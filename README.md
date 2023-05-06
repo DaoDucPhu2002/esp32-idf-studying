@@ -26,3 +26,7 @@ khi nhận dữ liệu từ phần cứng thì nó sẽ lưu vào BUFFER -> chuy
     + + UART_BREAK: ngắt uart
     + + UART_PARITY_ERR: lỗi bit kiểm tra chẵn lẻ
     + + UART_PATTERN_DET: uart pattern detected
+
+//==============================================
+ LƯU Ý:
+    + + + KHI ĐỔI TÊN CÁI MAIN.C THÌ PHẢI ĐỔI CẢ TRONG FILE CMAKELIST

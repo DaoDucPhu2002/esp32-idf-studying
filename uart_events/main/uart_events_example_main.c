@@ -150,3 +150,4 @@ void app_main(void)
     //Create a task to handler UART event from ISR
     xTaskCreate(uart_event_task, "uart_event_task", 2048, NULL, 12, NULL);
 }
+ 
