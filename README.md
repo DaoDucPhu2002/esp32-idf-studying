@@ -30,3 +30,5 @@ khi nhận dữ liệu từ phần cứng thì nó sẽ lưu vào BUFFER -> chuy
 //==============================================
  LƯU Ý:
     + + + KHI ĐỔI TÊN CÁI MAIN.C THÌ PHẢI ĐỔI CẢ TRONG FILE CMAKELIST
+    + + + Khi viết thư viện riêng cần thêm dòng
+            set(EXTRA_COMPONENT_DIRS ${CMAKE_CURENT_LIS_DIR}/<folder>)
