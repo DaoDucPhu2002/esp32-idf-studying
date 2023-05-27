@@ -1,5 +1,7 @@
 #include "main.h"
 
+#define TAG_BTN "BUTTON"
+
 typedef enum
 {
     BUTTON_RELEASE,              // 3.3v

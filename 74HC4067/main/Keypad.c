@@ -12,14 +12,15 @@ KeyPad_State get_keypad_state(void)
     {
         sw_sta = BELL_BUTTON_PRESS;
     }
-    else if (sw_adc_value > 3000 && sw_adc_value < 3200
+    else if (sw_adc_value > 3000 && sw_adc_value < 3200)
     {
         sw_sta = CHECK_BUTTON_PRESS;
     }
     else
     {
-        sw_sta
+        sw_sta = BUTTON_RELEASE;
     }
 
-    return sw_sta
+    ESP_LOGI(TAG_BTN, "BUTTON is state: %d", sw_sta);
+    return sw_sta;
 }
