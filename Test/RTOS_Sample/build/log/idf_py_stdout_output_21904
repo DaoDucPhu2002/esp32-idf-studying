@@ -1,0 +1,5 @@
+[0/1] Re-running CMake...
+-- Configuring incomplete, errors occurred!
+See also "D:/CODE/ESP32-IDF/esp32-idf-studying/RTOS_Sample/build/CMakeFiles/CMakeOutput.log".
+FAILED: build.ninja 
+C:\Users\daoph\.espressif\tools\cmake\3.24.0\bin\cmake.exe --regenerate-during-build -SD:\CODE\ESP32-IDF\esp32-idf-studying\RTOS_Sample -BD:\CODE\ESP32-IDF\esp32-idf-studying\RTOS_Sample\build
