@@ -8,4 +8,4 @@ typedef enum
     NORMAL_SENSOR_STATE,
 } Sensor_State;
 
-Sensor_State get_state_sensor(int channel);
+int get_state_sensor(int channel);

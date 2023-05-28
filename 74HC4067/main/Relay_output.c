@@ -1,5 +1,4 @@
-#include "main.h"
-#define TAG_RELAY "RELAY"
+#include "Relay_output.h"
 
 void set_relay_output(uint8_t channel, uint8_t value)
 {
