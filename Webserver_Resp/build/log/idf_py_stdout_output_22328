@@ -1,0 +1,30 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\Webserver_Resp\build\bootloader\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.8_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/CODE/ESP32-IDF/esp32-idf-studying/Webserver_Resp/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6710 bytes. 0x8f0 bytes (8%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+D:/CODE/ESP32-IDF/esp32-idf-studying/Webserver_Resp/main/main.c: In function 'http_scan_wifi_handle':
+D:/CODE/ESP32-IDF/esp32-idf-studying/Webserver_Resp/main/main.c:132:14: warning: passing argument 1 of 'snprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  132 |     snprintf(&html_scan_wifi, sizeof(html_scan_wifi),
+      |              ^~~~~~~~~~~~~~~
+      |              |
+      |              const char (*)[2000]
+In file included from D:/CODE/ESP32-IDF/esp32-idf-studying/Webserver_Resp/main/main.c:1:
+c:\users\daoph\.espressif\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\xtensa-esp32-elf\sys-include\stdio.h:266:19: note: expected 'char * restrict' but argument is of type 'const char (*)[2000]'
+  266 | int     snprintf (char *__restrict, size_t, const char *__restrict, ...)
+      |                   ^
+At top level:
+D:/CODE/ESP32-IDF/esp32-idf-studying/Webserver_Resp/main/main.c:174:13: warning: 'disconnect_handler' defined but not used [-Wunused-function]
+  174 | static void disconnect_handler(void *arg, esp_event_base_t event_base,
+      |             ^~~~~~~~~~~~~~~~~~
+[3/8] Linking C static library esp-idf\main\libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Building C object CMakeFiles/main.elf.dir/project_elf_src_esp32.c.obj
+[6/8] Linking CXX executable main.elf
+[7/8] Generating binary image from built executable
+esptool.py v4.5
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated D:/CODE/ESP32-IDF/esp32-idf-studying/Webserver_Resp/build/main.bin
+[8/8] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\Webserver_Resp\build\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.8_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/CODE/ESP32-IDF/esp32-idf-studying/Webserver_Resp/build/partition_table/partition-table.bin D:/CODE/ESP32-IDF/esp32-idf-studying/Webserver_Resp/build/main.bin"
+main.bin binary size 0xbac50 bytes. Smallest app partition is 0x100000 bytes. 0x453b0 bytes (27%) free.

@@ -1,0 +1,92 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\Webserver_Resp\build\bootloader\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.8_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/CODE/ESP32-IDF/esp32-idf-studying/Webserver_Resp/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6710 bytes. 0x8f0 bytes (8%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+D:/CODE/ESP32-IDF/esp32-idf-studying/Webserver_Resp/main/main.c: In function 'http_scan_wifi_handle':
+D:/CODE/ESP32-IDF/esp32-idf-studying/Webserver_Resp/main/main.c:129:14: warning: passing argument 1 of 'snprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  129 |     snprintf(&html_scan_wifi, sizeof(html_scan_wifi),
+      |              ^~~~~~~~~~~~~~~
+      |              |
+      |              const char (*)[2000]
+In file included from D:/CODE/ESP32-IDF/esp32-idf-studying/Webserver_Resp/main/main.c:1:
+c:\users\daoph\.espressif\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\xtensa-esp32-elf\sys-include\stdio.h:266:19: note: expected 'char * restrict' but argument is of type 'const char (*)[2000]'
+  266 | int     snprintf (char *__restrict, size_t, const char *__restrict, ...)
+      |                   ^
+At top level:
+D:/CODE/ESP32-IDF/esp32-idf-studying/Webserver_Resp/main/main.c:171:13: warning: 'disconnect_handler' defined but not used [-Wunused-function]
+  171 | static void disconnect_handler(void *arg, esp_event_base_t event_base,
+      |             ^~~~~~~~~~~~~~~~~~
+[3/8] Linking C static library esp-idf\main\libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable main.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.5
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated D:/CODE/ESP32-IDF/esp32-idf-studying/Webserver_Resp/build/main.bin
+[7/8] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\Webserver_Resp\build\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.8_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/CODE/ESP32-IDF/esp32-idf-studying/Webserver_Resp/build/partition_table/partition-table.bin D:/CODE/ESP32-IDF/esp32-idf-studying/Webserver_Resp/build/main.bin"
+main.bin binary size 0xbab10 bytes. Smallest app partition is 0x100000 bytes. 0x454f0 bytes (27%) free.
+[7/8] cmd.exe /C "cd /D C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\esptool_py && C:\Users\daoph\.espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1 -D SERIAL_TOOL=C:/Users/daoph/.espressif/python_env/idf5.0_py3.8_env/Scripts/python.exe;;C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/CODE/ESP32-IDF/esp32-idf-studying/Webserver_Resp/build -P C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esptool_py/run_serial_tool.cmake"
+esptool esp32 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 main.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.5
+Serial port COM3
+Connecting....
+Chip is ESP32-D0WD (revision v1.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 10:52:1c:76:17:94
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000cafff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26384 bytes to 16455...
+Writing at 0x00001000... (50 %)
+Writing at 0x000076ad... (100 %)
+Wrote 26384 bytes (16455 compressed) at 0x00001000 in 0.9 seconds (effective 239.9 kbit/s)...
+Hash of data verified.
+Compressed 764688 bytes to 491225...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001b6b6... (6 %)
+Writing at 0x00024b07... (10 %)
+Writing at 0x00029ff9... (13 %)
+Writing at 0x00033f0a... (16 %)
+Writing at 0x00039876... (20 %)
+Writing at 0x0003f33d... (23 %)
+Writing at 0x00044d3e... (26 %)
+Writing at 0x0004a8c2... (30 %)
+Writing at 0x0005032d... (33 %)
+Writing at 0x0005600b... (36 %)
+Writing at 0x0005b7bf... (40 %)
+Writing at 0x00060a15... (43 %)
+Writing at 0x00065e30... (46 %)
+Writing at 0x0006b191... (50 %)
+Writing at 0x00070789... (53 %)
+Writing at 0x00075ef7... (56 %)
+Writing at 0x0007bc36... (60 %)
+Writing at 0x000813c8... (63 %)
+Writing at 0x00086a19... (66 %)
+Writing at 0x0008c286... (70 %)
+Writing at 0x00091c91... (73 %)
+Writing at 0x0009740c... (76 %)
+Writing at 0x0009cf31... (80 %)
+Writing at 0x000a31c4... (83 %)
+Writing at 0x000a94d1... (86 %)
+Writing at 0x000aed3c... (90 %)
+Writing at 0x000b77d8... (93 %)
+Writing at 0x000bfacd... (96 %)
+Writing at 0x000c54ff... (100 %)
+Wrote 764688 bytes (491225 compressed) at 0x00010000 in 11.4 seconds (effective 536.7 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 302.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
