@@ -67,9 +67,19 @@ int32_t wifi_read_data_form_eeprom(const char *data_key)
     nvs_close(read_handle);
     return data_Value;
 }
-esp_err_t wifi_config()
+esp_err_t wifi_connected_sta(char *ssid_sta, char *pass)
 {
-    
+    wifi_config_t sta_wifi_cfg;
+    memset(&sta_wifi_cfg, 0, sizeof(sta_wifi_cfg));
+    strcpy((char *)sta_wifi_cfg.sta.ssid, ssid_sta);
+    strcpy((char *)sta_wifi_cfg.sta.password, pass);
+    ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
+    esp_err_t sta_cfg = esp_wifi_set_config(WIFI_IF_STA, &sta_wifi_cfg);
+    if (sta_cfg != ESP_OK)
+    {
+        // return error
+        }
+    return ESP_OK;
 }
 
 void wifi_scan(void)
