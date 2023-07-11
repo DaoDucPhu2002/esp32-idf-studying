@@ -1,0 +1,57 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\FireAlam_WIFI_example\build\bootloader\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.8_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6710 bytes. 0x8f0 bytes (8%) free.
+[2/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:5:
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_event/include/esp_event_loop.h:2:2: warning: #warning "esp_event_loop.h is deprecated, please include esp_event.h instead" [-Wcpp]
+    2 | #warning "esp_event_loop.h is deprecated, please include esp_event.h instead"
+      |  ^~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c: In function 'wifi_scan':
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:41:20: warning: initialization of 'unsigned char' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+   41 |         .channel = NULL,
+      |                    ^~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:41:20: note: (near initialization for 'scan_config.channel')
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:58:12: warning: function returns address of local variable [-Wreturn-local-addr]
+   58 |     return wifi_records;
+      |            ^~~~~~~~~~~~
+In file included from C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_hw_support/include/esp_intr_alloc.h:11,
+                 from C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_hw_support/include/esp_cpu.h:20,
+                 from C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_hw_support/include/spinlock.h:11,
+                 from C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:74,
+                 from C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h:58,
+                 from C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:70,
+                 from D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:3:
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c: In function 'wifi_ap_init':
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:76:35: warning: passing argument 1 of 'esp_wifi_init' from incompatible pointer type [-Wincompatible-pointer-types]
+   76 |     ESP_ERROR_CHECK(esp_wifi_init(&ap_wifi_config));
+      |                                   ^~~~~~~~~~~~~~~
+      |                                   |
+      |                                   wifi_config_t *
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_common/include/esp_err.h:117:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  117 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+In file included from D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:6:
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_wifi/include/esp_wifi.h:252:51: note: expected 'const wifi_init_config_t *' but argument is of type 'wifi_config_t *'
+  252 | esp_err_t esp_wifi_init(const wifi_init_config_t *config);
+      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c: In function 'post_handle':
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:99:35: warning: passing argument 2 of 'httpd_req_recv' from incompatible pointer type [-Wincompatible-pointer-types]
+   99 |     int ret = httpd_req_recv(req, &content, recv_size);
+      |                                   ^~~~~~~~
+      |                                   |
+      |                                   char (*)[100]
+In file included from D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:11:
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_http_server/include/esp_http_server.h:866:42: note: expected 'char *' but argument is of type 'char (*)[100]'
+  866 | int httpd_req_recv(httpd_req_t *r, char *buf, size_t buf_len);
+      |                                    ~~~~~~^~~
+[3/7] Linking C static library esp-idf\main\libmain.a
+[4/7] Generating ld/sections.ld
+[5/7] Linking CXX executable main.elf
+[6/7] Generating binary image from built executable
+esptool.py v4.5
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/build/main.bin
+[7/7] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\FireAlam_WIFI_example\build\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.8_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/build/partition_table/partition-table.bin D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/build/main.bin"
+main.bin binary size 0xae350 bytes. Smallest app partition is 0x100000 bytes. 0x51cb0 bytes (32%) free.

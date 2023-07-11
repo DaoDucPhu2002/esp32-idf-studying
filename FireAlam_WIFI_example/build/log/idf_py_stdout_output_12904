@@ -1,0 +1,108 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\FireAlam_WIFI_example\build\bootloader\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.8_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6710 bytes. 0x8f0 bytes (8%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:5:
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_event/include/esp_event_loop.h:2:2: warning: #warning "esp_event_loop.h is deprecated, please include esp_event.h instead" [-Wcpp]
+    2 | #warning "esp_event_loop.h is deprecated, please include esp_event.h instead"
+      |  ^~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c: In function 'wifi_scan':
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:41:20: warning: initialization of 'unsigned char' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+   41 |         .channel = NULL,
+      |                    ^~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:41:20: note: (near initialization for 'scan_config.channel')
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:58:12: warning: function returns address of local variable [-Wreturn-local-addr]
+   58 |     return wifi_records;
+      |            ^~~~~~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c: In function 'wifi_ap_init':
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:76:19: warning: passing argument 1 of 'esp_wifi_init' from incompatible pointer type [-Wincompatible-pointer-types]
+   76 |     esp_wifi_init(&ap_wifi_config);
+      |                   ^~~~~~~~~~~~~~~
+      |                   |
+      |                   wifi_config_t *
+In file included from D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:6:
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_wifi/include/esp_wifi.h:252:51: note: expected 'const wifi_init_config_t *' but argument is of type 'wifi_config_t *'
+  252 | esp_err_t esp_wifi_init(const wifi_init_config_t *config);
+      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c: In function 'post_handle':
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:99:35: warning: passing argument 2 of 'httpd_req_recv' from incompatible pointer type [-Wincompatible-pointer-types]
+   99 |     int ret = httpd_req_recv(req, &content, recv_size);
+      |                                   ^~~~~~~~
+      |                                   |
+      |                                   char (*)[100]
+In file included from D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:11:
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_http_server/include/esp_http_server.h:866:42: note: expected 'char *' but argument is of type 'char (*)[100]'
+  866 | int httpd_req_recv(httpd_req_t *r, char *buf, size_t buf_len);
+      |                                    ~~~~~~^~~
+[3/8] Linking C static library esp-idf\main\libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable main.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.5
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/build/main.bin
+[7/8] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\FireAlam_WIFI_example\build\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.8_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/build/partition_table/partition-table.bin D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/build/main.bin"
+main.bin binary size 0xae300 bytes. Smallest app partition is 0x100000 bytes. 0x51d00 bytes (32%) free.
+[7/8] cmd.exe /C "cd /D C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\esptool_py && C:\Users\daoph\.espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1 -D SERIAL_TOOL=C:/Users/daoph/.espressif/python_env/idf5.0_py3.8_env/Scripts/python.exe;;C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/build -P C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esptool_py/run_serial_tool.cmake"
+esptool esp32 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 main.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.5
+Serial port COM3
+Connecting.....
+Chip is ESP32-D0WD (revision v1.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 10:52:1c:76:17:94
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000befff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26384 bytes to 16453...
+Writing at 0x00001000... (50 %)
+Writing at 0x000076ad... (100 %)
+Wrote 26384 bytes (16453 compressed) at 0x00001000 in 0.8 seconds (effective 250.0 kbit/s)...
+Hash of data verified.
+Compressed 713472 bytes to 457605...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001aa59... (7 %)
+Writing at 0x00023ab0... (10 %)
+Writing at 0x00028dc8... (14 %)
+Writing at 0x00032053... (17 %)
+Writing at 0x00037b08... (21 %)
+Writing at 0x0003d55e... (25 %)
+Writing at 0x000431f1... (28 %)
+Writing at 0x00048a37... (32 %)
+Writing at 0x0004dbc4... (35 %)
+Writing at 0x00052fe7... (39 %)
+Writing at 0x00058382... (42 %)
+Writing at 0x0005d97c... (46 %)
+Writing at 0x0006321b... (50 %)
+Writing at 0x00068df5... (53 %)
+Writing at 0x0006e65d... (57 %)
+Writing at 0x00073e16... (60 %)
+Writing at 0x00079660... (64 %)
+Writing at 0x0007ee2e... (67 %)
+Writing at 0x00084a7b... (71 %)
+Writing at 0x0008b367... (75 %)
+Writing at 0x00090eec... (78 %)
+Writing at 0x00096767... (82 %)
+Writing at 0x0009f960... (85 %)
+Writing at 0x000a7626... (89 %)
+Writing at 0x000adfaa... (92 %)
+Writing at 0x000b3906... (96 %)
+Writing at 0x000b9184... (100 %)
+Wrote 713472 bytes (457605 compressed) at 0x00010000 in 10.6 seconds (effective 539.8 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 306.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

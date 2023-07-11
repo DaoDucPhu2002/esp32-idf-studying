@@ -1,0 +1,109 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\FireAlam_WIFI_example\build\bootloader\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.8_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6710 bytes. 0x8f0 bytes (8%) free.
+[2/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj 
+ccache C:\Users\daoph\.espressif\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DUNITY_INCLUDE_CONFIG_H -ID:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/build/config -ID:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/newlib/platform_include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/freertos/FreeRTOS-Kernel/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/freertos/esp_additions/include/freertos -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/freertos/esp_additions/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_hw_support/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_hw_support/include/soc -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_hw_support/include/soc/esp32 -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_hw_support/port/esp32/. -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_hw_support/port/esp32/private_include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/heap/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/log/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/soc/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/soc/esp32/. -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/soc/esp32/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/hal/esp32/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/hal/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/hal/platform_port/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_rom/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_rom/include/esp32 -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_rom/esp32 -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_common/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_system/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_system/port/soc -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_system/port/include/private -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/xtensa/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/xtensa/esp32/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/lwip/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/lwip/include/apps -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/lwip/include/apps/sntp -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/lwip/lwip/src/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/lwip/port/esp32/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/lwip/port/esp32/include/arch -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_ringbuf/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/efuse/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/efuse/esp32/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/driver/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/driver/deprecated -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/driver/esp32/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_pm/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/mbedtls/port/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/mbedtls/mbedtls/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/mbedtls/mbedtls/library -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/mbedtls/esp_crt_bundle/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_app_format/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/bootloader_support/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/bootloader_support/bootloader_flash/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_partition/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/app_update/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/spi_flash/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/pthread/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_timer/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/app_trace/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_event/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/nvs_flash/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_phy/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_phy/esp32/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/vfs/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_netif/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/wpa_supplicant/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/wpa_supplicant/port/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/wpa_supplicant/esp_supplicant/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_wifi/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/unity/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/unity/unity/src -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/cmock/CMock/src -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/console -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/http_parser -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp-tls -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp-tls/esp-tls-crypto -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_adc/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_adc/interface -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_adc/esp32/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_adc/deprecated/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_eth/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_gdbstub/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_gdbstub/xtensa -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_gdbstub/esp32 -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_hid/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/tcp_transport/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_http_client/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_http_server/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_https_ota/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_lcd/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_lcd/interface -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/protobuf-c/protobuf-c -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/protocomm/include/common -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/protocomm/include/security -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/protocomm/include/transports -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_local_ctrl/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_psram/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/espcoredump/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/espcoredump/include/port/xtensa -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/wear_levelling/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/sdmmc/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/fatfs/diskio -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/fatfs/vfs -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/fatfs/src -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/idf_test/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/idf_test/include/esp32 -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/ieee802154/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/json/cJSON -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/mqtt/esp-mqtt/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/perfmon/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/spiffs/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/ulp/ulp_common/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/ulp/ulp_common/include/esp32 -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/wifi_provisioning/include -mlongcalls -Wno-frame-address  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fmacro-prefix-map=D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example=. -fmacro-prefix-map=C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1=/IDF -fstrict-volatile-bitfields -Wno-error=unused-but-set-variable -fno-jump-tables -fno-tree-switch-conversion -DconfigENABLE_FREERTOS_DEBUG_OCDAWARE=1 -std=gnu17 -Wno-old-style-declaration -D_GNU_SOURCE -DIDF_VER=\"v5.0.1-dirty\" -DESP_PLATFORM -D_POSIX_READER_WRITER_LOCKS -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -MF esp-idf\main\CMakeFiles\__idf_main.dir\main.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -c D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c
+In file included from D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:5:
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_event/include/esp_event_loop.h:2:2: warning: #warning "esp_event_loop.h is deprecated, please include esp_event.h instead" [-Wcpp]
+    2 | #warning "esp_event_loop.h is deprecated, please include esp_event.h instead"
+      |  ^~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c: In function 'wifi_scan':
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:41:20: warning: initialization of 'unsigned char' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+   41 |         .channel = NULL,
+      |                    ^~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:41:20: note: (near initialization for 'scan_config.channel')
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:58:12: warning: function returns address of local variable [-Wreturn-local-addr]
+   58 |     return wifi_records;
+      |            ^~~~~~~~~~~~
+In file included from C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_hw_support/include/esp_intr_alloc.h:11,
+                 from C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_hw_support/include/esp_cpu.h:20,
+                 from C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_hw_support/include/spinlock.h:11,
+                 from C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:74,
+                 from C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h:58,
+                 from C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:70,
+                 from D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:3:
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c: In function 'wifi_ap_init':
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:76:35: warning: passing argument 1 of 'esp_wifi_init' from incompatible pointer type [-Wincompatible-pointer-types]
+   76 |     ESP_ERROR_CHECK(esp_wifi_init(&ap_wifi_config));
+      |                                   ^~~~~~~~~~~~~~~
+      |                                   |
+      |                                   wifi_config_t *
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_common/include/esp_err.h:117:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  117 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+In file included from D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:6:
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_wifi/include/esp_wifi.h:252:51: note: expected 'const wifi_init_config_t *' but argument is of type 'wifi_config_t *'
+  252 | esp_err_t esp_wifi_init(const wifi_init_config_t *config);
+      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c: In function 'get_handle':
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:84:33: warning: missing terminating " character
+   84 |     const char http_content[] = "
+      |                                 ^
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:84:33: error: missing terminating " character
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:85:13: error: expected expression before '<' token
+   85 |             <!DOCTYPE html>
+      |             ^
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:92:18: error: stray '\' in program
+   92 |     <form action=\"/login\" method=\"post\">
+      |                  ^
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:92:19: warning: missing terminating " character
+   92 |     <form action=\"/login\" method=\"post\">
+      |                   ^
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:92:19: error: missing terminating " character
+   92 |     <form action=\"/login\" method=\"post\">
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:93:20: error: stray '\' in program
+   93 |         <label for=\"password\">Mật khẩu:</label>
+      |                    ^
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:93:21: warning: missing terminating " character
+   93 |         <label for=\"password\">Mật khẩu:</label>
+      |                     ^
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:93:21: error: missing terminating " character
+   93 |         <label for=\"password\">Mật khẩu:</label>
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:94:21: error: stray '\' in program
+   94 |         <input type=\"password\" id="password\" name=\"password\">
+      |                     ^
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:94:46: error: stray '\' in program
+   94 |         <input type=\"password\" id="password\" name=\"password\">
+      |                                              ^
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:94:47: warning: missing terminating " character
+   94 |         <input type=\"password\" id="password\" name=\"password\">
+      |                                               ^
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:94:47: error: missing terminating " character
+   94 |         <input type=\"password\" id="password\" name=\"password\">
+      |                                               ^~~~~~~~~~~~~~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:96:21: error: stray '\' in program
+   96 |         <input type=\"submit\" value=\"Đăng nhập\">
+      |                     ^
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:96:22: warning: missing terminating " character
+   96 |         <input type=\"submit\" value=\"Đăng nhập\">
+      |                      ^
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:96:22: error: missing terminating " character
+   96 |         <input type=\"submit\" value=\"Đăng nhập\">
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:101:5: warning: missing terminating " character
+  101 |     ";
+      |     ^
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:101:5: error: missing terminating " character
+  101 |     ";
+      |     ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:84:16: warning: unused variable 'http_content' [-Wunused-variable]
+   84 |     const char http_content[] = "
+      |                ^~~~~~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c: In function 'post_handle':
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:109:24: error: implicit declaration of function 'min' [-Werror=implicit-function-declaration]
+  109 |     size_t recv_size = min(req->content_len, sizeof(content));
+      |                        ^~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:110:35: warning: passing argument 2 of 'httpd_req_recv' from incompatible pointer type [-Wincompatible-pointer-types]
+  110 |     int ret = httpd_req_recv(req, &content, recv_size);
+      |                                   ^~~~~~~~
+      |                                   |
+      |                                   char (*)[100]
+In file included from D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_WIFI_example/main/main.c:11:
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_http_server/include/esp_http_server.h:866:42: note: expected 'char *' but argument is of type 'char (*)[100]'
+  866 | int httpd_req_recv(httpd_req_t *r, char *buf, size_t buf_len);
+      |                                    ~~~~~~^~~
+cc1.exe: some warnings being treated as errors
+ninja: build stopped: subcommand failed.
