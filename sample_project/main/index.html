@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WiFi Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>WiFi Manager</h2>
+        <ul id="wifi-list"></ul>
+        <button onclick="refreshWiFi()">Refresh</button>
+    </div>
+    <script>
+        function refreshWiFi() {
+            // Gửi yêu cầu AJAX để lấy danh sách mạng WiFi
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "/wifi-list", true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // Khi nhận được phản hồi từ máy chủ, cập nhật danh sách mạng WiFi
+                    var wifiList = JSON.parse(xhr.responseText);
+                    var wifiListHtml = "";
+                    wifiList.forEach(function (wifi) {
+                        wifiListHtml += "<li>" + wifi.ssid + "</li>";
+                    });
+                    document.getElementById("wifi-list").innerHTML = wifiListHtml;
+                }
+            };
+            xhr.send();
+        }
+    </script>
+</body>
+
+</html>

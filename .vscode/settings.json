@@ -23,9 +23,12 @@
     "esp_event.h": "c",
     "event_groups.h": "c",
     "nvs_flash.h": "c",
-    "esp_http_server.h": "c"
+    "esp_http_server.h": "c",
+    "stdc++.h": "c",
+    "file_serving_example_common.h": "c"
   },
   "C_Cpp.errorSquiggles": "enabled",
   "idf.portWin": "COM3",
-  "idf.adapterTargetName": "esp32"
+  "idf.adapterTargetName": "esp32",
+  "liveServer.settings.port": 5501
 }

@@ -1,0 +1,36 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.associations": {
+      "gpio.h": "c",
+      "sensor_input.h": "c",
+      "main.h": "c",
+      "keypad.h": "c",
+      "io_config.h": "c",
+      "protocol_examples_common.h": "c",
+      "mqtt_client.h": "c",
+      "array": "cpp",
+      "deque": "cpp",
+      "list": "cpp",
+      "string": "cpp",
+      "unordered_map": "cpp",
+      "unordered_set": "cpp",
+      "vector": "cpp",
+      "string_view": "cpp",
+      "initializer_list": "cpp",
+      "regex": "cpp",
+      "valarray": "cpp",
+      "*.ipp": "cpp",
+      "esp_log.h": "c",
+      "esp_event.h": "c",
+      "event_groups.h": "c",
+      "nvs_flash.h": "c",
+      "esp_http_server.h": "c",
+      "esp_wifi.h": "c"
+    }
+  }
+}

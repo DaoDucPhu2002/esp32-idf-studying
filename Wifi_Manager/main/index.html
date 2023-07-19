@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Wi-Fi Manager</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<style>
+		.wifi-list {
+			margin-bottom: 10px;
+		}
+
+		.wifi-item {
+			padding: 5px;
+			border: 1px solid #ccc;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1 class="mt-4">Wi-Fi Manager</h1>
+		<div class="wifi-list">
+			<h2>Available Wi-Fi Networks:</h2>
+			<button id="scan-btn" class="btn btn-primary" data-toggle="modal" data-target="#wifi-modal">Scan</button>
+		</div>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="wifi-modal" tabindex="-1" role="dialog" aria-labelledby="wifi-modal-label"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="wifi-modal-label">Wi-Fi Networks</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div id="wifi-list"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function getWifiList() {
+			fetch('/api/wifi-list')
+				.then(response => response.json())
+				.then(data => {
+					let wifiList = document.getElementById('wifi-list');
+					wifiList.innerHTML = '';
+					data.forEach(wifi => {
+						let wifiItem = document.createElement('div');
+						wifiItem.classList.add('wifi-item', 'mb-2', 'p-2');
+						wifiItem.textContent = wifi.ssid;
+						wifiList.appendChild(wifiItem);
+					});
+				})
+				.catch(error => console.log(error));
+		}
+
+		document.addEventListener('DOMContentLoaded', () => {
+			document.getElementById('scan-btn').addEventListener('click', getWifiList);
+		});
+	</script>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

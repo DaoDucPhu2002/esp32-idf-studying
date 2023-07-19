@@ -1,0 +1,66 @@
+[1/5] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\Wifi_Manager\build\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/CODE/ESP32-IDF/esp32-idf-studying/Wifi_Manager/build/partition_table/partition-table.bin D:/CODE/ESP32-IDF/esp32-idf-studying/Wifi_Manager/build/main.bin"
+main.bin binary size 0xa9970 bytes. Smallest app partition is 0x100000 bytes. 0x56690 bytes (34%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\Wifi_Manager\build\bootloader\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/CODE/ESP32-IDF/esp32-idf-studying/Wifi_Manager/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6710 bytes. 0x8f0 bytes (8%) free.
+[2/3] cmd.exe /C "cd /D C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\esptool_py && C:\Users\daoph\.espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1 -D SERIAL_TOOL=C:/Users/daoph/.espressif/python_env/idf5.0_py3.11_env/Scripts/python.exe;;C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/CODE/ESP32-IDF/esp32-idf-studying/Wifi_Manager/build -P C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esptool_py/run_serial_tool.cmake"
+esptool esp32 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 main.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.5.1
+Serial port COM3
+Connecting....
+Chip is ESP32-D0WD (revision v1.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 10:52:1c:76:17:94
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000b9fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26384 bytes to 16452...
+Writing at 0x00001000... (50 %)
+Writing at 0x000076ad... (100 %)
+Wrote 26384 bytes (16452 compressed) at 0x00001000 in 0.9 seconds (effective 242.6 kbit/s)...
+Hash of data verified.
+Compressed 694640 bytes to 447316...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001a822... (7 %)
+Writing at 0x00022d1c... (10 %)
+Writing at 0x000284be... (14 %)
+Writing at 0x000320e6... (17 %)
+Writing at 0x00037a45... (21 %)
+Writing at 0x0003d4f1... (25 %)
+Writing at 0x00043224... (28 %)
+Writing at 0x0004880d... (32 %)
+Writing at 0x0004da64... (35 %)
+Writing at 0x00052e5a... (39 %)
+Writing at 0x000581f6... (42 %)
+Writing at 0x0005d862... (46 %)
+Writing at 0x0006322c... (50 %)
+Writing at 0x00068d79... (53 %)
+Writing at 0x0006e4b1... (57 %)
+Writing at 0x00073c7c... (60 %)
+Writing at 0x00079590... (64 %)
+Writing at 0x0007ed72... (67 %)
+Writing at 0x00084946... (71 %)
+Writing at 0x0008ade8... (75 %)
+Writing at 0x00090877... (78 %)
+Writing at 0x0009940e... (82 %)
+Writing at 0x000a1435... (85 %)
+Writing at 0x000a72f3... (89 %)
+Writing at 0x000acea2... (92 %)
+Writing at 0x000b2a86... (96 %)
+Writing at 0x000b7c33... (100 %)
+Wrote 694640 bytes (447316 compressed) at 0x00010000 in 10.4 seconds (effective 535.6 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 305.0 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

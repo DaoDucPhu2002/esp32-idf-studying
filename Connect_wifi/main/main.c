@@ -29,6 +29,94 @@
 #define EXAMPLE_ESP_WIFI_PASS "12345678"
 #define EXAMPLE_ESP_WIFI_CHANNEL 1
 #define EXAMPLE_MAX_STA_CONN 4
+
+#define EXAMPLE_ESP_MAXIMUM_RETRY 5
+/*URL Varialbe*/
+char url_data[100];
+
+/*Define event group to STA Mode*/
+static EventGroupHandle_t wifi_sta_event_group;
+#define WIFI_CONNECTED_BIT BIT0
+#define WIFI_FAIL_BIT BIT1
+void wifi_sta_config(char *ssid, char *pass);
+/*=======================================================
+                        String Handle
+=========================================================*/
+static void
+url_decoder(char *str)
+{
+    char *pstr = str;
+    char *buf = str;
+    while (*pstr)
+    {
+        if (*pstr == '+')
+        {
+            *buf++ = ' ';
+        }
+        else
+        {
+            *buf++ = *pstr;
+        }
+        pstr++;
+    }
+    *buf = '\0';
+}
+char *get_ssid(char *str)
+{
+    char *ssid_ptr = strstr(str, "ssid=");
+    if (ssid_ptr != NULL)
+    {
+        ssid_ptr += strlen("ssid=");
+
+        // Tìm vị trí kết thúc của chuỗi SSID
+        char *ssid_end = strchr(ssid_ptr, '&');
+        if (ssid_end != NULL)
+        {
+            // Tính toán độ dài của chuỗi SSID
+            int ssid_length = ssid_end - ssid_ptr;
+
+            // Cấp phát bộ nhớ động cho chuỗi SSID và sao chép giá trị
+            char *ssid = malloc((ssid_length + 1) * sizeof(char));
+            strncpy(ssid, ssid_ptr, ssid_length);
+            ssid[ssid_length] = '\0';
+
+            // Giải mã URL (nếu cần)
+            url_decoder(ssid);
+
+            return ssid;
+        }
+    }
+
+    return NULL; // Trường hợp không tìm thấy SSID
+}
+
+char *get_password(char *str)
+{
+    char *password_ptr = strstr(str, "password=");
+    if (password_ptr != NULL)
+    {
+        password_ptr += strlen("password=");
+
+        // Đếm độ dài của password
+        int password_length = 0;
+        char *password_end = password_ptr;
+        while (*password_end != '\0' && *password_end != '&')
+        {
+            password_end++;
+            password_length++;
+        }
+
+        // Cấp phát bộ nhớ động cho chuỗi password và sao chép giá trị
+        char *password = malloc((password_length + 1) * sizeof(char));
+        strncpy(password, password_ptr, password_length);
+        password[password_length] = '\0';
+
+        return password;
+    }
+
+    return NULL; // Trường hợp không tìm thấy password
+}
+
 /*=======================================================
                         Webserver config
 =========================================================*/
@@ -114,13 +202,40 @@ static esp_err_t echo_post_handler(httpd_req_t *req)
         }
 
         /* Send back the same data */
-        httpd_resp_send_chunk(req, buf, ret);
-        remaining -= ret;
 
+        sprintf(url_data, "%.*s", ret, buf);
         /* Log data received */
         ESP_LOGI(TAG, "=========== RECEIVED DATA ==========");
-        ESP_LOGI(TAG, "%.*s", ret, buf);
+        char *ssid_data = get_ssid(url_data);
+        char *pass_data = get_password(url_data);
+        ESP_LOGI(TAG, "SSID = %s", ssid_data);
+        ESP_LOGI(TAG, "Pass = %s", pass_data);
         ESP_LOGI(TAG, "====================================");
+        if (ssid_data != NULL)
+        {
+            wifi_sta_config(ssid_data, pass_data);
+            ESP_LOGI(TAG, "Conncet to %s ", ssid_data);
+            EventBits_t bits = xEventGroupWaitBits(wifi_sta_event_group,
+                                                   WIFI_CONNECTED_BIT | WIFI_FAIL_BIT,
+                                                   pdFALSE,
+                                                   pdFALSE,
+                                                   portMAX_DELAY);
+
+            if (bits & WIFI_CONNECTED_BIT)
+            {
+                ESP_LOGI(TAG, "connected to ap SSID:%s password:%s",
+                         EXAMPLE_ESP_WIFI_SSID, EXAMPLE_ESP_WIFI_PASS);
+            }
+            else if (bits & WIFI_FAIL_BIT)
+            {
+                ESP_LOGI(TAG, "Failed to connect to SSID:%s, password:%s",
+                         EXAMPLE_ESP_WIFI_SSID, EXAMPLE_ESP_WIFI_PASS);
+            }
+            else
+            {
+                ESP_LOGE(TAG, "UNEXPECTED EVENT");
+            }
+        }
     }
 
     // End response
@@ -210,15 +325,14 @@ static void connect_handler(void *arg, esp_event_base_t event_base,
 }
 
 /*=======================================================
-                        AP mode config
+                        Wifi config
 =========================================================*/
-
-void app_main(void)
+void wifi_ap_config()
 {
-    static httpd_handle_t server = NULL;
     ESP_ERROR_CHECK(nvs_flash_init());
     ESP_ERROR_CHECK(esp_netif_init());
     ESP_ERROR_CHECK(esp_event_loop_create_default());
+
     esp_netif_create_default_wifi_ap();
     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
     ESP_ERROR_CHECK(esp_wifi_init(&cfg));
@@ -243,10 +357,97 @@ void app_main(void)
 
     esp_wifi_start();
     ESP_LOGI(TAG, "wifi init soft ap finished. SSID:%s password: %s ", EXAMPLE_ESP_WIFI_SSID, EXAMPLE_ESP_WIFI_PASS);
+}
 
+/*=======================================================
+                        Connect STA
+=========================================================*/
+
+static int s_retry_num = 0;
+
+static void event_handler(void *arg, esp_event_base_t event_base,
+                          int32_t event_id, void *event_data)
+{
+    if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START)
+    {
+        esp_wifi_connect();
+    }
+    else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED)
+    {
+        if (s_retry_num < EXAMPLE_ESP_MAXIMUM_RETRY)
+        {
+            esp_wifi_connect();
+            s_retry_num++;
+            ESP_LOGI(TAG, "retry to connect to the AP");
+        }
+        else
+        {
+            xEventGroupSetBits(wifi_sta_event_group, WIFI_FAIL_BIT);
+        }
+        ESP_LOGI(TAG, "connect to the AP fail");
+    }
+    else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP)
+    {
+        ip_event_got_ip_t *event = (ip_event_got_ip_t *)event_data;
+        ESP_LOGI(TAG, "got ip:" IPSTR, IP2STR(&event->ip_info.ip));
+        s_retry_num = 0;
+        xEventGroupSetBits(wifi_sta_event_group, WIFI_CONNECTED_BIT);
+    }
+}
+
+void wifi_sta_config(char *ssid, char *pass)
+{
+    wifi_sta_event_group = xEventGroupCreate();
+    esp_netif_create_default_wifi_sta();
+
+    wifi_config_t wifi_config;
+    memset(&wifi_config, 0, sizeof(wifi_config));
+    strcpy((char *)wifi_config.sta.ssid, ssid);
+    strcpy((char *)wifi_config.sta.password, pass);
+    wifi_config_t ap_config = {
+        .ap = {
+            .ssid = EXAMPLE_ESP_WIFI_SSID,
+            .password = EXAMPLE_ESP_WIFI_PASS,
+            .ssid_len = strlen(EXAMPLE_ESP_WIFI_SSID),
+            .max_connection = 4,
+            .authmode = WIFI_AUTH_WPA2_PSK,
+        },
+    };
+  
+
+    ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_APSTA));
+    ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_config));
+    ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_AP, &ap_config));
+
+    ESP_ERROR_CHECK(esp_wifi_start());
+    EventBits_t bits = xEventGroupWaitBits(wifi_sta_event_group,
+                                           WIFI_CONNECTED_BIT | WIFI_FAIL_BIT,
+                                           pdFALSE,
+                                           pdFALSE,
+                                           portMAX_DELAY);
+
+    /* xEventGroupWaitBits() returns the bits before the call returned, hence we can test which event actually
+     * happened. */
+}
+void app_main(void)
+{
+
+    static httpd_handle_t server = NULL;
+    wifi_ap_config();
     ESP_ERROR_CHECK(esp_event_handler_register(IP_EVENT, IP_EVENT_STA_GOT_IP, &connect_handler, &server));
     ESP_ERROR_CHECK(esp_event_handler_register(WIFI_EVENT, WIFI_EVENT_STA_DISCONNECTED, &disconnect_handler, &server));
-
+    esp_event_handler_instance_t instance_any_id;
+    esp_event_handler_instance_t instance_got_ip;
+    ESP_ERROR_CHECK(esp_event_handler_instance_register(WIFI_EVENT,
+                                                        ESP_EVENT_ANY_ID,
+                                                        &event_handler,
+                                                        NULL,
+                                                        &instance_any_id));
+    ESP_ERROR_CHECK(esp_event_handler_instance_register(IP_EVENT,
+                                                        IP_EVENT_STA_GOT_IP,
+                                                        &event_handler,
+                                                        NULL,
+                                                        &instance_got_ip));
     /* Start the server for the first time */
     server = start_webserver();
 }
