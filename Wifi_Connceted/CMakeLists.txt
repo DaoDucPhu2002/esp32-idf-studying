@@ -6,3 +6,5 @@ cmake_minimum_required(VERSION 3.16)
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 project(main)
+
+target_add_binary_data(${CMAKE_PROJECT_NAME}.elf "html/index.html" TEXT)

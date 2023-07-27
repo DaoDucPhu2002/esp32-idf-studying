@@ -1,0 +1,17 @@
+CMake Error at C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/tools/cmake/component.cmake:484 (add_library):
+  add_library cannot create target "__idf_main" because another target with
+  the same name already exists.  The existing target is a static library
+  created in source directory
+  "D:/CODE/ESP32-IDF/esp32-idf-studying/Wifi_Connceted/main".  See
+  documentation for policy CMP0002 for more details.
+Call Stack (most recent call first):
+  main/CMakeLists.txt:5 (idf_component_register)
+
+
+CMake Error at C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/tools/cmake/component.cmake:438 (message):
+  Called idf_component_register from a non-component directory.
+Call Stack (most recent call first):
+  CMakeLists.txt:11 (idf_component_register)
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed

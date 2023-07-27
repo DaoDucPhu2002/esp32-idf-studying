@@ -1,14 +1,37 @@
 #include "wifi_config.h"
-/*Wifi Config Variable*/
-wifi_config_t wifi_config;
+#include "webserver.h"
+/*Wifi Info Access Point Mode*/
+#define AP_SSID "DaoDucPhu"
+#define AP_PASS "12345678"
+#define AP_MAX_CONN 4
+#define AP_CHANNEL 1
 /*Provision type variable */
-provisioned_type_t provasion_type = PROVISIONED_SMART_CONFIG;
+provisioned_type_t provasion_type = PROVISIONED_ACCESS_POINT;
 /*Event Group Handler*/
 static EventGroupHandle_t s_wifi_event_group;
 
 static const int CONNECTED_BIT = BIT0;
 static const int ESPTOUCH_DONE_BIT = BIT1;
+static const int HTTP_POST_DONE_BIT = BIT2;
 static const char *TAG = "WIFI_MANAGER";
+/*ssid pass post handle*/
+char ssid_data[64];
+char pass_data[32];
+
+/*Post ssid and pass*/
+
+void wifi_data_callback(char *data, int len)
+{
+    printf("%.*s\n", len, data);
+    char *pt = strtok(data, "/");
+    strcpy(ssid_data, pt);
+    pt = strtok(NULL, "/");
+    strcpy(pass_data, pt);
+    printf("ssid: %s, pwd: %s\n", ssid_data, pass_data);
+    // xEventGroupSetBits(xCreatedEventGroup, WIFI_RECV_INFO);
+    xEventGroupSetBits(s_wifi_event_group, HTTP_POST_DONE_BIT);
+}
+
 /*Event Handle*/
 
 static void event_handler(void *arg, esp_event_base_t event_base,
@@ -79,6 +102,18 @@ static void event_handler(void *arg, esp_event_base_t event_base,
     {
         xEventGroupSetBits(s_wifi_event_group, ESPTOUCH_DONE_BIT);
     }
+    if (event_id == WIFI_EVENT_AP_STACONNECTED)
+    {
+        wifi_event_ap_staconnected_t *event = (wifi_event_ap_staconnected_t *)event_data;
+        ESP_LOGI(TAG, "station " MACSTR " join, AID=%d",
+                 MAC2STR(event->mac), event->aid);
+    }
+    else if (event_id == WIFI_EVENT_AP_STADISCONNECTED)
+    {
+        wifi_event_ap_stadisconnected_t *event = (wifi_event_ap_stadisconnected_t *)event_data;
+        ESP_LOGI(TAG, "station " MACSTR " leave, AID=%d",
+                 MAC2STR(event->mac), event->aid);
+    }
 }
 
 bool is_provisioned(void)
@@ -87,11 +122,14 @@ bool is_provisioned(void)
     ESP_ERROR_CHECK(esp_netif_init());
     ESP_ERROR_CHECK(esp_event_loop_create_default());
     esp_netif_t *sta_netif = esp_netif_create_default_wifi_sta();
+    esp_netif_create_default_wifi_ap();
     assert(sta_netif);
 
     s_wifi_event_group = xEventGroupCreate();
     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
     ESP_ERROR_CHECK(esp_wifi_init(&cfg));
+    /*Wifi Config Variable*/
+    wifi_config_t wifi_config;
     ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
     esp_wifi_get_config(WIFI_IF_STA, &wifi_config);
     /*Check Info*/
@@ -101,15 +139,48 @@ bool is_provisioned(void)
     }
     return provisioned;
 }
-void wifi_sta_config()
+void wifi_ap_config()
 {
+    wifi_config_t ap_config = {
+        .ap = {
+            .ssid = AP_SSID,
+            .ssid_len = strlen(AP_SSID),
+            .channel = AP_CHANNEL,
+            .password = AP_PASS,
+            .max_connection = AP_MAX_CONN,
+            .authmode = WIFI_AUTH_WPA_WPA2_PSK,
+            .pmf_cfg = {
+                .required = false,
+            },
+        },
+    };
+    ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_AP));
+    ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_AP, &ap_config));
+    ESP_ERROR_CHECK(esp_wifi_start());
+
+    ESP_LOGI(TAG, "wifi_init_softap finished. SSID:%s password:%s channel:%d",
+             AP_SSID, AP_PASS, AP_CHANNEL);
 }
 void wifi_manager(void)
 {
     bool provisioned = is_provisioned();
+    static httpd_handle_t server = NULL;
     ESP_ERROR_CHECK(esp_event_handler_register(WIFI_EVENT, ESP_EVENT_ANY_ID, &event_handler, NULL));
     ESP_ERROR_CHECK(esp_event_handler_register(IP_EVENT, IP_EVENT_STA_GOT_IP, &event_handler, NULL));
     ESP_ERROR_CHECK(esp_event_handler_register(SC_EVENT, ESP_EVENT_ANY_ID, &event_handler, NULL));
+
+    esp_event_handler_instance_t instance_any_id;
+    esp_event_handler_instance_t instance_got_ip;
+    ESP_ERROR_CHECK(esp_event_handler_instance_register(WIFI_EVENT,
+                                                        ESP_EVENT_ANY_ID,
+                                                        &event_handler,
+                                                        NULL,
+                                                        &instance_any_id));
+    ESP_ERROR_CHECK(esp_event_handler_instance_register(IP_EVENT,
+                                                        IP_EVENT_STA_GOT_IP,
+                                                        &event_handler,
+                                                        NULL,
+                                                        &instance_got_ip));
 
     if (!provisioned)
     {
@@ -127,6 +198,20 @@ void wifi_manager(void)
         }
         else if (provasion_type == PROVISIONED_ACCESS_POINT)
         {
+            http_post_set_callback(wifi_data_callback);
+            wifi_ap_config();
+            server = start_webserver();
+            xEventGroupWaitBits(s_wifi_event_group, HTTP_POST_DONE_BIT, false, true, portMAX_DELAY);
+
+            wifi_config_t wifi_config;
+            bzero(&wifi_config, sizeof(wifi_config));
+            memcpy(wifi_config.sta.ssid, ssid_data, strlen(ssid_data));
+            memcpy(wifi_config.sta.password, pass_data, strlen(pass_data));
+            wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+            ESP_ERROR_CHECK(esp_wifi_init(&cfg));
+            ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
+            ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_config));
+            ESP_ERROR_CHECK(esp_wifi_start());
         }
     }
     else
