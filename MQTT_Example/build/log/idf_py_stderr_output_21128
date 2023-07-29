@@ -1,0 +1,225 @@
+Traceback (most recent call last):
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 503, in parse_int
+    return int(v, 0)
+           ^^^^^^^^^
+ValueError: invalid literal for int() with base 0: 'data  nvs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 508, in parse_int
+    return keywords[v.lower()]
+           ~~~~~~~~^^^^^^^^^^^
+KeyError: 'data  nvs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 166, in from_csv
+    res.append(PartitionDefinition.from_csv(line, line_no + 1))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 348, in from_csv
+    res.type = res.parse_type(fields[1])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 396, in parse_type
+    return parse_int(strval, TYPES)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 510, in parse_int
+    raise InputError("Value '%s' is not valid. Known keywords: %s" % (v, ', '.join(keywords)))
+gen_esp32part.InputError: Value 'data  nvs' is not valid. Known keywords: app, data
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\parttool.py", line 358, in <module>
+    main()
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\parttool.py", line 327, in main
+    target = ParttoolTarget(**target_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\parttool.py", line 97, in __init__
+    partition_table = gen.PartitionTable.from_csv(f.read())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 168, in from_csv
+    raise InputError('Error at line %d: %s\nPlease check extra_partition_subtypes.inc file in build/config directory' % (line_no + 1, err))
+gen_esp32part.InputError: Error at line 7: Value 'data  nvs' is not valid. Known keywords: app, data
+Please check extra_partition_subtypes.inc file in build/config directory
+Traceback (most recent call last):
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 503, in parse_int
+    return int(v, 0)
+           ^^^^^^^^^
+ValueError: invalid literal for int() with base 0: 'data  nvs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 508, in parse_int
+    return keywords[v.lower()]
+           ~~~~~~~~^^^^^^^^^^^
+KeyError: 'data  nvs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 166, in from_csv
+    res.append(PartitionDefinition.from_csv(line, line_no + 1))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 348, in from_csv
+    res.type = res.parse_type(fields[1])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 396, in parse_type
+    return parse_int(strval, TYPES)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 510, in parse_int
+    raise InputError("Value '%s' is not valid. Known keywords: %s" % (v, ', '.join(keywords)))
+gen_esp32part.InputError: Value 'data  nvs' is not valid. Known keywords: app, data
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\parttool.py", line 358, in <module>
+    main()
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\parttool.py", line 327, in main
+    target = ParttoolTarget(**target_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\parttool.py", line 97, in __init__
+    partition_table = gen.PartitionTable.from_csv(f.read())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 168, in from_csv
+    raise InputError('Error at line %d: %s\nPlease check extra_partition_subtypes.inc file in build/config directory' % (line_no + 1, err))
+gen_esp32part.InputError: Error at line 7: Value 'data  nvs' is not valid. Known keywords: app, data
+Please check extra_partition_subtypes.inc file in build/config directory
+Traceback (most recent call last):
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 503, in parse_int
+    return int(v, 0)
+           ^^^^^^^^^
+ValueError: invalid literal for int() with base 0: 'data  nvs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 508, in parse_int
+    return keywords[v.lower()]
+           ~~~~~~~~^^^^^^^^^^^
+KeyError: 'data  nvs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 166, in from_csv
+    res.append(PartitionDefinition.from_csv(line, line_no + 1))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 348, in from_csv
+    res.type = res.parse_type(fields[1])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 396, in parse_type
+    return parse_int(strval, TYPES)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 510, in parse_int
+    raise InputError("Value '%s' is not valid. Known keywords: %s" % (v, ', '.join(keywords)))
+gen_esp32part.InputError: Value 'data  nvs' is not valid. Known keywords: app, data
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\parttool.py", line 358, in <module>
+    main()
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\parttool.py", line 327, in main
+    target = ParttoolTarget(**target_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\parttool.py", line 97, in __init__
+    partition_table = gen.PartitionTable.from_csv(f.read())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 168, in from_csv
+    raise InputError('Error at line %d: %s\nPlease check extra_partition_subtypes.inc file in build/config directory' % (line_no + 1, err))
+gen_esp32part.InputError: Error at line 7: Value 'data  nvs' is not valid. Known keywords: app, data
+Please check extra_partition_subtypes.inc file in build/config directory
+Traceback (most recent call last):
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 503, in parse_int
+    return int(v, 0)
+           ^^^^^^^^^
+ValueError: invalid literal for int() with base 0: 'data  nvs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 508, in parse_int
+    return keywords[v.lower()]
+           ~~~~~~~~^^^^^^^^^^^
+KeyError: 'data  nvs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 166, in from_csv
+    res.append(PartitionDefinition.from_csv(line, line_no + 1))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 348, in from_csv
+    res.type = res.parse_type(fields[1])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 396, in parse_type
+    return parse_int(strval, TYPES)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 510, in parse_int
+    raise InputError("Value '%s' is not valid. Known keywords: %s" % (v, ', '.join(keywords)))
+gen_esp32part.InputError: Value 'data  nvs' is not valid. Known keywords: app, data
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\parttool.py", line 358, in <module>
+    main()
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\parttool.py", line 327, in main
+    target = ParttoolTarget(**target_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\parttool.py", line 97, in __init__
+    partition_table = gen.PartitionTable.from_csv(f.read())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 168, in from_csv
+    raise InputError('Error at line %d: %s\nPlease check extra_partition_subtypes.inc file in build/config directory' % (line_no + 1, err))
+gen_esp32part.InputError: Error at line 7: Value 'data  nvs' is not valid. Known keywords: app, data
+Please check extra_partition_subtypes.inc file in build/config directory
+Traceback (most recent call last):
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 503, in parse_int
+    return int(v, 0)
+           ^^^^^^^^^
+ValueError: invalid literal for int() with base 0: 'data  nvs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 508, in parse_int
+    return keywords[v.lower()]
+           ~~~~~~~~^^^^^^^^^^^
+KeyError: 'data  nvs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 166, in from_csv
+    res.append(PartitionDefinition.from_csv(line, line_no + 1))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 348, in from_csv
+    res.type = res.parse_type(fields[1])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 396, in parse_type
+    return parse_int(strval, TYPES)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 510, in parse_int
+    raise InputError("Value '%s' is not valid. Known keywords: %s" % (v, ', '.join(keywords)))
+gen_esp32part.InputError: Value 'data  nvs' is not valid. Known keywords: app, data
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\parttool.py", line 358, in <module>
+    main()
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\parttool.py", line 327, in main
+    target = ParttoolTarget(**target_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\parttool.py", line 97, in __init__
+    partition_table = gen.PartitionTable.from_csv(f.read())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\partition_table\gen_esp32part.py", line 168, in from_csv
+    raise InputError('Error at line %d: %s\nPlease check extra_partition_subtypes.inc file in build/config directory' % (line_no + 1, err))
+gen_esp32part.InputError: Error at line 7: Value 'data  nvs' is not valid. Known keywords: app, data
+Please check extra_partition_subtypes.inc file in build/config directory

@@ -25,7 +25,12 @@
     "nvs_flash.h": "c",
     "esp_http_server.h": "c",
     "stdc++.h": "c",
-    "file_serving_example_common.h": "c"
+    "file_serving_example_common.h": "c",
+    "stdio.h": "c",
+    "random": "cpp",
+    "wifi_config.h": "c",
+    "mqtt.h": "c",
+    "nvs_app.h": "c"
   },
   "C_Cpp.errorSquiggles": "enabled",
   "idf.portWin": "COM3",

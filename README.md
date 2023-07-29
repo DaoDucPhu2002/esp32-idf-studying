@@ -66,4 +66,36 @@ LƯU Ý:
 EvenGroup : trường hợp 1 task thực thi nhiệm vụ là đọc nút bấm còn 1 task nhiệm vụ in data thì ra sử dụng evenGroup của RTOS;
 //============================================//
 UART COMMAND LINE INTERFACE
+//=============================================//
+để nhúng ảnh + file vào flash.(4M)
+sử dụng lệnh:
+target_add_binary_data(${CMAKE_PROJECT_NAME}.elf "html/index.html" TEXT)
+//nếu gửi html "html/index.html": path
+//thêm ở file Cmakelist,txt
 
+file component: trong thư mục main
+thêm dòng: COMPONET_EMBED_TXTFILES: = path;
+\*\*\* để lấy dữ liệu từ flash:
+
+- dùng lệnh extern:
+  ++ extern const uint8_t index_html_start[] asm("\_binary_index_html_start");
+  ++ extern const uint8_t index_html_end[] asm("\_binary_index_html_end");
+  và lưu ý phải set type
+
+---
+
+để tạo key client trong MQTT:
+chạy Git Bash (chuột phải bấm git bash here):
+sau đó làm theo link: https://test.mosquitto.org/ssl/
+
+---
+
+partitions.csv: bảng chia vùng nhớ của esp
+thiết lập trong menuconfig
+có offset: địa chỉ đặt file. có thẻ tùy chỉnh offset và size
+lưu ý thay đổi flash trong menuconfig
+
+---
+
+để có thể link thư viện bên ngoài (components) thêm dòng
+set(req <tên thư viện> <tên thư viện>) trong file CMakeList trong hàm main

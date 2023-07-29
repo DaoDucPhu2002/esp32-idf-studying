@@ -1,0 +1,12 @@
+[1/1] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\MQTT_Example\build && C:\Users\daoph\.espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/tools/idf_size.py D:/CODE/ESP32-IDF/esp32-idf-studying/MQTT_Example/build/main.map"
+Total sizes:
+Used static DRAM:   10172 bytes ( 170564 remain, 5.6% used)
+      .data size:    7820 bytes
+      .bss  size:    2352 bytes
+Used static IRAM:   49126 bytes (  81946 remain, 37.5% used)
+      .text size:   48099 bytes
+   .vectors size:    1027 bytes
+Used Flash size :  142315 bytes
+      .text     :  106023 bytes
+      .rodata   :   36036 bytes
+Total image size:  199261 bytes (.bin may be padded larger)

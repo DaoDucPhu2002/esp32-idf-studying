@@ -1,75 +1,132 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Giao diện nhập mật khẩu</title>
+  <title>Wi-Fi Networks</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+    table {
+      border-collapse: collapse;
+      width: 50%;
     }
 
-    .container {
-      background-color: #fff;
-      border-radius: 5px;
-      padding: 20px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    }
-
-    .container h2 {
+    th,
+    td {
+      border: 1px solid black;
+      padding: 8px;
       text-align: center;
     }
 
-    .form-group {
-      margin-bottom: 15px;
+    th {
+      background-color: #f2f2f2;
     }
 
-    .form-group label {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-
-    .form-group input[type="password"] {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 3px;
-    }
-
-    .form-group input[type="submit"] {
-      width: 100%;
-      padding: 10px;
-      background-color: #4CAF50;
-      border: none;
-      color: #fff;
-      font-weight: bold;
+    tr:hover {
+      background-color: #f5f5f5;
       cursor: pointer;
-      border-radius: 3px;
     }
 
-    .form-group input[type="submit"]:hover {
-      background-color: #45a049;
+    /* Custom dialog box styles */
+    .dialog-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .dialog-box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <h2>Nhập mật khẩu</h2>
-    <form>
-      <div class="form-group">
-        <label for="password">Mật khẩu:</label>
-        <input type="password" id="password" name="password" required>
-      </div>
-      <div class="form-group">
-        <input type="submit" value="Đăng nhập">
-      </div>
-    </form>
+  <h1>Available Wi-Fi Networks</h1>
+  <table>
+    <tr>
+      <th>SSID</th>
+      <th>Signal Strength (RSSI)</th>
+    </tr>
+    <!-- Data rows will be inserted here from JavaScript -->
+  </table>
+
+  <div class="dialog-overlay" id="dialogOverlay">
+    <div class="dialog-box">
+      <h2>Wi-Fi Password</h2>
+      <label for="passwordInput">Enter Wi-Fi Password:</label>
+      <input type="password" id="passwordInput">
+      <button onclick="connectWifi()">Connect</button>
+      <button onclick="closeDialog()">Cancel</button>
+    </div>
   </div>
+
+  <script>
+    var selectedSSID;
+    var post_wifi = new XMLHttpRequest();
+    var get_info = new XMLHttpRequest();
+    function connectToWifi(ssid) {
+      selectedSSID = ssid;
+      // Show the dialog box
+      var dialogOverlay = document.getElementById("dialogOverlay");
+      dialogOverlay.style.display = "flex";
+    }
+
+    function closeDialog() {
+      var dialogOverlay = document.getElementById("dialogOverlay");
+      var passwordInput = document.getElementById("passwordInput");
+      passwordInput.value = ""; // Clear the password input field
+      // Hide the dialog box
+      dialogOverlay.style.display = "none";
+    }
+
+    function connectWifi() {
+      var passwordInput = document.getElementById("passwordInput");
+      var password = passwordInput.value;
+
+      if (password != "") {
+        post_wifi.open("POST", "/wifi_get_pass");
+        post_wifi.send(selectedSSID + '/' + password + '/');
+        alert("Connecting to Wi-Fi: " + selectedSSID + ", Password: " + password);
+
+
+        closeDialog();
+      }
+    }
+
+    // Example data for the table (you can get this data from the server using AJAX)
+    function displayData(jsonData) {
+      var wifiData = JSON.parse(jsonData);
+      var table = document.querySelector("table");
+
+      // Populate the table with data
+      wifiData.forEach(function (item) {
+        var row = table.insertRow();
+        var ssidCell = row.insertCell();
+        var rssiCell = row.insertCell();
+
+        ssidCell.textContent = item.ssid;
+        rssiCell.textContent = item.rssi;
+
+        // Add click event listener to each row
+        row.addEventListener("click", function () {
+          connectToWifi(item.ssid);
+        });
+      });
+    }
+
+    //Fetch data from server
+    fetch('/wifi_info')
+      .then(Response => Response.json())
+      .then(data => displayData(JSON.stringify(data)))
+      .catch(error => console.error('error featching data'))
+
+  </script>
 </body>
+
 </html>
