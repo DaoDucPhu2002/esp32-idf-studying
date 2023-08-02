@@ -29,9 +29,6 @@ static esp_err_t wifi_get_handler(httpd_req_t *req)
 {
     char *buf;
     size_t buf_len;
-
-    /* Get header value string length and allocate memory for length + 1,
-     * extra byte for null termination */
     buf_len = httpd_req_get_hdr_value_len(req, "Host") + 1;
     if (buf_len > 1)
     {

@@ -8,6 +8,9 @@
 /*AP record*/
 wifi_ap_record_t *wifi_info;
 uint16_t ap_count;
+/*retry sta num*/
+static int retry_num = 0;
+#define MAXIMUM_RETRY 10
 
 /*Provision type variable */
 provisioned_type_t provasion_type = PROVISIONED_ACCESS_POINT;
@@ -71,7 +74,21 @@ static void event_handler(void *arg, esp_event_base_t event_base,
     }
     else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED)
     {
-        esp_wifi_connect();
+        if (retry_num < MAXIMUM_RETRY)
+        {
+            esp_wifi_connect();
+
+            retry_num++;
+        }
+        else
+        {
+            ESP_LOGI(TAG, "Connected wifi is false!!!");
+            ESP_LOGI(TAG, "Erase wifi data form flash");
+            esp_wifi_restore();
+            ESP_LOGI(TAG, "The device will reboot after 5 seconds...");
+            vTaskDelay(5000 / portTICK_PERIOD_MS);
+            esp_restart();
+        }
         xEventGroupClearBits(s_wifi_event_group, CONNECTED_BIT);
     }
     else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP)
@@ -79,6 +96,7 @@ static void event_handler(void *arg, esp_event_base_t event_base,
         ip_event_got_ip_t *event = (ip_event_got_ip_t *)event_data;
         ESP_LOGI(TAG, "got ip:" IPSTR, IP2STR(&event->ip_info.ip));
         xEventGroupSetBits(s_wifi_event_group, CONNECTED_BIT);
+        retry_num = 0;
     }
     else if (event_base == SC_EVENT && event_id == SC_EVENT_SCAN_DONE)
     {

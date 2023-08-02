@@ -64,14 +64,10 @@ void ADC_task(void *pvParameters)
     {
         temp = temp + 1;
         adc_vbat += adc1_get_raw(ADC_VBAT);
-        //  adc_key = adc1_get_raw(ADC_KEY);
-        // printf("ADC KEY:  %d \n", adc_key);
-        // adc_rf = adc1_get_raw(ADC_RF);
-        //    printf("ADC RF:  %d \n", adc_rf);
+
         get_keypad_state();
         adc_charg = adc1_get_raw(ADC_CHARGER);
-        //  printf("ADC CHARG:  %d \n", adc_charg);
-        // adc_rf = ;
+
         if (temp > 10)
         {
             adc_vbat /= 10;
@@ -105,6 +101,6 @@ void app_main(void)
     GPIO_config_test();
     keypad_adc_config();
 
-    // xTaskCreate(Sensor_Handle_task, "Main Task", 2048 * 5, NULL, 6, NULL);
+    xTaskCreate(Sensor_Handle_task, "Main Task", 2048 * 5, NULL, 6, NULL);
     xTaskCreate(ADC_task, "Keypad Task", 1024 * 5, NULL, 3, NULL);
 }

@@ -33,6 +33,6 @@ void app_main(void)
     app_flash_get_int(KEY, &temp);
     temp++;
     app_flash_set_int(KEY, temp);
-    // wifi_manager();
-    // mqtt_app_start();
+    wifi_manager();
+    mqtt_app_start();
 }
