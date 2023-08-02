@@ -43,7 +43,7 @@ void wifi_data_callback(char *data, int len)
 /*Get wifi info */
 void get_info_wifi(char *data, int len)
 {
-    char json_string[200];
+    char json_string[1000];
     snprintf(json_string, sizeof(json_string), "[");
     for (int i = 0; i < ap_count; i++)
     {

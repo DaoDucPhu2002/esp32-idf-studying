@@ -1,0 +1,12 @@
+[1/1] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\Wifi_Connceted_ver2\build && C:\Users\daoph\.espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/tools/idf_size.py D:/CODE/ESP32-IDF/esp32-idf-studying/Wifi_Connceted_ver2/build/main.map"
+Total sizes:
+Used static DRAM:   29244 bytes ( 151492 remain, 16.2% used)
+      .data size:   13180 bytes
+      .bss  size:   16064 bytes
+Used static IRAM:   85050 bytes (  46022 remain, 64.9% used)
+      .text size:   84023 bytes
+   .vectors size:    1027 bytes
+Used Flash size :  721180 bytes
+      .text     :  570483 bytes
+      .rodata   :  150441 bytes
+Total image size:  819410 bytes (.bin may be padded larger)
