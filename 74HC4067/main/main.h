@@ -30,5 +30,3 @@
 #define ADC_CHARGER ADC_CHANNEL_0
 
 #define BUFF_SIZE 1024 * 2
-
-void uart_init();
