@@ -1,0 +1,9 @@
+{
+	"folders": [],
+	"settings": {
+		"EIDE.SerialPortMonitor.BaudRate": 921600,
+		"files.associations": {
+			"*.tcc": "cpp"
+		}
+	}
+}

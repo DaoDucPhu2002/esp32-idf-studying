@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.tcc": "cpp"
+    },
+    "cmake.sourceDirectory": "D:/MyDrive/DungNV8/Project/Thien Viet/Code/ESP32/ESP32_GSafeV3/.pio/libdeps/esp32doit-devkit-v1/Unity"
+}
