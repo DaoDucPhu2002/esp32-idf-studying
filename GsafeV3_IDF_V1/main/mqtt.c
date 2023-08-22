@@ -1,9 +1,12 @@
 #include "main.h"
 #include "mqtt.h"
+#include "peripherals.h"
 #include "mqtt_client.h"
 #include "esp_log.h"
 #define TAG_MQTT "MQTTS_EXAMPLE"
-
+#define topic_mqtt "/DaoDucPhu"
+extern uint8_t data_send[numBytes];
+static esp_mqtt_client_handle_t mqtt_client;
 typedef struct
 {
     char buf[256];
@@ -35,7 +38,7 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
     {
     case MQTT_EVENT_CONNECTED:
         LOG_DEBUG(TAG_MQTT, "\nMQTT_EVENT_CONNECTED");
-        msg_id = esp_mqtt_client_subscribe(client, "/DaoDucPhu", 0);
+        msg_id = esp_mqtt_client_subscribe(client, topic_mqtt, 0);
         LOG_DEBUG(TAG_MQTT, "\nsent subscribe successful, msg_id=%d", msg_id);
 
         break;
@@ -45,13 +48,14 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
 
     case MQTT_EVENT_SUBSCRIBED:
         LOG_DEBUG(TAG_MQTT, "\nMQTT_EVENT_SUBSCRIBED, msg_id=%d", event->msg_id);
-        msg_id = esp_mqtt_client_publish(client, "/DaoDucPhu", "DaoDucPhu", 0, 0, 0);
+        msg_id = esp_mqtt_client_publish(client, topic_mqtt, "DaoDucPhu", 0, 0, 0);
         LOG_DEBUG(TAG_MQTT, "\nsent publish successful, msg_id=%d", msg_id);
         break;
     case MQTT_EVENT_UNSUBSCRIBED:
         LOG_DEBUG(TAG_MQTT, "\nMQTT_EVENT_UNSUBSCRIBED, msg_id=%d", event->msg_id);
         break;
     case MQTT_EVENT_PUBLISHED:
+
         LOG_DEBUG(TAG_MQTT, "\nMQTT_EVENT_PUBLISHED, msg_id=%d", event->msg_id);
         break;
     case MQTT_EVENT_DATA:
@@ -88,8 +92,14 @@ void mqtt_app_start(void)
     };
 
     LOG_DEBUG(TAG_MQTT, "\n[APP] Free memory: %ld bytes", esp_get_free_heap_size());
-    esp_mqtt_client_handle_t client = esp_mqtt_client_init(&mqtt_cfg);
+    mqtt_client = esp_mqtt_client_init(&mqtt_cfg);
     /* The last argument may be used to pass data to the event handler, in this example mqtt_event_handler */
-    esp_mqtt_client_register_event(client, ESP_EVENT_ANY_ID, mqtt_event_handler, NULL);
-    esp_mqtt_client_start(client);
+    esp_mqtt_client_register_event(mqtt_client, ESP_EVENT_ANY_ID, mqtt_event_handler, NULL);
+    esp_mqtt_client_start(mqtt_client);
+}
+
+void mqtt_publish_data(const char *topic, const char *data)
+{
+    int msg_id = esp_mqtt_client_publish(mqtt_client, topic, data, 0, 0, 0);
+    LOG_DEBUG(TAG_MQTT, "Data published, msg_id=%d", msg_id);
 }

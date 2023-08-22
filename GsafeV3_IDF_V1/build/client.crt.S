@@ -1,4 +1,4 @@
-/* * Data converted from D:/CODE/ESP32-IDF/esp32-idf-studying/sample_project/main/client.crt
+/* * Data converted from D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_IDF_V1/main/client.crt
  * (null byte appended)
  */
 .data

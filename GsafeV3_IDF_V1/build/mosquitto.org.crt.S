@@ -1,4 +1,4 @@
-/* * Data converted from D:/CODE/ESP32-IDF/esp32-idf-studying/sample_project/main/mosquitto.org.crt
+/* * Data converted from D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_IDF_V1/main/mosquitto.org.crt
  * (null byte appended)
  */
 .data

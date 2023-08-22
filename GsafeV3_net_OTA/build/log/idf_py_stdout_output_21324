@@ -1,0 +1,17 @@
+[1/855] Generating project_elf_src_esp32.c
+[2/855] Generating memory.ld linker script...
+[3/855] Generating ../../partition_table/partition-table.bin
+FAILED: partition_table/partition-table.bin D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/build/partition_table/partition-table.bin 
+cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\GsafeV3_net_OTA\build\esp-idf\partition_table && C:\Users\daoph\.espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/gen_esp32part.py -q --offset 0x8000 --flash-size 4MB -- D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/partitions.csv D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/build/partition_table/partition-table.bin && C:\Users\daoph\.espressif\tools\cmake\3.24.0\bin\cmake.exe -E echo "Partition table binary generated. Contents:" && C:\Users\daoph\.espressif\tools\cmake\3.24.0\bin\cmake.exe -E echo ******************************************************************************* && C:\Users\daoph\.espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/gen_esp32part.py -q --offset 0x8000 --flash-size 4MB -- D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/build/partition_table/partition-table.bin && C:\Users\daoph\.espressif\tools\cmake\3.24.0\bin\cmake.exe -E echo *******************************************************************************"
+Error at line 4: CSV flag column contains unknown flag 'encryted'
+Please check extra_partition_subtypes.inc file in build/config directory
+[4/855] Building C object esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_chip_drivers.c.obj
+[5/855] Building C object esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/flash_brownout_hook.c.obj
+[6/855] Building C object esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_chip_issi.c.obj
+[7/855] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/secure_boot.c.obj
+[8/855] Building C object esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_chip_mxic.c.obj
+[9/855] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.obj
+[10/855] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/flash_qio_mode.c.obj
+[11/855] Building C object esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_chip_generic.c.obj
+[12/855] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/bootloader_flash_config_esp32.c.obj
+ninja: build stopped: subcommand failed.

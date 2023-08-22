@@ -1,0 +1,67 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\EC200N\build\bootloader\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/CODE/ESP32-IDF/esp32-idf-studying/EC200N/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6710 bytes. 0x8f0 bytes (8%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+D:/CODE/ESP32-IDF/esp32-idf-studying/EC200N/main/main.c: In function 'response_data':
+D:/CODE/ESP32-IDF/esp32-idf-studying/EC200N/main/main.c:63:20: warning: function returns address of local variable [-Wreturn-local-addr]
+   63 |             return response;
+      |                    ^~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/EC200N/main/main.c: In function 'power_on':
+D:/CODE/ESP32-IDF/esp32-idf-studying/EC200N/main/main.c:82:14: warning: unused variable 'pre_time' [-Wunused-variable]
+   82 |     uint32_t pre_time = esp_timer_get_time() / 1000; // Thời gian bắt đầu kiểm tra
+      |              ^~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/EC200N/main/main.c: In function 'MQTT_Setup':
+D:/CODE/ESP32-IDF/esp32-idf-studying/EC200N/main/main.c:131:10: warning: unused variable 'response' [-Wunused-variable]
+  131 |     char response[128];
+      |          ^~~~~~~~
+[3/8] Linking C static library esp-idf\main\libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable main.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.5.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/CODE/ESP32-IDF/esp32-idf-studying/EC200N/build/main.bin
+[7/8] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\EC200N\build\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/CODE/ESP32-IDF/esp32-idf-studying/EC200N/build/partition_table/partition-table.bin D:/CODE/ESP32-IDF/esp32-idf-studying/EC200N/build/main.bin"
+main.bin binary size 0x31ed0 bytes. Smallest app partition is 0x100000 bytes. 0xce130 bytes (80%) free.
+[7/8] cmd.exe /C "cd /D C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\esptool_py && C:\Users\daoph\.espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1 -D SERIAL_TOOL=C:/Users/daoph/.espressif/python_env/idf5.0_py3.11_env/Scripts/python.exe;;C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/CODE/ESP32-IDF/esp32-idf-studying/EC200N/build -P C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esptool_py/run_serial_tool.cmake"
+esptool esp32 -p COM16 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 main.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.5.1
+Serial port COM16
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: c0:49:ef:e0:11:70
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00041fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26384 bytes to 16454...
+Writing at 0x00001000... (50 %)
+Writing at 0x000076ac... (100 %)
+Wrote 26384 bytes (16454 compressed) at 0x00001000 in 0.8 seconds (effective 268.8 kbit/s)...
+Hash of data verified.
+Compressed 204496 bytes to 108036...
+Writing at 0x00010000... (14 %)
+Writing at 0x0001c9c4... (28 %)
+Writing at 0x00022217... (42 %)
+Writing at 0x000280e4... (57 %)
+Writing at 0x0002e53d... (71 %)
+Writing at 0x00038b4d... (85 %)
+Writing at 0x0003e59c... (100 %)
+Wrote 204496 bytes (108036 compressed) at 0x00010000 in 2.6 seconds (effective 637.2 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 304.0 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

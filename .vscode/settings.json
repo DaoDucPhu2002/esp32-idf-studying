@@ -32,7 +32,11 @@
     "mqtt.h": "c",
     "nvs_app.h": "c",
     "*.tcc": "c",
-    "network_user.h": "c"
+    "network_user.h": "c",
+    "peripherals.h": "c",
+    "source_location": "c",
+    "ec200.h": "c",
+    "esp_http_client.h": "c"
   },
   "C_Cpp.errorSquiggles": "enabled",
   "idf.portWin": "COM3",

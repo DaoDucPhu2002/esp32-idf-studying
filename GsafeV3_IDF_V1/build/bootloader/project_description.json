@@ -1,8 +1,8 @@
 {
     "project_name":       "bootloader",
     "project_path":       "C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/bootloader/subproject",
-    "build_dir":          "D:/CODE/ESP32-IDF/esp32-idf-studying/sample_project/build/bootloader",
-    "config_file":        "D:/CODE/ESP32-IDF/esp32-idf-studying/sample_project/sdkconfig",
+    "build_dir":          "D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_IDF_V1/build/bootloader",
+    "config_file":        "D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_IDF_V1/sdkconfig",
     "config_defaults":    "",
     "bootloader_elf":     "",
     "app_elf":            "bootloader.elf",

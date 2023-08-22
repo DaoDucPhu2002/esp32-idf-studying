@@ -38,13 +38,13 @@
 #define EOLINE 23
 #define INSEN 22
 #define LAMP 25
-#define BELL 33
+#define BELL GPIO_NUM_33
 #define RL1 27
 #define RL2 26
 /*Wifi indicator*/
 #define LED_WF 2
-#define LEDR 14
-#define LEDG 12
+#define LEDR 12
+#define LEDG 14
 #define BEEP 4
 #define VBAT_EN 13
 #define V_BOOST 15

@@ -22,4 +22,5 @@
 #include "esp_log.h"
 
 void mqtt_app_start(void);
+void mqtt_publish_data(const char *topic, const char *data);
 #endif

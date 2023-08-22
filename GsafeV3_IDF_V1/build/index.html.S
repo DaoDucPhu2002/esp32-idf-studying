@@ -1,4 +1,4 @@
-/* * Data converted from D:/CODE/ESP32-IDF/esp32-idf-studying/sample_project/html/index.html
+/* * Data converted from D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_IDF_V1/html/index.html
  * (null byte appended)
  */
 .data

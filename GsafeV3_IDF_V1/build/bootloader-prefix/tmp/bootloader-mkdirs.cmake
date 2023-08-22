@@ -5,18 +5,18 @@ cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
   "C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/bootloader/subproject"
-  "D:/CODE/ESP32-IDF/esp32-idf-studying/sample_project/build/bootloader"
-  "D:/CODE/ESP32-IDF/esp32-idf-studying/sample_project/build/bootloader-prefix"
-  "D:/CODE/ESP32-IDF/esp32-idf-studying/sample_project/build/bootloader-prefix/tmp"
-  "D:/CODE/ESP32-IDF/esp32-idf-studying/sample_project/build/bootloader-prefix/src/bootloader-stamp"
-  "D:/CODE/ESP32-IDF/esp32-idf-studying/sample_project/build/bootloader-prefix/src"
-  "D:/CODE/ESP32-IDF/esp32-idf-studying/sample_project/build/bootloader-prefix/src/bootloader-stamp"
+  "D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_IDF_V1/build/bootloader"
+  "D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_IDF_V1/build/bootloader-prefix"
+  "D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_IDF_V1/build/bootloader-prefix/tmp"
+  "D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_IDF_V1/build/bootloader-prefix/src/bootloader-stamp"
+  "D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_IDF_V1/build/bootloader-prefix/src"
+  "D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_IDF_V1/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "D:/CODE/ESP32-IDF/esp32-idf-studying/sample_project/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_IDF_V1/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "D:/CODE/ESP32-IDF/esp32-idf-studying/sample_project/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_IDF_V1/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

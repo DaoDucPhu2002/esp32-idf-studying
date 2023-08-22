@@ -4,8 +4,8 @@
 #include "main.h"
 #include "esp_timer.h"
 /*Info Device*/
-#define ESP_ID "123456789012"
-#define IMEI "" // Get form module sim
+#define ESP_ID "123456789012ABC"
+#define IMEI "12345ABC334" // Get form module sim
 
 /*Define Function */
 #define LAMP_ON gpio_set_level(LAMP, 1)
@@ -25,19 +25,19 @@
 
 #define LED_WF_ON gpio_set_level(LED_WF, 1)
 #define LED_WF_OFF gpio_set_level(LED_WF, 0)
-#define LED_WF_TOGGLE() gpio_set_level(LED_WF, !gpio_get_level(LED_WF))
+#define LED_WF_TOGGLE gpio_set_level(LED_WF, !gpio_get_level(LED_WF))
 
 #define BEEP_ON gpio_set_level(BEEP, 1)
 #define BEEP_OFF gpio_set_level(BEEP, 0)
-#define BEEP_TOGGLE() gpio_set_level(BEEP, !gpio_get_level(BEEP))
+#define BEEP_TOGGLE gpio_set_level(BEEP, !gpio_get_level(BEEP))
 
 #define LEDR_ON gpio_set_level(LEDR, 1)
 #define LEDR_OFF gpio_set_level(LEDR, 0)
-#define LEDR_TOGGLE() gpio_set_level(LEDR, !gpio_get_level(LEDR))
+#define LEDR_TOGGLE gpio_set_level(LEDR, !gpio_get_level(LEDR))
 
 #define LEDG_ON gpio_set_level(LEDG, 1)
 #define LEDG_OFF gpio_set_level(LEDG, 0)
-#define LEDG_TOGGLE() gpio_set_level(LEDG, !gpio_get_level(LEDG))
+#define LEDG_TOGGLE gpio_set_level(LEDG, !gpio_get_level(LEDG))
 
 #define ALARM 0x00
 #define NOT_USE 0x01
@@ -48,15 +48,16 @@
 #define PW_BAT 0x02
 #define PWM_CHARG 0x04
 #define BAT_OK 0x08
+/*RF remote*/
 
 /*KEY PAD*/
 #define KEY_MODE 1
 #define KEY_BELL 2
 #define KEY_CHECK 3
-#define KEY_M_B 4
-#define KEY_M_C 5
-#define KEY_B_C 6
-#define KEY_M_B_C 7
+// #define KEY_M_B 4
+// #define KEY_M_C 5
+// #define KEY_B_C 6
+// #define KEY_M_B_C 7
 /*Data*/
 #define numLine 16     // 3
 #define byteOfLine 1   // 33 //17 33
@@ -75,6 +76,16 @@
 
 #define UART_SIM UART_NUM_2
 /*Function Handle*/
-void uart_init(void);
-
+void uart_init();
+void gpio_init(void);
+void checkAlarm(void);
+void data_to_send();
+void adc_init(void);
+void Read_Sensor();
+void Peripheral_data_processing();
+void checkLineStatus();
+void taskStatus(void *xParameters);
+void InitIO();
+void SaveSettingToEEPROM();
+int check_RF();
 #endif

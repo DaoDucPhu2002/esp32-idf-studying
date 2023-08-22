@@ -1,0 +1,71 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\GsafeV3_IDF_V1\build\bootloader\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_IDF_V1/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6710 bytes. 0x8f0 bytes (8%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/peripherals.c.obj
+In file included from D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_IDF_V1/main/main.h:5,
+                 from D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_IDF_V1/main/peripherals.h:4,
+                 from D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_IDF_V1/main/peripherals.c:1:
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_IDF_V1/main/peripherals.c: In function 'gpio_init':
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_IDF_V1/main/peripherals.c:64:59: warning: left shift count >= width of type [-Wshift-count-overflow]
+   64 |                              (1 << RL1) | (1 << RL2) | (1 << BELL) | (1 << LAMP) |
+      |                                                           ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_IDF_V1/main/peripherals.c: In function 'data_to_send':
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_IDF_V1/main/peripherals.c:368:34: warning: iteration 12 invokes undefined behavior [-Waggressive-loop-optimizations]
+  368 |         data_send[index++] = IMEI[line];
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_IDF_V1/main/peripherals.c:366:25: note: within this loop
+  366 |     for (line = 0; line < sendIMEI; line++)
+[3/8] Linking C static library esp-idf\main\libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable main.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.5.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_IDF_V1/build/main.bin
+[7/8] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\GsafeV3_IDF_V1\build\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_IDF_V1/build/partition_table/partition-table.bin D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_IDF_V1/build/main.bin"
+main.bin binary size 0x37330 bytes. Smallest app partition is 0x100000 bytes. 0xc8cd0 bytes (78%) free.
+[7/8] cmd.exe /C "cd /D C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\esptool_py && C:\Users\daoph\.espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1 -D SERIAL_TOOL=C:/Users/daoph/.espressif/python_env/idf5.0_py3.11_env/Scripts/python.exe;;C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_IDF_V1/build -P C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esptool_py/run_serial_tool.cmake"
+esptool esp32 -p COM17 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 main.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.5.1
+Serial port COM17
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: c0:49:ef:e0:11:70
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00047fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26384 bytes to 16454...
+Writing at 0x00001000... (50 %)
+Writing at 0x000076ac... (100 %)
+Wrote 26384 bytes (16454 compressed) at 0x00001000 in 0.9 seconds (effective 242.3 kbit/s)...
+Hash of data verified.
+Compressed 226096 bytes to 122001...
+Writing at 0x00010000... (12 %)
+Writing at 0x0001cebe... (25 %)
+Writing at 0x000229ba... (37 %)
+Writing at 0x000287e0... (50 %)
+Writing at 0x0002e282... (62 %)
+Writing at 0x00036d83... (75 %)
+Writing at 0x0003ec77... (87 %)
+Writing at 0x00044862... (100 %)
+Wrote 226096 bytes (122001 compressed) at 0x00010000 in 2.9 seconds (effective 631.9 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 340.1 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
