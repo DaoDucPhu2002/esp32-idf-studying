@@ -1,0 +1,14 @@
+[1/7] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\DoAn\Smart_Switch_V1\build\bootloader\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/CODE/ESP32-IDF/esp32-idf-studying/DoAn/Smart_Switch_V1/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6710 bytes. 0x8f0 bytes (8%) free.
+[2/5] Linking CXX executable do_an_chuyen_nganh.elf
+FAILED: do_an_chuyen_nganh.elf 
+cmd.exe /C "cd . && C:\Users\daoph\.espressif\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-g++.exe -mlongcalls -Wno-frame-address  @CMakeFiles\do_an_chuyen_nganh.elf.rsp -o do_an_chuyen_nganh.elf  && cd ."
+c:/users/daoph/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: esp-idf/main/libmain.a(mqtt.c.obj):(.literal.mqtt_event_handler+0x40): undefined reference to `get_mqtt_data_callback'
+c:/users/daoph/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: esp-idf/main/libmain.a(mqtt.c.obj): in function `mqtt_event_handler':
+D:/CODE/ESP32-IDF/esp32-idf-studying/DoAn/Smart_Switch_V1/main/mqtt.c:85: undefined reference to `get_mqtt_data_callback'
+c:/users/daoph/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: esp-idf/main/libmain.a(main.c.obj):(.literal.app_main+0x28): undefined reference to `mqtt_app_public_callback'
+c:/users/daoph/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: esp-idf/main/libmain.a(main.c.obj): in function `app_main':
+D:/CODE/ESP32-IDF/esp32-idf-studying/DoAn/Smart_Switch_V1/main/main.c:116: undefined reference to `mqtt_app_public_callback'
+collect2.exe: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.

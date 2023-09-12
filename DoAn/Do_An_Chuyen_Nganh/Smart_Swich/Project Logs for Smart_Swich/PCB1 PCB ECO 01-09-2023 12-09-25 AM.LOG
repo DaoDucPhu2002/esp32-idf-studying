@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=NetD?_1 Pin=L?-1
+Removed Pin From Net: NetName=5V Pin=L?-2
+Removed Member From Class: ClassName=Mat_Duoi Member=L?
+Added Component: Designator=L1(Cuon Cam 12x12x10)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "Dán"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Cu?n C?m 100uH 7x7x4MM CD74"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetD?_1 Pin=L1-1
+Added Pin To Net: NetName=5V Pin=L1-2
+Added Member To Class: ClassName=Mat_Duoi Member=Component L1 100uH - 3A SMD
+Added Room: Name=Mat_Duoi
+Added Room: Name=Mat_tren

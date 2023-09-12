@@ -1,0 +1,115 @@
+[1/12] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/EC200.c.obj
+[2/12] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/mqtt.c.obj
+[3/12] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\GsafaV3_24082023\build\bootloader\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6710 bytes. 0x8f0 bytes (8%) free.
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/main/main.c: In function 'app_main':
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/main/main.c:87:15: warning: passing argument 1 of 'MQTT_Open' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   87 |     MQTT_Open(mqtt_hostname, mqtt_port, ESP_ID, topicSever4G, mqtt_user, mqtt_pass);
+      |               ^~~~~~~~~~~~~
+In file included from D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/main/main.c:6:
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/main/EC200.h:24:21: note: expected 'char *' but argument is of type 'const char *'
+   24 | int MQTT_Open(char *mqtt_server, int mqtt_port, char *esp_id, char *topic_srv, char *user, char *passwd);
+      |               ~~~~~~^~~~~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/main/main.c:87:63: warning: passing argument 5 of 'MQTT_Open' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   87 |     MQTT_Open(mqtt_hostname, mqtt_port, ESP_ID, topicSever4G, mqtt_user, mqtt_pass);
+      |                                                               ^~~~~~~~~
+In file included from D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/main/main.c:6:
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/main/EC200.h:24:86: note: expected 'char *' but argument is of type 'const char *'
+   24 | int MQTT_Open(char *mqtt_server, int mqtt_port, char *esp_id, char *topic_srv, char *user, char *passwd);
+      |                                                                                ~~~~~~^~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/main/main.c:87:74: warning: passing argument 6 of 'MQTT_Open' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   87 |     MQTT_Open(mqtt_hostname, mqtt_port, ESP_ID, topicSever4G, mqtt_user, mqtt_pass);
+      |                                                                          ^~~~~~~~~
+In file included from D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/main/main.c:6:
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/main/EC200.h:24:98: note: expected 'char *' but argument is of type 'const char *'
+   24 | int MQTT_Open(char *mqtt_server, int mqtt_port, char *esp_id, char *topic_srv, char *user, char *passwd);
+      |                                                                                            ~~~~~~^~~~~~
+[5/10] Linking C static library esp-idf\main\libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable main.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.5.1
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/build/main.bin
+[9/10] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\GsafaV3_24082023\build\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/build/partition_table/partition-table.bin D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/build/main.bin"
+main.bin binary size 0xe93a0 bytes. Smallest app partition is 0x150000 bytes. 0x66c60 bytes (31%) free.
+[9/10] cmd.exe /C "cd /D C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\esptool_py && C:\Users\daoph\.espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1 -D SERIAL_TOOL=C:/Users/daoph/.espressif/python_env/idf5.0_py3.11_env/Scripts/python.exe;;C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/build -P C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esptool_py/run_serial_tool.cmake"
+esptool esp32 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x20000 main.bin 0x8000 partition_table/partition-table.bin 0x11000 ota_data_initial.bin
+esptool.py v4.5.1
+Serial port COM3
+Connecting....
+Chip is ESP32-D0WD (revision v1.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 10:52:1c:76:17:94
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00020000 to 0x00109fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x00011000 to 0x00012fff...
+Compressed 26384 bytes to 16452...
+Writing at 0x00001000... (50 %)
+Writing at 0x000076af... (100 %)
+Wrote 26384 bytes (16452 compressed) at 0x00001000 in 0.9 seconds (effective 237.7 kbit/s)...
+Hash of data verified.
+Compressed 955296 bytes to 606618...
+Writing at 0x00020000... (2 %)
+Writing at 0x0002c824... (5 %)
+Writing at 0x00035b8d... (7 %)
+Writing at 0x0003b29a... (10 %)
+Writing at 0x000457c7... (13 %)
+Writing at 0x0004fd14... (15 %)
+Writing at 0x000559af... (18 %)
+Writing at 0x0005b2ea... (21 %)
+Writing at 0x00061000... (23 %)
+Writing at 0x00066a2b... (26 %)
+Writing at 0x0006ccc7... (28 %)
+Writing at 0x00072612... (31 %)
+Writing at 0x00077f9c... (34 %)
+Writing at 0x0007e60a... (36 %)
+Writing at 0x0008419b... (39 %)
+Writing at 0x00089abd... (42 %)
+Writing at 0x0008ef57... (44 %)
+Writing at 0x00094293... (47 %)
+Writing at 0x000996c0... (50 %)
+Writing at 0x0009ea86... (52 %)
+Writing at 0x000a4098... (55 %)
+Writing at 0x000a9987... (57 %)
+Writing at 0x000af716... (60 %)
+Writing at 0x000b4f8b... (63 %)
+Writing at 0x000ba9f8... (65 %)
+Writing at 0x000bffd1... (68 %)
+Writing at 0x000c5a2e... (71 %)
+Writing at 0x000cb25a... (73 %)
+Writing at 0x000d09e4... (76 %)
+Writing at 0x000d63f7... (78 %)
+Writing at 0x000dbf39... (81 %)
+Writing at 0x000e1778... (84 %)
+Writing at 0x000ea1ca... (86 %)
+Writing at 0x000f2a6e... (89 %)
+Writing at 0x000f86d2... (92 %)
+Writing at 0x000fe0db... (94 %)
+Writing at 0x00103a6a... (97 %)
+Writing at 0x001091a8... (100 %)
+Wrote 955296 bytes (606618 compressed) at 0x00020000 in 14.1 seconds (effective 543.4 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 127...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (127 compressed) at 0x00008000 in 0.1 seconds (effective 325.4 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 31...
+Writing at 0x00011000... (100 %)
+Wrote 8192 bytes (31 compressed) at 0x00011000 in 0.2 seconds (effective 435.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

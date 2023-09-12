@@ -1,0 +1,85 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\DoAn\Smart_Switch_V1\build\bootloader\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/CODE/ESP32-IDF/esp32-idf-studying/DoAn/Smart_Switch_V1/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6710 bytes. 0x8f0 bytes (8%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[3/8] Linking C static library esp-idf\main\libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable do_an_chuyen_nganh.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.5.1
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated D:/CODE/ESP32-IDF/esp32-idf-studying/DoAn/Smart_Switch_V1/build/do_an_chuyen_nganh.bin
+[7/8] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\DoAn\Smart_Switch_V1\build\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/CODE/ESP32-IDF/esp32-idf-studying/DoAn/Smart_Switch_V1/build/partition_table/partition-table.bin D:/CODE/ESP32-IDF/esp32-idf-studying/DoAn/Smart_Switch_V1/build/do_an_chuyen_nganh.bin"
+do_an_chuyen_nganh.bin binary size 0xe59f0 bytes. Smallest app partition is 0x100000 bytes. 0x1a610 bytes (10%) free.
+[7/8] cmd.exe /C "cd /D C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\esptool_py && C:\Users\daoph\.espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1 -D SERIAL_TOOL=C:/Users/daoph/.espressif/python_env/idf5.0_py3.11_env/Scripts/python.exe;;C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/CODE/ESP32-IDF/esp32-idf-studying/DoAn/Smart_Switch_V1/build -P C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esptool_py/run_serial_tool.cmake"
+esptool esp32 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 do_an_chuyen_nganh.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.5.1
+Serial port COM3
+Connecting.......
+Chip is ESP32-D0WD (revision v1.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 10:52:1c:76:17:94
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000f5fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26384 bytes to 16451...
+Writing at 0x00001000... (50 %)
+Writing at 0x000076ae... (100 %)
+Wrote 26384 bytes (16451 compressed) at 0x00001000 in 0.9 seconds (effective 238.6 kbit/s)...
+Hash of data verified.
+Compressed 940528 bytes to 598423...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001c73b... (5 %)
+Writing at 0x000255b8... (8 %)
+Writing at 0x0002ae1b... (10 %)
+Writing at 0x00035252... (13 %)
+Writing at 0x0003f2fa... (16 %)
+Writing at 0x00044e7d... (18 %)
+Writing at 0x0004a8f6... (21 %)
+Writing at 0x0005051a... (24 %)
+Writing at 0x00056020... (27 %)
+Writing at 0x0005c1f4... (29 %)
+Writing at 0x00061ad2... (32 %)
+Writing at 0x0006744a... (35 %)
+Writing at 0x0006dab1... (37 %)
+Writing at 0x00073573... (40 %)
+Writing at 0x00078e51... (43 %)
+Writing at 0x0007e238... (45 %)
+Writing at 0x0008364e... (48 %)
+Writing at 0x000889d9... (51 %)
+Writing at 0x0008df55... (54 %)
+Writing at 0x000935cc... (56 %)
+Writing at 0x00098d34... (59 %)
+Writing at 0x0009eb41... (62 %)
+Writing at 0x000a45af... (64 %)
+Writing at 0x000a9e03... (67 %)
+Writing at 0x000af443... (70 %)
+Writing at 0x000b4d65... (72 %)
+Writing at 0x000ba61c... (75 %)
+Writing at 0x000bfdd5... (78 %)
+Writing at 0x000c5747... (81 %)
+Writing at 0x000cb306... (83 %)
+Writing at 0x000d0b4b... (86 %)
+Writing at 0x000da4f3... (89 %)
+Writing at 0x000e1dc5... (91 %)
+Writing at 0x000e7ab6... (94 %)
+Writing at 0x000ed5b3... (97 %)
+Writing at 0x000f2ac0... (100 %)
+Wrote 940528 bytes (598423 compressed) at 0x00010000 in 13.7 seconds (effective 548.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 315.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

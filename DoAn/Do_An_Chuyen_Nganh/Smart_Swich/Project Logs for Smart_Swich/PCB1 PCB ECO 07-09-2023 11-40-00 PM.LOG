@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=IR_Pin Pin=MD?-14
+Added Net: Name=IR_Pin
+Added Member To Class: ClassName=Mat_Duoi Member=Component HD? Header 2
+Added Room: Name=Mat_tren

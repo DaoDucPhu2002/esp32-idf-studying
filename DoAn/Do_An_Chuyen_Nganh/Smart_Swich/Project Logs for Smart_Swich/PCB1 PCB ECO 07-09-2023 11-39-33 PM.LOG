@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=Net*_4 Pin=HD?-1
+Removed Pin From Net: NetName=Net*_3 Pin=HD?-2
+Removed Pin From Net: NetName=5V Pin=JP10-1
+Removed Pin From Net: NetName=OUT1_2 Pin=JP10-2
+Removed Pin From Net: NetName=\ Pin=JP10-3
+Removed Pin From Net: NetName=GND Pin=JP10-4
+Removed Member From Class: ClassName=Mat_Duoi Member=HD?
+Added Pin To Net: NetName=GND Pin=JP10-1
+Added Pin To Net: NetName=\ Pin=JP10-2
+Added Pin To Net: NetName=OUT1_2 Pin=JP10-3
+Added Pin To Net: NetName=5V Pin=JP10-4
+Added Pin To Net: NetName=IR_Pin Pin=MD?-14
+Added Net: Name=IR_Pin
+Added Room: Name=Mat_Duoi
+Added Room: Name=Mat_tren

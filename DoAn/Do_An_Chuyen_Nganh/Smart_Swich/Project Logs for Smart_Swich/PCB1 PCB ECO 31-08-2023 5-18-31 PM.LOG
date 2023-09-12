@@ -1,0 +1,19 @@
+Removed Pin From Net: NetName=GND Pin=Nguon-1
+Removed Pin From Net: NetName=GND Pin=Nguon-1
+Removed Pin From Net: NetName=+12 Pin=Nguon-2
+Removed Pin From Net: NetName=+12 Pin=Nguon-2
+Removed Member From Class: ClassName=Mat_Duoi Member=Nguon
+Added Component: Designator=*(NGUON_220_12)
+Added Pin To Net: NetName=GND Pin=*-1
+Added Pin To Net: NetName=GND Pin=*-1
+Added Pin To Net: NetName=+12 Pin=*-2
+Added Pin To Net: NetName=+12 Pin=*-2
+Added Pin To Net: NetName=Net*_3 Pin=*-3
+Added Pin To Net: NetName=Net*_3 Pin=*-3
+Added Pin To Net: NetName=Net*_3 Pin=HD?-2
+Added Net: Name=Net*_3
+Added Pin To Net: NetName=Net*_4 Pin=*-4
+Added Pin To Net: NetName=Net*_4 Pin=*-4
+Added Pin To Net: NetName=Net*_4 Pin=HD?-1
+Added Net: Name=Net*_4
+Added Member To Class: ClassName=Mat_Duoi Member=Component * MODULE_NGUON

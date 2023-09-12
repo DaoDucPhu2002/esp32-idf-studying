@@ -1,0 +1,265 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\GsafeV3_net_OTA\build\bootloader\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6710 bytes. 0x8f0 bytes (8%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ota_app.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/ota_app.c.obj 
+ccache C:\Users\daoph\.espressif\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DUNITY_INCLUDE_CONFIG_H -ID:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/build/config -ID:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/newlib/platform_include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/freertos/FreeRTOS-Kernel/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/freertos/esp_additions/include/freertos -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/freertos/esp_additions/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_hw_support/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_hw_support/include/soc -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_hw_support/include/soc/esp32 -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_hw_support/port/esp32/. -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_hw_support/port/esp32/private_include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/heap/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/log/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/soc/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/soc/esp32/. -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/soc/esp32/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/hal/esp32/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/hal/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/hal/platform_port/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_rom/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_rom/include/esp32 -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_rom/esp32 -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_common/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_system/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_system/port/soc -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_system/port/include/private -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/xtensa/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/xtensa/esp32/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/lwip/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/lwip/include/apps -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/lwip/include/apps/sntp -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/lwip/lwip/src/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/lwip/port/esp32/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/lwip/port/esp32/include/arch -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_ringbuf/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/efuse/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/efuse/esp32/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/driver/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/driver/deprecated -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/driver/esp32/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_pm/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/mbedtls/port/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/mbedtls/mbedtls/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/mbedtls/mbedtls/library -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/mbedtls/esp_crt_bundle/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_app_format/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/bootloader_support/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/bootloader_support/bootloader_flash/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_partition/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/app_update/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/spi_flash/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/pthread/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_timer/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/app_trace/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_event/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/nvs_flash/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_phy/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_phy/esp32/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/vfs/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_netif/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/wpa_supplicant/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/wpa_supplicant/port/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/wpa_supplicant/esp_supplicant/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_wifi/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/unity/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/unity/unity/src -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/cmock/CMock/src -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/console -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/http_parser -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp-tls -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp-tls/esp-tls-crypto -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_adc/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_adc/interface -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_adc/esp32/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_adc/deprecated/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_eth/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_gdbstub/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_gdbstub/xtensa -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_gdbstub/esp32 -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_hid/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/tcp_transport/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_http_client/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_http_server/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_https_ota/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_lcd/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_lcd/interface -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/protobuf-c/protobuf-c -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/protocomm/include/common -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/protocomm/include/security -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/protocomm/include/transports -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_local_ctrl/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_psram/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/espcoredump/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/espcoredump/include/port/xtensa -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/wear_levelling/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/sdmmc/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/fatfs/diskio -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/fatfs/vfs -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/fatfs/src -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/idf_test/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/idf_test/include/esp32 -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/ieee802154/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/json/cJSON -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/mqtt/esp-mqtt/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/perfmon/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/spiffs/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/ulp/ulp_common/include -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/ulp/ulp_common/include/esp32 -IC:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/wifi_provisioning/include -mlongcalls -Wno-frame-address  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fmacro-prefix-map=D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA=. -fmacro-prefix-map=C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1=/IDF -fstrict-volatile-bitfields -Wno-error=unused-but-set-variable -fno-jump-tables -fno-tree-switch-conversion -DconfigENABLE_FREERTOS_DEBUG_OCDAWARE=1 -std=gnu17 -Wno-old-style-declaration -D_GNU_SOURCE -DIDF_VER=\"v5.0.1-dirty\" -DESP_PLATFORM -D_POSIX_READER_WRITER_LOCKS -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/ota_app.c.obj -MF esp-idf\main\CMakeFiles\__idf_main.dir\ota_app.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/ota_app.c.obj -c D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c: In function 'esp_https_ota_begin_copy':
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:31:5: error: implicit declaration of function 'esp_https_ota_dispatch_event' [-Werror=implicit-function-declaration]
+   31 |     esp_https_ota_dispatch_event(ESP_HTTPS_OTA_START, NULL, 0);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:45:10: error: implicit declaration of function 'is_server_verification_enabled' [-Werror=implicit-function-declaration]
+   45 |     if (!is_server_verification_enabled(ota_config))
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:56:5: error: unknown type name 'esp_https_ota_t'; did you mean 'esp_https_ota_event_t'?
+   56 |     esp_https_ota_t *https_ota_handle = calloc(1, sizeof(esp_https_ota_t));
+      |     ^~~~~~~~~~~~~~~
+      |     esp_https_ota_event_t
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:56:58: error: 'esp_https_ota_t' undeclared (first use in this function); did you mean 'esp_https_ota'?
+   56 |     esp_https_ota_t *https_ota_handle = calloc(1, sizeof(esp_https_ota_t));
+      |                                                          ^~~~~~~~~~~~~~~
+      |                                                          esp_https_ota
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:56:58: note: each undeclared identifier is reported only once for each function it appears in
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:64:21: error: request for member 'partial_http_download' in something not a structure or union
+   64 |     https_ota_handle->partial_http_download = ota_config->partial_http_download;
+      |                     ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:65:21: error: request for member 'max_http_request_size' in something not a structure or union
+   65 |     https_ota_handle->max_http_request_size = (ota_config->max_http_request_size == 0) ? DEFAULT_REQUEST_SIZE : ota_config->max_http_request_size;
+      |                     ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:65:90: error: 'DEFAULT_REQUEST_SIZE' undeclared (first use in this function)
+   65 |     https_ota_handle->max_http_request_size = (ota_config->max_http_request_size == 0) ? DEFAULT_REQUEST_SIZE : ota_config->max_http_request_size;
+      |                                                                                          ^~~~~~~~~~~~~~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:68:21: error: request for member 'http_client' in something not a structure or union
+   68 |     https_ota_handle->http_client = esp_http_client_init(ota_config->http_config);
+      |                     ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:69:25: error: request for member 'http_client' in something not a structure or union
+   69 |     if (https_ota_handle->http_client == NULL)
+      |                         ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:78:63: error: request for member 'http_client' in something not a structure or union
+   78 |         err = ota_config->http_client_init_cb(https_ota_handle->http_client);
+      |                                                               ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:86:25: error: request for member 'partial_http_download' in something not a structure or union
+   86 |     if (https_ota_handle->partial_http_download)
+      |                         ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:88:52: error: request for member 'http_client' in something not a structure or union
+   88 |         esp_http_client_set_method(https_ota_handle->http_client, HTTP_METHOD_HEAD);
+      |                                                    ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:89:55: error: request for member 'http_client' in something not a structure or union
+   89 |         err = esp_http_client_perform(https_ota_handle->http_client);
+      |                                                       ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:92:74: error: request for member 'http_client' in something not a structure or union
+   92 |             int status = esp_http_client_get_status_code(https_ota_handle->http_client);
+      |                                                                          ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:106:25: error: request for member 'image_length' in something not a structure or union
+  106 |         https_ota_handle->image_length = esp_http_client_get_content_length(https_ota_handle->http_client);
+      |                         ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:106:93: error: request for member 'http_client' in something not a structure or union
+  106 |         https_ota_handle->image_length = esp_http_client_get_content_length(https_ota_handle->http_client);
+      |                                                                                             ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:107:47: error: request for member 'http_client' in something not a structure or union
+  107 |         esp_http_client_close(https_ota_handle->http_client);
+      |                                               ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:109:29: error: request for member 'image_length' in something not a structure or union
+  109 |         if (https_ota_handle->image_length > https_ota_handle->max_http_request_size)
+      |                             ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:109:62: error: request for member 'max_http_request_size' in something not a structure or union
+  109 |         if (https_ota_handle->image_length > https_ota_handle->max_http_request_size)
+      |                                                              ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:112:65: error: request for member 'max_http_request_size' in something not a structure or union
+  112 |             asprintf(&header_val, "bytes=0-%d", https_ota_handle->max_http_request_size - 1);
+      |                                                                 ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:120:56: error: request for member 'http_client' in something not a structure or union
+  120 |             esp_http_client_set_header(https_ota_handle->http_client, "Range", header_val);
+      |                                                        ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:123:52: error: request for member 'http_client' in something not a structure or union
+  123 |         esp_http_client_set_method(https_ota_handle->http_client, HTTP_METHOD_GET);
+      |                                                    ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:126:48: error: request for member 'http_client' in something not a structure or union
+  126 |     esp_http_client_set_header(https_ota_handle->http_client, "Host", "test.api.lctech.vn");
+      |                                                ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:127:48: error: request for member 'http_client' in something not a structure or union
+  127 |     esp_http_client_set_header(https_ota_handle->http_client, "x-ESP32-STA-MAC", "10521C761794");
+      |                                                ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:128:48: error: request for member 'http_client' in something not a structure or union
+  128 |     esp_http_client_set_header(https_ota_handle->http_client, "x-ESP32-version", "0.0");
+      |                                                ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:129:11: error: implicit declaration of function '_http_connect'; did you mean 'lwip_connect'? [-Werror=implicit-function-declaration]
+  129 |     err = _http_connect(https_ota_handle->http_client);
+      |           ^~~~~~~~~~~~~
+      |           lwip_connect
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:129:41: error: request for member 'http_client' in something not a structure or union
+  129 |     err = _http_connect(https_ota_handle->http_client);
+      |                                         ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:140:26: error: request for member 'partial_http_download' in something not a structure or union
+  140 |     if (!https_ota_handle->partial_http_download)
+      |                          ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:142:25: error: request for member 'image_length' in something not a structure or union
+  142 |         https_ota_handle->image_length = esp_http_client_get_content_length(https_ota_handle->http_client);
+      |                         ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:142:93: error: request for member 'http_client' in something not a structure or union
+  142 |         https_ota_handle->image_length = esp_http_client_get_content_length(https_ota_handle->http_client);
+      |                                                                                             ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:145:21: error: request for member 'update_partition' in something not a structure or union
+  145 |     https_ota_handle->update_partition = NULL;
+      |                     ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:147:21: error: request for member 'update_partition' in something not a structure or union
+  147 |     https_ota_handle->update_partition = esp_ota_get_next_update_partition(NULL);
+      |                     ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:148:25: error: request for member 'update_partition' in something not a structure or union
+  148 |     if (https_ota_handle->update_partition == NULL)
+      |                         ^~
+In file included from D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:4:
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:155:30: error: request for member 'update_partition' in something not a structure or union
+  155 |              https_ota_handle->update_partition->subtype, https_ota_handle->update_partition->address);
+      |                              ^~
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/log/include/esp_log.h:410:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  410 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/log/include/esp_log.h:342:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  342 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:154:5: note: in expansion of macro 'ESP_LOGI'
+  154 |     ESP_LOGI(TAG, "Writing to partition subtype %d at offset 0x%x",
+      |     ^~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:155:75: error: request for member 'update_partition' in something not a structure or union
+  155 |              https_ota_handle->update_partition->subtype, https_ota_handle->update_partition->address);
+      |                                                                           ^~
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/log/include/esp_log.h:410:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  410 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/log/include/esp_log.h:342:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  342 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:154:5: note: in expansion of macro 'ESP_LOGI'
+  154 |     ESP_LOGI(TAG, "Writing to partition subtype %d at offset 0x%x",
+      |     ^~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:155:30: error: request for member 'update_partition' in something not a structure or union
+  155 |              https_ota_handle->update_partition->subtype, https_ota_handle->update_partition->address);
+      |                              ^~
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/log/include/esp_log.h:411:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  411 |         else if (level==ESP_LOG_WARN )      { esp_log_write(ESP_LOG_WARN,       tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/log/include/esp_log.h:342:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  342 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:154:5: note: in expansion of macro 'ESP_LOGI'
+  154 |     ESP_LOGI(TAG, "Writing to partition subtype %d at offset 0x%x",
+      |     ^~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:155:75: error: request for member 'update_partition' in something not a structure or union
+  155 |              https_ota_handle->update_partition->subtype, https_ota_handle->update_partition->address);
+      |                                                                           ^~
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/log/include/esp_log.h:411:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  411 |         else if (level==ESP_LOG_WARN )      { esp_log_write(ESP_LOG_WARN,       tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/log/include/esp_log.h:342:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  342 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:154:5: note: in expansion of macro 'ESP_LOGI'
+  154 |     ESP_LOGI(TAG, "Writing to partition subtype %d at offset 0x%x",
+      |     ^~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:155:30: error: request for member 'update_partition' in something not a structure or union
+  155 |              https_ota_handle->update_partition->subtype, https_ota_handle->update_partition->address);
+      |                              ^~
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/log/include/esp_log.h:412:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  412 |         else if (level==ESP_LOG_DEBUG )     { esp_log_write(ESP_LOG_DEBUG,      tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/log/include/esp_log.h:342:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  342 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:154:5: note: in expansion of macro 'ESP_LOGI'
+  154 |     ESP_LOGI(TAG, "Writing to partition subtype %d at offset 0x%x",
+      |     ^~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:155:75: error: request for member 'update_partition' in something not a structure or union
+  155 |              https_ota_handle->update_partition->subtype, https_ota_handle->update_partition->address);
+      |                                                                           ^~
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/log/include/esp_log.h:412:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  412 |         else if (level==ESP_LOG_DEBUG )     { esp_log_write(ESP_LOG_DEBUG,      tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/log/include/esp_log.h:342:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  342 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:154:5: note: in expansion of macro 'ESP_LOGI'
+  154 |     ESP_LOGI(TAG, "Writing to partition subtype %d at offset 0x%x",
+      |     ^~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:155:30: error: request for member 'update_partition' in something not a structure or union
+  155 |              https_ota_handle->update_partition->subtype, https_ota_handle->update_partition->address);
+      |                              ^~
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/log/include/esp_log.h:413:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  413 |         else if (level==ESP_LOG_VERBOSE )   { esp_log_write(ESP_LOG_VERBOSE,    tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/log/include/esp_log.h:342:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  342 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:154:5: note: in expansion of macro 'ESP_LOGI'
+  154 |     ESP_LOGI(TAG, "Writing to partition subtype %d at offset 0x%x",
+      |     ^~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:155:75: error: request for member 'update_partition' in something not a structure or union
+  155 |              https_ota_handle->update_partition->subtype, https_ota_handle->update_partition->address);
+      |                                                                           ^~
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/log/include/esp_log.h:413:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  413 |         else if (level==ESP_LOG_VERBOSE )   { esp_log_write(ESP_LOG_VERBOSE,    tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/log/include/esp_log.h:342:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  342 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:154:5: note: in expansion of macro 'ESP_LOGI'
+  154 |     ESP_LOGI(TAG, "Writing to partition subtype %d at offset 0x%x",
+      |     ^~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:155:30: error: request for member 'update_partition' in something not a structure or union
+  155 |              https_ota_handle->update_partition->subtype, https_ota_handle->update_partition->address);
+      |                              ^~
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/log/include/esp_log.h:414:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  414 |         else                                { esp_log_write(ESP_LOG_INFO,       tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/log/include/esp_log.h:342:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  342 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:154:5: note: in expansion of macro 'ESP_LOGI'
+  154 |     ESP_LOGI(TAG, "Writing to partition subtype %d at offset 0x%x",
+      |     ^~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:155:75: error: request for member 'update_partition' in something not a structure or union
+  155 |              https_ota_handle->update_partition->subtype, https_ota_handle->update_partition->address);
+      |                                                                           ^~
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/log/include/esp_log.h:414:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  414 |         else                                { esp_log_write(ESP_LOG_INFO,       tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/log/include/esp_log.h:342:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  342 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:154:5: note: in expansion of macro 'ESP_LOGI'
+  154 |     ESP_LOGI(TAG, "Writing to partition subtype %d at offset 0x%x",
+      |     ^~~~~~~~
+In file included from D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:15:
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:157:70: error: 'DEFAULT_OTA_BUF_SIZE' undeclared (first use in this function); did you mean 'DEFAULT_HTTP_BUF_SIZE'?
+  157 |     const int alloc_size = MAX(ota_config->http_config->buffer_size, DEFAULT_OTA_BUF_SIZE);
+      |                                                                      ^~~~~~~~~~~~~~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:158:21: error: request for member 'ota_upgrade_buf' in something not a structure or union
+  158 |     https_ota_handle->ota_upgrade_buf = (char *)malloc(alloc_size);
+      |                     ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:159:26: error: request for member 'ota_upgrade_buf' in something not a structure or union
+  159 |     if (!https_ota_handle->ota_upgrade_buf)
+      |                          ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:174:21: error: request for member 'ota_upgrade_buf_size' in something not a structure or union
+  174 |     https_ota_handle->ota_upgrade_buf_size = alloc_size;
+      |                     ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:175:21: error: request for member 'bulk_flash_erase' in something not a structure or union
+  175 |     https_ota_handle->bulk_flash_erase = ota_config->bulk_flash_erase;
+      |                     ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:176:21: error: request for member 'binary_file_len' in something not a structure or union
+  176 |     https_ota_handle->binary_file_len = 0;
+      |                     ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:178:21: error: request for member 'state' in something not a structure or union
+  178 |     https_ota_handle->state = ESP_HTTPS_OTA_BEGIN;
+      |                     ^~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:178:31: error: 'ESP_HTTPS_OTA_BEGIN' undeclared (first use in this function); did you mean 'ESP_HTTPS_OTA_EVENT'?
+  178 |     https_ota_handle->state = ESP_HTTPS_OTA_BEGIN;
+      |                               ^~~~~~~~~~~~~~~~~~~
+      |                               ESP_HTTPS_OTA_EVENT
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:182:5: error: implicit declaration of function '_http_cleanup' [-Werror=implicit-function-declaration]
+  182 |     _http_cleanup(https_ota_handle->http_client);
+      |     ^~~~~~~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:182:35: error: request for member 'http_client' in something not a structure or union
+  182 |     _http_cleanup(https_ota_handle->http_client);
+      |                                   ^~
+cc1.exe: some warnings being treated as errors
+ninja: build stopped: subcommand failed.

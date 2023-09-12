@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=3.3V Pin=KEY_1-1
+Removed Pin From Net: NetName=BTN1 Pin=KEY_1-2
+Removed Pin From Net: NetName=GND Pin=KEY_1-3
+Removed Member From Class: ClassName=Mat_tren Member=KEY_1
+Change Component Comment : Designator=KEY2 Old Comment=KEY2 New Comment=Component_1
+Added Component: Designator=KEY1(test)
+Added Pin To Net: NetName=3.3V Pin=KEY1-1
+Added Pin To Net: NetName=BTN1 Pin=KEY1-2
+Added Pin To Net: NetName=GND Pin=KEY1-3
+Added Member To Class: ClassName=Mat_tren Member=Component KEY1 Component_1

@@ -1,0 +1,20 @@
+Removed Pin From Net: NetName=\ Pin=JP3-2
+Removed Pin From Net: NetName=5V Pin=JP5-1
+Removed Pin From Net: NetName=OUT1 Pin=JP5-2
+Removed Pin From Net: NetName=\ Pin=JP5-3
+Removed Pin From Net: NetName=GND Pin=JP5-4
+Removed Pin From Net: NetName=\ Pin=MD?-12
+Removed Pin From Net: NetName=OUT1 Pin=R10-1
+Removed Member From Class: ClassName=Mat_Duoi Member=JP5
+Added Component: Designator=JP10(CON4)
+Add component (AddParameter): Name = "Value"; Value = "Connector 4"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=5V Pin=JP10-1
+Added Pin To Net: NetName=\ Pin=JP10-3
+Added Pin To Net: NetName=GND Pin=JP10-4
+Added Pin To Net: NetName=OUT1_2 Pin=JP10-2
+Added Pin To Net: NetName=OUT1_2 Pin=R10-1
+Added Net: Name=OUT1_2
+Added Pin To Net: NetName=OUT2 Pin=JP3-2
+Added Pin To Net: NetName=OUT2 Pin=MD?-12
+Added Net: Name=OUT2
+Added Member To Class: ClassName=Mat_Duoi Member=Component JP10 JP4

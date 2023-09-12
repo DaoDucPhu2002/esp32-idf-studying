@@ -1,0 +1,114 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\GsafeV3_net_OTA\build\bootloader\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6710 bytes. 0x8f0 bytes (8%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ota_app.c.obj
+In file included from C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_hw_support/include/esp_intr_alloc.h:11,
+                 from C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_hw_support/include/esp_cpu.h:20,
+                 from C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_hw_support/include/spinlock.h:11,
+                 from C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:74,
+                 from C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h:58,
+                 from C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:70,
+                 from D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:2:
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c: In function 'start_ota':
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_common/include/esp_err.h:23:25: warning: returning 'int' from a function with return type 'void *' makes pointer from integer without a cast [-Wint-conversion]
+   23 | #define ESP_FAIL        -1      /*!< Generic esp_err_t code indicating failure */
+      |                         ^
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:37:16: note: in expansion of macro 'ESP_FAIL'
+   37 |         return ESP_FAIL;
+      |                ^~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c: In function 'ota_task_init_start':
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:98:17: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+   98 |     xTaskCreate(&start_ota, "start_ota", 8192, NULL, 5, NULL);
+      |                 ^~~~~~~~~~
+      |                 |
+      |                 void * (*)(void)
+In file included from D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:3:
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:444:44: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'void * (*)(void)'
+  444 |                             TaskFunction_t pvTaskCode,
+      |                             ~~~~~~~~~~~~~~~^~~~~~~~~~
+[3/8] Linking C static library esp-idf\main\libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable main.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.5.1
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/build/main.bin
+[7/8] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\GsafeV3_net_OTA\build\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/build/partition_table/partition-table.bin D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/build/main.bin"
+main.bin binary size 0xe88f0 bytes. Smallest app partition is 0x150000 bytes. 0x67710 bytes (31%) free.
+[7/8] cmd.exe /C "cd /D C:\Users\daoph\.espressif\frameworks\esp-idf-v5.0.1\components\esptool_py && C:\Users\daoph\.espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1 -D SERIAL_TOOL=C:/Users/daoph/.espressif/python_env/idf5.0_py3.11_env/Scripts/python.exe;;C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/build -P C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esptool_py/run_serial_tool.cmake"
+esptool esp32 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x20000 main.bin 0x8000 partition_table/partition-table.bin 0x11000 ota_data_initial.bin
+esptool.py v4.5.1
+Serial port COM3
+Connecting....
+Chip is ESP32-D0WD (revision v1.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 10:52:1c:76:17:94
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00020000 to 0x00108fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x00011000 to 0x00012fff...
+Compressed 26384 bytes to 16453...
+Writing at 0x00001000... (50 %)
+Writing at 0x000076ae... (100 %)
+Wrote 26384 bytes (16453 compressed) at 0x00001000 in 0.9 seconds (effective 243.8 kbit/s)...
+Hash of data verified.
+Compressed 952560 bytes to 605884...
+Writing at 0x00020000... (2 %)
+Writing at 0x0002c558... (5 %)
+Writing at 0x00035a31... (8 %)
+Writing at 0x0003b1f6... (10 %)
+Writing at 0x000455d8... (13 %)
+Writing at 0x0004fbaa... (16 %)
+Writing at 0x000557e5... (18 %)
+Writing at 0x0005b13c... (21 %)
+Writing at 0x00060abd... (24 %)
+Writing at 0x00066a0c... (27 %)
+Writing at 0x0006c6d8... (29 %)
+Writing at 0x00071f4f... (32 %)
+Writing at 0x000778c8... (35 %)
+Writing at 0x0007e013... (37 %)
+Writing at 0x00083aa3... (40 %)
+Writing at 0x00089403... (43 %)
+Writing at 0x0008e877... (45 %)
+Writing at 0x00093b81... (48 %)
+Writing at 0x00098fae... (51 %)
+Writing at 0x0009e443... (54 %)
+Writing at 0x000a39f4... (56 %)
+Writing at 0x000a92b6... (59 %)
+Writing at 0x000af0b0... (62 %)
+Writing at 0x000b49a0... (64 %)
+Writing at 0x000ba28f... (67 %)
+Writing at 0x000bf862... (70 %)
+Writing at 0x000c52bc... (72 %)
+Writing at 0x000caade... (75 %)
+Writing at 0x000d0286... (78 %)
+Writing at 0x000d5cb5... (81 %)
+Writing at 0x000db7d2... (83 %)
+Writing at 0x000e104c... (86 %)
+Writing at 0x000e9c13... (89 %)
+Writing at 0x000f2307... (91 %)
+Writing at 0x000f8093... (94 %)
+Writing at 0x000fda5b... (97 %)
+Writing at 0x00103375... (100 %)
+Wrote 952560 bytes (605884 compressed) at 0x00020000 in 14.1 seconds (effective 542.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 127...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (127 compressed) at 0x00008000 in 0.1 seconds (effective 297.6 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 31...
+Writing at 0x00011000... (100 %)
+Wrote 8192 bytes (31 compressed) at 0x00011000 in 0.2 seconds (effective 435.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

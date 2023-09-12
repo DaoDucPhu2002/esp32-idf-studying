@@ -1,0 +1,39 @@
+[1/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ota_app.c.obj
+In file included from C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_hw_support/include/esp_intr_alloc.h:11,
+                 from C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_hw_support/include/esp_cpu.h:20,
+                 from C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_hw_support/include/spinlock.h:11,
+                 from C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:74,
+                 from C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h:58,
+                 from C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:70,
+                 from D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:2:
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c: In function 'start_ota':
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_common/include/esp_err.h:23:25: warning: returning 'int' from a function with return type 'void *' makes pointer from integer without a cast [-Wint-conversion]
+   23 | #define ESP_FAIL        -1      /*!< Generic esp_err_t code indicating failure */
+      |                         ^
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:37:16: note: in expansion of macro 'ESP_FAIL'
+   37 |         return ESP_FAIL;
+      |                ^~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c: In function 'ota_task_init_start':
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:98:17: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+   98 |     xTaskCreate(&start_ota, "start_ota", 8192, NULL, 5, NULL);
+      |                 ^~~~~~~~~~
+      |                 |
+      |                 void * (*)(void)
+In file included from D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/main/ota_app.c:3:
+C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:444:44: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'void * (*)(void)'
+  444 |                             TaskFunction_t pvTaskCode,
+      |                             ~~~~~~~~~~~~~~~^~~~~~~~~~
+[2/9] Linking C static library esp-idf\main\libmain.a
+[3/9] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\GsafeV3_net_OTA\build\bootloader\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6710 bytes. 0x8f0 bytes (8%) free.
+[4/7] Generating ld/sections.ld
+[5/7] Linking CXX executable main.elf
+[6/7] Generating binary image from built executable
+esptool.py v4.5.1
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/build/main.bin
+[7/7] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\GsafeV3_net_OTA\build\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/build/partition_table/partition-table.bin D:/CODE/ESP32-IDF/esp32-idf-studying/GsafeV3_net_OTA/build/main.bin"
+main.bin binary size 0xe88f0 bytes. Smallest app partition is 0x150000 bytes. 0x67710 bytes (31%) free.

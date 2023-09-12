@@ -1,0 +1,44 @@
+[1/14] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\GsafaV3_24082023\build\bootloader\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6710 bytes. 0x8f0 bytes (8%) free.
+[2/14] No install step for 'bootloader'
+[3/14] Completed 'bootloader'
+[4/14] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/mqtt.c.obj
+[5/14] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/main/main.c: In function 'app_main':
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/main/main.c:86:15: warning: passing argument 1 of 'MQTT_Open' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   86 |     MQTT_Open(mqtt_hostname, mqtt_port, ESP_ID, topicSever4G, mqtt_user, mqtt_pass);
+      |               ^~~~~~~~~~~~~
+In file included from D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/main/main.c:6:
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/main/EC200.h:24:21: note: expected 'char *' but argument is of type 'const char *'
+   24 | int MQTT_Open(char *mqtt_server, int mqtt_port, char *esp_id, char *topic_srv, char *user, char *passwd);
+      |               ~~~~~~^~~~~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/main/main.c:86:63: warning: passing argument 5 of 'MQTT_Open' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   86 |     MQTT_Open(mqtt_hostname, mqtt_port, ESP_ID, topicSever4G, mqtt_user, mqtt_pass);
+      |                                                               ^~~~~~~~~
+In file included from D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/main/main.c:6:
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/main/EC200.h:24:86: note: expected 'char *' but argument is of type 'const char *'
+   24 | int MQTT_Open(char *mqtt_server, int mqtt_port, char *esp_id, char *topic_srv, char *user, char *passwd);
+      |                                                                                ~~~~~~^~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/main/main.c:86:74: warning: passing argument 6 of 'MQTT_Open' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   86 |     MQTT_Open(mqtt_hostname, mqtt_port, ESP_ID, topicSever4G, mqtt_user, mqtt_pass);
+      |                                                                          ^~~~~~~~~
+In file included from D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/main/main.c:6:
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/main/EC200.h:24:98: note: expected 'char *' but argument is of type 'const char *'
+   24 | int MQTT_Open(char *mqtt_server, int mqtt_port, char *esp_id, char *topic_srv, char *user, char *passwd);
+      |                                                                                            ~~~~~~^~~~~~
+[6/14] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ota_app.c.obj
+[7/14] Linking C static library esp-idf\main\libmain.a
+[8/14] Generating ld/sections.ld
+[9/14] Generating index.html.S
+[10/14] Building C object CMakeFiles/main.elf.dir/project_elf_src_esp32.c.obj
+[11/14] Building ASM object CMakeFiles/main.elf.dir/index.html.S.obj
+[12/14] Linking CXX executable main.elf
+[13/14] Generating binary image from built executable
+esptool.py v4.5.1
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/build/main.bin
+[14/14] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\GsafaV3_24082023\build\esp-idf\esptool_py && C:\Users\daoph\.espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/build/partition_table/partition-table.bin D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_24082023/build/main.bin"
+main.bin binary size 0xef0f0 bytes. Smallest app partition is 0x150000 bytes. 0x60f10 bytes (29%) free.

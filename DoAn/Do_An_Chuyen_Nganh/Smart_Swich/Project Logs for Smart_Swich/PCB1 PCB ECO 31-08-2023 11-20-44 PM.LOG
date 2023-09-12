@@ -1,0 +1,9 @@
+Added Pin To Net: NetName=3.3V Pin=KEY1-1
+Added Pin To Net: NetName=BTN1 Pin=KEY1-2
+Added Pin To Net: NetName=GND Pin=KEY1-3
+Added Pin To Net: NetName=3.3V Pin=KEY2-1
+Added Pin To Net: NetName=BTN2 Pin=KEY2-2
+Added Pin To Net: NetName=GND Pin=KEY2-3
+Added Member To Class: ClassName=Mat_tren Member=Component KEY1 Component_1
+Added Member To Class: ClassName=Mat_tren Member=Component KEY2 Component_1
+Added Room: Name=Mat_tren

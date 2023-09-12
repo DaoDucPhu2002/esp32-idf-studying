@@ -36,11 +36,16 @@
     "peripherals.h": "c",
     "source_location": "c",
     "ec200.h": "c",
-    "esp_http_client.h": "c"
+    "esp_http_client.h": "c",
+    "cerrno": "c",
+    "ota_app.h": "c",
+    "esp_https_ota.h": "c"
   },
   "C_Cpp.errorSquiggles": "enabled",
   "idf.portWin": "COM3",
   "idf.adapterTargetName": "esp32",
   "liveServer.settings.port": 5501,
-  "cmake.sourceDirectory": "D:/CODE/ESP32-IDF/esp32-idf-studying/74HC4067"
+  "cmake.sourceDirectory": "D:/CODE/ESP32-IDF/esp32-idf-studying/74HC4067",
+
+  
 }
