@@ -15,7 +15,7 @@
 #include "freertos/semphr.h"
 #include "freertos/queue.h"
 
-#include "lwip/sockets.h"
+// #include "lwip/sockets.h"
 #include "lwip/dns.h"
 #include "lwip/netdb.h"
 
