@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=GND Pin=JP1-1
+Removed Pin From Net: NetName=TX0 Pin=JP1-3
+Removed Pin From Net: NetName=3.3V Pin=JP1-4
+Removed Pin From Net: NetName=BOOT Pin=JP1-5
+Added Pin To Net: NetName=BOOT Pin=JP1-1
+Added Pin To Net: NetName=GND Pin=JP1-3
+Added Pin To Net: NetName=TX0 Pin=JP1-4
+Added Pin To Net: NetName=3.3V Pin=JP1-5
+Added Pin To Net: NetName=GND Pin=MD1-34
+Change Net Name : Old Net Name=GND New Net Name=RX0

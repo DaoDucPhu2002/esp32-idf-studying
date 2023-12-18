@@ -1,0 +1,14 @@
+Change Component Designator: OldDesignator=KF1 NewDesignator=LINE1
+Change Component Designator: OldDesignator=KF2 NewDesignator=LINE 2
+Change Component Designator: OldDesignator=KF3 NewDesignator=LINE 3
+Change Component Designator: OldDesignator=KF4 NewDesignator=LINE 4
+Change Component Designator: OldDesignator=KF5 NewDesignator=LINE 5
+Change Component Designator: OldDesignator=KF6 NewDesignator=LINE 6
+Change Component Designator: OldDesignator=KF7 NewDesignator=LINE 7
+Change Component Designator: OldDesignator=KF8 NewDesignator=LINE 8
+Change Component Designator: OldDesignator=U? NewDesignator=U6
+Added Room: Name=4Line Output
+Added Room: Name=16_Line_sensor
+Added Room: Name=Center
+Added Room: Name=Connect_Input_output
+Added Room: Name=Power

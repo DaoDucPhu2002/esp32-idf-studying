@@ -1,0 +1,287 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM7 instead...[0m
+[0;33m--- idf_monitor on \\.\COM7 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812bc: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x40149024: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vprintf.c:30
+[0m
+[0;33m0x400d7c4d: send_data_to_server at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/mqtt.c:127
+[0m
+[0;33m0x400d7562: app_main at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/main.c:66
+[0m
+[0;33m0x40153c07: main_task at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/port_common.c:131 (discriminator 2)
+[0m
+[0;33m0x4008bde9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:154
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812bc: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x40149024: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vprintf.c:30
+[0m
+[0;33m0x400d7c4d: send_data_to_server at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/mqtt.c:127
+[0m
+[0;33m0x400d7562: app_main at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/main.c:66
+[0m
+[0;33m0x40153c07: main_task at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/port_common.c:131 (discriminator 2)
+[0m
+[0;33m0x4008bde9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:154
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812bc: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x40149024: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vprintf.c:30
+[0m
+[0;33m0x400d7c4d: send_data_to_server at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/mqtt.c:127
+[0m
+[0;33m0x400d7562: app_main at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/main.c:66
+[0m
+[0;33m0x40153c07: main_task at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/port_common.c:131 (discriminator 2)
+[0m
+[0;33m0x4008bde9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:154
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812bc: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x40149024: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vprintf.c:30
+[0m
+[0;33m0x400d7c4d: send_data_to_server at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/mqtt.c:127
+[0m
+[0;33m0x400d7562: app_main at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/main.c:66
+[0m
+[0;33m0x40153c07: main_task at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/port_common.c:131 (discriminator 2)
+[0m
+[0;33m0x4008bde9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:154
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812bc: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x40149024: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vprintf.c:30
+[0m
+[0;33m0x400d7c4d: send_data_to_server at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/mqtt.c:127
+[0m
+[0;33m0x400d7562: app_main at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/main.c:66
+[0m
+[0;33m0x40153c07: main_task at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/port_common.c:131 (discriminator 2)
+[0m
+[0;33m0x4008bde9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:154
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812bc: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x40149024: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vprintf.c:30
+[0m
+[0;33m0x400d7c4d: send_data_to_server at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/mqtt.c:127
+[0m
+[0;33m0x400d7562: app_main at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/main.c:66
+[0m
+[0;33m0x40153c07: main_task at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/port_common.c:131 (discriminator 2)
+[0m
+[0;33m0x4008bde9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:154
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812bc: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x40149024: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vprintf.c:30
+[0m
+[0;33m0x400d7c4d: send_data_to_server at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/mqtt.c:127
+[0m
+[0;33m0x400d7562: app_main at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/main.c:66
+[0m
+[0;33m0x40153c07: main_task at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/port_common.c:131 (discriminator 2)
+[0m
+[0;33m0x4008bde9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:154
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812bc: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x40149024: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vprintf.c:30
+[0m
+[0;33m0x400d7c4d: send_data_to_server at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/mqtt.c:127
+[0m
+[0;33m0x400d7562: app_main at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/main.c:66
+[0m
+[0;33m0x40153c07: main_task at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/port_common.c:131 (discriminator 2)
+[0m
+[0;33m0x4008bde9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:154
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812bc: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x40149024: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vprintf.c:30
+[0m
+[0;33m0x400d7c4d: send_data_to_server at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/mqtt.c:127
+[0m
+[0;33m0x400d7562: app_main at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/main.c:66
+[0m
+[0;33m0x40153c07: main_task at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/port_common.c:131 (discriminator 2)
+[0m
+[0;33m0x4008bde9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:154
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812bc: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x40149024: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vprintf.c:30
+[0m
+[0;33m0x400d7c4d: send_data_to_server at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/mqtt.c:127
+[0m
+[0;33m0x400d7562: app_main at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/main.c:66
+[0m
+[0;33m0x40153c07: main_task at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/port_common.c:131 (discriminator 2)
+[0m
+[0;33m0x4008bde9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:154
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812bc: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x40149024: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vprintf.c:30
+[0m
+[0;33m0x400d7c4d: send_data_to_server at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/mqtt.c:127
+[0m
+[0;33m0x400d7562: app_main at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/main.c:66
+[0m
+[0;33m0x40153c07: main_task at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/port_common.c:131 (discriminator 2)
+[0m
+[0;33m0x4008bde9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:154
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812bc: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x40149024: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vprintf.c:30
+[0m
+[0;33m0x400d7c4d: send_data_to_server at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/mqtt.c:127
+[0m
+[0;33m0x400d7562: app_main at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/main.c:66
+[0m
+[0;33m0x40153c07: main_task at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/port_common.c:131 (discriminator 2)
+[0m
+[0;33m0x4008bde9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:154
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812bc: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x40149024: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vprintf.c:30
+[0m
+[0;33m0x400d7c4d: send_data_to_server at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/mqtt.c:127
+[0m
+[0;33m0x400d7562: app_main at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/main.c:66
+[0m
+[0;33m0x40153c07: main_task at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/port_common.c:131 (discriminator 2)
+[0m
+[0;33m0x4008bde9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:154
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812bc: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x40149024: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vprintf.c:30
+[0m
+[0;33m0x400d7c4d: send_data_to_server at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/mqtt.c:127
+[0m
+[0;33m0x400d7562: app_main at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/main.c:66
+[0m
+[0;33m0x40153c07: main_task at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/port_common.c:131 (discriminator 2)
+[0m
+[0;33m0x4008bde9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:154
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812bc: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x40149024: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vprintf.c:30
+[0m
+[0;33m0x400d7c4d: send_data_to_server at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/mqtt.c:127
+[0m
+[0;33m0x400d7562: app_main at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/main.c:66
+[0m
+[0;33m0x40153c07: main_task at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/port_common.c:131 (discriminator 2)
+[0m
+[0;33m0x4008bde9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:154
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812bc: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x40149024: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vprintf.c:30
+[0m
+[0;33m0x400d7c4d: send_data_to_server at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/mqtt.c:127
+[0m
+[0;33m0x400d7562: app_main at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/main.c:66
+[0m
+[0;33m0x40153c07: main_task at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/port_common.c:131 (discriminator 2)
+[0m
+[0;33m0x4008bde9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:154
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812bc: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x400d7c4d: send_data_to_server at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/mqtt.c:127
+[0m
+[0;33m0x400d7562: app_main at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/main.c:66
+[0m
+[0;33m0x40153c07: main_task at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/port_common.c:131 (discriminator 2)
+[0m
+[0;33m0x4008bde9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:154
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812bc: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x400d7c4d: send_data_to_server at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/mqtt.c:127
+[0m
+[0;33m0x400d7562: app_main at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/main.c:66
+[0m
+[0;33m0x40153c07: main_task at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/port_common.c:131 (discriminator 2)
+[0m
+[0;33m0x4008bde9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:154
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812bc: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x40149024: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vprintf.c:30
+[0m
+[0;33m0x400d7c4d: send_data_to_server at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/mqtt.c:127
+[0m
+[0;33m0x400d7562: app_main at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/main.c:66
+[0m
+[0;33m0x40153c07: main_task at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/port_common.c:131 (discriminator 2)
+[0m
+[0;33m0x4008bde9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:154
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812bc: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x40149024: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vprintf.c:30
+[0m
+[0;33m0x400d7c4d: send_data_to_server at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/mqtt.c:127
+[0m
+[0;33m0x400d7562: app_main at D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/main/main.c:66
+[0m
+[0;33m0x40153c07: main_task at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/port_common.c:131 (discriminator 2)
+[0m
+[0;33m0x4008bde9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:154
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812bc: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/port/cpu_start.c:143
+[0m
+[0m

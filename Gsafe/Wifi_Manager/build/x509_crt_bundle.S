@@ -1,4 +1,4 @@
-/* * Data converted from D:/CODE/ESP32-IDF/esp32-idf-studying/Wifi_Manager/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from D:/CODE/ESP32-IDF/esp32-idf-studying/Gsafe/Wifi_Manager/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded

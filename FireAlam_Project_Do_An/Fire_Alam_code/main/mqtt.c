@@ -1,3 +1,5 @@
+#include "main.h"
+#include "Alam_Handler.h"
 
 #include "mqtt.h"
 #include "esp_mac.h"
@@ -7,34 +9,32 @@
 #include "json_parser.h"
 
 static const char *TAG_MQTT = "MQTTS_EXAMPLE";
-
-extern Button_status_t device;
-char *ESP_ID;
-char *txt_subscribe = "DaoDucPhu";
-char *topic_server = "DaoDucPhu";
+extern Alam_Handler_t alarm_data;
+extern uint8_t ESP_ID[6];
+char *txt_subscribe = "Alam_seting";
+char *topic_server = "Alam_noti";
 int msg_id;
 esp_mqtt_client_handle_t client;
-mqtt_data_handle_t data_mqtt;
-mqtt_data_handle_callback_t data_handle_callback = NULL;
-// void readMAC()
-// {
+void readMAC()
+{
 
-//     uint8_t mac[6];
-//     if (esp_read_mac(mac, ESP_MAC_WIFI_STA) == ESP_OK)
-//     {
+    uint8_t mac[6];
+    if (esp_read_mac(mac, ESP_MAC_WIFI_STA) == ESP_OK)
+    {
+        for (int i = 0; i < 6; i++)
+        {
+            ESP_ID[i] = mac[i];
+        }
+    }
 
-//         snprintf(ESP_ID, 13, "%02X%02X%02X%02X%02X%02X",
-//                  mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
-//         ESP_LOGI("MAC", "%s", ESP_ID);
-//     }
+    printf("pubic: %s", txt_subscribe);
+}
+void get_mqtt_data(char *data, int len)
+{
 
-//     for (int i = 0; i < 12; i++)
-//     {
-//         txt_subscribe[i + 4] = ESP_ID[i];
-//     }
-//     printf("pubic: %s", txt_subscribe);
-// }
-
+    alarm_data.is_line_not_use = data[0];
+    printf("Data Line Not Use: %2x\n", alarm_data.is_line_not_use);
+}
 // void ReadIMEI()
 // {
 //     char *cimei = malloc(16);
@@ -61,7 +61,7 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
     case MQTT_EVENT_CONNECTED:
         ESP_LOGI(TAG_MQTT, "\nMQTT_EVENT_CONNECTED");
 
-        msg_id = esp_mqtt_client_subscribe(client, topic_server, 0);
+        msg_id = esp_mqtt_client_subscribe(client, txt_subscribe, 0);
 
         ESP_LOGI(TAG_MQTT, "\nsent subscribe successful, msg_id=%d", msg_id);
 
@@ -86,7 +86,8 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
         ESP_LOGI(TAG_MQTT, "\nTOPIC=%.*s\r\n", event->topic_len, event->topic);
         ESP_LOGI(TAG_MQTT, "\nDATA=%.*s\r\n", event->data_len, event->data);
         get_mqtt_data(event->data, event->data_len);
-        data_handle_callback(event->data, event->data_len);
+
+        //  data_handle_callback(event->data, event->data_len);
         break;
     case MQTT_EVENT_ERROR:
         ESP_LOGI(TAG_MQTT, "\nMQTT_EVENT_ERROR");
@@ -107,6 +108,7 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
 void mqtt_app_start(void)
 {
 
+    readMAC();
     const esp_mqtt_client_config_t mqtt_cfg = {
         .broker = {
             .address.uri = "mqtt://test.mosquitto.org:1883",
@@ -124,74 +126,6 @@ void mqtt_app_start(void)
 void send_data_to_server(uint8_t *data)
 {
 
-    msg_id = esp_mqtt_client_publish(client, topic_server, (const char *)data, strlen((const char *)data), 0, 0);
+    msg_id = esp_mqtt_client_publish(client, topic_server, (const char *)data, 17, 0, 0);
     ESP_LOGI(TAG_MQTT, "\nsent publish successful, msg_id=%d", msg_id);
-}
-/*===================================================*/
-/*              JSON Handle                          */
-static void flush_str(char *buf, void *priv)
-{
-    json_gen_test_result_t *result = (json_gen_test_result_t *)priv;
-    if (result)
-    {
-        if (strlen(buf) > sizeof(result->buf) - result->offset)
-        {
-            printf("Result Buffer too small\r\n");
-            return;
-        }
-        memcpy(result->buf + result->offset, buf, strlen(buf));
-        result->offset += strlen(buf);
-    }
-}
-void json_gen_perform_test(json_gen_test_result_t *result, int sta_button1, int sta_button2, uint64_t time_button1, uint64_t time_button2)
-{
-    char buf[20];
-    memset(result, 0, sizeof(json_gen_test_result_t));
-    json_gen_str_t jstr;
-    json_gen_str_start(&jstr, buf, sizeof(buf), flush_str, result);
-    json_gen_start_object(&jstr);
-    json_gen_obj_set_int(&jstr, "Status_Button_1", sta_button1);
-    json_gen_obj_set_int(&jstr, "Status_Button_2", sta_button2);
-    json_gen_obj_set_int(&jstr, "Timer_Button_1", time_button1);
-    json_gen_obj_set_int(&jstr, "Timer_Button_2", time_button2);
-    json_gen_end_object(&jstr);
-    json_gen_str_end(&jstr);
-    printf("Gennerated: %s\n", result->buf);
-}
-void get_mqtt_data(char *data, int len)
-{
-
-    jparse_ctx_t jctx;
-    int ret = json_parse_start(&jctx, data, len);
-    if (ret != OS_SUCCESS)
-    {
-        ESP_LOGE("JSON PARSER", "Fail");
-    }
-    if (ret == OS_SUCCESS)
-    {
-        if (json_obj_get_int(&jctx, "Status_Button_1", &device.sta_button1) == OS_SUCCESS)
-        {
-            printf("Button1 Sta: %s\n", device.sta_button1 ? "on" : "off");
-        }
-        if (json_obj_get_int(&jctx, "Status_Button_2", &device.sta_button2) == OS_SUCCESS)
-        {
-            printf("Button2 Sta: %s\n", (device.sta_button2) ? "on" : "off");
-        }
-        if (json_obj_get_int64(&jctx, "Timer_Button_1", &device.timer_button1) == OS_SUCCESS)
-        {
-            printf("Button1 delay: %lld\n", device.timer_button1);
-        }
-        if (json_obj_get_int64(&jctx, "Timer_Button_2", &device.timer_button2) == OS_SUCCESS)
-        {
-            printf("Button2 delay: %lld\n", device.timer_button2);
-        }
-    }
-}
-void mqtt_set_callback(void *cb)
-{
-
-    if (cb)
-    {
-        data_handle_callback = cb;
-    }
 }

@@ -22,6 +22,34 @@ void app_main(void)
         ret = nvs_flash_init();
     }
     ESP_ERROR_CHECK(ret);
+    int is_connect_wifi = 0;
+    int failedConnection = 0;
+    int maxFailedConnect = 10;
+    init_nvs();
+    while (1)
+    {
+        if (is_connect_wifi == 0)
+        {
 
-    wifi_manager();
+            ESP_LOGI("Wifi", "Connecting to Wifi ...");
+            read_wifi_and_connect();
+            if (esp_wifi_connect() == ESP_OK)
+            {
+                printf("Wifi_Connected\n");
+                is_connect_wifi = 1;
+            }
+            else
+            {
+                failedConnection++;
+                printf("Connect Failed\n");
+            }
+            if (failedConnection > maxFailedConnect)
+            {
+                printf("Wifi Manager Start\n");
+                wifi_manager();
+                is_connect_wifi = 1;
+            }
+            vTaskDelay(1000 / portTICK_PERIOD_MS);
+        }
+    }
 }

@@ -1,4 +1,4 @@
-/* * Data converted from D:/CODE/ESP32-IDF/esp32-idf-studying/Wifi_Connceted_ver2/html/index.html
+/* * Data converted from D:/CODE/ESP32-IDF/esp32-idf-studying/Gsafe/Wifi_Connceted_ver2/html/index.html
  * (null byte appended)
  */
 .data

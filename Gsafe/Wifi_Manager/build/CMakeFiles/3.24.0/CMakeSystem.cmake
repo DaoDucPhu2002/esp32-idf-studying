@@ -1,9 +1,9 @@
-set(CMAKE_HOST_SYSTEM "Windows-10.0.22622")
+set(CMAKE_HOST_SYSTEM "Windows-10.0.22621")
 set(CMAKE_HOST_SYSTEM_NAME "Windows")
-set(CMAKE_HOST_SYSTEM_VERSION "10.0.22622")
+set(CMAKE_HOST_SYSTEM_VERSION "10.0.22621")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "AMD64")
 
-include("C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/tools/cmake/toolchain-esp32.cmake")
+include("C:/Espressif/frameworks/esp-idf-v5.0.3/tools/cmake/toolchain-esp32.cmake")
 
 set(CMAKE_SYSTEM "Generic")
 set(CMAKE_SYSTEM_NAME "Generic")

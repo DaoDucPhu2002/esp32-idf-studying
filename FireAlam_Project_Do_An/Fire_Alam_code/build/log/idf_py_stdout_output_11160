@@ -1,0 +1,1999 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6992
+load:0x40078000,len:15512
+load:0x40080400,len:3864
+entry 0x40080650
+[0;32mI (27) boot: ESP-IDF v5.0.3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time 18:40:57[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v1.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27f30h (163632) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=00037f58 vaddr=3ffb0000 size=03404h ( 13316) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=0003b364 vaddr=40080000 size=04cb4h ( 19636) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9bd98h (638360) map[0m
+[0;32mI (403) esp_image: segment 4: paddr=000dbdc0 vaddr=40084cb4 size=10180h ( 65920) load[0m
+[0;32mI (441) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (441) boot: Disabling RNG early entropy source...[0m
+[0;32mI (452) cpu_start: Multicore app[0m
+[0;32mI (452) cpu_start: Pro cpu up.[0m
+[0;32mI (453) cpu_start: Starting app cpu, entry point is 0x400812bc[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) cpu_start: Application information:[0m
+[0;32mI (475) cpu_start: Project name:     main[0m
+[0;32mI (480) cpu_start: App version:      d2f66b4-dirty[0m
+[0;32mI (486) cpu_start: Compile time:     Nov 20 2023 18:40:35[0m
+[0;32mI (492) cpu_start: ELF file SHA256:  bbd7e84d799cc645...[0m
+[0;32mI (498) cpu_start: ESP-IDF:          v5.0.3-dirty[0m
+[0;32mI (503) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (508) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (513) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (517) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (525) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFB77E8 len 00028818 (162 KiB): DRAM[0m
+[0;32mI (537) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (543) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (550) heap_init: At 40094E34 len 0000B1CC (44 KiB): IRAM[0m
+[0;32mI (557) spi_flash: detected chip: generic[0m
+[0;32mI (561) spi_flash: flash io: dio[0m
+[0;33mW (564) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (579) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+[0;32mI (665) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (665) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (665) gpio: GPIO[16]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (675) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (685) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (695) gpio: GPIO[22]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (705) gpio: GPIO[23]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (715) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (725) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (735) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (745) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (755) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (765) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (775) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (785) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Line NotUse: ff[0;31mE (795) mqtt_client: Client was not initialized[0m
+[0;32mI (795) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (805) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+I (815) wifi:wifi driver task: 3ffc0c38, prio:23, stack:6656, core=0
+[0;32mI (815) system_api: Base MAC address is not set[0m
+[0;32mI (825) system_api: read default base MAC address from EFUSE[0m
+I (855) wifi:wifi firmware version: 15fc0ca
+I (855) wifi:wifi certification version: v7.0
+I (855) wifi:config NVS flash: enabled
+I (855) wifi:config nano formating: disabled
+I (855) wifi:Init data frame dynamic rx buffer num: 32
+I (865) wifi:Init management frame dynamic rx buffer num: 32
+I (865) wifi:Init management short buffer num: 32
+I (875) wifi:Init dynamic tx buffer num: 32
+I (875) wifi:Init static rx buffer size: 1600
+I (875) wifi:Init static rx buffer num: 10
+I (885) wifi:Init dynamic rx buffer num: 32
+
+[0;32mI (885) wifi_init: rx ba win: 6[0m
+[0;32mI (895) wifi_init: tcpip mbox: 32[0m
+[0;32mI (895) wifi_init: udp mbox: 6[0m
+[0;32mI (895) wifi_init: tcp mbox: 6[0m
+[0;32mI (905) wifi_init: tcp tx win: 5744[0m
+[0;32mI (905) wifi_init: tcp rx win: 5744[0m
+[0;32mI (915) wifi_init: tcp mss: 1440[0m
+[0;32mI (915) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (915) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (925) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1025) wifi:mode : sta (e0:e2:e6:ce:04:d4)
+I (1025) wifi:enable tsf
+pubic: Alam_seting[0;32mI (1025) MQTTS_EXAMPLE: 
+[APP] Free memory: 233540 bytes[0m
+[0;32mI (1035) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=7[0m
+E (1035) wifi:[0;32mI (1035) MQTTS_EXAMPLE: 
+Other event id:7[0m
+sta is connecting, return error
+[0;31mE (1055) esp-tls: couldn't get hostname for :test.mosquitto.org: getaddrinfo() returns 202, addrinfo=0x0[0m
+I (1055) wifi:[0;31mE (1055) transport_base: Failed to open a new connection: 32769[0m
+new:<4,0>, old:<1,0>, ap:<255,255>, sta:<4,0>, prof:1
+I (1075) wifi:state: init -> auth (b0)
+[0;31mE (1075) mqtt_client: Error transport connect[0m
+I (1075) wifi:[0;32mI (1075) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=0[0m
+state: auth -> assoc (0)[0;32mI (1085) MQTTS_EXAMPLE: 
+MQTT_EVENT_ERROR[0m
+
+[0;31mE (1095) MQTTS_EXAMPLE: Last error reported from esp-tls: 0x8001[0m
+[0;32mI (1105) MQTTS_EXAMPLE: 
+Last errno string (Success)[0m
+[0;32mI (1105) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=2[0m
+I (1115) wifi:state: assoc -> run (10)
+[0;32mI (1125) MQTTS_EXAMPLE: 
+MQTT_EVENT_DISCONNECTED[0m
+I (1205) wifi:connected with Ba Anh Em, aid = 1, channel 4, BW20, bssid = b0:8b:92:30:94:fd
+I (1205) wifi:security: WPA2-PSK, phy: bgn, rssi: -45
+I (1215) wifi:pm start, type: 1
+
+I (1265) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+Line NotUse: ff[0;33mW (1885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (1885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+
+Br �SUUU         ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6992
+load:0x40078000,len:15512
+load:0x40080400,len:3864
+entry 0x40080650
+[0;32mI (27) boot: ESP-IDF v5.0.3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time 18:40:57[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v1.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27f30h (163632) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=00037f58 vaddr=3ffb0000 size=03404h ( 13316) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=0003b364 vaddr=40080000 size=04cb4h ( 19636) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9bd98h (638360) map[0m
+[0;32mI (403) esp_image: segment 4: paddr=000dbdc0 vaddr=40084cb4 size=10180h ( 65920) load[0m
+[0;32mI (441) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (441) boot: Disabling RNG early entropy source...[0m
+[0;32mI (452) cpu_start: Multicore app[0m
+[0;32mI (452) cpu_start: Pro cpu up.[0m
+[0;32mI (453) cpu_start: Starting app cpu, entry point is 0x400812bc[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) cpu_start: Application information:[0m
+[0;32mI (475) cpu_start: Project name:     main[0m
+[0;32mI (480) cpu_start: App version:      d2f66b4-dirty[0m
+[0;32mI (486) cpu_start: Compile time:     Nov 20 2023 18:40:35[0m
+[0;32mI (492) cpu_start: ELF file SHA256:  bbd7e84d799cc645...[0m
+[0;32mI (498) cpu_start: ESP-IDF:          v5.0.3-dirty[0m
+[0;32mI (503) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (508) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (513) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (517) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (525) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFB77E8 len 00028818 (162 KiB): DRAM[0m
+[0;32mI (537) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (543) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (550) heap_init: At 40094E34 len 0000B1CC (44 KiB): IRAM[0m
+[0;32mI (557) spi_flash: detected chip: generic[0m
+[0;32mI (561) spi_flash: flash io: dio[0m
+[0;33mW (564) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (579) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+[0;32mI (665) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (665) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (665) gpio: GPIO[16]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (675) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (685) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (695) gpio: GPIO[22]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (705) gpio: GPIO[23]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (715) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (725) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (735) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (745) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (755) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (765) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (775) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (785) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Line NotUse: ff[0;31mE (795) mqtt_client: Client was not initialized[0m
+[0;32mI (795) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (805) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+I (815) wifi:wifi driver task: 3ffc0c38, prio:23, stack:6656, core=0
+[0;32mI (815) system_api: Base MAC address is not set[0m
+[0;32mI (825) system_api: read default base MAC address from EFUSE[0m
+I (855) wifi:wifi firmware version: 15fc0ca
+I (855) wifi:wifi certification version: v7.0
+I (855) wifi:config NVS flash: enabled
+I (855) wifi:config nano formating: disabled
+I (855) wifi:Init data frame dynamic rx buffer num: 32
+I (865) wifi:Init management frame dynamic rx buffer num: 32
+I (865) wifi:Init management short buffer num: 32
+I (875) wifi:Init dynamic tx buffer num: 32
+I (875) wifi:Init static rx buffer size: 1600
+I (875) wifi:Init static rx buffer num: 10
+I (885) wifi:Init dynamic rx buffer num: 32
+
+[0;32mI (885) wifi_init: rx ba win: 6[0m
+[0;32mI (895) wifi_init: tcpip mbox: 32[0m
+[0;32mI (895) wifi_init: udp mbox: 6[0m
+[0;32mI (895) wifi_init: tcp mbox: 6[0m
+[0;32mI (905) wifi_init: tcp tx win: 5744[0m
+[0;32mI (905) wifi_init: tcp rx win: 5744[0m
+[0;32mI (915) wifi_init: tcp mss: 1440[0m
+[0;32mI (915) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (915) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (925) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1025) wifi:mode : sta (e0:e2:e6:ce:04:d4)
+I (1025) wifi:enable tsf
+pubic: Alam_seting[0;32mI (1025) MQTTS_EXAMPLE: 
+[APP] Free memory: 233540 bytes[0m
+[0;32mI (1035) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=7[0m
+E (1035) wifi:[0;32mI (1035) MQTTS_EXAMPLE: 
+Other event id:7[0m
+sta is connecting, return error
+[0;31mE (1045) esp-tls: couldn't get hostname for :test.mosquitto.org: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (1055) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (1065) mqtt_client: Error transport connect[0m
+[0;32mI (1065) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=0[0m
+[0;32mI (1075) MQTTS_EXAMPLE: 
+MQTT_EVENT_ERROR[0m
+[0;31mE (1085) MQTTS_EXAMPLE: Last error reported from esp-tls: 0x8001[0m
+[0;32mI (1085) MQTTS_EXAMPLE: 
+Last errno string (Success)[0m
+[0;32mI (1095) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=2[0m
+[0;32mI (1105) MQTTS_EXAMPLE: 
+MQTT_EVENT_DISCONNECTED[0m
+I (1115) wifi:new:<4,0>, old:<1,0>, ap:<255,255>, sta:<4,0>, prof:1
+I (1115) wifi:state: init -> auth (b0)
+I (1125) wifi:state: auth -> assoc (0)
+I (1125) wifi:state: assoc -> run (10)
+I (1225) wifi:connected with Ba Anh Em, aid = 1, channel 4, BW20, bssid = b0:8b:92:30:94:fd
+I (1235) wifi:security: WPA2-PSK, phy: bgn, rssi: -51
+I (1235) wifi:pm start, type: 1
+
+I (1295) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (1335) wifi:<ba-add>idx:0 (ifx:0, b0:8b:92:30:94:fd), tid:0, ssn:0, winSize:64
+Line NotUse: ff[0;33mW (1885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (1885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+[0;32mI (2245) esp_netif_handlers: sta ip: 192.168.1.3, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2245) WIFI_MANAGER: got ip:192.168.1.3[0m
+[0;32mI (2245) WIFI_MANAGER: got ip:192.168.1.3[0m
+Line NotUse: ff[0;33mW (2885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (2885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (3885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (3885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (4885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (4885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (5885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (5885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (6885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (6885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (7885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (7885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (8885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (8885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (9885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (9885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (10885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (10885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+[0;32mI (11115) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=7[0m
+[0;32mI (11115) MQTTS_EXAMPLE: 
+Other event id:7[0m
+I (11125) wifi:<ba-add>idx:1 (ifx:0, b0:8b:92:30:94:fd), tid:6, ssn:3, winSize:64
+Line NotUse: ff[0;32mI (12665) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=1[0m
+[0;32mI (12675) MQTTS_EXAMPLE: 
+MQTT_EVENT_CONNECTED[0m
+[0;32mI (12675) MQTTS_EXAMPLE: 
+sent subscribe successful, msg_id=65005[0m
+[0;32mI (12685) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+[0;32mI (12895) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=3[0m
+[0;32mI (12895) MQTTS_EXAMPLE: 
+MQTT_EVENT_SUBSCRIBED, msg_id=65005[0m
+[0;32mI (12905) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (12915) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (12915) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (12925) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (12925) MQTTS_EXAMPLE: 
+DATA=�
+[0m
+Data Line Not Use: af
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (13685) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (14685) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (15685) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Я
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (16685) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Я
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (17685) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (18685) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (19685) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (20685) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Я
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (21685) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѯ
+
+Br  �       ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6992
+load:0x40078000,len:15512
+load:0x40080400,len:3864
+entry 0x40080650
+[0;32mI (26) boot: ESP-IDF v5.0.3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time 18:40:57[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v1.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27f30h (163632) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=00037f58 vaddr=3ffb0000 size=03404h ( 13316) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=0003b364 vaddr=40080000 size=04cb4h ( 19636) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9bd98h (638360) map[0m
+[0;32mI (403) esp_image: segment 4: paddr=000dbdc0 vaddr=40084cb4 size=10180h ( 65920) load[0m
+[0;32mI (441) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (441) boot: Disabling RNG early entropy source...[0m
+[0;32mI (452) cpu_start: Multicore app[0m
+[0;32mI (452) cpu_start: Pro cpu up.[0m
+[0;32mI (453) cpu_start: Starting app cpu, entry point is 0x400812bc[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) cpu_start: Application information:[0m
+[0;32mI (475) cpu_start: Project name:     main[0m
+[0;32mI (480) cpu_start: App version:      d2f66b4-dirty[0m
+[0;32mI (486) cpu_start: Compile time:     Nov 20 2023 18:40:35[0m
+[0;32mI (492) cpu_start: ELF file SHA256:  bbd7e84d799cc645...[0m
+[0;32mI (498) cpu_start: ESP-IDF:          v5.0.3-dirty[0m
+[0;32mI (503) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (508) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (512) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (517) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (525) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (530) heap_init: At 3FFB77E8 len 00028818 (162 KiB): DRAM[0m
+[0;32mI (537) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (543) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (550) heap_init: At 40094E34 len 0000B1CC (44 KiB): IRAM[0m
+[0;32mI (557) spi_flash: detected chip: generic[0m
+[0;32mI (560) spi_flash: flash io: dio[0m
+[0;33mW (564) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (579) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+[0;32mI (665) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (665) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (665) gpio: GPIO[16]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (675) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (685) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (695) gpio: GPIO[22]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (705) gpio: GPIO[23]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (715) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (725) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (735) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (745) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (755) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (765) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (775) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (785) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Line NotUse: ff[0;31mE (795) mqtt_client: Client was not initialized[0m
+[0;32mI (795) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (805) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+I (815) wifi:wifi driver task: 3ffc0c38, prio:23, stack:6656, core=0
+[0;32mI (815) system_api: Base MAC address is not set[0m
+[0;32mI (825) system_api: read default base MAC address from EFUSE[0m
+I (855) wifi:wifi firmware version: 15fc0ca
+I (855) wifi:wifi certification version: v7.0
+I (855) wifi:config NVS flash: enabled
+I (855) wifi:config nano formating: disabled
+I (855) wifi:Init data frame dynamic rx buffer num: 32
+I (865) wifi:Init management frame dynamic rx buffer num: 32
+I (865) wifi:Init management short buffer num: 32
+I (875) wifi:Init dynamic tx buffer num: 32
+I (875) wifi:Init static rx buffer size: 1600
+I (875) wifi:Init static rx buffer num: 10
+I (885) wifi:Init dynamic rx buffer num: 32
+
+[0;32mI (885) wifi_init: rx ba win: 6[0m
+[0;32mI (895) wifi_init: tcpip mbox: 32[0m
+[0;32mI (895) wifi_init: udp mbox: 6[0m
+[0;32mI (895) wifi_init: tcp mbox: 6[0m
+[0;32mI (905) wifi_init: tcp tx win: 5744[0m
+[0;32mI (905) wifi_init: tcp rx win: 5744[0m
+[0;32mI (915) wifi_init: tcp mss: 1440[0m
+[0;32mI (915) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (915) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (925) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1025) wifi:mode : sta (e0:e2:e6:ce:04:d4)
+I (1025) wifi:enable tsf
+pubic: Alam_seting[0;32mI (1025) MQTTS_EXAMPLE: 
+[APP] Free memory: 233540 bytes[0m
+[0;32mI (1035) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=7[0m
+E (1035) wifi:[0;32mI (1035) MQTTS_EXAMPLE: 
+Other event id:7[0m
+sta is connecting, return error
+[0;31mE (1045) esp-tls: couldn't get hostname for :test.mosquitto.org: getaddrinfo() returns 202, addrinfo=0x0[0m
+I (1055) wifi:[0;31mE (1055) transport_base: Failed to open a new connection: 32769[0m
+new:<4,0>, old:<1,0>, ap:<255,255>, sta:<4,0>, prof:1
+I (1075) wifi:state: init -> auth (b0)
+[0;31mE (1075) mqtt_client: Error transport connect[0m
+[0;32mI (1075) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=0[0m
+I (1085) wifi:[0;32mI (1085) MQTTS_EXAMPLE: 
+MQTT_EVENT_ERROR[0m
+[0;31mE (1095) MQTTS_EXAMPLE: Last error reported from esp-tls: 0x8001[0m
+[0;32mI (1105) MQTTS_EXAMPLE: 
+Last errno string (Success)[0m
+[0;32mI (1105) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=2[0m
+state: auth -> assoc (0)
+[0;32mI (1115) MQTTS_EXAMPLE: 
+MQTT_EVENT_DISCONNECTED[0m
+I (1125) wifi:state: assoc -> run (10)
+I (1225) wifi:connected with Ba Anh Em, aid = 1, channel 4, BW20, bssid = b0:8b:92:30:94:fd
+I (1225) wifi:security: WPA2-PSK, phy: bgn, rssi: -46
+I (1235) wifi:pm start, type: 1
+
+I (1235) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+
+Br E                       � ��U�UUUUUUUUU  � �  @        UD                     � 
+UU�UU                                                                             %�I�                               @�U�U�UUUUUUAabt�����k������������UA  �       � � 	                     �R�UUUUUUUUUUUUUUUUU�����"                         RUUUUUUUUUUUUUUUU[Uw���                           ���UUUUUUUUUUUUUUUUU]Um���� D�                              �PIUUUUUUUUUUUUUUUUUUUUU�� �P(E              �w��UWUUUUUUUUUU   UUUUUUUUUU���{�UUUE�U"                  ��U�UUUUUUUUUUUUU�UUUUuյ�׿���� @ U�H                      RUUUUUUUUUUUUUUUUUUUUUU�{������o UUI$                  �UU�UUUUUUUUUUUUU��UUU�U����� UU����              �      ������� ��������������U���߿���  �   ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6992
+load:0x40078000,len:15512
+load:0x40080400,len:3864
+entry 0x40080650
+[0;32mI (26) boot: ESP-IDF v5.0.3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time 18:40:57[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v1.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27f30h (163632) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=00037f58 vaddr=3ffb0000 size=03404h ( 13316) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=0003b364 vaddr=40080000 size=04cb4h ( 19636) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9bd98h (638360) map[0m
+[0;32mI (403) esp_image: segment 4: paddr=000dbdc0 vaddr=40084cb4 size=10180h ( 65920) load[0m
+[0;32mI (441) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (441) boot: Disabling RNG early entropy source...[0m
+[0;32mI (452) cpu_start: Multicore app[0m
+[0;32mI (452) cpu_start: Pro cpu up.[0m
+[0;32mI (453) cpu_start: Starting app cpu, entry point is 0x400812bc[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) cpu_start: Application information:[0m
+[0;32mI (475) cpu_start: Project name:     main[0m
+[0;32mI (480) cpu_start: App version:      d2f66b4-dirty[0m
+[0;32mI (486) cpu_start: Compile time:     Nov 20 2023 18:40:35[0m
+[0;32mI (492) cpu_start: ELF file SHA256:  bbd7e84d799cc645...[0m
+[0;32mI (498) cpu_start: ESP-IDF:          v5.0.3-dirty[0m
+[0;32mI (503) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (508) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (513) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (517) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (525) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFB77E8 len 00028818 (162 KiB): DRAM[0m
+[0;32mI (537) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (543) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (550) heap_init: At 40094E34 len 0000B1CC (44 KiB): IRAM[0m
+[0;32mI (557) spi_flash: detected chip: generic[0m
+[0;32mI (560) spi_flash: flash io: dio[0m
+[0;33mW (564) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (579) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+[0;32mI (665) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (665) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (665) gpio: GPIO[16]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (675) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (685) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (695) gpio: GPIO[22]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (705) gpio: GPIO[23]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (715) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (725) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (735) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (745) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (755) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (765) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (775) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (785) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Line NotUse: ff[0;31mE (795) mqtt_client: Client was not initialized[0m
+[0;32mI (795) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (805) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+I (815) wifi:wifi driver task: 3ffc0c38, prio:23, stack:6656, core=0
+[0;32mI (815) system_api: Base MAC address is not set[0m
+[0;32mI (825) system_api: read default base MAC address from EFUSE[0m
+I (855) wifi:wifi firmware version: 15fc0ca
+I (855) wifi:wifi certification version: v7.0
+I (855) wifi:config NVS flash: enabled
+I (855) wifi:config nano formating: disabled
+I (855) wifi:Init data frame dynamic rx buffer num: 32
+I (865) wifi:Init management frame dynamic rx buffer num: 32
+I (865) wifi:Init management short buffer num: 32
+I (875) wifi:Init dynamic tx buffer num: 32
+I (875) wifi:Init static rx buffer size: 1600
+I (875) wifi:Init static rx buffer num: 10
+I (885) wifi:Init dynamic rx buffer num: 32
+
+[0;32mI (885) wifi_init: rx ba win: 6[0m
+[0;32mI (895) wifi_init: tcpip mbox: 32[0m
+[0;32mI (895) wifi_init: udp mbox: 6[0m
+[0;32mI (895) wifi_init: tcp mbox: 6[0m
+[0;32mI (905) wifi_init: tcp tx win: 5744[0m
+[0;32mI (905) wifi_init: tcp rx win: 5744[0m
+[0;32mI (915) wifi_init: tcp mss: 1440[0m
+[0;32mI (915) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (915) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (925) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1025) wifi:mode : sta (e0:e2:e6:ce:04:d4)
+I (1025) wifi:enable tsf
+pubic: Alam_seting[0;32mI (1025) MQTTS_EXAMPLE: 
+[APP] Free memory: 233540 bytes[0m
+[0;32mI (1035) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=7[0m
+E (1035) wifi:[0;32mI (1035) MQTTS_EXAMPLE: 
+Other event id:7[0m
+sta is connecting, return error
+[0;31mE (1055) esp-tls: couldn't get hostname for :test.mosquitto.org: getaddrinfo() returns 202, addrinfo=0x0[0m
+I (1055) wifi:[0;31mE (1055) transport_base: Failed to open a new connection: 32769[0m
+new:<4,0>, old:<1,0>, ap:<255,255>, sta:<4,0>, prof:1
+I (1075) wifi:state: init -> auth (b0)
+[0;31mE (1075) mqtt_client: Error transport connect[0m
+I (1075) wifi:[0;32mI (1075) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=0[0m
+state: auth -> assoc (0)[0;32mI (1085) MQTTS_EXAMPLE: 
+MQTT_EVENT_ERROR[0m
+
+[0;31mE (1095) MQTTS_EXAMPLE: Last error reported from esp-tls: 0x8001[0m
+[0;32mI (1105) MQTTS_EXAMPLE: 
+Last errno string (Success)[0m
+[0;32mI (1105) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=2[0m
+I (1115) wifi:state: assoc -> run (10)
+[0;32mI (1115) MQTTS_EXAMPLE: 
+MQTT_EVENT_DISCONNECTED[0m
+I (1205) wifi:connected with Ba Anh Em, aid = 1, channel 4, BW20, bssid = b0:8b:92:30:94:fd
+I (1205) wifi:security: WPA2-PSK, phy: bgn, rssi: -46
+I (1215) wifi:pm start, type: 1
+
+I (1325) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (1335) wifi:<ba-add>idx:0 (ifx:0, b0:8b:92:30:94:fd), tid:0, ssn:0, winSize:64
+Line NotUse: ff[0;33mW (1885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (1885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+[0;32mI (2215) esp_netif_handlers: sta ip: 192.168.1.3, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2215) WIFI_MANAGER: got ip:192.168.1.3[0m
+[0;32mI (2215) WIFI_MANAGER: got ip:192.168.1.3[0m
+Line NotUse: ff[0;33mW (2885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (2885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (3885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (3885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (4885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (4885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (5885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (5885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (6885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (6885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (7885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (7885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (8885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (8885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (9885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (9885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (10885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (10885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+[0;32mI (11125) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=7[0m
+[0;32mI (11125) MQTTS_EXAMPLE: 
+Other event id:7[0m
+I (11135) wifi:<ba-add>idx:1 (ifx:0, b0:8b:92:30:94:fd), tid:6, ssn:2, winSize:64
+[0;32mI (11585) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=1[0m
+[0;32mI (11585) MQTTS_EXAMPLE: 
+MQTT_EVENT_CONNECTED[0m
+[0;32mI (11585) MQTTS_EXAMPLE: 
+sent subscribe successful, msg_id=26241[0m
+[0;32mI (11785) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=3[0m
+[0;32mI (11785) MQTTS_EXAMPLE: 
+MQTT_EVENT_SUBSCRIBED, msg_id=26241[0m
+[0;32mI (11795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=26241[0m
+[0;32mI (11805) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (11805) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (11815) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (11815) MQTTS_EXAMPLE: 
+DATA=�
+[0m
+Data Line Not Use: af
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (11885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����į
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (12885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ư
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (13885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ů
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (14885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ů
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (15885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ï
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (16885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����į
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (17885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ů
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (18885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ʯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (19885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (20885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ɯ
+
+Brow   �D         ���������������o$4 UUUUUUUUUUUUUI� PR                   IAI @�H	��"H
+%                �����߿UUUUUUUUU3�g[&@        ( �?���?�$ UT��Q��D
+ �UUUUUUUUUUUUUUUUUUUUUE
+�E�          �                  �                                                          "  U	�
+                                                                 �� �@�A@                                                                     �                               ��UUUUUUUUUU�UUUUUUUUUUUUUUUUUUUUUUUUUUUUSg�������.hR�E �   @؅���UUUE�� 1          �                                 P�D��"*�                    �P                                                              @   "@   B�Q                                                                          *�                           UUUUUUUUUTUUUTUUUUUUUUUUUUUUUUUUUUUUUUU�@       ����������`B  D                                          T�*UU��UUUU%�U%UUU                      �                                                                                                                                                         @ P@                         �����������߳UUUUUUUUUUUUUUUUUUUUU                     @UUUUUUUUUUUUUUUUUU �      @                                                         ��D@I�!���U�UP                        @                                        �����"TU%UI�U��UU�                                                        UUUUUUUUUUUUUUUUUUUUU                    ! �!  ��   
+�UUUUUUUUUUUUUUUUUUUU�@@     �               �_UUT�P~�~� p         �����"�                          U�UU�U�UUUUUUUUUU�U @                       @                                   @B��QI��@QUUUUUUUU                         �                                        �*U�UUUUUU�UUUIR UUUUUUUUU�UUUUUUUUUUU���           ������������UUUUUUUUUUUEUUUUUUUUUUUUUUUUUUUUUUUUUUUY��
+����Q�BD    �P��u�_�_���`@    UUU%U%�*R)���U
+I                    PUUUUUUUUUUUUUUUUUUUU �          ZT��PE*]��           EH �T� (  H                     UUUUUUUUUI�UUUUUUUU          �TD�T P	$            @�E!�                             U�UUUUUUEUUUUUUUUUUU        �������_շUUwUU���UUUUUUuuUU�UUUUU��UUUUUUUUUUUUUUUUUUUU�����k�
+*TUUUUUUUUUUUUUUUUUUU                @�UUUUUUUUUUUUUUUUUUU�dE$  @               @ D   ��_����U�U}�w���?Y        ��UUUUU��UUUUUUU��)                      UUUUUUUUUUUUUUUUUUUU   @                	    D  �EUUUwe�_��         TU�UUUUU���UI��U�RE                     UUUUUUUUUUUUUUUUUUUUe   �  �@  �  P             #A���uU����s �U}������[�]]UUWU�]UUU������UUUUUUUUUUUUUUUUUUUU      �P@     �UEUUU�UUUU�U�UUUUUUUUUUUUUUUUUUUUUUUU�!��
+t:m�����@  �n���������    UUUUUUUUUUUUUU���*)          ���UUUUUUUUUUUUUUUUUUUU�� )D �  @F   �     � Q ��}�����]��]������  �   UUU�U�UUUU�UUUU�RUU                      TUUUUUUUUUUUUUUUUUUUU@� A  ��B              �ڕ�������k�	     ��������������UUUUUUUUUUUUUUUUUUUU�      �4�\����UUUUUUETUUUUUUU�UUUUUUUUUUUUUUUUUUUUUUU������ ���������?wd �TUUUUUUUUUUUUUUUUUUU              U���PUUUUUUUUUUUUUUUUUUUUU��\��FC�mt����ûŭ}���������&� �UUUUUUUUUUUUUUUUUUU            ���DA$P�D �DUUUUUUUUUUUUUUUUUUUUUUUUUU��Oy�w?��������������79�UUUUUU�UUUUUUUUUUTU  �UUUUUUUUUUUUUUUUUUUUUX   � �  � ����UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUw���UUUUUUUUUUUUUUUUUUU@       P�@ePUUEUUUUUUUQUUUUUUUUUUUUUUUUUUUUUUUUUUUU���������������AUUUUUUUUUUUUUUUUUUUU     P         ��QU��U�UUUUUUUUUUUUUUUUUUUUUUUUUUUUUU����w����������n� UUUUUUUUUUUUUUUUUUUU  UUUUUUUUUUUUUUUUUUUUUt���o�� @ ����UUUUUUUյU�W�]���UUUUUUUUUUUUUUUUUUU��1�UUUUUUUUUUUUUUUUUUUUU         � Qh& �UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUus��^TUUUUUUUUUUUUUUUUUUU    ����������UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU����TUUUUUUUUUUUUUUUUUUU   �ls�  ��UUuUUUUU�UUUUUUU� �UUUUUu��o���_�WUUUUUUUUUUUUUUUUUWU�{UUUUUUUUUUUUUUUUUUUUU              UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU��"OUUUUUUUUUUUUUUUUUUUU   �     ���UUUUUUUUUUU�UUUUUUUUUUUUUUUUUUUUUUUUUUU���L�UUUUUUUUUUUUUUUUUUUU��      ����UUUUUUUUUUUUUUU �[����������UUUk�����WUU]UUUUUWU�U�UuU����UUUUUUUUUUUUUUUUUUU� B    �       h��UUUUUUU�UUU�UUUUUU�UUUUUUUUUUUUUUUUUUUU�UUUUUUUUUUUUUUUUUUUU           ����UUUUUUUUUUUUUUU�UUUUUUUUUUUUUUUUUUUUUU�w�UUUUUUUUUUUUUUUUUUUUUE        �UUUUUUUUUUUWUUUUUUUUUUUUUUUUUUUUUUUUUUUU ������������������UUUUUUUUUUUUUUUUUUUUUs� Ja0��͋     @ �  � �UUUUUUUUUU�Uuu��oUUUUUUUUUUUUUUUUUUU��UUUUUUUUUUUUUUUUUUUUd �            ���UUUUUUU�U��U�UU�}UUUUUUUUUUUUUUUUUUUU�TUUUUUUUUUUUUUUUUUUUU�D            {���UUUUUUUUUU�UUUUUU�UUUUUUUUUUUUUUUUUUUU� ������UUUUUUUUUUUUUUUUUUUUuT���W��,@� ��k�UUUUUUUUݫ�}���UUUUUUUUUUWU�UUUUUU��_UUUUUUUUUUUUUUUUUUUU  �� �           @/UUUUUUUUUU��U�UU�[UUUUUUUUUUUUUUUUUUUU�UUUUUUUUUUUUUUUUUUUU
+          �     @��UUUUUUUUUU�UUUuW�UUUUUUUUUUUUUUUUUUUUU� U�UUUUUUUUUUUUUUUUUU�����~�UUUUU�}���߿_UUUUuUuU]U]��_���]�UUUUUUUUUUUUUUUUUUUUUuMɈ VX   �        ���UUUUUUu��ۯw���UUUUUUUUUUUUUUUUUUU]߫UUUUUUUUUUUUUUUUUUUU�aP   � @          �   �UUUUUuUUUUWmU۵W�WUUUUUUUUUUUUUUUUUUUU�\UUUUUU �]_UUUUU]�UUUUUuUUU���UUյ�������_UUUUWUUU�[յW_����UUUUUUUUUUUUUUUUUUUUU�Y)�@J�1J D @  �������UUUUUUջu�Uu�UտUUUUUUUUUUUUUUUUU]U�UUUUUUUUUUUUUUUUUUUUUյ%��@ �!Q         $ �UUUUUUUU�W�Uuߵ��UUUUUUUUUUUUUUUUUUUU�UUUUUUUUUUUUUUUUUUUU�GuB@@ ������߭���}��[����������������WUUUUUUUUUUUUUUUUUUUU��W�Ou�R�Y�{��UUUUU��������UUUUUUUUUUUUU]�]�ouUUUUUUUUUUUUUUUUUUUUUUU����6����� �(�E�UUUU���}�����_UUUUUUUUUUݫ����]��UUUUUUUUUUUUUUUUUUUUU��w���o
+�  ~��� �����_����������������UUUUUUUUUUUUUUUUUUUU���UU�k��_�����U�]��U]�UU����[���UUUUUUUUUUUUUUUUUUUUU�������b^B�=��UUU]u�������UUUUU�UU��w�w�׫��UUUUUUUUUUUUUUUUUUUUUU��M���j���UUUU��� ������w�W�UUUUUUUUUUUUUUUUUU�Ww��w��������[�[�������UUUUUUUUUUUUUUUUUUUU��_��UUUU�������WUWUUUu�U�U�[������UUUUUUUUUUUUUUUUUUUU5�������;t���WUUUU���w��UUUUUUUUUU]UUUU ���UUUUUUUUUUUUUUUUUUUU�Uu�����m�u������������UUUUUUUUUUUUUUUUUUUu��������UUU�������UUUUUUU�Uսmu����WUUUUUUUUUUUUUUUUUUUն���UUUU�_������UUU���{]�UUo��o��� ��{׽[�W�UU�WUu��]������������UUUUUUUUUUUUUUUUUUUU��u��������������WUUUUUUUUUUUUUUUUUUUU׫�������������� �����[�������������������}���U�UUU]UUUUUUUUUU�U[���������������UUUUUUUUUUUUUUUUUUUU}WUU��������U��U���� ��[�w����}�������m��߫U�UuUUUUUU�uUU�w�����������������wUUUUUUUUUUUUUUUUU���������o���������uUU]�UUUUUUUUU� ���������]�w���UUUWUuUUUUU����������������UUUUUUUUUUUUUUUUUUUU�W���������������]U�]w�UUUUUUUUUUUUU� ��������m�m���w}�׻��������_��������U]Uk�UUUUU]UUWUU��������{�߷������{ݭ_��wuUUUUU�UU� �_��]]�uuu��UUU������������������UUUWUUUUUUUUUUUUu�������������������uUU��u�u�UUUUUuU���� �U����om��W]UU�WW����������������UUUUUUUUUUUUUUUUUU�߷���������������W�UUUUUUUW�u�UUWUUU��o��������������� ����������}�߷������������w�UU�UU�UWUwUuUU����������������wU�}�U�UUUUUUU]�uUշ������������� ����_�������m���߻�������WU�UUUUUuUU]]U�UU�������������w����W�UU]UUmUUUի�u����������������� ������������������������_m�}�������������������u�UUw�kUu�UUU���������������_��Uo_uUUU ���������}��}��������o������]]UUUU�UU�UUUU]UU���������������UUUUUUUUUUUUUUUUUUU �������������U�wW���������������������uU�]�kU�UuWU�U��������{�������]�UwU]U�wu�UUUUW�U� �w������m[U�wUU�����������������WWUUUUU�UUUUU�UUU�����������������{W�U�U�WWu�WUUU�UU� ����������wWU�{������������m]�U����wWUU�Uկ�����������o�����w�u�W��U]U�_[շu������w_����� �������m������������������]U�UUUU�UUUU]U������������_�����u��UU]U�Uu��UU������������{��� �������߿��������������W��w]��]տ�����������k�o�{�W�U��U�UUU�������߯������ ��������������������������oU�������������W��wku�w�������������� ��������������������������o�����������_���������������������߽�]��U��WUuU ������������������������{������������mk��mW�m��u�� ����������������������o������o�������������{U�{���[m��� �������������������������������������������[��WU�UU�W��� ���������������������������]m������������~��������W��u����������������� ��������������������{�������}�������������������������������}����� �����������������������[���������������������������mխkuu�u]�w��������������w� ��������������������U��U�[���������������������W��_�������������������o����� ����}����ݭ�k���������������{k�����]m[uݭ�������߿�������o�׵U�U��UuUUUUU]U� ��������W��������������ݵ���������]������������[{UUU���]]�UU� ����������������������UU]U�}U��W����������������u�U��Uݻ��mu�� �����w�������������������[�o����������W���������UUum׭�U�U�U�W���������� �������������w��������������UUUUUUUUUUUUUUUUUUUU����������u}�ս�U�u�o���������{wU�[�U��UUݵu�������������� �����������������߽��������������������׫��uUu����������������� �����������������_����������������׽�m_�u�}����]�w��������������� ��������������������������������k���]UU�UUUUU]kUU������������������UUUUUUU�UUuUUUUUUU� ����������k�U��������}�����������w�����U۫Uݭ}}�W���������߿��_����}[��U�UWW���UUU� ��������������}�������������k�ս��������������o�����������������}W�o}�� �����{����������������������u�����]��ݷշ�����������������U�UW�U]WUUUUUUUUUU���� ����������w�������������۷u��uU�UUuUUUUUUU�����������������]UUU�UյU�U��UU���������������� �������}����������������oUw��_ݷ��W�wuU�����������������o�u�W���u�W���uU�}������������� ��������������������۽�ݫ��U׵�m���_����_���������}��]ou�U}�o��kխ������������ ���������������m��UW����W�m������������������o����uUUW�]��UUUW������������������]�WUUU ���w����������������]�]U�W���������������[]UUUUUUUUUUUUUUUUU������������������UU]��UUU�UuUUUUUUU� ��������������UU]�WUuUU]�m���������������wU]UUUUUUUUUUUUUUUUU���������w������UUU]UwwUUUUU��W�U� ������U��������������������}��UU�խuUUU�UUU��������������������]_UUUUUUUUUUUUUU���� ������U����իm������������������UUUUUUUUUUU�UUUUUU����������������������UuUU�UUUUUUUUUUU�ջk����������� ����������m����������������������UU]U���UU�������������������WWUWUUUUUUUUUUuUUU�w������������� ������������������{�������߿ݻ����U��U]U�U������������������kuUUUU]UUUUUUUUUUU����������������� ������o�������W�����������m��mWUUUUU�����������}���k�U�]�]UUUUUmUu�UUU��������������� ���������������������߿UU�_U�]U]�mU]�UU���������������U�UUU�UuUUUU]�UUu�o���������������UUUU�mUUUUUUU  ������ջ�u�u}�U����������������_U�UUU�UUUUUUUU�UUU�۫�������������WUUUUUUUUUUUUUUU��� ������u���WwUUU��WW�������������������[�UUUUUUUUUUUUUUUUU�����������������muUUU]UUUUUUUUUUUUU� ���W]�����{�_U[�����������������U�UUUUUUUUUWUUUUUUUU��������W�}�����UUUUUUUUUUUUUUUUUUUU�w�[���� ������m�U�տ�uU���������������{�UWUUUU�UUuUUUUUUU���������������WU�UUUUUUUUUUUUUUUUU���������������� ���������������������������U����]]UUWuU�U�U]U�Wm���������������UUUUUUUUUUUUUUUUUUU����������������  ��������������������uU�u�UW���U�������������������U�WwUUU�UU�UUUUUU��u�������������� ���������_����������������UUUUUUUUWuUUUUUUUUկ���������������UUUUUUUUUUUUUUUUUUUU�����������������w�UUUUUUUU �������������������W��U]U]UUUUW�U�UWUU�o���������������WUWUUUUUUUUUUUUUUUU�[������oow������UUUUUUUUUUUUUUUUUUUU� ���{�����������[UUUUUUUUUUUUUUUUUU�?����������������UUUUUUUUUUUUUUUUUUUU��U���߷������������UUUUUUUUUUUUUUUUUUU�� �������UU�����U�UU�U�{�����������������UUUUUUUUUUUUUUUUUU�����U�������}�۵������UUUUUUUUUUUUUUUUUUU�UU ��uUUUUWUU�uUU]]�UU���������������U]UUUUUUUUUUUUUUUUUU��U���������o����UUUUUUUUUUUUUUUUUUU���������o� ����w_�w��W��]յ������������������WW]�UWUUUUUUUUUUUUU���������������[UUUUUUUUUUUUUUUUUUU��U�[��w��������o���� �������[ݭ�U�m���������߿��������]�UUUUUUU]UյUUUU����������������UWUUUUUUUUUUUUUUUUUU�խ������������ ��������������������UUUUUUUUUUUUUUUUUUUU���������UUUUUUUUUUUUUUUUUUUU�5���������� ����ۻ���UUU����UUUUUUUUUUUUUUUUUUUU������������UUUUUUUUUUUUUUUUUUUUU���>�k� �  ���������������������������WUuUUU]UUUUUUUUUUUU������������������UUUUUUUUUUUUUUUUUUU���UU���������������������U]UUUUUUUUUUU�UUUUUU��� ���o{�������������������U��UUU�U�UUUU��U��U����������������WUUUUUUUUUUUUUUUUUUUU|�U���������u��W��������UUUUUUUUUUUUUUUUUUU�� �����UUUUUUUUUUUUUUUUUUUU������UUUUUUUUUUUUUUUUUUUUUpo����o��������UUUUUUUUUUUUUUUUUUUUU���~���������}���U UUUUUUUUUUUUUUUUUUUU�����UUUUUUUUUUUUUUUUUUUUUu��_��w����{�k�����UUUUUUUUUUUUUUUUUUUUU�w �s �"�?�n F���Uu����_�������_� [UUUUUU]UUUUUUUUUUUU�������UUUUUUUUUUUUUUUUUUUUU��t���������������o���UUUUUUUUUUUUUUUUUUUUU��f?�����p��U������������ �UUUUUUUUUUUUUUTUUUU�����UUUUUUUUUUUUUUUUUUUUղ��?����]UU�������UUUUUUUUUUUUUUUUU�UUU����������������UUW�������� �[�w�UU�UUUUUU�U������UUUUUUUUUUUUUUUUUUUUU�����������UU����������UUUUUUUUUUUUUUUUUUUU��i�@�<^������UUU�_��������������U w�]UU��UUUUUUUUU������UUUUUUUUUUUUUUUUUUUUU���37�����U�����������UUUUUUUUUUUUUUUUUUUU���-z��-���o F�~��_U��������������UUUUUUUUUUUUUUUUUUUUU\}� ���ww������o�UUUUUUUUUUUUUUUUUUUU�?��m�������UUUUUUUUUUUUUUUUUUUU�������� b�߷\���{�������������}UUUUUUUUUUUUUUUUUUUUUUr���2���������p�� �����o����UUUUUUUUUUUUUUUUUUUU�^�� �� WUUUUUUUUUUUUUUUUUUU��� UUUUUUUUUUUUUUUUUUUU�UU�������UUUk��u����oo���UUUUUUUUUUUUUUUUU�U�s��=       @���UUUUUUUUUUUUUUUU �bi6�6U���
+�"�[��L� *���   �    ���UUUUUUUUUUU  ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6992
+load:0x40078000,len:15512
+load:0x40080400,len:3864
+entry 0x40080650
+[0;32mI (27) boot: ESP-IDF v5.0.3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time 18:40:57[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v1.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27f30h (163632) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=00037f58 vaddr=3ffb0000 size=03404h ( 13316) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=0003b364 vaddr=40080000 size=04cb4h ( 19636) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9bd98h (638360) map[0m
+[0;32mI (403) esp_image: segment 4: paddr=000dbdc0 vaddr=40084cb4 size=10180h ( 65920) load[0m
+[0;32mI (441) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (441) boot: Disabling RNG early entropy source...[0m
+[0;32mI (452) cpu_start: Multicore app[0m
+[0;32mI (452) cpu_start: Pro cpu up.[0m
+[0;32mI (453) cpu_start: Starting app cpu, entry point is 0x400812bc[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) cpu_start: Application information:[0m
+[0;32mI (475) cpu_start: Project name:     main[0m
+[0;32mI (480) cpu_start: App version:      d2f66b4-dirty[0m
+[0;32mI (486) cpu_start: Compile time:     Nov 20 2023 18:40:35[0m
+[0;32mI (492) cpu_start: ELF file SHA256:  bbd7e84d799cc645...[0m
+[0;32mI (498) cpu_start: ESP-IDF:          v5.0.3-dirty[0m
+[0;32mI (503) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (508) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (513) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (517) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (525) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFB77E8 len 00028818 (162 KiB): DRAM[0m
+[0;32mI (537) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (543) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (550) heap_init: At 40094E34 len 0000B1CC (44 KiB): IRAM[0m
+[0;32mI (557) spi_flash: detected chip: generic[0m
+[0;32mI (561) spi_flash: flash io: dio[0m
+[0;33mW (564) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (579) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+[0;32mI (665) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (665) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (665) gpio: GPIO[16]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (675) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (685) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (695) gpio: GPIO[22]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (705) gpio: GPIO[23]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (715) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (725) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (735) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (745) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (755) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (765) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (775) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (785) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Line NotUse: ff[0;31mE (795) mqtt_client: Client was not initialized[0m
+[0;32mI (795) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (805) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+I (815) wifi:wifi driver task: 3ffc0c38, prio:23, stack:6656, core=0
+[0;32mI (815) system_api: Base MAC address is not set[0m
+[0;32mI (825) system_api: read default base MAC address from EFUSE[0m
+I (855) wifi:wifi firmware version: 15fc0ca
+I (855) wifi:wifi certification version: v7.0
+I (855) wifi:config NVS flash: enabled
+I (855) wifi:config nano formating: disabled
+I (855) wifi:Init data frame dynamic rx buffer num: 32
+I (865) wifi:Init management frame dynamic rx buffer num: 32
+I (865) wifi:Init management short buffer num: 32
+I (875) wifi:Init dynamic tx buffer num: 32
+I (875) wifi:Init static rx buffer size: 1600
+I (875) wifi:Init static rx buffer num: 10
+I (885) wifi:Init dynamic rx buffer num: 32
+
+[0;32mI (885) wifi_init: rx ba win: 6[0m
+[0;32mI (895) wifi_init: tcpip mbox: 32[0m
+[0;32mI (895) wifi_init: udp mbox: 6[0m
+[0;32mI (895) wifi_init: tcp mbox: 6[0m
+[0;32mI (905) wifi_init: tcp tx win: 5744[0m
+[0;32mI (905) wifi_init: tcp rx win: 5744[0m
+[0;32mI (915) wifi_init: tcp mss: 1440[0m
+[0;32mI (915) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (915) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (925) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1025) wifi:mode : sta (e0:e2:e6:ce:04:d4)
+I (1025) wifi:enable tsf
+pubic: Alam_seting[0;32mI (1025) MQTTS_EXAMPLE: 
+[APP] Free memory: 233540 bytes[0m
+[0;32mI (1035) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=7[0m
+E (1035) wifi:[0;32mI (1035) MQTTS_EXAMPLE: 
+Other event id:7[0m
+sta is connecting, return error
+[0;31mE (1055) esp-tls: couldn't get hostname for :test.mosquitto.org: getaddrinfo() returns 202, addrinfo=0x0[0m
+I (1055) wifi:[0;31mE (1055) transport_base: Failed to open a new connection: 32769[0m
+new:<4,0>, old:<1,0>, ap:<255,255>, sta:<4,0>, prof:1
+I (1075) wifi:state: init -> auth (b0)
+[0;31mE (1075) mqtt_client: Error transport connect[0m
+I (1075) wifi:[0;32mI (1075) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=0[0m
+state: auth -> assoc (0)[0;32mI (1085) MQTTS_EXAMPLE: 
+MQTT_EVENT_ERROR[0m
+
+[0;31mE (1095) MQTTS_EXAMPLE: Last error reported from esp-tls: 0x8001[0m
+[0;32mI (1105) MQTTS_EXAMPLE: 
+Last errno string (Success)[0m
+[0;32mI (1105) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=2[0m
+I (1115) wifi:state: assoc -> run (10)
+[0;32mI (1125) MQTTS_EXAMPLE: 
+MQTT_EVENT_DISCONNECTED[0m
+I (1205) wifi:connected with Ba Anh Em, aid = 1, channel 4, BW20, bssid = b0:8b:92:30:94:fd
+I (1205) wifi:security: WPA2-PSK, phy: bgn, rssi: -50
+I (1215) wifi:pm start, type: 1
+
+I (1225) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+Line NotUse: ff[0;33mW (1885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (1885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (2885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (2885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+I (3325) wifi:<ba-add>idx:0 (ifx:0, b0:8b:92:30:94:fd), tid:0, ssn:1, winSize:64
+Line NotUse: ff[0;33mW (3885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (3885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+[0;32mI (4215) esp_netif_handlers: sta ip: 192.168.1.3, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4215) WIFI_MANAGER: got ip:192.168.1.3[0m
+[0;32mI (4215) WIFI_MANAGER: got ip:192.168.1.3[0m
+Line NotUse: ff[0;33mW (4885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (4885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (5885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (5885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (6885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (6885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (7885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (7885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (8885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (8885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (9885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (9885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (10885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (10885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+[0;32mI (11125) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=7[0m
+[0;32mI (11125) MQTTS_EXAMPLE: 
+Other event id:7[0m
+I (11135) wifi:<ba-add>idx:1 (ifx:0, b0:8b:92:30:94:fd), tid:6, ssn:2, winSize:64
+[0;32mI (11675) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=1[0m
+[0;32mI (11675) MQTTS_EXAMPLE: 
+MQTT_EVENT_CONNECTED[0m
+[0;32mI (11685) MQTTS_EXAMPLE: 
+sent subscribe successful, msg_id=61308[0m
+[0;32mI (11875) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=3[0m
+[0;32mI (11885) MQTTS_EXAMPLE: 
+MQTT_EVENT_SUBSCRIBED, msg_id=61308[0m
+Line NotUse: ff[0;32mI (11885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=61308[0m
+[0;32mI (11895) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (11905) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (11905) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (11915) MQTTS_EXAMPLE: 
+DATA=�
+[0m
+Data Line Not Use: af
+[0;32mI (11925) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (12925) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����˯
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (13925) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����˯
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (14925) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ί
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (15925) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����կ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (16925) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ӯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (17925) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ӯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (18925) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����կ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (19925) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ׯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (20925) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����֯
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (21925) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����կ
+
+Brow UUUUUUU�         �   �           �           ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6992
+load:0x40078000,len:15512
+load:0x40080400,len:3864
+entry 0x40080650
+[0;32mI (27) boot: ESP-IDF v5.0.3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time 18:40:57[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v1.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27f30h (163632) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=00037f58 vaddr=3ffb0000 size=03404h ( 13316) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=0003b364 vaddr=40080000 size=04cb4h ( 19636) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9bd98h (638360) map[0m
+[0;32mI (403) esp_image: segment 4: paddr=000dbdc0 vaddr=40084cb4 size=10180h ( 65920) load[0m
+[0;32mI (441) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (441) boot: Disabling RNG early entropy source...[0m
+[0;32mI (452) cpu_start: Multicore app[0m
+[0;32mI (453) cpu_start: Pro cpu up.[0m
+[0;32mI (453) cpu_start: Starting app cpu, entry point is 0x400812bc[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) cpu_start: Application information:[0m
+[0;32mI (475) cpu_start: Project name:     main[0m
+[0;32mI (480) cpu_start: App version:      d2f66b4-dirty[0m
+[0;32mI (486) cpu_start: Compile time:     Nov 20 2023 18:40:35[0m
+[0;32mI (492) cpu_start: ELF file SHA256:  bbd7e84d799cc645...[0m
+[0;32mI (498) cpu_start: ESP-IDF:          v5.0.3-dirty[0m
+[0;32mI (503) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (508) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (513) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (518) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (525) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFB77E8 len 00028818 (162 KiB): DRAM[0m
+[0;32mI (537) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (543) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (550) heap_init: At 40094E34 len 0000B1CC (44 KiB): IRAM[0m
+[0;32mI (557) spi_flash: detected chip: generic[0m
+[0;32mI (561) spi_flash: flash io: dio[0m
+[0;33mW (564) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (579) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+[0;32mI (665) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (665) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (665) gpio: GPIO[16]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (675) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (685) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (695) gpio: GPIO[22]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (705) gpio: GPIO[23]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (715) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (725) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (735) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (745) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (755) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (765) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (775) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (785) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Line NotUse: ff[0;31mE (795) mqtt_client: Client was not initialized[0m
+[0;32mI (795) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (805) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+I (815) wifi:wifi driver task: 3ffc0c38, prio:23, stack:6656, core=0
+[0;32mI (815) system_api: Base MAC address is not set[0m
+[0;32mI (825) system_api: read default base MAC address from EFUSE[0m
+I (855) wifi:wifi firmware version: 15fc0ca
+I (855) wifi:wifi certification version: v7.0
+I (855) wifi:config NVS flash: enabled
+I (855) wifi:config nano formating: disabled
+I (855) wifi:Init data frame dynamic rx buffer num: 32
+I (865) wifi:Init management frame dynamic rx buffer num: 32
+I (865) wifi:Init management short buffer num: 32
+I (875) wifi:Init dynamic tx buffer num: 32
+I (875) wifi:Init static rx buffer size: 1600
+I (875) wifi:Init static rx buffer num: 10
+I (885) wifi:Init dynamic rx buffer num: 32
+
+[0;32mI (885) wifi_init: rx ba win: 6[0m
+[0;32mI (895) wifi_init: tcpip mbox: 32[0m
+[0;32mI (895) wifi_init: udp mbox: 6[0m
+[0;32mI (895) wifi_init: tcp mbox: 6[0m
+[0;32mI (905) wifi_init: tcp tx win: 5744[0m
+[0;32mI (905) wifi_init: tcp rx win: 5744[0m
+[0;32mI (915) wifi_init: tcp mss: 1440[0m
+[0;32mI (915) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (915) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (925) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1025) wifi:mode : sta (e0:e2:e6:ce:04:d4)
+I (1025) wifi:enable tsf
+pubic: Alam_seting[0;32mI (1025) MQTTS_EXAMPLE: 
+[APP] Free memory: 233540 bytes[0m
+[0;32mI (1035) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=7[0m
+E (1035) wifi:[0;32mI (1035) MQTTS_EXAMPLE: 
+Other event id:7[0m
+sta is connecting, return error
+[0;31mE (1055) esp-tls: couldn't get hostname for :test.mosquitto.org: getaddrinfo() returns 202, addrinfo=0x0[0m
+I (1055) wifi:[0;31mE (1055) transport_base: Failed to open a new connection: 32769[0m
+new:<4,0>, old:<1,0>, ap:<255,255>, sta:<4,0>, prof:1
+I (1075) wifi:state: init -> auth (b0)
+[0;31mE (1075) mqtt_client: Error transport connect[0m
+I (1075) wifi:[0;32mI (1075) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=0[0m
+state: auth -> assoc (0)[0;32mI (1085) MQTTS_EXAMPLE: 
+MQTT_EVENT_ERROR[0m
+
+[0;31mE (1095) MQTTS_EXAMPLE: Last error reported from esp-tls: 0x8001[0m
+[0;32mI (1105) MQTTS_EXAMPLE: 
+Last errno string (Success)[0m
+[0;32mI (1105) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=2[0m
+I (1105) wifi:state: assoc -> run (10)
+[0;32mI (1125) MQTTS_EXAMPLE: 
+MQTT_EVENT_DISCONNECTED[0m
+I (1205) wifi:connected with Ba Anh Em, aid = 1, channel 4, BW20, bssid = b0:8b:92:30:94:fd
+I (1205) wifi:security: WPA2-PSK, phy: bgn, rssi: -45
+I (1215) wifi:pm start, type: 1
+
+I (1295) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+
+Br �U�UUUUUUE        a  ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6992
+load:0x40078000,len:15512
+load:0x40080400,len:3864
+entry 0x40080650
+[0;32mI (27) boot: ESP-IDF v5.0.3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time 18:40:57[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v1.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27f30h (163632) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=00037f58 vaddr=3ffb0000 size=03404h ( 13316) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=0003b364 vaddr=40080000 size=04cb4h ( 19636) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9bd98h (638360) map[0m
+[0;32mI (403) esp_image: segment 4: paddr=000dbdc0 vaddr=40084cb4 size=10180h ( 65920) load[0m
+[0;32mI (441) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (441) boot: Disabling RNG early entropy source...[0m
+[0;32mI (452) cpu_start: Multicore app[0m
+[0;32mI (452) cpu_start: Pro cpu up.[0m
+[0;32mI (453) cpu_start: Starting app cpu, entry point is 0x400812bc[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) cpu_start: Application information:[0m
+[0;32mI (475) cpu_start: Project name:     main[0m
+[0;32mI (480) cpu_start: App version:      d2f66b4-dirty[0m
+[0;32mI (486) cpu_start: Compile time:     Nov 20 2023 18:40:35[0m
+[0;32mI (492) cpu_start: ELF file SHA256:  bbd7e84d799cc645...[0m
+[0;32mI (498) cpu_start: ESP-IDF:          v5.0.3-dirty[0m
+[0;32mI (503) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (508) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (513) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (517) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (525) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFB77E8 len 00028818 (162 KiB): DRAM[0m
+[0;32mI (537) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (543) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (550) heap_init: At 40094E34 len 0000B1CC (44 KiB): IRAM[0m
+[0;32mI (557) spi_flash: detected chip: generic[0m
+[0;32mI (560) spi_flash: flash io: dio[0m
+[0;33mW (564) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (579) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+[0;32mI (665) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (665) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (665) gpio: GPIO[16]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (675) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (685) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (695) gpio: GPIO[22]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (705) gpio: GPIO[23]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (715) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (725) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (735) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (745) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (755) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (765) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (775) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (785) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Line NotUse: ff[0;31mE (795) mqtt_client: Client was not initialized[0m
+[0;32mI (795) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (805) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+I (815) wifi:wifi driver task: 3ffc0c38, prio:23, stack:6656, core=0
+[0;32mI (815) system_api: Base MAC address is not set[0m
+[0;32mI (825) system_api: read default base MAC address from EFUSE[0m
+I (855) wifi:wifi firmware version: 15fc0ca
+I (855) wifi:wifi certification version: v7.0
+I (855) wifi:config NVS flash: enabled
+I (855) wifi:config nano formating: disabled
+I (855) wifi:Init data frame dynamic rx buffer num: 32
+I (865) wifi:Init management frame dynamic rx buffer num: 32
+I (865) wifi:Init management short buffer num: 32
+I (875) wifi:Init dynamic tx buffer num: 32
+I (875) wifi:Init static rx buffer size: 1600
+I (875) wifi:Init static rx buffer num: 10
+I (885) wifi:Init dynamic rx buffer num: 32
+
+[0;32mI (885) wifi_init: rx ba win: 6[0m
+[0;32mI (895) wifi_init: tcpip mbox: 32[0m
+[0;32mI (895) wifi_init: udp mbox: 6[0m
+[0;32mI (895) wifi_init: tcp mbox: 6[0m
+[0;32mI (905) wifi_init: tcp tx win: 5744[0m
+[0;32mI (905) wifi_init: tcp rx win: 5744[0m
+[0;32mI (915) wifi_init: tcp mss: 1440[0m
+[0;32mI (915) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (915) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (925) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1025) wifi:mode : sta (e0:e2:e6:ce:04:d4)
+I (1035) wifi:enable tsf
+pubic: Alam_seting[0;32mI (1035) MQTTS_EXAMPLE: 
+[APP] Free memory: 233540 bytes[0m
+[0;32mI (1035) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=7[0m
+E (1035) wifi:[0;32mI (1045) MQTTS_EXAMPLE: 
+Other event id:7[0m
+sta is connecting, return error
+[0;31mE (1045) esp-tls: couldn't get hostname for :test.mosquitto.org: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (1065) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (1065) mqtt_client: Error transport connect[0m
+[0;32mI (1075) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=0[0m
+[0;32mI (1085) MQTTS_EXAMPLE: 
+MQTT_EVENT_ERROR[0m
+[0;31mE (1085) MQTTS_EXAMPLE: Last error reported from esp-tls: 0x8001[0m
+[0;32mI (1095) MQTTS_EXAMPLE: 
+Last errno string (Success)[0m
+[0;32mI (1095) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=2[0m
+[0;32mI (1105) MQTTS_EXAMPLE: 
+MQTT_EVENT_DISCONNECTED[0m
+I (1115) wifi:new:<4,0>, old:<1,0>, ap:<255,255>, sta:<4,0>, prof:1
+I (1115) wifi:state: init -> auth (b0)
+I (1125) wifi:state: auth -> assoc (0)
+I (1135) wifi:state: assoc -> run (10)
+I (1235) wifi:connected with Ba Anh Em, aid = 1, channel 4, BW20, bssid = b0:8b:92:30:94:fd
+I (1235) wifi:security: WPA2-PSK, phy: bgn, rssi: -46
+I (1245) wifi:pm start, type: 1
+
+I (1305) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (1815) wifi:<ba-add>idx:0 (ifx:0, b0:8b:92:30:94:fd), tid:0, ssn:0, winSize:64
+Line NotUse: ff[0;33mW (1885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (1885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+[0;32mI (2745) esp_netif_handlers: sta ip: 192.168.1.3, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2745) WIFI_MANAGER: got ip:192.168.1.3[0m
+[0;32mI (2745) WIFI_MANAGER: got ip:192.168.1.3[0m
+Line NotUse: ff[0;33mW (2885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (2885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (3885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (3885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+
+Br UUUUUU                ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6992
+load:0x40078000,len:15512
+load:0x40080400,len:3864
+entry 0x40080650
+[0;32mI (27) boot: ESP-IDF v5.0.3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time 18:40:57[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v1.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27f30h (163632) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=00037f58 vaddr=3ffb0000 size=03404h ( 13316) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=0003b364 vaddr=40080000 size=04cb4h ( 19636) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9bd98h (638360) map[0m
+[0;32mI (403) esp_image: segment 4: paddr=000dbdc0 vaddr=40084cb4 size=10180h ( 65920) load[0m
+[0;32mI (441) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (441) boot: Disabling RNG early entropy source...[0m
+[0;32mI (452) cpu_start: Multicore app[0m
+[0;32mI (453) cpu_start: Pro cpu up.[0m
+[0;32mI (453) cpu_start: Starting app cpu, entry point is 0x400812bc[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) cpu_start: Application information:[0m
+[0;32mI (476) cpu_start: Project name:     main[0m
+[0;32mI (480) cpu_start: App version:      d2f66b4-dirty[0m
+[0;32mI (486) cpu_start: Compile time:     Nov 20 2023 18:40:35[0m
+[0;32mI (492) cpu_start: ELF file SHA256:  bbd7e84d799cc645...[0m
+[0;32mI (498) cpu_start: ESP-IDF:          v5.0.3-dirty[0m
+[0;32mI (503) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (508) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (513) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (518) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (525) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFB77E8 len 00028818 (162 KiB): DRAM[0m
+[0;32mI (537) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (543) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (550) heap_init: At 40094E34 len 0000B1CC (44 KiB): IRAM[0m
+[0;32mI (557) spi_flash: detected chip: generic[0m
+[0;32mI (561) spi_flash: flash io: dio[0m
+[0;33mW (565) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (579) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+[0;32mI (665) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (665) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (665) gpio: GPIO[16]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (675) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (685) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (695) gpio: GPIO[22]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (705) gpio: GPIO[23]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (715) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (725) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (735) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (745) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (755) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (765) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (775) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (785) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Line NotUse: ff[0;31mE (795) mqtt_client: Client was not initialized[0m
+[0;32mI (795) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (805) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+I (815) wifi:wifi driver task: 3ffc0c38, prio:23, stack:6656, core=0
+[0;32mI (815) system_api: Base MAC address is not set[0m
+[0;32mI (825) system_api: read default base MAC address from EFUSE[0m
+I (855) wifi:wifi firmware version: 15fc0ca
+I (855) wifi:wifi certification version: v7.0
+I (855) wifi:config NVS flash: enabled
+I (855) wifi:config nano formating: disabled
+I (855) wifi:Init data frame dynamic rx buffer num: 32
+I (865) wifi:Init management frame dynamic rx buffer num: 32
+I (865) wifi:Init management short buffer num: 32
+I (875) wifi:Init dynamic tx buffer num: 32
+I (875) wifi:Init static rx buffer size: 1600
+I (875) wifi:Init static rx buffer num: 10
+I (885) wifi:Init dynamic rx buffer num: 32
+
+[0;32mI (885) wifi_init: rx ba win: 6[0m
+[0;32mI (895) wifi_init: tcpip mbox: 32[0m
+[0;32mI (895) wifi_init: udp mbox: 6[0m
+[0;32mI (895) wifi_init: tcp mbox: 6[0m
+[0;32mI (905) wifi_init: tcp tx win: 5744[0m
+[0;32mI (905) wifi_init: tcp rx win: 5744[0m
+[0;32mI (915) wifi_init: tcp mss: 1440[0m
+[0;32mI (915) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (915) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (925) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1025) wifi:mode : sta (e0:e2:e6:ce:04:d4)
+I (1025) wifi:enable tsf
+pubic: Alam_seting[0;32mI (1025) MQTTS_EXAMPLE: 
+[APP] Free memory: 233540 bytes[0m
+[0;32mI (1035) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=7[0m
+E (1035) wifi:[0;32mI (1035) MQTTS_EXAMPLE: 
+Other event id:7[0m
+sta is connecting, return error
+[0;31mE (1045) esp-tls: couldn't get hostname for :test.mosquitto.org: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (1055) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (1065) mqtt_client: Error transport connect[0m
+[0;32mI (1065) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=0[0m
+[0;32mI (1075) MQTTS_EXAMPLE: 
+MQTT_EVENT_ERROR[0m
+[0;31mE (1085) MQTTS_EXAMPLE: Last error reported from esp-tls: 0x8001[0m
+[0;32mI (1085) MQTTS_EXAMPLE: 
+Last errno string (Success)[0m
+[0;32mI (1095) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=2[0m
+[0;32mI (1105) MQTTS_EXAMPLE: 
+MQTT_EVENT_DISCONNECTED[0m
+I (1115) wifi:new:<4,0>, old:<1,0>, ap:<255,255>, sta:<4,0>, prof:1
+I (1115) wifi:state: init -> auth (b0)
+I (1125) wifi:state: auth -> assoc (0)
+I (1125) wifi:state: assoc -> run (10)
+I (1225) wifi:connected with Ba Anh Em, aid = 1, channel 4, BW20, bssid = b0:8b:92:30:94:fd
+I (1225) wifi:security: WPA2-PSK, phy: bgn, rssi: -54
+I (1235) wifi:pm start, type: 1
+
+I (1325) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+Line NotUse: ff[0;33mW (1885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (1885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (2885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (2885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+����Կ�
+I (3375) wifi:<ba-add>idx:0 (ifx:0, b0:8b:92:30:94:fd), tid:0, ssn:0, winSize:64
+Line NotUse: ff[0;33mW (3885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (3885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+[0;32mI (4235) esp_netif_handlers: sta ip: 192.168.1.3, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4235) WIFI_MANAGER: got ip:192.168.1.3[0m
+[0;32mI (4235) WIFI_MANAGER: got ip:192.168.1.3[0m
+Line NotUse: ff[0;33mW (4885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (4885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (5885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (5885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+I (6145) wifi:<ba-add>idx:1 (ifx:0, b0:8b:92:30:94:fd), tid:6, ssn:3, winSize:64
+Line NotUse: ff[0;33mW (6885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (6885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (7885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (7885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (8885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (8885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (9885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (9885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (10885) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (10885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+[0;32mI (11115) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=7[0m
+[0;32mI (11115) MQTTS_EXAMPLE: 
+Other event id:7[0m
+[0;32mI (11785) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=1[0m
+[0;32mI (11785) MQTTS_EXAMPLE: 
+MQTT_EVENT_CONNECTED[0m
+[0;32mI (11795) MQTTS_EXAMPLE: 
+sent subscribe successful, msg_id=56481[0m
+Line NotUse: ff[0;32mI (11885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+����Լ�
+[0;32mI (11995) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=3[0m
+[0;32mI (11995) MQTTS_EXAMPLE: 
+MQTT_EVENT_SUBSCRIBED, msg_id=56481[0m
+[0;32mI (12005) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (12015) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (12015) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (12025) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (12025) MQTTS_EXAMPLE: 
+DATA=�
+[0m
+Data Line Not Use: af
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (12885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ů
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (13885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ȯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (14885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (15885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����˯
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (16885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (17885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (18885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ί
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (19885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ί
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (20885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����̯
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (21885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (22885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (23885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (24885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ί
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (25885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ү
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (26885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Я
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (27885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ί
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (28885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (29885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (30885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����˯
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (31885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (32885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (33885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (34885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����¯
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (35885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (36885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ɯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (37885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ɯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (38885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Я
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (39885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ӯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (40885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Я
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (41885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ӯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (42885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ү
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (43885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (44885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (45885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Я
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (46885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ί
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (47885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (48885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ү
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (49885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (50885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (51885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Я
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (52885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Я
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (53885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (54885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Я
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (55885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Я
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (56885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (57885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (58885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (59885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (60885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (61885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (62885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����¯
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (63885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+����Լ�
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (64885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ɯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (65885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ί
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (66885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Я
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (67885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Я
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (68885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Я
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (69885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Я
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (70885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Я
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (71885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Я
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (72885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ү
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (73885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (74885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Я
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (75885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (76885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Я
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (77885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����˯
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (78885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (79885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (80885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����į
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (81885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ǯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (82885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Я
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (83885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (84885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ԯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (85885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (86885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (87885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Я
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (88885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����̯
+������line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (92885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����̯
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (93885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����̯
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (94885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ǯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (95885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (96885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Я
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (97885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ԯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (98885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ү
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (99885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ί
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (100885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����˯
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (101885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (102885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (103885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ί
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (104885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Я
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (10

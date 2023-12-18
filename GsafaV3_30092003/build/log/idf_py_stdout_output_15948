@@ -1,0 +1,61 @@
+[1/12] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/EC200.c.obj
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_30092003/main/EC200.c: In function 'power_on':
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_30092003/main/EC200.c:61:16: warning: unused variable 'start_time' [-Wunused-variable]
+   61 |     TickType_t start_time = xTaskGetTickCount(); // Thời điểm bắt đầu timeout
+      |                ^~~~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_30092003/main/EC200.c:60:9: warning: unused variable 'is_power_on' [-Wunused-variable]
+   60 |     int is_power_on = 0;
+      |         ^~~~~~~~~~~
+[2/12] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\GsafaV3_30092003\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.0.3/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_30092003/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6760 bytes. 0x8a0 bytes (8%) free.
+[3/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_30092003/main/main.c: In function 'app_main':
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_30092003/main/main.c:99:19: warning: passing argument 1 of 'MQTT_Open' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   99 |         MQTT_Open(mqtt_hostname, mqtt_port, ESP_ID, topicSever4G, mqtt_user, mqtt_pass);
+      |                   ^~~~~~~~~~~~~
+In file included from D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_30092003/main/main.c:6:
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_30092003/main/EC200.h:24:21: note: expected 'char *' but argument is of type 'const char *'
+   24 | int MQTT_Open(char *mqtt_server, int mqtt_port, char *esp_id, char *topic_srv, char *user, char *passwd);
+      |               ~~~~~~^~~~~~~~~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_30092003/main/main.c:99:67: warning: passing argument 5 of 'MQTT_Open' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   99 |         MQTT_Open(mqtt_hostname, mqtt_port, ESP_ID, topicSever4G, mqtt_user, mqtt_pass);
+      |                                                                   ^~~~~~~~~
+In file included from D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_30092003/main/main.c:6:
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_30092003/main/EC200.h:24:86: note: expected 'char *' but argument is of type 'const char *'
+   24 | int MQTT_Open(char *mqtt_server, int mqtt_port, char *esp_id, char *topic_srv, char *user, char *passwd);
+      |                                                                                ~~~~~~^~~~
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_30092003/main/main.c:99:78: warning: passing argument 6 of 'MQTT_Open' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   99 |         MQTT_Open(mqtt_hostname, mqtt_port, ESP_ID, topicSever4G, mqtt_user, mqtt_pass);
+      |                                                                              ^~~~~~~~~
+In file included from D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_30092003/main/main.c:6:
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_30092003/main/EC200.h:24:98: note: expected 'char *' but argument is of type 'const char *'
+   24 | int MQTT_Open(char *mqtt_server, int mqtt_port, char *esp_id, char *topic_srv, char *user, char *passwd);
+      |                                                                                            ~~~~~~^~~~~~
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/wifi_config.c.obj
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_30092003/main/wifi_config.c: In function 'wifi_manager':
+D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_30092003/main/wifi_config.c:230:27: warning: variable 'server' set but not used [-Wunused-but-set-variable]
+  230 |     static httpd_handle_t server = NULL;
+      |                           ^~~~~~
+[5/10] Linking C static library esp-idf\main\libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable main.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.5.1
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_30092003/build/main.bin
+[9/10] cmd.exe /C "cd /D D:\CODE\ESP32-IDF\esp32-idf-studying\GsafaV3_30092003\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.0.3/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_30092003/build/partition_table/partition-table.bin D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_30092003/build/main.bin"
+main.bin binary size 0xea890 bytes. Smallest app partition is 0x150000 bytes. 0x65770 bytes (30%) free.
+[9/10] cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.0.3\components\esptool_py && C:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.0.3 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.0_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.0.3/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_30092003/build -P C:/Espressif/frameworks/esp-idf-v5.0.3/components/esptool_py/run_serial_tool.cmake"
+esptool esp32 -p COM7 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x20000 main.bin 0x8000 partition_table/partition-table.bin 0x11000 ota_data_initial.bin
+esptool.py v4.5.1
+Serial port COM7
+Connecting......................................
+
+A fatal error occurred: Failed to connect to ESP32: No serial data received.
+For troubleshooting steps visit: https://docs.espressif.com/projects/esptool/en/latest/troubleshooting.html
+FAILED: CMakeFiles/flash D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_30092003/build/CMakeFiles/flash 
+cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.0.3\components\esptool_py && C:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.0.3 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.0_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.0.3/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/CODE/ESP32-IDF/esp32-idf-studying/GsafaV3_30092003/build -P C:/Espressif/frameworks/esp-idf-v5.0.3/components/esptool_py/run_serial_tool.cmake"
+ninja: build stopped: subcommand failed.

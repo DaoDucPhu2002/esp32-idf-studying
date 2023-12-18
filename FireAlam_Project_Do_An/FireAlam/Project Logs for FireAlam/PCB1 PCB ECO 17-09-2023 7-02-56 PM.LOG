@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=CLK_PIN Pin=MD1-27
+Removed Pin From Net: NetName=DATA_PIN Pin=MD1-30
+Added Pin To Net: NetName=DATA_PIN Pin=MD1-27
+Added Pin To Net: NetName=CLK_PIN Pin=MD1-30

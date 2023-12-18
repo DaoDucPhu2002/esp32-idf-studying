@@ -7,6 +7,7 @@
 #define AP_CHANNEL 1
 /*Wifi connect maximum retry*/
 #define EXAMPLE_ESP_MAXIMUM_RETRY 5
+#define WIFI_NAMESPACE "Wifi_Config"
 int s_retry_num = 0;
 /*AP record*/
 wifi_ap_record_t *wifi_info;
@@ -26,6 +27,105 @@ static const char *TAG = "WIFI_MANAGER";
 /*ssid pass post handle*/
 char ssid_data[64];
 char pass_data[32];
+
+/*Save SSID and Pass to EEPROM*/
+/*NVS init*/
+void init_nvs()
+{
+    esp_err_t ret = nvs_flash_init();
+    if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND)
+    {
+        ESP_ERROR_CHECK(ret);
+        ret = nvs_flash_erase();
+    }
+    ESP_ERROR_CHECK(ret);
+}
+/*Write Wifi to EEPROM*/
+void save_wifi(char *ssid, char *pass)
+{
+    nvs_handle_t nvs_handle;
+    esp_err_t err;
+
+    err = nvs_open(WIFI_NAMESPACE, NVS_READWRITE, &nvs_handle);
+    if (err != ESP_OK)
+    {
+        printf("Error (%s) opening NVS handle!\n", esp_err_to_name(err));
+    }
+    else
+    {
+        err = nvs_set_str(nvs_handle, "ssid", (const char *)ssid);
+        if (err != ESP_OK)
+        {
+            printf("Error (%s) writing SSID to NVS!\n", esp_err_to_name(err));
+        }
+        else if (err == ESP_OK)
+        {
+            printf("Saved SSID\n");
+        }
+
+        err = nvs_set_str(nvs_handle, "password", (const char *)pass);
+        if (err != ESP_OK)
+        {
+            printf("Error (%s) writing password to NVS!\n", esp_err_to_name(err));
+        }
+        else if (err == ESP_OK)
+        {
+            printf("Saved SSID\n");
+        }
+        nvs_close(nvs_handle);
+    }
+}
+/*Read Wifi form NVS*/
+void read_wifi_and_connect()
+{
+    nvs_handle_t nvs_handle;
+    esp_err_t err;
+    err = nvs_open(WIFI_NAMESPACE, NVS_READONLY, &nvs_handle);
+    if (err != ESP_OK)
+    {
+        printf("Error (%s) opening NVS handle!\n", esp_err_to_name(err));
+        return;
+    }
+    size_t ssid_size = sizeof(ssid_data);
+    err = nvs_get_str(nvs_handle, "ssid", ssid_data, &ssid_size);
+    if (err != ESP_OK)
+    {
+        printf("Error (%s) reading SSID from NVS!\n", esp_err_to_name(err));
+        nvs_close(nvs_handle);
+        return;
+    }
+    else if (err == ESP_OK)
+    {
+        printf("Read SSID Done:%s\n", ssid_data);
+    }
+
+    size_t password_size = sizeof(pass_data);
+    err = nvs_get_str(nvs_handle, "password", pass_data, &password_size);
+    if (err != ESP_OK)
+    {
+        printf("Error (%s) reading password from NVS!\n", esp_err_to_name(err));
+        nvs_close(nvs_handle);
+        return;
+    }
+    else if (err == ESP_OK)
+    {
+        printf("Read SSID Done:%s\n", pass_data);
+    }
+    nvs_close(nvs_handle);
+
+    wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+    ESP_ERROR_CHECK(esp_wifi_init(&cfg));
+    ESP_ERROR_CHECK(esp_wifi_set_storage(WIFI_STORAGE_RAM));
+
+    wifi_config_t wifi_config;
+    bzero(&wifi_config, sizeof(wifi_config));
+    memcpy(wifi_config.sta.ssid, ssid_data, strlen(ssid_data));
+    memcpy(wifi_config.sta.password, pass_data, strlen(pass_data));
+
+    ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
+    ESP_ERROR_CHECK(esp_wifi_set_config(ESP_IF_WIFI_STA, &wifi_config));
+    ESP_ERROR_CHECK(esp_wifi_start());
+}
 
 /*Post ssid and pass*/
 
@@ -87,10 +187,6 @@ static void event_handler(void *arg, esp_event_base_t event_base,
         {
             ESP_LOGI(TAG, "Connected wifi is false!!!");
             ESP_LOGI(TAG, "Erase wifi data form flash");
-            esp_wifi_restore();
-            ESP_LOGI(TAG, "The device will reboot after 5 seconds...");
-            vTaskDelay(5000 / portTICK_PERIOD_MS);
-            esp_restart();
         }
     }
     else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP)
@@ -288,4 +384,5 @@ void wifi_manager(void)
     }
     xEventGroupWaitBits(s_wifi_event_group, CONNECTED_BIT, false, true, portMAX_DELAY);
     ESP_LOGI(TAG, " Connected wifi");
+    save_wifi(ssid_data, pass_data);
 }

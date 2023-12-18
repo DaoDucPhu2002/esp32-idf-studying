@@ -1,0 +1,421 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x3 (DOWNLOAD_BOOT(UART0/UART1/SDIO_REI_REO_V2))
+waiting for download
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x3 (DOWNLOAD_BOOT(UART0/UART1/SDIO_REI_REO_V2))
+waiting for download
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x3 (DOWNLOAD_BOOT(UART0/UART1/SDIO_REI_REO_V2))
+waiting for download
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x3 (DOWNLOAD_BOOT(UART0/UART1/SDIO_REI_REO_V2))
+waiting for download
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x3 (DOWNLOAD_BOOT(UART0/UART1/SDIO_REI_REO_V2))
+waiting for download
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x3 (DOWNLOAD_BOOT(UART0/UART1/SDIO_REI_REO_V2))
+waiting for download
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6992
+load:0x40078000,len:15512
+load:0x40080400,len:3864
+entry 0x40080650
+[0;32mI (27) boot: ESP-IDF v5.0.3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time 18:40:57[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v1.0[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0914ch ( 37196) map[0m
+[0;32mI (113) esp_image: segment 1: paddr=00019174 vaddr=3ffb0000 size=01ed4h (  7892) load[0m
+[0;32mI (116) esp_image: segment 2: paddr=0001b050 vaddr=40080000 size=04fc8h ( 20424) load[0m
+[0;32mI (127) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16cf0h ( 93424) map[0m
+[0;32mI (161) esp_image: segment 4: paddr=00036d18 vaddr=40084fc8 size=06a10h ( 27152) load[0m
+[0;32mI (179) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (179) boot: Disabling RNG early entropy source...[0m
+[0;32mI (190) cpu_start: Multicore app[0m
+[0;32mI (190) cpu_start: Pro cpu up.[0m
+[0;32mI (190) cpu_start: Starting app cpu, entry point is 0x40081048[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (208) cpu_start: Pro cpu start user code[0m
+[0;32mI (208) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (209) cpu_start: Application information:[0m
+[0;32mI (213) cpu_start: Project name:     main[0m
+[0;32mI (218) cpu_start: App version:      d2f66b4-dirty[0m
+[0;32mI (223) cpu_start: Compile time:     Nov 20 2023 18:40:35[0m
+[0;32mI (230) cpu_start: ELF file SHA256:  39b79437dfdb7be0...[0m
+[0;32mI (236) cpu_start: ESP-IDF:          v5.0.3-dirty[0m
+[0;32mI (241) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (246) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (250) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (255) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (263) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (268) heap_init: At 3FFB2888 len 0002D778 (181 KiB): DRAM[0m
+[0;32mI (275) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (281) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (287) heap_init: At 4008B9D8 len 00014628 (81 KiB): IRAM[0m
+[0;32mI (295) spi_flash: detected chip: generic[0m
+[0;32mI (298) spi_flash: flash io: dio[0m
+[0;33mW (302) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (316) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+[0;32mI (327) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:1073433424 [0m
+[0;31mE (337) gpio: gpio_set_intr_type(150): GPIO interrupt type error[0m
+[0;32mI (347) gpio: GPIO[22]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:1073433424 [0m
+[0;31mE (357) gpio: gpio_set_intr_type(150): GPIO interrupt type error[0m
+[0;32mI (357) gpio: GPIO[23]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:1073433424 [0m
+[0;31mE (367) gpio: gpio_set_intr_type(150): GPIO interrupt type error[0m
+[0;32mI (377) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:1073433424 [0m
+[0;31mE (387) gpio: gpio_set_intr_type(150): GPIO interrupt type error[0m
+[0;32mI (397) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:1073433424 [0m
+[0;31mE (407) gpio: gpio_set_intr_type(150): GPIO interrupt type error[0m
+[0;32mI (407) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:1073433424 [0m
+[0;31mE (417) gpio: gpio_set_intr_type(150): GPIO interrupt type error[0m
+[0;32mI (427) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (437) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (447) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+ets Jun  8 2016 00:22:57
+
+rst:0x6 (SDIO_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6992
+load:0x40078000,len:15512
+load:0x40080400,len:3864
+entry 0x40080650
+[0;32mI (53) boot: ESP-IDF v5.0.3-dirty 2nd stage bootloader[0m
+[0;32mI (53) boot: compile time 18:40:57[0m
+[0;32mI (53) boot: Multicore bootloader[0m
+[0;32mI (57) boot: chip revision: v1.0[0m
+[0;32mI (61) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (66) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (70) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (75) boot: Enabling RNG early entropy source...[0m
+[0;32mI (80) boot: Partition Table:[0m
+[0;32mI (84) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (91) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (99) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (106) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (114) boot: End of partition table[0m
+[0;32mI (118) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0914ch ( 37196) map[0m
+[0;32mI (140) esp_image: segment 1: paddr=00019174 vaddr=3ffb0000 size=01ed4h (  7892) load[0m
+[0;32mI (143) esp_image: segment 2: paddr=0001b050 vaddr=40080000 size=04fc8h ( 20424) load[0m
+[0;32mI (154) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16cf0h ( 93424) map[0m
+[0;32mI (188) esp_image: segment 4: paddr=00036d18 vaddr=40084fc8 size=06a10h ( 27152) load[0m
+[0;32mI (205) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (206) boot: Disabling RNG early entropy source...[0m
+[0;32mI (217) cpu_start: Multicore app[0m
+[0;32mI (217) cpu_start: Pro cpu up.[0m
+[0;32mI (217) cpu_start: Starting app cpu, entry point is 0x40081048[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (235) cpu_start: Pro cpu start user code[0m
+[0;32mI (235) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (235) cpu_start: Application information:[0m
+[0;32mI (240) cpu_start: Project name:     main[0m
+[0;32mI (245) cpu_start: App version:      d2f66b4-dirty[0m
+[0;32mI (250) cpu_start: Compile time:     Nov 20 2023 18:40:35[0m
+[0;32mI (256) cpu_start: ELF file SHA256:  39b79437dfdb7be0...[0m
+[0;32mI (262) cpu_start: ESP-IDF:          v5.0.3-dirty[0m
+[0;32mI (268) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (272) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (277) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (282) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (289) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (295) heap_init: At 3FFB2888 len 0002D778 (181 KiB): DRAM[0m
+[0;32mI (301) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (308) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (314) heap_init: At 4008B9D8 len 00014628 (81 KiB): IRAM[0m
+[0;32mI (322) spi_flash: detected chip: generic[0m
+[0;32mI (325) spi_flash: flash io: dio[0m
+[0;33mW (329) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (343) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+[0;32mI (353) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:1073433424 [0m
+[0;31mE (363) gpio: gpio_set_intr_type(150): GPIO interrupt type error[0m
+[0;32mI (373) gpio: GPIO[22]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:1073433424 [0m
+[0;31mE (383) gpio: gpio_set_intr_type(150): GPIO interrupt type error[0m
+[0;32mI (383) gpio: GPIO[23]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:1073433424 [0m
+[0;31mE (393) gpio: gpio_set_intr_type(150): GPIO interrupt type error[0m
+[0;32mI (403) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:1073433424 [0m
+[0;31mE (413) gpio: gpio_set_intr_type(150): GPIO interrupt type error[0m
+[0;32mI (423) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:1073433424 [0m
+[0;31mE (433) gpio: gpio_set_intr_type(150): GPIO interrupt type error[0m
+[0;32mI (433) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:1073433424 [0m
+[0;31mE (443) gpio: gpio_set_intr_type(150): GPIO interrupt type error[0m
+[0;32mI (453) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (463) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (473) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 0 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 0 
+line 0: sta 0 
+line 0: sta 0 
+line 0: sta 0 
+line 0: sta 0 
+line 0: sta 0 
+line 0: sta 0 
+line 0: sta 0 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 
+line 0: sta 2 

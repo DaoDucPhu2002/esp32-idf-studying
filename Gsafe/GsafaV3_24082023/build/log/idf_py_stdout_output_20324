@@ -1,0 +1,126 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6992
+load:0x40078000,len:15512
+load:0x40080400,len:3864
+entry 0x40080650
+[0;32mI (27) boot: ESP-IDF v5.0.3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time 14:34:10[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (40) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (49) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00008000[0m
+[0;32mI (72) boot:  1 otadata          OTA data         01 00 00011000 00002000[0m
+[0;32mI (80) boot:  2 phy_init         RF data          01 01 00013000 00001000[0m
+[0;32mI (87) boot:  3 ota_0            OTA app          00 10 00020000 00150000[0m
+[0;32mI (95) boot:  4 ota_1            OTA app          00 11 00170000 00150000[0m
+[0;32mI (102) boot: End of partition table[0m
+[0;32mI (107) boot: No factory image, trying OTA 0[0m
+[0;32mI (111) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=2a804h (174084) map[0m
+[0;32mI (183) esp_image: segment 1: paddr=0004a82c vaddr=3ffb0000 size=03484h ( 13444) load[0m
+[0;32mI (188) esp_image: segment 2: paddr=0004dcb8 vaddr=40080000 size=02360h (  9056) load[0m
+[0;32mI (192) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=a73c4h (684996) map[0m
+[0;32mI (445) esp_image: segment 4: paddr=000f73ec vaddr=40082360 size=13914h ( 80148) load[0m
+[0;32mI (489) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (536) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (537) boot: Disabling RNG early entropy source...[0m
+[0;32mI (547) cpu_start: Multicore app[0m
+[0;32mI (547) cpu_start: Pro cpu up.[0m
+[0;32mI (548) cpu_start: Starting app cpu, entry point is 0x400813a8[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (566) cpu_start: Pro cpu start user code[0m
+[0;32mI (566) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (566) cpu_start: Application information:[0m
+[0;32mI (570) cpu_start: Project name:     main[0m
+[0;32mI (575) cpu_start: App version:      d2f66b4-dirty[0m
+[0;32mI (581) cpu_start: Compile time:     Sep 30 2023 14:33:53[0m
+[0;32mI (587) cpu_start: ELF file SHA256:  9e1972e50f5b7eec...[0m
+[0;32mI (593) cpu_start: ESP-IDF:          v5.0.3-dirty[0m
+[0;32mI (598) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (603) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (608) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (612) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (620) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (626) heap_init: At 3FFB7A60 len 000285A0 (161 KiB): DRAM[0m
+[0;32mI (632) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (638) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (645) heap_init: At 40095C74 len 0000A38C (40 KiB): IRAM[0m
+[0;32mI (652) spi_flash: detected chip: generic[0m
+[0;32mI (655) spi_flash: flash io: dio[0m
+[0;32mI (661) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+[0;32mI (671) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (681) system_api: Base MAC address is not set[0m
+[0;32mI (681) system_api: read default base MAC address from EFUSE[0m
+[0;32mI (691) MAC: 40F52047186C[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6992
+load:0x40078000,len:15512
+load:0x40080400,len:3864
+entry 0x40080650
+[0;32mI (27) boot: ESP-IDF v5.0.3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time 14:34:10[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (40) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (49) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00008000[0m
+[0;32mI (72) boot:  1 otadata          OTA data         01 00 00011000 00002000[0m
+[0;32mI (80) boot:  2 phy_init         RF data          01 01 00013000 00001000[0m
+[0;32mI (87) boot:  3 ota_0            OTA app          00 10 00020000 00150000[0m
+[0;32mI (95) boot:  4 ota_1            OTA app          00 11 00170000 00150000[0m
+[0;32mI (102) boot: End of partition table[0m
+[0;32mI (107) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=2a804h (174084) map[0m
+[0;32mI (178) esp_image: segment 1: paddr=0004a82c vaddr=3ffb0000 size=03484h ( 13444) load[0m
+[0;32mI (183) esp_image: segment 2: paddr=0004dcb8 vaddr=40080000 size=02360h (  9056) load[0m
+[0;32mI (188) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=a73c4h (684996) map[0m
+[0;32mI (440) esp_image: segment 4: paddr=000f73ec vaddr=40082360 size=13914h ( 80148) load[0m
+[0;32mI (484) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (484) boot: Disabling RNG early entropy source...[0m
+[0;32mI (495) cpu_start: Multicore app[0m
+[0;32mI (495) cpu_start: Pro cpu up.[0m
+[0;32mI (496) cpu_start: Starting app cpu, entry point is 0x400813a8[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (513) cpu_start: Pro cpu start user code[0m
+[0;32mI (514) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (514) cpu_start: Application information:[0m
+[0;32mI (518) cpu_start: Project name:     main[0m
+[0;32mI (523) cpu_start: App version:      d2f66b4-dirty[0m
+[0;32mI (528) cpu_start: Compile time:     Sep 30 2023 14:33:53[0m
+[0;32mI (535) cpu_start: ELF file SHA256:  9e1972e50f5b7eec...[0m
+[0;32mI (541) cpu_start: ESP-IDF:          v5.0.3-dirty[0m
+[0;32mI (546) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (551) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (555) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (560) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (568) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (573) heap_init: At 3FFB7A60 len 000285A0 (161 KiB): DRAM[0m
+[0;32mI (580) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (586) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (592) heap_init: At 40095C74 len 0000A38C (40 KiB): IRAM[0m
+[0;32mI (600) spi_flash: detected chip: generic[0m
+[0;32mI (603) spi_flash: flash io: dio[0m
+[0;32mI (609) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+[0;32mI (619) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (629) system_api: Base MAC address is not set[0m
+[0;32mI (629) system_api: read default base MAC address from EFUSE[0m
+[0;32mI (639) MAC: 40F52047186C[0m

@@ -29,6 +29,7 @@ typedef enum
     PROVISIONED_SMART_CONFIG = 0,
     PROVISIONED_ACCESS_POINT = 1,
 } provisioned_type_t;
-
+void init_nvs();
+void read_wifi_and_connect();
 void wifi_manager(void);
 #endif

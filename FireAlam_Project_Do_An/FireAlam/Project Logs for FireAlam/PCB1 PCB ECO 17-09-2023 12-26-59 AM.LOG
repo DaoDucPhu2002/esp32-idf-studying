@@ -1,0 +1,40 @@
+Added Component: Designator=KF5(Con 2 KF301 5.08)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH000987"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "CON 2 KF301-2P 5.08MM Xanh Duong"; VariantName = "[No Variations]"
+Added Component: Designator=KF6(Con 2 KF301 5.08)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH000987"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "CON 2 KF301-2P 5.08MM Xanh Duong"; VariantName = "[No Variations]"
+Added Component: Designator=KF7(Con 2 KF301 5.08)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH000987"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "CON 2 KF301-2P 5.08MM Xanh Duong"; VariantName = "[No Variations]"
+Added Component: Designator=KF8(Con 2 KF301 5.08)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH000987"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "CON 2 KF301-2P 5.08MM Xanh Duong"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=LINE5 Pin=KF5-1
+Added Pin To Net: NetName=GND Pin=KF5-2
+Added Pin To Net: NetName=LINE6 Pin=KF6-1
+Added Pin To Net: NetName=GND Pin=KF6-2
+Added Pin To Net: NetName=LINE7 Pin=KF7-1
+Added Pin To Net: NetName=GND Pin=KF7-2
+Added Pin To Net: NetName=LINE8 Pin=KF8-1
+Added Pin To Net: NetName=GND Pin=KF8-2
+Added Member To Class: ClassName=Connect_Input_output Member=Component KF5 CON 2 KF301
+Added Member To Class: ClassName=Connect_Input_output Member=Component KF6 CON 2 KF301
+Added Member To Class: ClassName=Connect_Input_output Member=Component KF7 CON 2 KF301
+Added Member To Class: ClassName=Connect_Input_output Member=Component KF8 CON 2 KF301

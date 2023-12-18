@@ -1,0 +1,1442 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6992
+load:0x40078000,len:15512
+load:0x40080400,len:3864
+entry 0x40080650
+[0;32mI (27) boot: ESP-IDF v5.0.3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time 18:40:57[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v1.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27f58h (163672) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=00037f80 vaddr=3ffb0000 size=03404h ( 13316) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=0003b38c vaddr=40080000 size=04c8ch ( 19596) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9bd8ch (638348) map[0m
+[0;32mI (403) esp_image: segment 4: paddr=000dbdb4 vaddr=40084c8c size=101a8h ( 65960) load[0m
+[0;32mI (441) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (441) boot: Disabling RNG early entropy source...[0m
+[0;32mI (453) cpu_start: Multicore app[0m
+[0;32mI (453) cpu_start: Pro cpu up.[0m
+[0;32mI (453) cpu_start: Starting app cpu, entry point is 0x400812bc[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) cpu_start: Application information:[0m
+[0;32mI (476) cpu_start: Project name:     main[0m
+[0;32mI (480) cpu_start: App version:      d2f66b4-dirty[0m
+[0;32mI (486) cpu_start: Compile time:     Nov 20 2023 18:40:35[0m
+[0;32mI (492) cpu_start: ELF file SHA256:  fbb7bdbec4ef44e1...[0m
+[0;32mI (498) cpu_start: ESP-IDF:          v5.0.3-dirty[0m
+[0;32mI (503) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (508) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (513) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (518) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (525) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFB77E8 len 00028818 (162 KiB): DRAM[0m
+[0;32mI (537) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (543) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (550) heap_init: At 40094E34 len 0000B1CC (44 KiB): IRAM[0m
+[0;32mI (557) spi_flash: detected chip: generic[0m
+[0;32mI (561) spi_flash: flash io: dio[0m
+[0;33mW (565) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (579) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+[0;32mI (665) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (665) gpio: GPIO[22]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (665) gpio: GPIO[23]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (675) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (685) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (695) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (705) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (715) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (725) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (735) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (745) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (755) ALAM: SYSTEM NORMAL[0m
+[0;32mI (755) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (765) ALAM: SYSTEM NORMAL[0m
+[0;32mI (765) ALAM: SYSTEM NORMAL[0m
+I (775) wifi:wifi driver task: 3ffc0c38, prio:23, stack:6656, core=0
+[0;32mI (775) system_api: Base MAC address is not set[0m
+[0;32mI (785) system_api: read default base MAC address from EFUSE[0m
+I (815) wifi:wifi firmware version: 15fc0ca
+I (815) wifi:wifi certification version: v7.0
+I (815) wifi:config NVS flash: enabled
+I (815) wifi:config nano formating: disabled
+I (815) wifi:Init data frame dynamic rx buffer num: 32
+I (825) wifi:Init management frame dynamic rx buffer num: 32
+I (825) wifi:Init management short buffer num: 32
+I (835) wifi:Init dynamic tx buffer num: 32
+I (835) wifi:Init static rx buffer size: 1600
+I (845) wifi:Init static rx buffer num: 10
+I (845) wifi:Init dynamic rx buffer num: 32
+[0;32mI (845) ALAM: SYSTEM NORMAL[0m
+[0;32mI (845) wifi_init: rx ba win: 6[0m
+[0;32mI (855) wifi_init: tcpip mbox: 32[0m
+[0;32mI (855) wifi_init: udp mbox: 6[0m
+[0;32mI (865) wifi_init: tcp mbox: 6[0m
+[0;32mI (865) wifi_init: tcp tx win: 5744[0m
+[0;32mI (875) wifi_init: tcp rx win: 5744[0m
+[0;32mI (875) wifi_init: tcp mss: 1440[0m
+[0;32mI (875) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (885) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (885) ALAM: SYSTEM NORMAL[0m
+[0;32mI (895) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1005) wifi:mode : sta (e0:e2:e6:ce:04:d4)
+I (1005) wifi:enable tsf
+pubic: DaoDucPhu[0;32mI (1005) MQTTS_EXAMPLE: 
+[APP] Free memory: 233392 bytes[0m
+[0;32mI (1005) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=7[0m
+E (1015) wifi:[0;32mI (1015) MQTTS_EXAMPLE: 
+Other event id:7[0m
+sta is connecting, return error
+[0;31mE (1025) esp-tls: couldn't get hostname for :test.mosquitto.org: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (1035) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (1045) mqtt_client: Error transport connect[0m
+[0;32mI (1045) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=0[0m
+[0;32mI (1055) MQTTS_EXAMPLE: 
+MQTT_EVENT_ERROR[0m
+[0;31mE (1055) MQTTS_EXAMPLE: Last error reported from esp-tls: 0x8001[0m
+[0;32mI (1065) MQTTS_EXAMPLE: 
+Last errno string (Success)[0m
+[0;32mI (1075) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=2[0m
+[0;32mI (1085) MQTTS_EXAMPLE: 
+MQTT_EVENT_DISCONNECTED[0m
+I (1085) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (1095) wifi:state: init -> auth (b0)
+[0;32mI (1015) ALAM: SYSTEM NORMAL[0m
+I (1095) wifi:state: auth -> assoc (0)
+[0;32mI (1105) ALAM: SYSTEM NORMAL[0m
+[0;32mI (1105) ALAM: SYSTEM NORMAL[0m
+e0 - I (1115) wifi:state: assoc -> run (10)
+e2 - e6 - ce -  4 - d4 - d6 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;33mW (1125) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (1125) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+I (1215) wifi:connected with Ba Anh Em, aid = 3, channel 11, BW20, bssid = b0:8b:92:30:94:fd
+I (1215) wifi:security: WPA2-PSK, phy: bgn, rssi: -42
+I (1225) wifi:pm start, type: 1
+
+I (1315) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (2135) ALAM: SYSTEM NORMAL[0m
+[0;32mI (2135) ALAM: SYSTEM NORMAL[0m
+[0;32mI (2135) ALAM: SYSTEM NORMAL[0m
+[0;32mI (2135) ALAM: SYSTEM NORMAL[0m
+[0;32mI (2135) ALAM: SYSTEM NORMAL[0m
+[0;32mI (2135) ALAM: SYSTEM NORMAL[0m
+[0;32mI (2145) ALAM: SYSTEM NORMAL[0m
+[0;32mI (2145) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d7 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;33mW (2155) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (2165) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (3175) ALAM: SYSTEM NORMAL[0m
+[0;32mI (3175) ALAM: SYSTEM NORMAL[0m
+[0;32mI (3175) ALAM: SYSTEM NORMAL[0m
+[0;32mI (3175) ALAM: SYSTEM NORMAL[0m
+[0;32mI (3175) ALAM: SYSTEM NORMAL[0m
+[0;32mI (3175) ALAM: SYSTEM NORMAL[0m
+[0;32mI (3185) ALAM: SYSTEM NORMAL[0m
+[0;32mI (3185) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d7 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;33mW (3195) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (3205) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+I (3365) wifi:<ba-add>idx:0 (ifx:0, b0:8b:92:30:94:fd), tid:0, ssn:0, winSize:64
+[0;32mI (4215) ALAM: SYSTEM NORMAL[0m
+[0;32mI (4215) ALAM: SYSTEM NORMAL[0m
+[0;32mI (4215) ALAM: SYSTEM NORMAL[0m
+[0;32mI (4215) ALAM: SYSTEM NORMAL[0m
+[0;32mI (4215) ALAM: SYSTEM NORMAL[0m
+[0;32mI (4215) ALAM: SYSTEM NORMAL[0m
+[0;32mI (4225) esp_netif_handlers: sta ip: 192.168.1.10, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4225) WIFI_MANAGER: got ip:192.168.1.10[0m
+[0;32mI (4235) WIFI_MANAGER: got ip:192.168.1.10[0m
+[0;32mI (4235) ALAM: SYSTEM NORMAL[0m
+[0;32mI (4245) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d7 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;33mW (4255) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (4265) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (5265) ALAM: SYSTEM NORMAL[0m
+[0;32mI (5265) ALAM: SYSTEM NORMAL[0m
+[0;32mI (5265) ALAM: SYSTEM NORMAL[0m
+[0;32mI (5265) ALAM: SYSTEM NORMAL[0m
+[0;32mI (5265) ALAM: SYSTEM NORMAL[0m
+[0;32mI (5265) ALAM: SYSTEM NORMAL[0m
+[0;32mI (5275) ALAM: SYSTEM NORMAL[0m
+[0;32mI (5275) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d7 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;33mW (5285) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (5295) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (6305) ALAM: SYSTEM NORMAL[0m
+[0;32mI (6305) ALAM: SYSTEM NORMAL[0m
+[0;32mI (6305) ALAM: SYSTEM NORMAL[0m
+[0;32mI (6305) ALAM: SYSTEM NORMAL[0m
+[0;32mI (6305) ALAM: SYSTEM NORMAL[0m
+[0;32mI (6305) ALAM: SYSTEM NORMAL[0m
+[0;32mI (6315) ALAM: SYSTEM NORMAL[0m
+[0;32mI (6315) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d6 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;33mW (6325) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (6335) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (7345) ALAM: SYSTEM NORMAL[0m
+[0;32mI (7345) ALAM: SYSTEM NORMAL[0m
+[0;32mI (7345) ALAM: SYSTEM NORMAL[0m
+[0;32mI (7345) ALAM: SYSTEM NORMAL[0m
+[0;32mI (7345) ALAM: SYSTEM NORMAL[0m
+[0;32mI (7345) ALAM: SYSTEM NORMAL[0m
+[0;32mI (7355) ALAM: SYSTEM NORMAL[0m
+[0;32mI (7355) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d6 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;33mW (7365) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (7375) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (8385) ALAM: SYSTEM NORMAL[0m
+[0;32mI (8385) ALAM: SYSTEM NORMAL[0m
+[0;32mI (8385) ALAM: SYSTEM NORMAL[0m
+[0;32mI (8385) ALAM: SYSTEM NORMAL[0m
+[0;32mI (8385) ALAM: SYSTEM NORMAL[0m
+[0;32mI (8385) ALAM: SYSTEM NORMAL[0m
+[0;32mI (8395) ALAM: SYSTEM NORMAL[0m
+[0;32mI (8395) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d6 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;33mW (8405) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (8415) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (9425) ALAM: SYSTEM NORMAL[0m
+[0;32mI (9425) ALAM: SYSTEM NORMAL[0m
+[0;32mI (9425) ALAM: SYSTEM NORMAL[0m
+[0;32mI (9425) ALAM: SYSTEM NORMAL[0m
+[0;32mI (9425) ALAM: SYSTEM NORMAL[0m
+[0;32mI (9425) ALAM: SYSTEM NORMAL[0m
+[0;32mI (9435) ALAM: SYSTEM NORMAL[0m
+[0;32mI (9435) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d6 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;33mW (9445) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (9455) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (10465) ALAM: SYSTEM NORMAL[0m
+[0;32mI (10465) ALAM: SYSTEM NORMAL[0m
+[0;32mI (10465) ALAM: SYSTEM NORMAL[0m
+[0;32mI (10465) ALAM: SYSTEM NORMAL[0m
+[0;32mI (10465) ALAM: SYSTEM NORMAL[0m
+[0;32mI (10465) ALAM: SYSTEM NORMAL[0m
+[0;32mI (10475) ALAM: SYSTEM NORMAL[0m
+[0;32mI (10475) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d6 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;33mW (10485) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (10495) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (11095) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=7[0m
+[0;32mI (11095) MQTTS_EXAMPLE: 
+Other event id:7[0m
+I (11105) wifi:<ba-add>idx:1 (ifx:0, b0:8b:92:30:94:fd), tid:6, ssn:2, winSize:64
+[0;32mI (11505) ALAM: SYSTEM NORMAL[0m
+[0;32mI (11505) ALAM: SYSTEM NORMAL[0m
+[0;32mI (11505) ALAM: SYSTEM NORMAL[0m
+[0;32mI (11505) ALAM: SYSTEM NORMAL[0m
+[0;32mI (11505) ALAM: SYSTEM NORMAL[0m
+[0;32mI (11505) ALAM: SYSTEM NORMAL[0m
+[0;32mI (11515) ALAM: SYSTEM NORMAL[0m
+[0;32mI (11515) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d5 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (11875) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=1[0m
+[0;32mI (11875) MQTTS_EXAMPLE: 
+MQTT_EVENT_CONNECTED[0m
+[0;32mI (11885) MQTTS_EXAMPLE: 
+sent subscribe successful, msg_id=11437[0m
+[0;32mI (11885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (12095) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=3[0m
+[0;32mI (12095) MQTTS_EXAMPLE: 
+MQTT_EVENT_SUBSCRIBED, msg_id=11437[0m
+[0;32mI (12095) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (12285) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (12285) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (12295) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (12295) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (12895) ALAM: SYSTEM NORMAL[0m
+[0;32mI (12895) ALAM: SYSTEM NORMAL[0m
+[0;32mI (12895) ALAM: SYSTEM NORMAL[0m
+[0;32mI (12895) ALAM: SYSTEM NORMAL[0m
+[0;32mI (12895) ALAM: SYSTEM NORMAL[0m
+[0;32mI (12895) ALAM: SYSTEM NORMAL[0m
+[0;32mI (12905) ALAM: SYSTEM NORMAL[0m
+[0;32mI (12905) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d6 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (12925) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (13115) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (13115) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (13125) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (13125) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (13925) ALAM: SYSTEM NORMAL[0m
+[0;32mI (13925) ALAM: SYSTEM NORMAL[0m
+[0;32mI (13925) ALAM: SYSTEM NORMAL[0m
+[0;32mI (13925) ALAM: SYSTEM NORMAL[0m
+[0;32mI (13925) ALAM: SYSTEM NORMAL[0m
+[0;32mI (13925) ALAM: SYSTEM NORMAL[0m
+[0;32mI (13935) ALAM: SYSTEM NORMAL[0m
+[0;32mI (13935) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d6 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (13945) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (14145) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (14145) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (14145) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (14155) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (14955) ALAM: SYSTEM NORMAL[0m
+[0;32mI (14955) ALAM: SYSTEM NORMAL[0m
+[0;32mI (14955) ALAM: SYSTEM NORMAL[0m
+[0;32mI (14955) ALAM: SYSTEM NORMAL[0m
+[0;32mI (14955) ALAM: SYSTEM NORMAL[0m
+[0;32mI (14955) ALAM: SYSTEM NORMAL[0m
+[0;32mI (14965) ALAM: SYSTEM NORMAL[0m
+[0;32mI (14965) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d7 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (14975) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (15175) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (15175) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (15175) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (15185) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (15985) ALAM: SYSTEM NORMAL[0m
+[0;32mI (15985) ALAM: SYSTEM NORMAL[0m
+[0;32mI (15985) ALAM: SYSTEM NORMAL[0m
+[0;32mI (15985) ALAM: SYSTEM NORMAL[0m
+[0;32mI (15985) ALAM: SYSTEM NORMAL[0m
+[0;32mI (15985) ALAM: SYSTEM NORMAL[0m
+[0;32mI (15995) ALAM: SYSTEM NORMAL[0m
+[0;32mI (15995) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d7 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (16015) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (16205) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (16205) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (16205) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (16215) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (17015) ALAM: SYSTEM NORMAL[0m
+[0;32mI (17015) ALAM: SYSTEM NORMAL[0m
+[0;32mI (17015) ALAM: SYSTEM NORMAL[0m
+[0;32mI (17015) ALAM: SYSTEM NORMAL[0m
+[0;32mI (17015) ALAM: SYSTEM NORMAL[0m
+[0;32mI (17015) ALAM: SYSTEM NORMAL[0m
+[0;32mI (17025) ALAM: SYSTEM NORMAL[0m
+[0;32mI (17025) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d7 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (17045) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (17235) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (17235) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (17235) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (17245) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (18045) ALAM: SYSTEM NORMAL[0m
+[0;32mI (18045) ALAM: SYSTEM NORMAL[0m
+[0;32mI (18045) ALAM: SYSTEM NORMAL[0m
+[0;32mI (18045) ALAM: SYSTEM NORMAL[0m
+[0;32mI (18045) ALAM: SYSTEM NORMAL[0m
+[0;32mI (18045) ALAM: SYSTEM NORMAL[0m
+[0;32mI (18055) ALAM: SYSTEM NORMAL[0m
+[0;32mI (18055) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d7 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (18075) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (18325) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (18325) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (18325) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (18335) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (19075) ALAM: SYSTEM NORMAL[0m
+[0;32mI (19075) ALAM: SYSTEM NORMAL[0m
+[0;32mI (19075) ALAM: SYSTEM NORMAL[0m
+[0;32mI (19075) ALAM: SYSTEM NORMAL[0m
+[0;32mI (19075) ALAM: SYSTEM NORMAL[0m
+[0;32mI (19075) ALAM: SYSTEM NORMAL[0m
+[0;32mI (19085) ALAM: SYSTEM NORMAL[0m
+[0;32mI (19085) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d7 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (19105) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (19345) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (19345) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (19345) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (19355) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (20105) ALAM: SYSTEM NORMAL[0m
+[0;32mI (20105) ALAM: SYSTEM NORMAL[0m
+[0;32mI (20105) ALAM: SYSTEM NORMAL[0m
+[0;32mI (20105) ALAM: SYSTEM NORMAL[0m
+[0;32mI (20105) ALAM: SYSTEM NORMAL[0m
+[0;32mI (20105) ALAM: SYSTEM NORMAL[0m
+[0;32mI (20115) ALAM: SYSTEM NORMAL[0m
+[0;32mI (20115) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d7 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (20135) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (20375) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (20375) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (20375) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (20375) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (21135) ALAM: SYSTEM NORMAL[0m
+[0;32mI (21135) ALAM: SYSTEM NORMAL[0m
+[0;32mI (21135) ALAM: SYSTEM NORMAL[0m
+[0;32mI (21135) ALAM: SYSTEM NORMAL[0m
+[0;32mI (21135) ALAM: SYSTEM NORMAL[0m
+[0;32mI (21135) ALAM: SYSTEM NORMAL[0m
+[0;32mI (21145) ALAM: SYSTEM NORMAL[0m
+[0;32mI (21145) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d7 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (21165) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (21395) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (21405) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (21405) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (21405) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (22165) ALAM: SYSTEM NORMAL[0m
+[0;32mI (22165) ALAM: SYSTEM NORMAL[0m
+[0;32mI (22165) ALAM: SYSTEM NORMAL[0m
+[0;32mI (22165) ALAM: SYSTEM NORMAL[0m
+[0;32mI (22165) ALAM: SYSTEM NORMAL[0m
+[0;32mI (22165) ALAM: SYSTEM NORMAL[0m
+[0;32mI (22175) ALAM: SYSTEM NORMAL[0m
+[0;32mI (22175) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d7 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (22195) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (22415) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (22415) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (22415) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (22425) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (23195) ALAM: SYSTEM NORMAL[0m
+[0;32mI (23195) ALAM: SYSTEM NORMAL[0m
+[0;32mI (23195) ALAM: SYSTEM NORMAL[0m
+[0;32mI (23195) ALAM: SYSTEM NORMAL[0m
+[0;32mI (23195) ALAM: SYSTEM NORMAL[0m
+[0;32mI (23195) ALAM: SYSTEM NORMAL[0m
+[0;32mI (23205) ALAM: SYSTEM NORMAL[0m
+[0;32mI (23205) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d7 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (23225) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (23455) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (23455) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (23455) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (23465) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (24225) ALAM: SYSTEM NORMAL[0m
+[0;32mI (24225) ALAM: SYSTEM NORMAL[0m
+[0;32mI (24225) ALAM: SYSTEM NORMAL[0m
+[0;32mI (24225) ALAM: SYSTEM NORMAL[0m
+[0;32mI (24225) ALAM: SYSTEM NORMAL[0m
+[0;32mI (24225) ALAM: SYSTEM NORMAL[0m
+[0;32mI (24235) ALAM: SYSTEM NORMAL[0m
+[0;32mI (24235) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d7 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (24255) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (24465) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (24465) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (24475) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (24475) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (25255) ALAM: SYSTEM NORMAL[0m
+[0;32mI (25255) ALAM: SYSTEM NORMAL[0m
+[0;32mI (25255) ALAM: SYSTEM NORMAL[0m
+[0;32mI (25255) ALAM: SYSTEM NORMAL[0m
+[0;32mI (25255) ALAM: SYSTEM NORMAL[0m
+[0;32mI (25255) ALAM: SYSTEM NORMAL[0m
+[0;32mI (25265) ALAM: SYSTEM NORMAL[0m
+[0;32mI (25265) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d7 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (25285) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (25515) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (25515) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (25515) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (25515) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (26285) ALAM: SYSTEM NORMAL[0m
+[0;32mI (26285) ALAM: SYSTEM NORMAL[0m
+[0;32mI (26285) ALAM: SYSTEM NORMAL[0m
+[0;32mI (26285) ALAM: SYSTEM NORMAL[0m
+[0;32mI (26285) ALAM: SYSTEM NORMAL[0m
+[0;32mI (26285) ALAM: SYSTEM NORMAL[0m
+[0;32mI (26295) ALAM: SYSTEM NORMAL[0m
+[0;32mI (26295) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d7 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (26305) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (26505) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (26505) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (26515) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (26515) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (27315) ALAM: SYSTEM NORMAL[0m
+[0;32mI (27315) ALAM: SYSTEM NORMAL[0m
+[0;32mI (27315) ALAM: SYSTEM NORMAL[0m
+[0;32mI (27315) ALAM: SYSTEM NORMAL[0m
+[0;32mI (27315) ALAM: SYSTEM NORMAL[0m
+[0;32mI (27315) ALAM: SYSTEM NORMAL[0m
+[0;32mI (27325) ALAM: SYSTEM NORMAL[0m
+[0;32mI (27325) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d7 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (27345) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (27535) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (27535) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (27535) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (27545) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (28345) ALAM: SYSTEM NORMAL[0m
+[0;32mI (28345) ALAM: SYSTEM NORMAL[0m
+[0;32mI (28345) ALAM: SYSTEM NORMAL[0m
+[0;32mI (28345) ALAM: SYSTEM NORMAL[0m
+[0;32mI (28345) ALAM: SYSTEM NORMAL[0m
+[0;32mI (28345) ALAM: SYSTEM NORMAL[0m
+[0;32mI (28355) ALAM: SYSTEM NORMAL[0m
+[0;32mI (28355) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d7 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (28365) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (28565) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (28575) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (28575) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (28575) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (29375) ALAM: SYSTEM NORMAL[0m
+[0;32mI (29375) ALAM: SYSTEM NORMAL[0m
+[0;32mI (29375) ALAM: SYSTEM NORMAL[0m
+[0;32mI (29375) ALAM: SYSTEM NORMAL[0m
+[0;32mI (29375) ALAM: SYSTEM NORMAL[0m
+[0;32mI (29375) ALAM: SYSTEM NORMAL[0m
+[0;32mI (29385) ALAM: SYSTEM NORMAL[0m
+[0;32mI (29385) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d7 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (29405) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (29595) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (29595) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (29595) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (29605) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (30405) ALAM: SYSTEM NORMAL[0m
+[0;32mI (30405) ALAM: SYSTEM NORMAL[0m
+[0;32mI (30405) ALAM: SYSTEM NORMAL[0m
+[0;32mI (30405) ALAM: SYSTEM NORMAL[0m
+[0;32mI (30405) ALAM: SYSTEM NORMAL[0m
+[0;32mI (30405) ALAM: SYSTEM NORMAL[0m
+[0;32mI (30415) ALAM: SYSTEM NORMAL[0m
+[0;32mI (30415) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d7 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (30435) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (30625) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (30625) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (30625) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (30635) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (31435) ALAM: SYSTEM NORMAL[0m
+[0;32mI (31435) ALAM: SYSTEM NORMAL[0m
+[0;32mI (31435) ALAM: SYSTEM NORMAL[0m
+[0;32mI (31435) ALAM: SYSTEM NORMAL[0m
+[0;32mI (31435) ALAM: SYSTEM NORMAL[0m
+[0;32mI (31435) ALAM: SYSTEM NORMAL[0m
+[0;32mI (31445) ALAM: SYSTEM NORMAL[0m
+[0;32mI (31445) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - ce -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (31465) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (31655) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (31655) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (31655) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (31665) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (32465) ALAM: SYSTEM NORMAL[0m
+[0;32mI (32465) ALAM: SYSTEM NORMAL[0m
+[0;32mI (32465) ALAM: SYSTEM NORMAL[0m
+[0;32mI (32465) ALAM: SYSTEM NORMAL[0m
+[0;32mI (32465) ALAM: SYSTEM NORMAL[0m
+[0;32mI (32465) ALAM: SYSTEM NORMAL[0m
+[0;32mI (32475) ALAM: SYSTEM NORMAL[0m
+[0;32mI (32475) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d4 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (32495) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (32685) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (32685) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (32685) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (32695) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (33495) ALAM: SYSTEM NORMAL[0m
+[0;32mI (33495) ALAM: SYSTEM NORMAL[0m
+[0;32mI (33495) ALAM: SYSTEM NORMAL[0m
+[0;32mI (33495) ALAM: SYSTEM NORMAL[0m
+[0;32mI (33495) ALAM: SYSTEM NORMAL[0m
+[0;32mI (33495) ALAM: SYSTEM NORMAL[0m
+[0;32mI (33505) ALAM: SYSTEM NORMAL[0m
+[0;32mI (33505) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - cf -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (33525) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (33715) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (33715) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (33715) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (33725) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (34525) ALAM: SYSTEM NORMAL[0m
+[0;32mI (34525) ALAM: SYSTEM NORMAL[0m
+[0;32mI (34525) ALAM: SYSTEM NORMAL[0m
+[0;32mI (34525) ALAM: SYSTEM NORMAL[0m
+[0;32mI (34525) ALAM: SYSTEM NORMAL[0m
+[0;32mI (34525) ALAM: SYSTEM NORMAL[0m
+[0;32mI (34535) ALAM: SYSTEM NORMAL[0m
+[0;32mI (34535) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d5 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (34555) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (34805) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (34805) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (34805) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (34815) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (35555) ALAM: SYSTEM NORMAL[0m
+[0;32mI (35555) ALAM: SYSTEM NORMAL[0m
+[0;32mI (35555) ALAM: SYSTEM NORMAL[0m
+[0;32mI (35555) ALAM: SYSTEM NORMAL[0m
+[0;32mI (35555) ALAM: SYSTEM NORMAL[0m
+[0;32mI (35555) ALAM: SYSTEM NORMAL[0m
+[0;32mI (35565) ALAM: SYSTEM NORMAL[0m
+[0;32mI (35565) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d6 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (35585) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (35825) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (35825) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (35835) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (35835) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (36585) ALAM: SYSTEM NORMAL[0m
+[0;32mI (36585) ALAM: SYSTEM NORMAL[0m
+[0;32mI (36585) ALAM: SYSTEM NORMAL[0m
+[0;32mI (36585) ALAM: SYSTEM NORMAL[0m
+[0;32mI (36585) ALAM: SYSTEM NORMAL[0m
+[0;32mI (36585) ALAM: SYSTEM NORMAL[0m
+[0;32mI (36595) ALAM: SYSTEM NORMAL[0m
+[0;32mI (36595) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d8 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (36615) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (36865) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (36865) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (36865) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (36875) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (37615) ALAM: SYSTEM NORMAL[0m
+[0;32mI (37615) ALAM: SYSTEM NORMAL[0m
+[0;32mI (37615) ALAM: SYSTEM NORMAL[0m
+[0;32mI (37615) ALAM: SYSTEM NORMAL[0m
+[0;32mI (37615) ALAM: SYSTEM NORMAL[0m
+[0;32mI (37615) ALAM: SYSTEM NORMAL[0m
+[0;32mI (37625) ALAM: SYSTEM NORMAL[0m
+[0;32mI (37625) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d8 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (37645) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (38015) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (38015) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (38025) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (38025) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (38645) ALAM: SYSTEM NORMAL[0m
+[0;32mI (38645) ALAM: SYSTEM NORMAL[0m
+[0;32mI (38645) ALAM: SYSTEM NORMAL[0m
+[0;32mI (38645) ALAM: SYSTEM NORMAL[0m
+[0;32mI (38645) ALAM: SYSTEM NORMAL[0m
+[0;32mI (38645) ALAM: SYSTEM NORMAL[0m
+[0;32mI (38655) ALAM: SYSTEM NORMAL[0m
+[0;32mI (38655) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d8 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (38675) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (38915) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (38915) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (38915) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (38925) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (39675) ALAM: SYSTEM NORMAL[0m
+[0;32mI (39675) ALAM: SYSTEM NORMAL[0m
+[0;32mI (39675) ALAM: SYSTEM NORMAL[0m
+[0;32mI (39675) ALAM: SYSTEM NORMAL[0m
+[0;32mI (39675) ALAM: SYSTEM NORMAL[0m
+[0;32mI (39675) ALAM: SYSTEM NORMAL[0m
+[0;32mI (39685) ALAM: SYSTEM NORMAL[0m
+[0;32mI (39685) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d8 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (39705) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (39925) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (39925) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (39925) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (39935) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (40705) ALAM: SYSTEM NORMAL[0m
+[0;32mI (40705) ALAM: SYSTEM NORMAL[0m
+[0;32mI (40705) ALAM: SYSTEM NORMAL[0m
+[0;32mI (40705) ALAM: SYSTEM NORMAL[0m
+[0;32mI (40705) ALAM: SYSTEM NORMAL[0m
+[0;32mI (40705) ALAM: SYSTEM NORMAL[0m
+[0;32mI (40715) ALAM: SYSTEM NORMAL[0m
+[0;32mI (40715) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d8 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (40735) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (40975) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (40975) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (40975) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (40975) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (41735) ALAM: SYSTEM NORMAL[0m
+[0;32mI (41735) ALAM: SYSTEM NORMAL[0m
+[0;32mI (41735) ALAM: SYSTEM NORMAL[0m
+[0;32mI (41735) ALAM: SYSTEM NORMAL[0m
+[0;32mI (41735) ALAM: SYSTEM NORMAL[0m
+[0;32mI (41735) ALAM: SYSTEM NORMAL[0m
+[0;32mI (41745) ALAM: SYSTEM NORMAL[0m
+[0;32mI (41745) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d8 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (41765) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (41975) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (41975) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (41975) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (41985) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (42765) ALAM: SYSTEM NORMAL[0m
+[0;32mI (42765) ALAM: SYSTEM NORMAL[0m
+[0;32mI (42765) ALAM: SYSTEM NORMAL[0m
+[0;32mI (42765) ALAM: SYSTEM NORMAL[0m
+[0;32mI (42765) ALAM: SYSTEM NORMAL[0m
+[0;32mI (42765) ALAM: SYSTEM NORMAL[0m
+[0;32mI (42775) ALAM: SYSTEM NORMAL[0m
+[0;32mI (42775) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d8 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (42795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (42995) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (42995) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (42995) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (43005) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (43795) ALAM: SYSTEM NORMAL[0m
+[0;32mI (43795) ALAM: SYSTEM NORMAL[0m
+[0;32mI (43795) ALAM: SYSTEM NORMAL[0m
+[0;32mI (43795) ALAM: SYSTEM NORMAL[0m
+[0;32mI (43795) ALAM: SYSTEM NORMAL[0m
+[0;32mI (43795) ALAM: SYSTEM NORMAL[0m
+[0;32mI (43805) ALAM: SYSTEM NORMAL[0m
+[0;32mI (43805) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d8 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (43815) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (44025) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (44025) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (44025) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (44025) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (44825) ALAM: SYSTEM NORMAL[0m
+[0;32mI (44825) ALAM: SYSTEM NORMAL[0m
+[0;32mI (44825) ALAM: SYSTEM NORMAL[0m
+[0;32mI (44825) ALAM: SYSTEM NORMAL[0m
+[0;32mI (44825) ALAM: SYSTEM NORMAL[0m
+[0;32mI (44825) ALAM: SYSTEM NORMAL[0m
+[0;32mI (44835) ALAM: SYSTEM NORMAL[0m
+[0;32mI (44835) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d8 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (44845) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (45045) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (45045) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (45045) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (45055) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (45855) ALAM: SYSTEM NORMAL[0m
+[0;32mI (45855) ALAM: SYSTEM NORMAL[0m
+[0;32mI (45855) ALAM: SYSTEM NORMAL[0m
+[0;32mI (45855) ALAM: SYSTEM NORMAL[0m
+[0;32mI (45855) ALAM: SYSTEM NORMAL[0m
+[0;32mI (45855) ALAM: SYSTEM NORMAL[0m
+[0;32mI (45865) ALAM: SYSTEM NORMAL[0m
+[0;32mI (45865) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d8 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (45885) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (46075) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (46075) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (46075) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (46085) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (46885) ALAM: SYSTEM NORMAL[0m
+[0;32mI (46885) ALAM: SYSTEM NORMAL[0m
+[0;32mI (46885) ALAM: SYSTEM NORMAL[0m
+[0;32mI (46885) ALAM: SYSTEM NORMAL[0m
+[0;32mI (46885) ALAM: SYSTEM NORMAL[0m
+[0;32mI (46885) ALAM: SYSTEM NORMAL[0m
+[0;32mI (46895) ALAM: SYSTEM NORMAL[0m
+[0;32mI (46895) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d8 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (46915) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (47105) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (47105) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (47105) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (47115) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (47915) ALAM: SYSTEM NORMAL[0m
+[0;32mI (47915) ALAM: SYSTEM NORMAL[0m
+[0;32mI (47915) ALAM: SYSTEM NORMAL[0m
+[0;32mI (47915) ALAM: SYSTEM NORMAL[0m
+[0;32mI (47915) ALAM: SYSTEM NORMAL[0m
+[0;32mI (47915) ALAM: SYSTEM NORMAL[0m
+[0;32mI (47925) ALAM: SYSTEM NORMAL[0m
+[0;32mI (47925) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d8 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (47945) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (48135) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (48135) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (48135) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (48145) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (48945) ALAM: SYSTEM NORMAL[0m
+[0;32mI (48945) ALAM: SYSTEM NORMAL[0m
+[0;32mI (48945) ALAM: SYSTEM NORMAL[0m
+[0;32mI (48945) ALAM: SYSTEM NORMAL[0m
+[0;32mI (48945) ALAM: SYSTEM NORMAL[0m
+[0;32mI (48945) ALAM: SYSTEM NORMAL[0m
+[0;32mI (48955) ALAM: SYSTEM NORMAL[0m
+[0;32mI (48955) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d9 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (48965) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (49165) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (49165) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (49165) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (49175) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (49975) ALAM: SYSTEM NORMAL[0m
+[0;32mI (49975) ALAM: SYSTEM NORMAL[0m
+[0;32mI (49975) ALAM: SYSTEM NORMAL[0m
+[0;32mI (49975) ALAM: SYSTEM NORMAL[0m
+[0;32mI (49975) ALAM: SYSTEM NORMAL[0m
+[0;32mI (49975) ALAM: SYSTEM NORMAL[0m
+[0;32mI (49985) ALAM: SYSTEM NORMAL[0m
+[0;32mI (49985) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d8 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (50005) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (50195) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (50195) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (50195) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (50205) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (51005) ALAM: SYSTEM NORMAL[0m
+[0;32mI (51005) ALAM: SYSTEM NORMAL[0m
+[0;32mI (51005) ALAM: SYSTEM NORMAL[0m
+[0;32mI (51005) ALAM: SYSTEM NORMAL[0m
+[0;32mI (51005) ALAM: SYSTEM NORMAL[0m
+[0;32mI (51005) ALAM: SYSTEM NORMAL[0m
+[0;32mI (51015) ALAM: SYSTEM NORMAL[0m
+[0;32mI (51015) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d8 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (51035) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (51225) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (51225) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (51225) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (51235) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (52035) ALAM: SYSTEM NORMAL[0m
+[0;32mI (52035) ALAM: SYSTEM NORMAL[0m
+[0;32mI (52035) ALAM: SYSTEM NORMAL[0m
+[0;32mI (52035) ALAM: SYSTEM NORMAL[0m
+[0;32mI (52035) ALAM: SYSTEM NORMAL[0m
+[0;32mI (52035) ALAM: SYSTEM NORMAL[0m
+[0;32mI (52045) ALAM: SYSTEM NORMAL[0m
+[0;32mI (52045) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d7 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (52065) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (52255) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (52255) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (52265) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (52265) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (53065) ALAM: SYSTEM NORMAL[0m
+[0;32mI (53065) ALAM: SYSTEM NORMAL[0m
+[0;32mI (53065) ALAM: SYSTEM NORMAL[0m
+[0;32mI (53065) ALAM: SYSTEM NORMAL[0m
+[0;32mI (53065) ALAM: SYSTEM NORMAL[0m
+[0;32mI (53065) ALAM: SYSTEM NORMAL[0m
+[0;32mI (53075) ALAM: SYSTEM NORMAL[0m
+[0;32mI (53075) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d7 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (53095) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (53445) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (53445) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (53445) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (53455) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (54095) ALAM: SYSTEM NORMAL[0m
+[0;32mI (54095) ALAM: SYSTEM NORMAL[0m
+[0;32mI (54095) ALAM: SYSTEM NORMAL[0m
+[0;32mI (54095) ALAM: SYSTEM NORMAL[0m
+[0;32mI (54095) ALAM: SYSTEM NORMAL[0m
+[0;32mI (54095) ALAM: SYSTEM NORMAL[0m
+[0;32mI (54105) ALAM: SYSTEM NORMAL[0m
+[0;32mI (54105) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d8 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (54125) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (54375) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (54375) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (54385) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (54385) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (55125) ALAM: SYSTEM NORMAL[0m
+[0;32mI (55125) ALAM: SYSTEM NORMAL[0m
+[0;32mI (55125) ALAM: SYSTEM NORMAL[0m
+[0;32mI (55125) ALAM: SYSTEM NORMAL[0m
+[0;32mI (55125) ALAM: SYSTEM NORMAL[0m
+[0;32mI (55125) ALAM: SYSTEM NORMAL[0m
+[0;32mI (55135) ALAM: SYSTEM NORMAL[0m
+[0;32mI (55135) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d8 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (55155) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (55495) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (55495) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (55495) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (55495) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (56155) ALAM: SYSTEM NORMAL[0m
+[0;32mI (56155) ALAM: SYSTEM NORMAL[0m
+[0;32mI (56155) ALAM: SYSTEM NORMAL[0m
+[0;32mI (56155) ALAM: SYSTEM NORMAL[0m
+[0;32mI (56155) ALAM: SYSTEM NORMAL[0m
+[0;32mI (56155) ALAM: SYSTEM NORMAL[0m
+[0;32mI (56165) ALAM: SYSTEM NORMAL[0m
+[0;32mI (56165) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d7 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (56185) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (56435) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (56435) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (56435) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (56445) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (57185) ALAM: SYSTEM NORMAL[0m
+[0;32mI (57185) ALAM: SYSTEM NORMAL[0m
+[0;32mI (57185) ALAM: SYSTEM NORMAL[0m
+[0;32mI (57185) ALAM: SYSTEM NORMAL[0m
+[0;32mI (57185) ALAM: SYSTEM NORMAL[0m
+[0;32mI (57185) ALAM: SYSTEM NORMAL[0m
+[0;32mI (57195) ALAM: SYSTEM NORMAL[0m
+[0;32mI (57195) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d8 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (57215) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (57535) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (57535) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (57535) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (57545) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (58215) ALAM: SYSTEM NORMAL[0m
+[0;32mI (58215) ALAM: SYSTEM NORMAL[0m
+[0;32mI (58215) ALAM: SYSTEM NORMAL[0m
+[0;32mI (58215) ALAM: SYSTEM NORMAL[0m
+[0;32mI (58215) ALAM: SYSTEM NORMAL[0m
+[0;32mI (58215) ALAM: SYSTEM NORMAL[0m
+[0;32mI (58225) ALAM: SYSTEM NORMAL[0m
+[0;32mI (58225) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d8 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (58245) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (58465) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (58465) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (58465) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (58475) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (59245) ALAM: SYSTEM NORMAL[0m
+[0;32mI (59245) ALAM: SYSTEM NORMAL[0m
+[0;32mI (59245) ALAM: SYSTEM NORMAL[0m
+[0;32mI (59245) ALAM: SYSTEM NORMAL[0m
+[0;32mI (59245) ALAM: SYSTEM NORMAL[0m
+[0;32mI (59245) ALAM: SYSTEM NORMAL[0m
+[0;32mI (59255) ALAM: SYSTEM NORMAL[0m
+[0;32mI (59255) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d8 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (59275) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (59585) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (59585) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (59585) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (59595) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (60275) ALAM: SYSTEM NORMAL[0m
+[0;32mI (60275) ALAM: SYSTEM NORMAL[0m
+[0;32mI (60275) ALAM: SYSTEM NORMAL[0m
+[0;32mI (60275) ALAM: SYSTEM NORMAL[0m
+[0;32mI (60275) ALAM: SYSTEM NORMAL[0m
+[0;32mI (60275) ALAM: SYSTEM NORMAL[0m
+[0;32mI (60285) ALAM: SYSTEM NORMAL[0m
+[0;32mI (60285) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (60305) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (60505) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (60505) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (60505) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (60515) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (61305) ALAM: SYSTEM NORMAL[0m
+[0;32mI (61305) ALAM: SYSTEM NORMAL[0m
+[0;32mI (61305) ALAM: SYSTEM NORMAL[0m
+[0;32mI (61305) ALAM: SYSTEM NORMAL[0m
+[0;32mI (61305) ALAM: SYSTEM NORMAL[0m
+[0;32mI (61305) ALAM: SYSTEM NORMAL[0m
+[0;32mI (61315) ALAM: SYSTEM NORMAL[0m
+[0;32mI (61315) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (61325) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (61545) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (61545) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (61545) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (61555) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (62335) ALAM: SYSTEM NORMAL[0m
+[0;32mI (62335) ALAM: SYSTEM NORMAL[0m
+[0;32mI (62335) ALAM: SYSTEM NORMAL[0m
+[0;32mI (62335) ALAM: SYSTEM NORMAL[0m
+[0;32mI (62335) ALAM: SYSTEM NORMAL[0m
+[0;32mI (62335) ALAM: SYSTEM NORMAL[0m
+[0;32mI (62345) ALAM: SYSTEM NORMAL[0m
+[0;32mI (62345) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d4 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (62355) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (62555) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (62555) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (62555) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (62565) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (63365) ALAM: SYSTEM NORMAL[0m
+[0;32mI (63365) ALAM: SYSTEM NORMAL[0m
+[0;32mI (63365) ALAM: SYSTEM NORMAL[0m
+[0;32mI (63365) ALAM: SYSTEM NORMAL[0m
+[0;32mI (63365) ALAM: SYSTEM NORMAL[0m
+[0;32mI (63365) ALAM: SYSTEM NORMAL[0m
+[0;32mI (63375) ALAM: SYSTEM NORMAL[0m
+[0;32mI (63375) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (63395) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (63585) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (63585) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (63595) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (63595) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (64395) ALAM: SYSTEM NORMAL[0m
+[0;32mI (64395) ALAM: SYSTEM NORMAL[0m
+[0;32mI (64395) ALAM: SYSTEM NORMAL[0m
+[0;32mI (64395) ALAM: SYSTEM NORMAL[0m
+[0;32mI (64395) ALAM: SYSTEM NORMAL[0m
+[0;32mI (64395) ALAM: SYSTEM NORMAL[0m
+[0;32mI (64405) ALAM: SYSTEM NORMAL[0m
+[0;32mI (64405) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (64425) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (64615) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (64615) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (64615) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (64625) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m
+[0;32mI (65425) ALAM: SYSTEM NORMAL[0m
+[0;32mI (65425) ALAM: SYSTEM NORMAL[0m
+[0;32mI (65425) ALAM: SYSTEM NORMAL[0m
+[0;32mI (65425) ALAM: SYSTEM NORMAL[0m
+[0;32mI (65425) ALAM: SYSTEM NORMAL[0m
+[0;32mI (65425) ALAM: SYSTEM NORMAL[0m
+[0;32mI (65435) ALAM: SYSTEM NORMAL[0m
+[0;32mI (65435) ALAM: SYSTEM NORMAL[0m
+e0 - e2 - e6 - ce -  4 - d4 - d3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 -  3 - . 
+[0;32mI (65455) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����������
+[0;32mI (65645) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (65645) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (65655) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (65655) MQTTS_EXAMPLE: 
+DATA=�����������
+[0m

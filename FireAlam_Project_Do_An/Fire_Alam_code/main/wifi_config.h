@@ -21,15 +21,8 @@
 #include "esp_netif.h"
 #include "esp_smartconfig.h"
 
-/*Typedef provision type */
-typedef enum
-{
-    PROVISIONED_SMART_CONFIG = 0,
-    PROVISIONED_ACCESS_POINT = 1,
-} provisioned_type_t;
-
-uint8_t wifi_manager(void);
+// void init_nvs();
+int is_connected_to_wifi();
+void wifi_manager(void *pvParameter);
 int8_t GetRSSI_Wifi();
-int8_t Wifi_LED_Status();
-int8_t Config_Key();
 #endif

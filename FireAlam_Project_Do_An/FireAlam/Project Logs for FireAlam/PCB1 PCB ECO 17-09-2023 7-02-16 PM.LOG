@@ -1,0 +1,3 @@
+Added Pin To Net: NetName=CLK_PIN Pin=MD1-27
+Added Pin To Net: NetName=LAT_PIN Pin=MD1-28
+Added Pin To Net: NetName=DATA_PIN Pin=MD1-30

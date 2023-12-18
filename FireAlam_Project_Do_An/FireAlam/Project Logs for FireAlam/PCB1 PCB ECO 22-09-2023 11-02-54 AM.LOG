@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=3.3V Pin=LS?-1
+Change Component Designator: OldDesignator=LS? NewDesignator=BEEP
+Added Pin To Net: NetName=12V Pin=BEEP-1
+Change Net Name : Old Net Name=NetLS?_2 New Net Name=NetBEEP_2

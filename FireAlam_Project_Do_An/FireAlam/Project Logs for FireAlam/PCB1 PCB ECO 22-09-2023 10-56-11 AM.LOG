@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=3.3V Pin=C20-1
+Removed Pin From Net: NetName=GND Pin=C20-2
+Removed Pin From Net: NetName=3.3V Pin=C21-1
+Removed Pin From Net: NetName=GND Pin=C21-2
+Removed Pin From Net: NetName=O1 Pin=MD1-26
+Removed Pin From Net: NetName=O2 Pin=MD1-27
+Removed Pin From Net: NetName=O3 Pin=MD1-28
+Removed Pin From Net: NetName=O4 Pin=MD1-30
+Removed Member From Class: ClassName=4Line Output Member=C20
+Removed Member From Class: ClassName=4Line Output Member=C21
+Added Pin To Net: NetName=O4 Pin=MD1-26
+Added Pin To Net: NetName=O3 Pin=MD1-27
+Added Pin To Net: NetName=O2 Pin=MD1-28
+Added Pin To Net: NetName=O1 Pin=MD1-29
+Added Pin To Net: NetName=BBB Pin=MD1-30

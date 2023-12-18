@@ -1,0 +1,1220 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6992
+load:0x40078000,len:15512
+load:0x40080400,len:3864
+entry 0x40080650
+[0;32mI (27) boot: ESP-IDF v5.0.3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time 18:40:57[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v1.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=22d88h (142728) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=00032db0 vaddr=3ffb0000 size=033a4h ( 13220) load[0m
+[0;32mI (156) esp_image: segment 2: paddr=0003615c vaddr=40080000 size=09ebch ( 40636) load[0m
+[0;32mI (173) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=858ech (547052) map[0m
+[0;32mI (371) esp_image: segment 4: paddr=000c5914 vaddr=40089ebc size=0af78h ( 44920) load[0m
+[0;32mI (400) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (400) boot: Disabling RNG early entropy source...[0m
+[0;32mI (412) cpu_start: Multicore app[0m
+[0;32mI (412) cpu_start: Pro cpu up.[0m
+[0;32mI (412) cpu_start: Starting app cpu, entry point is 0x400812bc[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (430) cpu_start: Pro cpu start user code[0m
+[0;32mI (430) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (430) cpu_start: Application information:[0m
+[0;32mI (435) cpu_start: Project name:     main[0m
+[0;32mI (440) cpu_start: App version:      d2f66b4-dirty[0m
+[0;32mI (445) cpu_start: Compile time:     Nov 20 2023 18:40:35[0m
+[0;32mI (451) cpu_start: ELF file SHA256:  183b51e4a3ce95ba...[0m
+[0;32mI (457) cpu_start: ESP-IDF:          v5.0.3-dirty[0m
+[0;32mI (462) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (467) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (472) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (477) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (484) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (490) heap_init: At 3FFB7150 len 00028EB0 (163 KiB): DRAM[0m
+[0;32mI (496) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (503) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (509) heap_init: At 40094E34 len 0000B1CC (44 KiB): IRAM[0m
+[0;32mI (517) spi_flash: detected chip: generic[0m
+[0;32mI (520) spi_flash: flash io: dio[0m
+[0;33mW (524) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (538) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+[0;32mI (624) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (624) gpio: GPIO[22]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (624) gpio: GPIO[23]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (634) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (644) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (654) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (664) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (674) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (684) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (694) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (704) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (714) ALAM: SYSTEM NORMAL[0m
+[0;32mI (714) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (724) ALAM: SYSTEM NORMAL[0m
+[0;32mI (724) ALAM: SYSTEM NORMAL[0m
+I (734) wifi:wifi driver task: 3ffc05a0, prio:23, stack:6656, core=0
+[0;32mI (734) system_api: Base MAC address is not set[0m
+[0;32mI (744) system_api: read default base MAC address from EFUSE[0m
+I (774) wifi:wifi firmware version: 15fc0ca
+I (774) wifi:wifi certification version: v7.0
+I (774) wifi:config NVS flash: enabled
+I (774) wifi:config nano formating: disabled
+I (774) wifi:Init data frame dynamic rx buffer num: 32
+I (784) wifi:Init management frame dynamic rx buffer num: 32
+I (784) wifi:Init management short buffer num: 32
+I (794) wifi:Init dynamic tx buffer num: 32
+I (794) wifi:Init static rx buffer size: 1600
+I (804) wifi:Init static rx buffer num: 10
+I (804) wifi:Init dynamic rx buffer num: 32
+[0;32mI (804) ALAM: SYSTEM NORMAL[0m
+[0;32mI (804) wifi_init: rx ba win: 6[0m
+[0;32mI (814) wifi_init: tcpip mbox: 32[0m
+[0;32mI (814) wifi_init: udp mbox: 6[0m
+[0;32mI (824) wifi_init: tcp mbox: 6[0m
+[0;32mI (824) wifi_init: tcp tx win: 5744[0m
+[0;32mI (834) wifi_init: tcp rx win: 5744[0m
+[0;32mI (834) wifi_init: tcp mss: 1440[0m
+[0;32mI (834) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (844) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (844) ALAM: SYSTEM NORMAL[0m
+[0;32mI (844) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (954) wifi:mode : sta (e0:e2:e6:ce:04:d4)
+I (954) wifi:enable tsf
+[0;32mI (954) ALAM: SYSTEM NORMAL[0m
+[0;32mI (954) ALAM: SYSTEM NORMAL[0m
+[0;32mI (954) ALAM: SYSTEM NORMAL[0m
+E (964) wifi:sta is connecting, return error
+[0;31mE (964) mqtt_client: Client was not initialized[0m
+I (964) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (974) wifi:state: init -> auth (b0)
+[0;32mI (974) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+I (984) wifi:state: auth -> assoc (0)
+I (994) wifi:state: assoc -> run (10)
+I (1094) wifi:connected with Ba Anh Em, aid = 3, channel 11, BW20, bssid = b0:8b:92:30:94:fd
+I (1094) wifi:security: WPA2-PSK, phy: bgn, rssi: -43
+I (1104) wifi:pm start, type: 1
+
+I (1144) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (1984) ALAM: SYSTEM NORMAL[0m
+[0;32mI (1984) ALAM: SYSTEM NORMAL[0m
+[0;32mI (1984) ALAM: SYSTEM NORMAL[0m
+[0;32mI (1984) ALAM: SYSTEM NORMAL[0m
+[0;32mI (1984) ALAM: SYSTEM NORMAL[0m
+[0;32mI (1984) ALAM: SYSTEM NORMAL[0m
+[0;32mI (1994) ALAM: SYSTEM NORMAL[0m
+[0;32mI (1994) ALAM: SYSTEM NORMAL[0m
+[0;31mE (1994) mqtt_client: Client was not initialized[0m
+[0;32mI (2004) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (3004) ALAM: SYSTEM NORMAL[0m
+[0;32mI (3004) ALAM: SYSTEM NORMAL[0m
+[0;32mI (3004) ALAM: SYSTEM NORMAL[0m
+[0;32mI (3004) ALAM: SYSTEM NORMAL[0m
+[0;32mI (3004) ALAM: SYSTEM NORMAL[0m
+[0;32mI (3004) ALAM: SYSTEM NORMAL[0m
+[0;32mI (3014) ALAM: SYSTEM NORMAL[0m
+[0;32mI (3014) ALAM: SYSTEM NORMAL[0m
+[0;31mE (3014) mqtt_client: Client was not initialized[0m
+[0;32mI (3024) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+I (3504) wifi:<ba-add>idx:0 (ifx:0, b0:8b:92:30:94:fd), tid:0, ssn:0, winSize:64
+[0;32mI (4024) ALAM: SYSTEM NORMAL[0m
+[0;32mI (4024) ALAM: SYSTEM NORMAL[0m
+[0;32mI (4024) ALAM: SYSTEM NORMAL[0m
+[0;32mI (4024) ALAM: SYSTEM NORMAL[0m
+[0;32mI (4024) ALAM: SYSTEM NORMAL[0m
+[0;32mI (4024) ALAM: SYSTEM NORMAL[0m
+[0;32mI (4034) ALAM: SYSTEM NORMAL[0m
+[0;32mI (4034) ALAM: SYSTEM NORMAL[0m
+[0;31mE (4034) mqtt_client: Client was not initialized[0m
+[0;32mI (4044) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (4604) esp_netif_handlers: sta ip: 192.168.1.10, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4604) WIFI_MANAGER: got ip:192.168.1.10[0m
+[0;32mI (4604) WIFI_MANAGER: got ip:192.168.1.10[0m
+[0;32mI (5044) ALAM: SYSTEM NORMAL[0m
+[0;32mI (5044) ALAM: SYSTEM NORMAL[0m
+[0;32mI (5044) ALAM: SYSTEM NORMAL[0m
+[0;32mI (5044) ALAM: SYSTEM NORMAL[0m
+[0;32mI (5044) ALAM: SYSTEM NORMAL[0m
+[0;32mI (5044) ALAM: SYSTEM NORMAL[0m
+[0;32mI (5054) ALAM: SYSTEM NORMAL[0m
+[0;32mI (5054) ALAM: SYSTEM NORMAL[0m
+[0;31mE (5054) mqtt_client: Client was not initialized[0m
+[0;32mI (5064) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (6064) ALAM: SYSTEM NORMAL[0m
+[0;32mI (6064) ALAM: SYSTEM NORMAL[0m
+[0;32mI (6064) ALAM: SYSTEM NORMAL[0m
+[0;32mI (6064) ALAM: SYSTEM NORMAL[0m
+[0;32mI (6064) ALAM: SYSTEM NORMAL[0m
+[0;32mI (6064) ALAM: SYSTEM NORMAL[0m
+[0;32mI (6074) ALAM: SYSTEM NORMAL[0m
+[0;32mI (6074) ALAM: SYSTEM NORMAL[0m
+[0;31mE (6074) mqtt_client: Client was not initialized[0m
+[0;32mI (6084) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (7084) ALAM: SYSTEM NORMAL[0m
+[0;32mI (7084) ALAM: SYSTEM NORMAL[0m
+[0;32mI (7084) ALAM: SYSTEM NORMAL[0m
+[0;32mI (7084) ALAM: SYSTEM NORMAL[0m
+[0;32mI (7084) ALAM: SYSTEM NORMAL[0m
+[0;32mI (7084) ALAM: SYSTEM NORMAL[0m
+[0;32mI (7094) ALAM: SYSTEM NORMAL[0m
+[0;32mI (7094) ALAM: SYSTEM NORMAL[0m
+[0;31mE (7094) mqtt_client: Client was not initialized[0m
+[0;32mI (7104) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (8114) ALAM: SYSTEM NORMAL[0m
+[0;32mI (8114) ALAM: SYSTEM NORMAL[0m
+[0;32mI (8114) ALAM: SYSTEM NORMAL[0m
+[0;32mI (8114) ALAM: SYSTEM NORMAL[0m
+[0;32mI (8114) ALAM: SYSTEM NORMAL[0m
+[0;32mI (8114) ALAM: SYSTEM NORMAL[0m
+[0;32mI (8124) ALAM: SYSTEM NORMAL[0m
+[0;32mI (8124) ALAM: SYSTEM NORMAL[0m
+[0;31mE (8124) mqtt_client: Client was not initialized[0m
+[0;32mI (8134) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (9134) ALAM: SYSTEM NORMAL[0m
+[0;32mI (9134) ALAM: SYSTEM NORMAL[0m
+[0;32mI (9134) ALAM: SYSTEM NORMAL[0m
+[0;32mI (9134) ALAM: SYSTEM NORMAL[0m
+[0;32mI (9134) ALAM: SYSTEM NORMAL[0m
+[0;32mI (9134) ALAM: SYSTEM NORMAL[0m
+[0;32mI (9144) ALAM: SYSTEM NORMAL[0m
+[0;32mI (9144) ALAM: SYSTEM NORMAL[0m
+[0;31mE (9144) mqtt_client: Client was not initialized[0m
+[0;32mI (9154) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (10154) ALAM: SYSTEM NORMAL[0m
+[0;32mI (10154) ALAM: SYSTEM NORMAL[0m
+[0;32mI (10154) ALAM: SYSTEM NORMAL[0m
+[0;32mI (10154) ALAM: SYSTEM NORMAL[0m
+[0;32mI (10154) ALAM: SYSTEM NORMAL[0m
+[0;32mI (10154) ALAM: SYSTEM NORMAL[0m
+[0;32mI (10164) ALAM: SYSTEM NORMAL[0m
+[0;32mI (10164) ALAM: SYSTEM NORMAL[0m
+[0;31mE (10164) mqtt_client: Client was not initialized[0m
+[0;32mI (10174) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (11184) ALAM: SYSTEM NORMAL[0m
+[0;32mI (11184) ALAM: SYSTEM NORMAL[0m
+[0;32mI (11184) ALAM: SYSTEM NORMAL[0m
+[0;32mI (11184) ALAM: SYSTEM NORMAL[0m
+[0;32mI (11184) ALAM: SYSTEM NORMAL[0m
+[0;32mI (11184) ALAM: SYSTEM NORMAL[0m
+[0;32mI (11194) ALAM: SYSTEM NORMAL[0m
+[0;32mI (11194) ALAM: SYSTEM NORMAL[0m
+[0;31mE (11194) mqtt_client: Client was not initialized[0m
+[0;32mI (11204) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (12214) ALAM: SYSTEM NORMAL[0m
+[0;32mI (12214) ALAM: SYSTEM NORMAL[0m
+[0;32mI (12214) ALAM: SYSTEM NORMAL[0m
+[0;32mI (12214) ALAM: SYSTEM NORMAL[0m
+[0;32mI (12214) ALAM: SYSTEM NORMAL[0m
+[0;32mI (12214) ALAM: SYSTEM NORMAL[0m
+[0;32mI (12224) ALAM: SYSTEM NORMAL[0m
+[0;32mI (12224) ALAM: SYSTEM NORMAL[0m
+[0;31mE (12224) mqtt_client: Client was not initialized[0m
+[0;32mI (12234) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (13244) ALAM: SYSTEM NORMAL[0m
+[0;32mI (13244) ALAM: SYSTEM NORMAL[0m
+[0;32mI (13244) ALAM: SYSTEM NORMAL[0m
+[0;32mI (13244) ALAM: SYSTEM NORMAL[0m
+[0;32mI (13244) ALAM: SYSTEM NORMAL[0m
+[0;32mI (13244) ALAM: SYSTEM NORMAL[0m
+[0;32mI (13254) ALAM: SYSTEM NORMAL[0m
+[0;32mI (13254) ALAM: SYSTEM NORMAL[0m
+[0;31mE (13254) mqtt_client: Client was not initialized[0m
+[0;32mI (13264) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (14274) ALAM: SYSTEM NORMAL[0m
+[0;32mI (14274) ALAM: SYSTEM NORMAL[0m
+[0;32mI (14274) ALAM: SYSTEM NORMAL[0m
+[0;32mI (14274) ALAM: SYSTEM NORMAL[0m
+[0;32mI (14274) ALAM: SYSTEM NORMAL[0m
+[0;32mI (14274) ALAM: SYSTEM NORMAL[0m
+[0;32mI (14284) ALAM: SYSTEM NORMAL[0m
+[0;32mI (14284) ALAM: SYSTEM NORMAL[0m
+[0;31mE (14284) mqtt_client: Client was not initialized[0m
+[0;32mI (14294) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (15304) ALAM: SYSTEM NORMAL[0m
+[0;32mI (15304) ALAM: SYSTEM NORMAL[0m
+[0;32mI (15304) ALAM: SYSTEM NORMAL[0m
+[0;32mI (15304) ALAM: SYSTEM NORMAL[0m
+[0;32mI (15304) ALAM: SYSTEM NORMAL[0m
+[0;32mI (15304) ALAM: SYSTEM NORMAL[0m
+[0;32mI (15314) ALAM: SYSTEM NORMAL[0m
+[0;32mI (15314) ALAM: SYSTEM NORMAL[0m
+[0;31mE (15314) mqtt_client: Client was not initialized[0m
+[0;32mI (15324) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (16334) ALAM: SYSTEM NORMAL[0m
+[0;32mI (16334) ALAM: SYSTEM NORMAL[0m
+[0;32mI (16334) ALAM: SYSTEM NORMAL[0m
+[0;32mI (16334) ALAM: SYSTEM NORMAL[0m
+[0;32mI (16334) ALAM: SYSTEM NORMAL[0m
+[0;32mI (16334) ALAM: SYSTEM NORMAL[0m
+[0;32mI (16344) ALAM: SYSTEM NORMAL[0m
+[0;32mI (16344) ALAM: SYSTEM NORMAL[0m
+[0;31mE (16344) mqtt_client: Client was not initialized[0m
+[0;32mI (16354) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (17364) ALAM: SYSTEM NORMAL[0m
+[0;32mI (17364) ALAM: SYSTEM NORMAL[0m
+[0;32mI (17364) ALAM: SYSTEM NORMAL[0m
+[0;32mI (17364) ALAM: SYSTEM NORMAL[0m
+[0;32mI (17364) ALAM: SYSTEM NORMAL[0m
+[0;32mI (17364) ALAM: SYSTEM NORMAL[0m
+[0;32mI (17374) ALAM: SYSTEM NORMAL[0m
+[0;32mI (17374) ALAM: SYSTEM NORMAL[0m
+[0;31mE (17374) mqtt_client: Client was not initialized[0m
+[0;32mI (17384) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (18394) ALAM: SYSTEM NORMAL[0m
+[0;32mI (18394) ALAM: SYSTEM NORMAL[0m
+[0;32mI (18394) ALAM: SYSTEM NORMAL[0m
+[0;32mI (18394) ALAM: SYSTEM NORMAL[0m
+[0;32mI (18394) ALAM: SYSTEM NORMAL[0m
+[0;32mI (18394) ALAM: SYSTEM NORMAL[0m
+[0;32mI (18404) ALAM: SYSTEM NORMAL[0m
+[0;32mI (18404) ALAM: SYSTEM NORMAL[0m
+[0;31mE (18404) mqtt_client: Client was not initialized[0m
+[0;32mI (18414) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (19424) ALAM: SYSTEM NORMAL[0m
+[0;32mI (19424) ALAM: SYSTEM NORMAL[0m
+[0;32mI (19424) ALAM: SYSTEM NORMAL[0m
+[0;32mI (19424) ALAM: SYSTEM NORMAL[0m
+[0;32mI (19424) ALAM: SYSTEM NORMAL[0m
+[0;32mI (19424) ALAM: SYSTEM NORMAL[0m
+[0;32mI (19434) ALAM: SYSTEM NORMAL[0m
+[0;32mI (19434) ALAM: SYSTEM NORMAL[0m
+[0;31mE (19434) mqtt_client: Client was not initialized[0m
+[0;32mI (19444) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (20454) ALAM: SYSTEM NORMAL[0m
+[0;32mI (20454) ALAM: SYSTEM NORMAL[0m
+[0;32mI (20454) ALAM: SYSTEM NORMAL[0m
+[0;32mI (20454) ALAM: SYSTEM NORMAL[0m
+[0;32mI (20454) ALAM: SYSTEM NORMAL[0m
+[0;32mI (20454) ALAM: SYSTEM NORMAL[0m
+[0;32mI (20464) ALAM: SYSTEM NORMAL[0m
+[0;32mI (20464) ALAM: SYSTEM NORMAL[0m
+[0;31mE (20464) mqtt_client: Client was not initialized[0m
+[0;32mI (20474) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (21484) ALAM: SYSTEM NORMAL[0m
+[0;32mI (21484) ALAM: SYSTEM NORMAL[0m
+[0;32mI (21484) ALAM: SYSTEM NORMAL[0m
+[0;32mI (21484) ALAM: SYSTEM NORMAL[0m
+[0;32mI (21484) ALAM: SYSTEM NORMAL[0m
+[0;32mI (21484) ALAM: SYSTEM NORMAL[0m
+[0;32mI (21494) ALAM: SYSTEM NORMAL[0m
+[0;32mI (21494) ALAM: SYSTEM NORMAL[0m
+[0;31mE (21494) mqtt_client: Client was not initialized[0m
+[0;32mI (21504) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (22514) ALAM: SYSTEM NORMAL[0m
+[0;32mI (22514) ALAM: SYSTEM NORMAL[0m
+[0;32mI (22514) ALAM: SYSTEM NORMAL[0m
+[0;32mI (22514) ALAM: SYSTEM NORMAL[0m
+[0;32mI (22514) ALAM: SYSTEM NORMAL[0m
+[0;32mI (22514) ALAM: SYSTEM NORMAL[0m
+[0;32mI (22524) ALAM: SYSTEM NORMAL[0m
+[0;32mI (22524) ALAM: SYSTEM NORMAL[0m
+[0;31mE (22524) mqtt_client: Client was not initialized[0m
+[0;32mI (22534) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (23544) ALAM: SYSTEM NORMAL[0m
+[0;32mI (23544) ALAM: SYSTEM NORMAL[0m
+[0;32mI (23544) ALAM: SYSTEM NORMAL[0m
+[0;32mI (23544) ALAM: SYSTEM NORMAL[0m
+[0;32mI (23544) ALAM: SYSTEM NORMAL[0m
+[0;32mI (23544) ALAM: SYSTEM NORMAL[0m
+[0;32mI (23554) ALAM: SYSTEM NORMAL[0m
+[0;32mI (23554) ALAM: SYSTEM NORMAL[0m
+[0;31mE (23554) mqtt_client: Client was not initialized[0m
+[0;32mI (23564) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (24574) ALAM: SYSTEM NORMAL[0m
+[0;32mI (24574) ALAM: SYSTEM NORMAL[0m
+[0;32mI (24574) ALAM: SYSTEM NORMAL[0m
+[0;32mI (24574) ALAM: SYSTEM NORMAL[0m
+[0;32mI (24574) ALAM: SYSTEM NORMAL[0m
+[0;32mI (24574) ALAM: SYSTEM NORMAL[0m
+[0;32mI (24584) ALAM: SYSTEM NORMAL[0m
+[0;32mI (24584) ALAM: SYSTEM NORMAL[0m
+[0;31mE (24584) mqtt_client: Client was not initialized[0m
+[0;32mI (24594) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (25604) ALAM: SYSTEM NORMAL[0m
+[0;32mI (25604) ALAM: SYSTEM NORMAL[0m
+[0;32mI (25604) ALAM: SYSTEM NORMAL[0m
+[0;32mI (25604) ALAM: SYSTEM NORMAL[0m
+[0;32mI (25604) ALAM: SYSTEM NORMAL[0m
+[0;32mI (25604) ALAM: SYSTEM NORMAL[0m
+[0;32mI (25614) ALAM: SYSTEM NORMAL[0m
+[0;32mI (25614) ALAM: SYSTEM NORMAL[0m
+[0;31mE (25614) mqtt_client: Client was not initialized[0m
+[0;32mI (25624) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (26634) ALAM: SYSTEM NORMAL[0m
+[0;32mI (26634) ALAM: SYSTEM NORMAL[0m
+[0;32mI (26634) ALAM: SYSTEM NORMAL[0m
+[0;32mI (26634) ALAM: SYSTEM NORMAL[0m
+[0;32mI (26634) ALAM: SYSTEM NORMAL[0m
+[0;32mI (26634) ALAM: SYSTEM NORMAL[0m
+[0;32mI (26644) ALAM: SYSTEM NORMAL[0m
+[0;32mI (26644) ALAM: SYSTEM NORMAL[0m
+[0;31mE (26644) mqtt_client: Client was not initialized[0m
+[0;32mI (26654) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (27664) ALAM: SYSTEM NORMAL[0m
+[0;32mI (27664) ALAM: SYSTEM NORMAL[0m
+[0;32mI (27664) ALAM: SYSTEM NORMAL[0m
+[0;32mI (27664) ALAM: SYSTEM NORMAL[0m
+[0;32mI (27664) ALAM: SYSTEM NORMAL[0m
+[0;32mI (27664) ALAM: SYSTEM NORMAL[0m
+[0;32mI (27674) ALAM: SYSTEM NORMAL[0m
+[0;32mI (27674) ALAM: SYSTEM NORMAL[0m
+[0;31mE (27674) mqtt_client: Client was not initialized[0m
+[0;32mI (27684) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (28694) ALAM: SYSTEM NORMAL[0m
+[0;32mI (28694) ALAM: SYSTEM NORMAL[0m
+[0;32mI (28694) ALAM: SYSTEM NORMAL[0m
+[0;32mI (28694) ALAM: SYSTEM NORMAL[0m
+[0;32mI (28694) ALAM: SYSTEM NORMAL[0m
+[0;32mI (28694) ALAM: SYSTEM NORMAL[0m
+[0;32mI (28704) ALAM: SYSTEM NORMAL[0m
+[0;32mI (28704) ALAM: SYSTEM NORMAL[0m
+[0;31mE (28704) mqtt_client: Client was not initialized[0m
+[0;32mI (28714) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (29724) ALAM: SYSTEM NORMAL[0m
+[0;32mI (29724) ALAM: SYSTEM NORMAL[0m
+[0;32mI (29724) ALAM: SYSTEM NORMAL[0m
+[0;32mI (29724) ALAM: SYSTEM NORMAL[0m
+[0;32mI (29724) ALAM: SYSTEM NORMAL[0m
+[0;32mI (29724) ALAM: SYSTEM NORMAL[0m
+[0;32mI (29734) ALAM: SYSTEM NORMAL[0m
+[0;32mI (29734) ALAM: SYSTEM NORMAL[0m
+[0;31mE (29734) mqtt_client: Client was not initialized[0m
+[0;32mI (29744) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (30754) ALAM: SYSTEM NORMAL[0m
+[0;32mI (30754) ALAM: SYSTEM NORMAL[0m
+[0;32mI (30754) ALAM: SYSTEM NORMAL[0m
+[0;32mI (30754) ALAM: SYSTEM NORMAL[0m
+[0;32mI (30754) ALAM: SYSTEM NORMAL[0m
+[0;32mI (30754) ALAM: SYSTEM NORMAL[0m
+[0;32mI (30764) ALAM: SYSTEM NORMAL[0m
+[0;32mI (30764) ALAM: SYSTEM NORMAL[0m
+[0;31mE (30764) mqtt_client: Client was not initialized[0m
+[0;32mI (30774) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (31784) ALAM: SYSTEM NORMAL[0m
+[0;32mI (31784) ALAM: SYSTEM NORMAL[0m
+[0;32mI (31784) ALAM: SYSTEM NORMAL[0m
+[0;32mI (31784) ALAM: SYSTEM NORMAL[0m
+[0;32mI (31784) ALAM: SYSTEM NORMAL[0m
+[0;32mI (31784) ALAM: SYSTEM NORMAL[0m
+[0;32mI (31794) ALAM: SYSTEM NORMAL[0m
+[0;32mI (31794) ALAM: SYSTEM NORMAL[0m
+[0;31mE (31794) mqtt_client: Client was not initialized[0m
+[0;32mI (31804) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (32814) ALAM: SYSTEM NORMAL[0m
+[0;32mI (32814) ALAM: SYSTEM NORMAL[0m
+[0;32mI (32814) ALAM: SYSTEM NORMAL[0m
+[0;32mI (32814) ALAM: SYSTEM NORMAL[0m
+[0;32mI (32814) ALAM: SYSTEM NORMAL[0m
+[0;32mI (32814) ALAM: SYSTEM NORMAL[0m
+[0;32mI (32824) ALAM: SYSTEM NORMAL[0m
+[0;32mI (32824) ALAM: SYSTEM NORMAL[0m
+[0;31mE (32824) mqtt_client: Client was not initialized[0m
+[0;32mI (32834) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (33844) ALAM: SYSTEM NORMAL[0m
+[0;32mI (33844) ALAM: SYSTEM NORMAL[0m
+[0;32mI (33844) ALAM: SYSTEM NORMAL[0m
+[0;32mI (33844) ALAM: SYSTEM NORMAL[0m
+[0;32mI (33844) ALAM: SYSTEM NORMAL[0m
+[0;32mI (33844) ALAM: SYSTEM NORMAL[0m
+[0;32mI (33854) ALAM: SYSTEM NORMAL[0m
+[0;32mI (33854) ALAM: SYSTEM NORMAL[0m
+[0;31mE (33854) mqtt_client: Client was not initialized[0m
+[0;32mI (33864) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (34874) ALAM: SYSTEM NORMAL[0m
+[0;32mI (34874) ALAM: SYSTEM NORMAL[0m
+[0;32mI (34874) ALAM: SYSTEM NORMAL[0m
+[0;32mI (34874) ALAM: SYSTEM NORMAL[0m
+[0;32mI (34874) ALAM: SYSTEM NORMAL[0m
+[0;32mI (34874) ALAM: SYSTEM NORMAL[0m
+[0;32mI (34884) ALAM: SYSTEM NORMAL[0m
+[0;32mI (34884) ALAM: SYSTEM NORMAL[0m
+[0;31mE (34884) mqtt_client: Client was not initialized[0m
+[0;32mI (34894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (35904) ALAM: SYSTEM NORMAL[0m
+[0;32mI (35904) ALAM: SYSTEM NORMAL[0m
+[0;32mI (35904) ALAM: SYSTEM NORMAL[0m
+[0;32mI (35904) ALAM: SYSTEM NORMAL[0m
+[0;32mI (35904) ALAM: SYSTEM NORMAL[0m
+[0;32mI (35904) ALAM: SYSTEM NORMAL[0m
+[0;32mI (35914) ALAM: SYSTEM NORMAL[0m
+[0;32mI (35914) ALAM: SYSTEM NORMAL[0m
+[0;31mE (35914) mqtt_client: Client was not initialized[0m
+[0;32mI (35924) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (36934) ALAM: SYSTEM NORMAL[0m
+[0;32mI (36934) ALAM: SYSTEM NORMAL[0m
+[0;32mI (36934) ALAM: SYSTEM NORMAL[0m
+[0;32mI (36934) ALAM: SYSTEM NORMAL[0m
+[0;32mI (36934) ALAM: SYSTEM NORMAL[0m
+[0;32mI (36934) ALAM: SYSTEM NORMAL[0m
+[0;32mI (36944) ALAM: SYSTEM NORMAL[0m
+[0;32mI (36944) ALAM: SYSTEM NORMAL[0m
+[0;31mE (36944) mqtt_client: Client was not initialized[0m
+[0;32mI (36954) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (37964) ALAM: SYSTEM NORMAL[0m
+[0;32mI (37964) ALAM: SYSTEM NORMAL[0m
+[0;32mI (37964) ALAM: SYSTEM NORMAL[0m
+[0;32mI (37964) ALAM: SYSTEM NORMAL[0m
+[0;32mI (37964) ALAM: SYSTEM NORMAL[0m
+[0;32mI (37964) ALAM: SYSTEM NORMAL[0m
+[0;32mI (37974) ALAM: SYSTEM NORMAL[0m
+[0;32mI (37974) ALAM: SYSTEM NORMAL[0m
+[0;31mE (37974) mqtt_client: Client was not initialized[0m
+[0;32mI (37984) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (38994) ALAM: SYSTEM NORMAL[0m
+[0;32mI (38994) ALAM: SYSTEM NORMAL[0m
+[0;32mI (38994) ALAM: SYSTEM NORMAL[0m
+[0;32mI (38994) ALAM: SYSTEM NORMAL[0m
+[0;32mI (38994) ALAM: SYSTEM NORMAL[0m
+[0;32mI (38994) ALAM: SYSTEM NORMAL[0m
+[0;32mI (39004) ALAM: SYSTEM NORMAL[0m
+[0;32mI (39004) ALAM: SYSTEM NORMAL[0m
+[0;31mE (39004) mqtt_client: Client was not initialized[0m
+[0;32mI (39014) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (40024) ALAM: SYSTEM NORMAL[0m
+[0;32mI (40024) ALAM: SYSTEM NORMAL[0m
+[0;32mI (40024) ALAM: SYSTEM NORMAL[0m
+[0;32mI (40024) ALAM: SYSTEM NORMAL[0m
+[0;32mI (40024) ALAM: SYSTEM NORMAL[0m
+[0;32mI (40024) ALAM: SYSTEM NORMAL[0m
+[0;32mI (40034) ALAM: SYSTEM NORMAL[0m
+[0;32mI (40034) ALAM: SYSTEM NORMAL[0m
+[0;31mE (40034) mqtt_client: Client was not initialized[0m
+[0;32mI (40044) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (41054) ALAM: SYSTEM NORMAL[0m
+[0;32mI (41054) ALAM: SYSTEM NORMAL[0m
+[0;32mI (41054) ALAM: SYSTEM NORMAL[0m
+[0;32mI (41054) ALAM: SYSTEM NORMAL[0m
+[0;32mI (41054) ALAM: SYSTEM NORMAL[0m
+[0;32mI (41054) ALAM: SYSTEM NORMAL[0m
+[0;32mI (41064) ALAM: SYSTEM NORMAL[0m
+[0;32mI (41064) ALAM: SYSTEM NORMAL[0m
+[0;31mE (41064) mqtt_client: Client was not initialized[0m
+[0;32mI (41074) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (42084) ALAM: SYSTEM NORMAL[0m
+[0;32mI (42084) ALAM: SYSTEM NORMAL[0m
+[0;32mI (42084) ALAM: SYSTEM NORMAL[0m
+[0;32mI (42084) ALAM: SYSTEM NORMAL[0m
+[0;32mI (42084) ALAM: SYSTEM NORMAL[0m
+[0;32mI (42084) ALAM: SYSTEM NORMAL[0m
+[0;32mI (42094) ALAM: SYSTEM NORMAL[0m
+[0;32mI (42094) ALAM: SYSTEM NORMAL[0m
+[0;31mE (42094) mqtt_client: Client was not initialized[0m
+[0;32mI (42104) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (43114) ALAM: SYSTEM NORMAL[0m
+[0;32mI (43114) ALAM: SYSTEM NORMAL[0m
+[0;32mI (43114) ALAM: SYSTEM NORMAL[0m
+[0;32mI (43114) ALAM: SYSTEM NORMAL[0m
+[0;32mI (43114) ALAM: SYSTEM NORMAL[0m
+[0;32mI (43114) ALAM: SYSTEM NORMAL[0m
+[0;32mI (43124) ALAM: SYSTEM NORMAL[0m
+[0;32mI (43124) ALAM: SYSTEM NORMAL[0m
+[0;31mE (43124) mqtt_client: Client was not initialized[0m
+[0;32mI (43134) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (44144) ALAM: SYSTEM NORMAL[0m
+[0;32mI (44144) ALAM: SYSTEM NORMAL[0m
+[0;32mI (44144) ALAM: SYSTEM NORMAL[0m
+[0;32mI (44144) ALAM: SYSTEM NORMAL[0m
+[0;32mI (44144) ALAM: SYSTEM NORMAL[0m
+[0;32mI (44144) ALAM: SYSTEM NORMAL[0m
+[0;32mI (44154) ALAM: SYSTEM NORMAL[0m
+[0;32mI (44154) ALAM: SYSTEM NORMAL[0m
+[0;31mE (44154) mqtt_client: Client was not initialized[0m
+[0;32mI (44164) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (45174) ALAM: SYSTEM NORMAL[0m
+[0;32mI (45174) ALAM: SYSTEM NORMAL[0m
+[0;32mI (45174) ALAM: SYSTEM NORMAL[0m
+[0;32mI (45174) ALAM: SYSTEM NORMAL[0m
+[0;32mI (45174) ALAM: SYSTEM NORMAL[0m
+[0;32mI (45174) ALAM: SYSTEM NORMAL[0m
+[0;32mI (45184) ALAM: SYSTEM NORMAL[0m
+[0;32mI (45184) ALAM: SYSTEM NORMAL[0m
+[0;31mE (45184) mqtt_client: Client was not initialized[0m
+[0;32mI (45194) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (46204) ALAM: SYSTEM NORMAL[0m
+[0;32mI (46204) ALAM: SYSTEM NORMAL[0m
+[0;32mI (46204) ALAM: SYSTEM NORMAL[0m
+[0;32mI (46204) ALAM: SYSTEM NORMAL[0m
+[0;32mI (46204) ALAM: SYSTEM NORMAL[0m
+[0;32mI (46204) ALAM: SYSTEM NORMAL[0m
+[0;32mI (46214) ALAM: SYSTEM NORMAL[0m
+[0;32mI (46214) ALAM: SYSTEM NORMAL[0m
+[0;31mE (46214) mqtt_client: Client was not initialized[0m
+[0;32mI (46224) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (47234) ALAM: SYSTEM NORMAL[0m
+[0;32mI (47234) ALAM: SYSTEM NORMAL[0m
+[0;32mI (47234) ALAM: SYSTEM NORMAL[0m
+[0;32mI (47234) ALAM: SYSTEM NORMAL[0m
+[0;32mI (47234) ALAM: SYSTEM NORMAL[0m
+[0;32mI (47234) ALAM: SYSTEM NORMAL[0m
+[0;32mI (47244) ALAM: SYSTEM NORMAL[0m
+[0;32mI (47244) ALAM: SYSTEM NORMAL[0m
+[0;31mE (47244) mqtt_client: Client was not initialized[0m
+[0;32mI (47254) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (48264) ALAM: SYSTEM NORMAL[0m
+[0;32mI (48264) ALAM: SYSTEM NORMAL[0m
+[0;32mI (48264) ALAM: SYSTEM NORMAL[0m
+[0;32mI (48264) ALAM: SYSTEM NORMAL[0m
+[0;32mI (48264) ALAM: SYSTEM NORMAL[0m
+[0;32mI (48264) ALAM: SYSTEM NORMAL[0m
+[0;32mI (48274) ALAM: SYSTEM NORMAL[0m
+[0;32mI (48274) ALAM: SYSTEM NORMAL[0m
+[0;31mE (48274) mqtt_client: Client was not initialized[0m
+[0;32mI (48284) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (49294) ALAM: SYSTEM NORMAL[0m
+[0;32mI (49294) ALAM: SYSTEM NORMAL[0m
+[0;32mI (49294) ALAM: SYSTEM NORMAL[0m
+[0;32mI (49294) ALAM: SYSTEM NORMAL[0m
+[0;32mI (49294) ALAM: SYSTEM NORMAL[0m
+[0;32mI (49294) ALAM: SYSTEM NORMAL[0m
+[0;32mI (49304) ALAM: SYSTEM NORMAL[0m
+[0;32mI (49304) ALAM: SYSTEM NORMAL[0m
+[0;31mE (49304) mqtt_client: Client was not initialized[0m
+[0;32mI (49314) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (50324) ALAM: SYSTEM NORMAL[0m
+[0;32mI (50324) ALAM: SYSTEM NORMAL[0m
+[0;32mI (50324) ALAM: SYSTEM NORMAL[0m
+[0;32mI (50324) ALAM: SYSTEM NORMAL[0m
+[0;32mI (50324) ALAM: SYSTEM NORMAL[0m
+[0;32mI (50324) ALAM: SYSTEM NORMAL[0m
+[0;32mI (50334) ALAM: SYSTEM NORMAL[0m
+[0;32mI (50334) ALAM: SYSTEM NORMAL[0m
+[0;31mE (50334) mqtt_client: Client was not initialized[0m
+[0;32mI (50344) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (51354) ALAM: SYSTEM NORMAL[0m
+[0;32mI (51354) ALAM: SYSTEM NORMAL[0m
+[0;32mI (51354) ALAM: SYSTEM NORMAL[0m
+[0;32mI (51354) ALAM: SYSTEM NORMAL[0m
+[0;32mI (51354) ALAM: SYSTEM NORMAL[0m
+[0;32mI (51354) ALAM: SYSTEM NORMAL[0m
+[0;32mI (51364) ALAM: SYSTEM NORMAL[0m
+[0;32mI (51364) ALAM: SYSTEM NORMAL[0m
+[0;31mE (51364) mqtt_client: Client was not initialized[0m
+[0;32mI (51374) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (52384) ALAM: SYSTEM NORMAL[0m
+[0;32mI (52384) ALAM: SYSTEM NORMAL[0m
+[0;32mI (52384) ALAM: SYSTEM NORMAL[0m
+[0;32mI (52384) ALAM: SYSTEM NORMAL[0m
+[0;32mI (52384) ALAM: SYSTEM NORMAL[0m
+[0;32mI (52384) ALAM: SYSTEM NORMAL[0m
+[0;32mI (52394) ALAM: SYSTEM NORMAL[0m
+[0;32mI (52394) ALAM: SYSTEM NORMAL[0m
+[0;31mE (52394) mqtt_client: Client was not initialized[0m
+[0;32mI (52404) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (53414) ALAM: SYSTEM NORMAL[0m
+[0;32mI (53414) ALAM: SYSTEM NORMAL[0m
+[0;32mI (53414) ALAM: SYSTEM NORMAL[0m
+[0;32mI (53414) ALAM: SYSTEM NORMAL[0m
+[0;32mI (53414) ALAM: SYSTEM NORMAL[0m
+[0;32mI (53414) ALAM: SYSTEM NORMAL[0m
+[0;32mI (53424) ALAM: SYSTEM NORMAL[0m
+[0;32mI (53424) ALAM: SYSTEM NORMAL[0m
+[0;31mE (53424) mqtt_client: Client was not initialized[0m
+[0;32mI (53434) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (54444) ALAM: SYSTEM NORMAL[0m
+[0;32mI (54444) ALAM: SYSTEM NORMAL[0m
+[0;32mI (54444) ALAM: SYSTEM NORMAL[0m
+[0;32mI (54444) ALAM: SYSTEM NORMAL[0m
+[0;32mI (54444) ALAM: SYSTEM NORMAL[0m
+[0;32mI (54444) ALAM: SYSTEM NORMAL[0m
+[0;32mI (54454) ALAM: SYSTEM NORMAL[0m
+[0;32mI (54454) ALAM: SYSTEM NORMAL[0m
+[0;31mE (54454) mqtt_client: Client was not initialized[0m
+[0;32mI (54464) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (55474) ALAM: SYSTEM NORMAL[0m
+[0;32mI (55474) ALAM: SYSTEM NORMAL[0m
+[0;32mI (55474) ALAM: SYSTEM NORMAL[0m
+[0;32mI (55474) ALAM: SYSTEM NORMAL[0m
+[0;32mI (55474) ALAM: SYSTEM NORMAL[0m
+[0;32mI (55474) ALAM: SYSTEM NORMAL[0m
+[0;32mI (55484) ALAM: SYSTEM NORMAL[0m
+[0;32mI (55484) ALAM: SYSTEM NORMAL[0m
+[0;31mE (55484) mqtt_client: Client was not initialized[0m
+[0;32mI (55494) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (56504) ALAM: SYSTEM NORMAL[0m
+[0;32mI (56504) ALAM: SYSTEM NORMAL[0m
+[0;32mI (56504) ALAM: SYSTEM NORMAL[0m
+[0;32mI (56504) ALAM: SYSTEM NORMAL[0m
+[0;32mI (56504) ALAM: SYSTEM NORMAL[0m
+[0;32mI (56504) ALAM: SYSTEM NORMAL[0m
+[0;32mI (56514) ALAM: SYSTEM NORMAL[0m
+[0;32mI (56514) ALAM: SYSTEM NORMAL[0m
+[0;31mE (56514) mqtt_client: Client was not initialized[0m
+[0;32mI (56524) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (57534) ALAM: SYSTEM NORMAL[0m
+[0;32mI (57534) ALAM: SYSTEM NORMAL[0m
+[0;32mI (57534) ALAM: SYSTEM NORMAL[0m
+[0;32mI (57534) ALAM: SYSTEM NORMAL[0m
+[0;32mI (57534) ALAM: SYSTEM NORMAL[0m
+[0;32mI (57534) ALAM: SYSTEM NORMAL[0m
+[0;32mI (57544) ALAM: SYSTEM NORMAL[0m
+[0;32mI (57544) ALAM: SYSTEM NORMAL[0m
+[0;31mE (57544) mqtt_client: Client was not initialized[0m
+[0;32mI (57554) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (58564) ALAM: SYSTEM NORMAL[0m
+[0;32mI (58564) ALAM: SYSTEM NORMAL[0m
+[0;32mI (58564) ALAM: SYSTEM NORMAL[0m
+[0;32mI (58564) ALAM: SYSTEM NORMAL[0m
+[0;32mI (58564) ALAM: SYSTEM NORMAL[0m
+[0;32mI (58564) ALAM: SYSTEM NORMAL[0m
+[0;32mI (58574) ALAM: SYSTEM NORMAL[0m
+[0;32mI (58574) ALAM: SYSTEM NORMAL[0m
+[0;31mE (58574) mqtt_client: Client was not initialized[0m
+[0;32mI (58584) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (59594) ALAM: SYSTEM NORMAL[0m
+[0;32mI (59594) ALAM: SYSTEM NORMAL[0m
+[0;32mI (59594) ALAM: SYSTEM NORMAL[0m
+[0;32mI (59594) ALAM: SYSTEM NORMAL[0m
+[0;32mI (59594) ALAM: SYSTEM NORMAL[0m
+[0;32mI (59594) ALAM: SYSTEM NORMAL[0m
+[0;32mI (59604) ALAM: SYSTEM NORMAL[0m
+[0;32mI (59604) ALAM: SYSTEM NORMAL[0m
+[0;31mE (59604) mqtt_client: Client was not initialized[0m
+[0;32mI (59614) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (60624) ALAM: SYSTEM NORMAL[0m
+[0;32mI (60624) ALAM: SYSTEM NORMAL[0m
+[0;32mI (60624) ALAM: SYSTEM NORMAL[0m
+[0;32mI (60624) ALAM: SYSTEM NORMAL[0m
+[0;32mI (60624) ALAM: SYSTEM NORMAL[0m
+[0;32mI (60624) ALAM: SYSTEM NORMAL[0m
+[0;32mI (60634) ALAM: SYSTEM NORMAL[0m
+[0;32mI (60634) ALAM: SYSTEM NORMAL[0m
+[0;31mE (60634) mqtt_client: Client was not initialized[0m
+[0;32mI (60644) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (61654) ALAM: SYSTEM NORMAL[0m
+[0;32mI (61654) ALAM: SYSTEM NORMAL[0m
+[0;32mI (61654) ALAM: SYSTEM NORMAL[0m
+[0;32mI (61654) ALAM: SYSTEM NORMAL[0m
+[0;32mI (61654) ALAM: SYSTEM NORMAL[0m
+[0;32mI (61654) ALAM: SYSTEM NORMAL[0m
+[0;32mI (61664) ALAM: SYSTEM NORMAL[0m
+[0;32mI (61664) ALAM: SYSTEM NORMAL[0m
+[0;31mE (61664) mqtt_client: Client was not initialized[0m
+[0;32mI (61674) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (62684) ALAM: SYSTEM NORMAL[0m
+[0;32mI (62684) ALAM: SYSTEM NORMAL[0m
+[0;32mI (62684) ALAM: SYSTEM NORMAL[0m
+[0;32mI (62684) ALAM: SYSTEM NORMAL[0m
+[0;32mI (62684) ALAM: SYSTEM NORMAL[0m
+[0;32mI (62684) ALAM: SYSTEM NORMAL[0m
+[0;32mI (62694) ALAM: SYSTEM NORMAL[0m
+[0;32mI (62694) ALAM: SYSTEM NORMAL[0m
+[0;31mE (62694) mqtt_client: Client was not initialized[0m
+[0;32mI (62704) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (63714) ALAM: SYSTEM NORMAL[0m
+[0;32mI (63714) ALAM: SYSTEM NORMAL[0m
+[0;32mI (63714) ALAM: SYSTEM NORMAL[0m
+[0;32mI (63714) ALAM: SYSTEM NORMAL[0m
+[0;32mI (63714) ALAM: SYSTEM NORMAL[0m
+[0;32mI (63714) ALAM: SYSTEM NORMAL[0m
+[0;32mI (63724) ALAM: SYSTEM NORMAL[0m
+[0;32mI (63724) ALAM: SYSTEM NORMAL[0m
+[0;31mE (63724) mqtt_client: Client was not initialized[0m
+[0;32mI (63734) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (64744) ALAM: SYSTEM NORMAL[0m
+[0;32mI (64744) ALAM: SYSTEM NORMAL[0m
+[0;32mI (64744) ALAM: SYSTEM NORMAL[0m
+[0;32mI (64744) ALAM: SYSTEM NORMAL[0m
+[0;32mI (64744) ALAM: SYSTEM NORMAL[0m
+[0;32mI (64744) ALAM: SYSTEM NORMAL[0m
+[0;32mI (64754) ALAM: SYSTEM NORMAL[0m
+[0;32mI (64754) ALAM: SYSTEM NORMAL[0m
+[0;31mE (64754) mqtt_client: Client was not initialized[0m
+[0;32mI (64764) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (65774) ALAM: SYSTEM NORMAL[0m
+[0;32mI (65774) ALAM: SYSTEM NORMAL[0m
+[0;32mI (65774) ALAM: SYSTEM NORMAL[0m
+[0;32mI (65774) ALAM: SYSTEM NORMAL[0m
+[0;32mI (65774) ALAM: SYSTEM NORMAL[0m
+[0;32mI (65774) ALAM: SYSTEM NORMAL[0m
+[0;32mI (65784) ALAM: SYSTEM NORMAL[0m
+[0;32mI (65784) ALAM: SYSTEM NORMAL[0m
+[0;31mE (65784) mqtt_client: Client was not initialized[0m
+[0;32mI (65794) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (66804) ALAM: SYSTEM NORMAL[0m
+[0;32mI (66804) ALAM: SYSTEM NORMAL[0m
+[0;32mI (66804) ALAM: SYSTEM NORMAL[0m
+[0;32mI (66804) ALAM: SYSTEM NORMAL[0m
+[0;32mI (66804) ALAM: SYSTEM NORMAL[0m
+[0;32mI (66804) ALAM: SYSTEM NORMAL[0m
+[0;32mI (66814) ALAM: SYSTEM NORMAL[0m
+[0;32mI (66814) ALAM: SYSTEM NORMAL[0m
+[0;31mE (66814) mqtt_client: Client was not initialized[0m
+[0;32mI (66824) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (67834) ALAM: SYSTEM NORMAL[0m
+[0;32mI (67834) ALAM: SYSTEM NORMAL[0m
+[0;32mI (67834) ALAM: SYSTEM NORMAL[0m
+[0;32mI (67834) ALAM: SYSTEM NORMAL[0m
+[0;32mI (67834) ALAM: SYSTEM NORMAL[0m
+[0;32mI (67834) ALAM: SYSTEM NORMAL[0m
+[0;32mI (67844) ALAM: SYSTEM NORMAL[0m
+[0;32mI (67844) ALAM: SYSTEM NORMAL[0m
+[0;31mE (67844) mqtt_client: Client was not initialized[0m
+[0;32mI (67854) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (68864) ALAM: SYSTEM NORMAL[0m
+[0;32mI (68864) ALAM: SYSTEM NORMAL[0m
+[0;32mI (68864) ALAM: SYSTEM NORMAL[0m
+[0;32mI (68864) ALAM: SYSTEM NORMAL[0m
+[0;32mI (68864) ALAM: SYSTEM NORMAL[0m
+[0;32mI (68864) ALAM: SYSTEM NORMAL[0m
+[0;32mI (68874) ALAM: SYSTEM NORMAL[0m
+[0;32mI (68874) ALAM: SYSTEM NORMAL[0m
+[0;31mE (68874) mqtt_client: Client was not initialized[0m
+[0;32mI (68884) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (69894) ALAM: SYSTEM NORMAL[0m
+[0;32mI (69894) ALAM: SYSTEM NORMAL[0m
+[0;32mI (69894) ALAM: SYSTEM NORMAL[0m
+[0;32mI (69894) ALAM: SYSTEM NORMAL[0m
+[0;32mI (69894) ALAM: SYSTEM NORMAL[0m
+[0;32mI (69894) ALAM: SYSTEM NORMAL[0m
+[0;32mI (69904) ALAM: SYSTEM NORMAL[0m
+[0;32mI (69904) ALAM: SYSTEM NORMAL[0m
+[0;31mE (69904) mqtt_client: Client was not initialized[0m
+[0;32mI (69914) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (70924) ALAM: SYSTEM NORMAL[0m
+[0;32mI (70924) ALAM: SYSTEM NORMAL[0m
+[0;32mI (70924) ALAM: SYSTEM NORMAL[0m
+[0;32mI (70924) ALAM: SYSTEM NORMAL[0m
+[0;32mI (70924) ALAM: SYSTEM NORMAL[0m
+[0;32mI (70924) ALAM: SYSTEM NORMAL[0m
+[0;32mI (70934) ALAM: SYSTEM NORMAL[0m
+[0;32mI (70934) ALAM: SYSTEM NORMAL[0m
+[0;31mE (70934) mqtt_client: Client was not initialized[0m
+[0;32mI (70944) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (71954) ALAM: SYSTEM NORMAL[0m
+[0;32mI (71954) ALAM: SYSTEM NORMAL[0m
+[0;32mI (71954) ALAM: SYSTEM NORMAL[0m
+[0;32mI (71954) ALAM: SYSTEM NORMAL[0m
+[0;32mI (71954) ALAM: SYSTEM NORMAL[0m
+[0;32mI (71954) ALAM: SYSTEM NORMAL[0m
+[0;32mI (71964) ALAM: SYSTEM NORMAL[0m
+[0;32mI (71964) ALAM: SYSTEM NORMAL[0m
+[0;31mE (71964) mqtt_client: Client was not initialized[0m
+[0;32mI (71974) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (72984) ALAM: SYSTEM NORMAL[0m
+[0;32mI (72984) ALAM: SYSTEM NORMAL[0m
+[0;32mI (72984) ALAM: SYSTEM NORMAL[0m
+[0;32mI (72984) ALAM: SYSTEM NORMAL[0m
+[0;32mI (72984) ALAM: SYSTEM NORMAL[0m
+[0;32mI (72984) ALAM: SYSTEM NORMAL[0m
+[0;32mI (72994) ALAM: SYSTEM NORMAL[0m
+[0;32mI (72994) ALAM: SYSTEM NORMAL[0m
+[0;31mE (72994) mqtt_client: Client was not initialized[0m
+[0;32mI (73004) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (74014) ALAM: SYSTEM NORMAL[0m
+[0;32mI (74014) ALAM: SYSTEM NORMAL[0m
+[0;32mI (74014) ALAM: SYSTEM NORMAL[0m
+[0;32mI (74014) ALAM: SYSTEM NORMAL[0m
+[0;32mI (74014) ALAM: SYSTEM NORMAL[0m
+[0;32mI (74014) ALAM: SYSTEM NORMAL[0m
+[0;32mI (74024) ALAM: SYSTEM NORMAL[0m
+[0;32mI (74024) ALAM: SYSTEM NORMAL[0m
+[0;31mE (74024) mqtt_client: Client was not initialized[0m
+[0;32mI (74034) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (75044) ALAM: SYSTEM NORMAL[0m
+[0;32mI (75044) ALAM: SYSTEM NORMAL[0m
+[0;32mI (75044) ALAM: SYSTEM NORMAL[0m
+[0;32mI (75044) ALAM: SYSTEM NORMAL[0m
+[0;32mI (75044) ALAM: SYSTEM NORMAL[0m
+[0;32mI (75044) ALAM: SYSTEM NORMAL[0m
+[0;32mI (75054) ALAM: SYSTEM NORMAL[0m
+[0;32mI (75054) ALAM: SYSTEM NORMAL[0m
+[0;31mE (75054) mqtt_client: Client was not initialized[0m
+[0;32mI (75064) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (76074) ALAM: SYSTEM NORMAL[0m
+[0;32mI (76074) ALAM: SYSTEM NORMAL[0m
+[0;32mI (76074) ALAM: SYSTEM NORMAL[0m
+[0;32mI (76074) ALAM: SYSTEM NORMAL[0m
+[0;32mI (76074) ALAM: SYSTEM NORMAL[0m
+[0;32mI (76074) ALAM: SYSTEM NORMAL[0m
+[0;32mI (76084) ALAM: SYSTEM NORMAL[0m
+[0;32mI (76084) ALAM: SYSTEM NORMAL[0m
+[0;31mE (76084) mqtt_client: Client was not initialized[0m
+[0;32mI (76094) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (77104) ALAM: SYSTEM NORMAL[0m
+[0;32mI (77104) ALAM: SYSTEM NORMAL[0m
+[0;32mI (77104) ALAM: SYSTEM NORMAL[0m
+[0;32mI (77104) ALAM: SYSTEM NORMAL[0m
+[0;32mI (77104) ALAM: SYSTEM NORMAL[0m
+[0;32mI (77104) ALAM: SYSTEM NORMAL[0m
+[0;32mI (77114) ALAM: SYSTEM NORMAL[0m
+[0;32mI (77114) ALAM: SYSTEM NORMAL[0m
+[0;31mE (77114) mqtt_client: Client was not initialized[0m
+[0;32mI (77124) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (78134) ALAM: SYSTEM NORMAL[0m
+[0;32mI (78134) ALAM: SYSTEM NORMAL[0m
+[0;32mI (78134) ALAM: SYSTEM NORMAL[0m
+[0;32mI (78134) ALAM: SYSTEM NORMAL[0m
+[0;32mI (78134) ALAM: SYSTEM NORMAL[0m
+[0;32mI (78134) ALAM: SYSTEM NORMAL[0m
+[0;32mI (78144) ALAM: SYSTEM NORMAL[0m
+[0;32mI (78144) ALAM: SYSTEM NORMAL[0m
+[0;31mE (78144) mqtt_client: Client was not initialized[0m
+[0;32mI (78154) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (79164) ALAM: SYSTEM NORMAL[0m
+[0;32mI (79164) ALAM: SYSTEM NORMAL[0m
+[0;32mI (79164) ALAM: SYSTEM NORMAL[0m
+[0;32mI (79164) ALAM: SYSTEM NORMAL[0m
+[0;32mI (79164) ALAM: SYSTEM NORMAL[0m
+[0;32mI (79164) ALAM: SYSTEM NORMAL[0m
+[0;32mI (79174) ALAM: SYSTEM NORMAL[0m
+[0;32mI (79174) ALAM: SYSTEM NORMAL[0m
+[0;31mE (79174) mqtt_client: Client was not initialized[0m
+[0;32mI (79184) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (80194) ALAM: SYSTEM NORMAL[0m
+[0;32mI (80194) ALAM: SYSTEM NORMAL[0m
+[0;32mI (80194) ALAM: SYSTEM NORMAL[0m
+[0;32mI (80194) ALAM: SYSTEM NORMAL[0m
+[0;32mI (80194) ALAM: SYSTEM NORMAL[0m
+[0;32mI (80194) ALAM: SYSTEM NORMAL[0m
+[0;32mI (80204) ALAM: SYSTEM NORMAL[0m
+[0;32mI (80204) ALAM: SYSTEM NORMAL[0m
+[0;31mE (80204) mqtt_client: Client was not initialized[0m
+[0;32mI (80214) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (81224) ALAM: SYSTEM NORMAL[0m
+[0;32mI (81224) ALAM: SYSTEM NORMAL[0m
+[0;32mI (81224) ALAM: SYSTEM NORMAL[0m
+[0;32mI (81224) ALAM: SYSTEM NORMAL[0m
+[0;32mI (81224) ALAM: SYSTEM NORMAL[0m
+[0;32mI (81224) ALAM: SYSTEM NORMAL[0m
+[0;32mI (81234) ALAM: SYSTEM NORMAL[0m
+[0;32mI (81234) ALAM: SYSTEM NORMAL[0m
+[0;31mE (81234) mqtt_client: Client was not initialized[0m
+[0;32mI (81244) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (82254) ALAM: SYSTEM NORMAL[0m
+[0;32mI (82254) ALAM: SYSTEM NORMAL[0m
+[0;32mI (82254) ALAM: SYSTEM NORMAL[0m
+[0;32mI (82254) ALAM: SYSTEM NORMAL[0m
+[0;32mI (82254) ALAM: SYSTEM NORMAL[0m
+[0;32mI (82254) ALAM: SYSTEM NORMAL[0m
+[0;32mI (82264) ALAM: SYSTEM NORMAL[0m
+[0;32mI (82264) ALAM: SYSTEM NORMAL[0m
+[0;31mE (82264) mqtt_client: Client was not initialized[0m
+[0;32mI (82274) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (83284) ALAM: SYSTEM NORMAL[0m
+[0;32mI (83284) ALAM: SYSTEM NORMAL[0m
+[0;32mI (83284) ALAM: SYSTEM NORMAL[0m
+[0;32mI (83284) ALAM: SYSTEM NORMAL[0m
+[0;32mI (83284) ALAM: SYSTEM NORMAL[0m
+[0;32mI (83284) ALAM: SYSTEM NORMAL[0m
+[0;32mI (83294) ALAM: SYSTEM NORMAL[0m
+[0;32mI (83294) ALAM: SYSTEM NORMAL[0m
+[0;31mE (83294) mqtt_client: Client was not initialized[0m
+[0;32mI (83304) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (84314) ALAM: SYSTEM NORMAL[0m
+[0;32mI (84314) ALAM: SYSTEM NORMAL[0m
+[0;32mI (84314) ALAM: SYSTEM NORMAL[0m
+[0;32mI (84314) ALAM: SYSTEM NORMAL[0m
+[0;32mI (84314) ALAM: SYSTEM NORMAL[0m
+[0;32mI (84314) ALAM: SYSTEM NORMAL[0m
+[0;32mI (84324) ALAM: SYSTEM NORMAL[0m
+[0;32mI (84324) ALAM: SYSTEM NORMAL[0m
+[0;31mE (84324) mqtt_client: Client was not initialized[0m
+[0;32mI (84334) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (85344) ALAM: SYSTEM NORMAL[0m
+[0;32mI (85344) ALAM: SYSTEM NORMAL[0m
+[0;32mI (85344) ALAM: SYSTEM NORMAL[0m
+[0;32mI (85344) ALAM: SYSTEM NORMAL[0m
+[0;32mI (85344) ALAM: SYSTEM NORMAL[0m
+[0;32mI (85344) ALAM: SYSTEM NORMAL[0m
+[0;32mI (85354) ALAM: SYSTEM NORMAL[0m
+[0;32mI (85354) ALAM: SYSTEM NORMAL[0m
+[0;31mE (85354) mqtt_client: Client was not initialized[0m
+[0;32mI (85364) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (86374) ALAM: SYSTEM NORMAL[0m
+[0;32mI (86374) ALAM: SYSTEM NORMAL[0m
+[0;32mI (86374) ALAM: SYSTEM NORMAL[0m
+[0;32mI (86374) ALAM: SYSTEM NORMAL[0m
+[0;32mI (86374) ALAM: SYSTEM NORMAL[0m
+[0;32mI (86374) ALAM: SYSTEM NORMAL[0m
+[0;32mI (86384) ALAM: SYSTEM NORMAL[0m
+[0;32mI (86384) ALAM: SYSTEM NORMAL[0m
+[0;31mE (86384) mqtt_client: Client was not initialized[0m
+[0;32mI (86394) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (87404) ALAM: SYSTEM NORMAL[0m
+[0;32mI (87404) ALAM: SYSTEM NORMAL[0m
+[0;32mI (87404) ALAM: SYSTEM NORMAL[0m
+[0;32mI (87404) ALAM: SYSTEM NORMAL[0m
+[0;32mI (87404) ALAM: SYSTEM NORMAL[0m
+[0;32mI (87404) ALAM: SYSTEM NORMAL[0m
+[0;32mI (87414) ALAM: SYSTEM NORMAL[0m
+[0;32mI (87414) ALAM: SYSTEM NORMAL[0m
+[0;31mE (87414) mqtt_client: Client was not initialized[0m
+[0;32mI (87424) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (88434) ALAM: SYSTEM NORMAL[0m
+[0;32mI (88434) ALAM: SYSTEM NORMAL[0m
+[0;32mI (88434) ALAM: SYSTEM NORMAL[0m
+[0;32mI (88434) ALAM: SYSTEM NORMAL[0m
+[0;32mI (88434) ALAM: SYSTEM NORMAL[0m
+[0;32mI (88434) ALAM: SYSTEM NORMAL[0m
+[0;32mI (88444) ALAM: SYSTEM NORMAL[0m
+[0;32mI (88444) ALAM: SYSTEM NORMAL[0m
+[0;31mE (88444) mqtt_client: Client was not initialized[0m
+[0;32mI (88454) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (89464) ALAM: SYSTEM NORMAL[0m
+[0;32mI (89464) ALAM: SYSTEM NORMAL[0m
+[0;32mI (89464) ALAM: SYSTEM NORMAL[0m
+[0;32mI (89464) ALAM: SYSTEM NORMAL[0m
+[0;32mI (89464) ALAM: SYSTEM NORMAL[0m
+[0;32mI (89464) ALAM: SYSTEM NORMAL[0m
+[0;32mI (89474) ALAM: SYSTEM NORMAL[0m
+[0;32mI (89474) ALAM: SYSTEM NORMAL[0m
+[0;31mE (89474) mqtt_client: Client was not initialized[0m
+[0;32mI (89484) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (90494) ALAM: SYSTEM NORMAL[0m
+[0;32mI (90494) ALAM: SYSTEM NORMAL[0m
+[0;32mI (90494) ALAM: SYSTEM NORMAL[0m
+[0;32mI (90494) ALAM: SYSTEM NORMAL[0m
+[0;32mI (90494) ALAM: SYSTEM NORMAL[0m
+[0;32mI (90494) ALAM: SYSTEM NORMAL[0m
+[0;32mI (90504) ALAM: SYSTEM NORMAL[0m
+[0;32mI (90504) ALAM: SYSTEM NORMAL[0m
+[0;31mE (90504) mqtt_client: Client was not initialized[0m
+[0;32mI (90514) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (91524) ALAM: SYSTEM NORMAL[0m
+[0;32mI (91524) ALAM: SYSTEM NORMAL[0m
+[0;32mI (91524) ALAM: SYSTEM NORMAL[0m
+[0;32mI (91524) ALAM: SYSTEM NORMAL[0m
+[0;32mI (91524) ALAM: SYSTEM NORMAL[0m
+[0;32mI (91524) ALAM: SYSTEM NORMAL[0m
+[0;32mI (91534) ALAM: SYSTEM NORMAL[0m
+[0;32mI (91534) ALAM: SYSTEM NORMAL[0m
+[0;31mE (91534) mqtt_client: Client was not initialized[0m
+[0;32mI (91544) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (92554) ALAM: SYSTEM NORMAL[0m
+[0;32mI (92554) ALAM: SYSTEM NORMAL[0m
+[0;32mI (92554) ALAM: SYSTEM NORMAL[0m
+[0;32mI (92554) ALAM: SYSTEM NORMAL[0m
+[0;32mI (92554) ALAM: SYSTEM NORMAL[0m
+[0;32mI (92554) ALAM: SYSTEM NORMAL[0m
+[0;32mI (92564) ALAM: SYSTEM NORMAL[0m
+[0;32mI (92564) ALAM: SYSTEM NORMAL[0m
+[0;31mE (92564) mqtt_client: Client was not initialized[0m
+[0;32mI (92574) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (93584) ALAM: SYSTEM NORMAL[0m
+[0;32mI (93584) ALAM: SYSTEM NORMAL[0m
+[0;32mI (93584) ALAM: SYSTEM NORMAL[0m
+[0;32mI (93584) ALAM: SYSTEM NORMAL[0m
+[0;32mI (93584) ALAM: SYSTEM NORMAL[0m
+[0;32mI (93584) ALAM: SYSTEM NORMAL[0m
+[0;32mI (93594) ALAM: SYSTEM NORMAL[0m
+[0;32mI (93594) ALAM: SYSTEM NORMAL[0m
+[0;31mE (93594) mqtt_client: Client was not initialized[0m
+[0;32mI (93604) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (94614) ALAM: SYSTEM NORMAL[0m
+[0;32mI (94614) ALAM: SYSTEM NORMAL[0m
+[0;32mI (94614) ALAM: SYSTEM NORMAL[0m
+[0;32mI (94614) ALAM: SYSTEM NORMAL[0m
+[0;32mI (94614) ALAM: SYSTEM NORMAL[0m
+[0;32mI (94614) ALAM: SYSTEM NORMAL[0m
+[0;32mI (94624) ALAM: SYSTEM NORMAL[0m
+[0;32mI (94624) ALAM: SYSTEM NORMAL[0m
+[0;31mE (94624) mqtt_client: Client was not initialized[0m
+[0;32mI (94634) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (95644) ALAM: SYSTEM NORMAL[0m
+[0;32mI (95644) ALAM: SYSTEM NORMAL[0m
+[0;32mI (95644) ALAM: SYSTEM NORMAL[0m
+[0;32mI (95644) ALAM: SYSTEM NORMAL[0m
+[0;32mI (95644) ALAM: SYSTEM NORMAL[0m
+[0;32mI (95644) ALAM: SYSTEM NORMAL[0m
+[0;32mI (95654) ALAM: SYSTEM NORMAL[0m
+[0;32mI (95654) ALAM: SYSTEM NORMAL[0m
+[0;31mE (95654) mqtt_client: Client was not initialized[0m
+[0;32mI (95664) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (96674) ALAM: SYSTEM NORMAL[0m
+[0;32mI (96674) ALAM: SYSTEM NORMAL[0m
+[0;32mI (96674) ALAM: SYSTEM NORMAL[0m
+[0;32mI (96674) ALAM: SYSTEM NORMAL[0m
+[0;32mI (96674) ALAM: SYSTEM NORMAL[0m
+[0;32mI (96674) ALAM: SYSTEM NORMAL[0m
+[0;32mI (96684) ALAM: SYSTEM NORMAL[0m
+[0;32mI (96684) ALAM: SYSTEM NORMAL[0m
+[0;31mE (96684) mqtt_client: Client was not initialized[0m
+[0;32mI (96694) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (97704) ALAM: SYSTEM NORMAL[0m
+[0;32mI (97704) ALAM: SYSTEM NORMAL[0m
+[0;32mI (97704) ALAM: SYSTEM NORMAL[0m
+[0;32mI (97704) ALAM: SYSTEM NORMAL[0m
+[0;32mI (97704) ALAM: SYSTEM NORMAL[0m
+[0;32mI (97704) ALAM: SYSTEM NORMAL[0m
+[0;32mI (97714) ALAM: SYSTEM NORMAL[0m
+[0;32mI (97714) ALAM: SYSTEM NORMAL[0m
+[0;31mE (97714) mqtt_client: Client was not initialized[0m
+[0;32mI (97724) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (98734) ALAM: SYSTEM NORMAL[0m
+[0;32mI (98734) ALAM: SYSTEM NORMAL[0m
+[0;32mI (98734) ALAM: SYSTEM NORMAL[0m
+[0;32mI (98734) ALAM: SYSTEM NORMAL[0m
+[0;32mI (98734) ALAM: SYSTEM NORMAL[0m
+[0;32mI (98734) ALAM: SYSTEM NORMAL[0m
+[0;32mI (98744) ALAM: SYSTEM NORMAL[0m
+[0;32mI (98744) ALAM: SYSTEM NORMAL[0m
+[0;31mE (98744) mqtt_client: Client was not initialized[0m
+[0;32mI (98754) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (99764) ALAM: SYSTEM NORMAL[0m
+[0;32mI (99764) ALAM: SYSTEM NORMAL[0m
+[0;32mI (99764) ALAM: SYSTEM NORMAL[0m
+[0;32mI (99764) ALAM: SYSTEM NORMAL[0m
+[0;32mI (99764) ALAM: SYSTEM NORMAL[0m
+[0;32mI (99764) ALAM: SYSTEM NORMAL[0m
+[0;32mI (99774) ALAM: SYSTEM NORMAL[0m
+[0;32mI (99774) ALAM: SYSTEM NORMAL[0m
+[0;31mE (99774) mqtt_client: Client was not initialized[0m
+[0;32mI (99784) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (100794) ALAM: SYSTEM NORMAL[0m
+[0;32mI (100794) ALAM: SYSTEM NORMAL[0m
+[0;32mI (100794) ALAM: SYSTEM NORMAL[0m
+[0;32mI (100794) ALAM: SYSTEM NORMAL[0m
+[0;32mI (100794) ALAM: SYSTEM NORMAL[0m
+[0;32mI (100794) ALAM: SYSTEM NORMAL[0m
+[0;32mI (100804) ALAM: SYSTEM NORMAL[0m
+[0;32mI (100804) ALAM: SYSTEM NORMAL[0m
+[0;31mE (100804) mqtt_client: Client was not initialized[0m
+[0;32mI (100814) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (101824) ALAM: SYSTEM NORMAL[0m
+[0;32mI (101824) ALAM: SYSTEM NORMAL[0m
+[0;32mI (101824) ALAM: SYSTEM NORMAL[0m
+[0;32mI (101824) ALAM: SYSTEM NORMAL[0m
+[0;32mI (101824) ALAM: SYSTEM NORMAL[0m
+[0;32mI (101824) ALAM: SYSTEM NORMAL[0m
+[0;32mI (101834) ALAM: SYSTEM NORMAL[0m
+[0;32mI (101834) ALAM: SYSTEM NORMAL[0m
+[0;31mE (101834) mqtt_client: Client was not initialized[0m
+[0;32mI (101844) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (102854) ALAM: SYSTEM NORMAL[0m
+[0;32mI (102854) ALAM: SYSTEM NORMAL[0m
+[0;32mI (102854) ALAM: SYSTEM NORMAL[0m
+[0;32mI (102854) ALAM: SYSTEM NORMAL[0m
+[0;32mI (102854) ALAM: SYSTEM NORMAL[0m
+[0;32mI (102854) ALAM: SYSTEM NORMAL[0m
+[0;32mI (102864) ALAM: SYSTEM NORMAL[0m
+[0;32mI (102864) ALAM: SYSTEM NORMAL[0m
+[0;31mE (102864) mqtt_client: Client was not initialized[0m
+[0;32mI (102874) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (103884) ALAM: SYSTEM NORMAL[0m
+[0;32mI (103884) ALAM: SYSTEM NORMAL[0m
+[0;32mI (103884) ALAM: SYSTEM NORMAL[0m
+[0;32mI (103884) ALAM: SYSTEM NORMAL[0m
+[0;32mI (103884) ALAM: SYSTEM NORMAL[0m
+[0;32mI (103884) ALAM: SYSTEM NORMAL[0m
+[0;32mI (103894) ALAM: SYSTEM NORMAL[0m
+[0;32mI (103894) ALAM: SYSTEM NORMAL[0m
+[0;31mE (103894) mqtt_client: Client was not initialized[0m
+[0;32mI (103904) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m

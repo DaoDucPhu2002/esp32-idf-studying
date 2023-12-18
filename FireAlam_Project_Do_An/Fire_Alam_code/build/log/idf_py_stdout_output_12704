@@ -1,0 +1,593 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6992
+load:0x40078000,len:15512
+load:0x40080400,len:3864
+entry 0x40080650
+[0;32mI (27) boot: ESP-IDF v5.0.3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time 18:40:57[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v1.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27f10h (163600) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=00037f38 vaddr=3ffb0000 size=03404h ( 13316) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=0003b344 vaddr=40080000 size=04cd4h ( 19668) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9bab8h (637624) map[0m
+[0;32mI (403) esp_image: segment 4: paddr=000dbae0 vaddr=40084cd4 size=10160h ( 65888) load[0m
+[0;32mI (441) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (441) boot: Disabling RNG early entropy source...[0m
+[0;32mI (452) cpu_start: Multicore app[0m
+[0;32mI (452) cpu_start: Pro cpu up.[0m
+[0;32mI (452) cpu_start: Starting app cpu, entry point is 0x400812bc[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (470) cpu_start: Pro cpu start user code[0m
+[0;32mI (470) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) cpu_start: Application information:[0m
+[0;32mI (475) cpu_start: Project name:     main[0m
+[0;32mI (480) cpu_start: App version:      d2f66b4-dirty[0m
+[0;32mI (485) cpu_start: Compile time:     Nov 20 2023 18:40:35[0m
+[0;32mI (492) cpu_start: ELF file SHA256:  f9e2a8f38be0ac2e...[0m
+[0;32mI (497) cpu_start: ESP-IDF:          v5.0.3-dirty[0m
+[0;32mI (503) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (508) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (512) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (517) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (525) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (530) heap_init: At 3FFB77C8 len 00028838 (162 KiB): DRAM[0m
+[0;32mI (537) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (543) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (549) heap_init: At 40094E34 len 0000B1CC (44 KiB): IRAM[0m
+[0;32mI (557) spi_flash: detected chip: generic[0m
+[0;32mI (560) spi_flash: flash io: dio[0m
+[0;33mW (564) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (579) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+[0;32mI (664) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (664) gpio: GPIO[22]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (664) gpio: GPIO[23]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (674) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (684) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (694) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (704) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (714) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (724) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (734) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (744) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (754) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (754) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (764) mqtt_client: Client was not initialized[0m
+I (774) wifi:wifi driver task: 3ffc0c18, prio:23, stack:6656, core=0
+[0;32mI (774) system_api: Base MAC address is not set[0m
+[0;32mI (784) system_api: read default base MAC address from EFUSE[0m
+I (814) wifi:wifi firmware version: 15fc0ca
+I (814) wifi:wifi certification version: v7.0
+I (814) wifi:config NVS flash: enabled
+I (814) wifi:config nano formating: disabled
+I (814) wifi:Init data frame dynamic rx buffer num: 32
+I (824) wifi:Init management frame dynamic rx buffer num: 32
+I (824) wifi:Init management short buffer num: 32
+I (834) wifi:Init dynamic tx buffer num: 32
+I (834) wifi:Init static rx buffer size: 1600
+I (834) wifi:Init static rx buffer num: 10
+I (844) wifi:Init dynamic rx buffer num: 32
+[0;32mI (844) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+[0;32mI (844) wifi_init: rx ba win: 6[0m
+[0;32mI (854) wifi_init: tcpip mbox: 32[0m
+[0;32mI (864) wifi_init: udp mbox: 6[0m
+[0;32mI (864) wifi_init: tcp mbox: 6[0m
+[0;32mI (864) wifi_init: tcp tx win: 5744[0m
+[0;32mI (874) wifi_init: tcp rx win: 5744[0m
+[0;32mI (874) wifi_init: tcp mss: 1440[0m
+[0;32mI (884) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (884) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (894) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (994) wifi:mode : sta (e0:e2:e6:ce:04:d4)
+I (994) wifi:enable tsf
+[0;32mI (994) MQTTS_EXAMPLE: 
+[APP] Free memory: 233572 bytes[0m
+[0;32mI (994) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=7[0m
+E (1004) wifi:[0;32mI (1004) MQTTS_EXAMPLE: 
+Other event id:7[0m
+sta is connecting, return error
+[0;31mE (1004) esp-tls: couldn't get hostname for :test.mosquitto.org: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (1024) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (1024) mqtt_client: Error transport connect[0m
+[0;32mI (1034) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=0[0m
+[0;32mI (1044) MQTTS_EXAMPLE: 
+MQTT_EVENT_ERROR[0m
+[0;31mE (1044) MQTTS_EXAMPLE: Last error reported from esp-tls: 0x8001[0m
+[0;32mI (1054) MQTTS_EXAMPLE: 
+Last errno string (Success)[0m
+[0;32mI (1054) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=2[0m
+[0;32mI (1064) MQTTS_EXAMPLE: 
+MQTT_EVENT_DISCONNECTED[0m
+I (1074) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (1074) wifi:state: init -> auth (b0)
+I (1084) wifi:state: auth -> assoc (0)
+I (1094) wifi:state: assoc -> run (10)
+I (1194) wifi:connected with Ba Anh Em, aid = 3, channel 11, BW20, bssid = b0:8b:92:30:94:fd
+I (1194) wifi:security: WPA2-PSK, phy: bgn, rssi: -53
+I (1204) wifi:pm start, type: 1
+
+I (1234) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (1894) ALAM: SYSTEM ERROR!!![0m
+[0;33mW (1894) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (1894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (2894) ALAM: SYSTEM ERROR!!![0m
+[0;33mW (2894) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (2894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+I (3644) wifi:<ba-add>idx:0 (ifx:0, b0:8b:92:30:94:fd), tid:0, ssn:1, winSize:64
+[0;32mI (3894) ALAM: SYSTEM ERROR!!![0m
+[0;33mW (3894) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (3894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (4704) esp_netif_handlers: sta ip: 192.168.1.10, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4704) WIFI_MANAGER: got ip:192.168.1.10[0m
+[0;32mI (4704) WIFI_MANAGER: got ip:192.168.1.10[0m
+[0;32mI (4894) ALAM: SYSTEM ERROR!!![0m
+[0;33mW (4894) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (4894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (5894) ALAM: SYSTEM ERROR!!![0m
+[0;33mW (5894) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (5894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (6894) ALAM: SYSTEM ERROR!!![0m
+[0;33mW (6894) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (6894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (7894) ALAM: SYSTEM ERROR!!![0m
+[0;33mW (7894) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (7894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (8894) ALAM: SYSTEM ERROR!!![0m
+[0;33mW (8894) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (8894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (9894) ALAM: SYSTEM ERROR!!![0m
+[0;33mW (9894) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (9894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (10894) ALAM: SYSTEM ERROR!!![0m
+[0;33mW (10894) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (10894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (11074) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=7[0m
+[0;32mI (11074) MQTTS_EXAMPLE: 
+Other event id:7[0m
+I (11084) wifi:<ba-add>idx:1 (ifx:0, b0:8b:92:30:94:fd), tid:6, ssn:3, winSize:64
+[0;32mI (11584) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=1[0m
+[0;32mI (11584) MQTTS_EXAMPLE: 
+MQTT_EVENT_CONNECTED[0m
+[0;32mI (11594) MQTTS_EXAMPLE: 
+sent subscribe successful, msg_id=47028[0m
+[0;32mI (11864) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=3[0m
+[0;32mI (11864) MQTTS_EXAMPLE: 
+MQTT_EVENT_SUBSCRIBED, msg_id=47028[0m
+[0;32mI (11864) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=47028[0m
+[0;32mI (11894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (11894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (12094) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (12094) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (12104) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (12104) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (12894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (12894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (13114) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (13114) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (13124) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (13124) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (13894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (13894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (14154) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (14154) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (14154) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (14164) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (14894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (14894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (15164) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (15164) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (15164) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (15174) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (15894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (15894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (16084) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (16084) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (16094) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (16094) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (16894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (16894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (17144) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (17144) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (17144) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (17144) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (17894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (17894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (18134) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (18134) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (18134) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (18144) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (18894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (18894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (19094) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (19094) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (19104) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (19104) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (19894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (19894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (20094) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (20094) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (20094) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (20094) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (20894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (20894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (21154) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (21154) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (21154) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (21164) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (21894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (21894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (22134) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (22134) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (22134) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (22144) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (22894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (22894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (23084) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (23084) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (23094) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (23094) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (23894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (23894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (24194) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (24204) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (24204) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (24204) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (24894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (24894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (25094) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (25094) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (25104) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (25104) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (25894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (25894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (26124) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (26124) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (26124) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (26134) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (26894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (26894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (27254) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (27254) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (27254) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (27254) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (27894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (27894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (28094) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (28094) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (28094) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (28104) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (28894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (28894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (29324) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (29324) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (29334) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (29334) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (29894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (29894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (30114) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (30114) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (30124) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (30124) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (30894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (30894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (31144) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (31144) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (31144) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (31144) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (31894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (31894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (32364) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (32364) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (32374) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (32374) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (32894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (32894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (33094) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (33094) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (33094) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (33104) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (33894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (33894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (34144) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (34144) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (34144) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (34144) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (34894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (34894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (35144) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (35144) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (35144) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (35144) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (35894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (35894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (36174) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (36174) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (36174) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (36184) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (36894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (36894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (37104) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (37104) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (37104) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (37114) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (37894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (37894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (38104) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (38104) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (38104) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (38114) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (38894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (38894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (39234) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (39234) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (39244) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (39244) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (39894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (39894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (40094) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (40094) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (40094) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (40104) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (40894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (40894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (41084) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (41084) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (41094) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (41094) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m
+[0;32mI (41894) ALAM: SYSTEM ERROR!!![0m
+[0;32mI (41894) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (42124) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (42124) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (42124) MQTTS_EXAMPLE: 
+TOPIC=DaoDucPhu
+[0m
+[0;32mI (42124) MQTTS_EXAMPLE: 
+DATA=Dao Phu
+[0m

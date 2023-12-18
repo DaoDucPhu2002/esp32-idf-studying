@@ -1,0 +1,35 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM7 instead...[0m
+[0;33m--- idf_monitor on \\.\COM7 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812bc: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x400d781c: is_provisioned at D:/CODE/ESP32-IDF/esp32-idf-studying/Gsafe/Wifi_Connceted_ver2/main/wifi_config.c:276 (discriminator 1)
+[0m
+[0;33m0x40088c4f: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/esp_err.c:47
+[0m
+[0;33m0x40081ebe: panic_abort at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/panic.c:424
+[0m
+[0;33m0x40088c59: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/esp_system.c:153
+[0m
+[0;33m0x4008f55e: abort at C:/Espressif/frameworks/esp-idf-v5.0.3/components/newlib/abort.c:38
+[0m
+[0;33m0x40088c4f: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/esp_err.c:47
+[0m
+[0;33m0x400d781c: is_provisioned at D:/CODE/ESP32-IDF/esp32-idf-studying/Gsafe/Wifi_Connceted_ver2/main/wifi_config.c:276 (discriminator 1)
+[0m
+[0;33m0x400d7a6b: wifi_manager at D:/CODE/ESP32-IDF/esp32-idf-studying/Gsafe/Wifi_Connceted_ver2/main/wifi_config.c:335
+[0m
+[0;33m0x400d712a: app_main at D:/CODE/ESP32-IDF/esp32-idf-studying/Gsafe/Wifi_Connceted_ver2/main/main.c:46
+[0m
+[0;33m0x4015b9eb: main_task at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/port_common.c:131 (discriminator 2)
+[0m
+[0;33m0x4008bde9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.0.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:154
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812bc: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.0.3/components/esp_system/port/cpu_start.c:143
+[0m
+[0m

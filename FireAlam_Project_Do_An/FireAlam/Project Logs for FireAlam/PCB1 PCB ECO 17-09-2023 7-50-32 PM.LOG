@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=LED_WIFI Pin=MD1-33
+Removed Pin From Net: NetName=LED_RED Pin=MD1-37
+Added Pin To Net: NetName=LED_RED Pin=MD1-33
+Added Pin To Net: NetName=LED_WIFI Pin=MD1-37
+Added Member To Class: ClassName=Center Member=Component LED_G

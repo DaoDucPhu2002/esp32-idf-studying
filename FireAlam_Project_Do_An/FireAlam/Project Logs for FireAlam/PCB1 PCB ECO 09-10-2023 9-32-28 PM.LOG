@@ -1,0 +1,3 @@
+Change Component Designator: OldDesignator=RESET NewDesignator=SW1
+Change Component Designator: OldDesignator=WIFI NewDesignator=SW2
+Added Room: Name=Power

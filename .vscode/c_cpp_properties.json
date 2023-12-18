@@ -5,8 +5,7 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "C:/Users/daoph/.espressif/**",
-                "C:/Espressif/**",
-                "C:/Users/daoph/.espressif/frameworks/esp-idf-v5.0.1/components/esp_adc/deprecated/include"
+                "C:/Espressif/**"
             ],
             "defines": [
                 "_DEBUG",
@@ -17,7 +16,7 @@
             "cStandard": "c17",
             "cppStandard": "gnu++17",
             "intelliSenseMode": "windows-gcc-x64",
-            "compileCommands": "${workspaceFolder}/74HC4067/build/compile_commands.json"
+            "configurationProvider": "ms-vscode.cmake-tools"
         }
     ],
     "version": 4

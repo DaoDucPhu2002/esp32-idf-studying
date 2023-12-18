@@ -1,0 +1,2973 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6992
+load:0x40078000,len:15512
+load:0x40080400,len:3864
+entry 0x40080650
+[0;32mI (27) boot: ESP-IDF v5.0.3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time 18:40:57[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v1.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27f28h (163624) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=00037f50 vaddr=3ffb0000 size=03404h ( 13316) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=0003b35c vaddr=40080000 size=04cbch ( 19644) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9bd54h (638292) map[0m
+[0;32mI (403) esp_image: segment 4: paddr=000dbd7c vaddr=40084cbc size=10178h ( 65912) load[0m
+[0;32mI (441) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (441) boot: Disabling RNG early entropy source...[0m
+[0;32mI (452) cpu_start: Multicore app[0m
+[0;32mI (453) cpu_start: Pro cpu up.[0m
+[0;32mI (453) cpu_start: Starting app cpu, entry point is 0x400812bc[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) cpu_start: Application information:[0m
+[0;32mI (475) cpu_start: Project name:     main[0m
+[0;32mI (480) cpu_start: App version:      d2f66b4-dirty[0m
+[0;32mI (486) cpu_start: Compile time:     Nov 20 2023 18:40:35[0m
+[0;32mI (492) cpu_start: ELF file SHA256:  f8d898f6298a04e7...[0m
+[0;32mI (498) cpu_start: ESP-IDF:          v5.0.3-dirty[0m
+[0;32mI (503) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (508) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (513) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (518) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (525) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFB77E8 len 00028818 (162 KiB): DRAM[0m
+[0;32mI (537) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (543) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (550) heap_init: At 40094E34 len 0000B1CC (44 KiB): IRAM[0m
+[0;32mI (557) spi_flash: detected chip: generic[0m
+[0;32mI (561) spi_flash: flash io: dio[0m
+[0;33mW (564) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (579) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+[0;32mI (665) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (665) gpio: GPIO[22]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (675) gpio: GPIO[23]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (675) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (685) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (695) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (705) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (715) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (725) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (735) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (745) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Line NotUse: ff[0;31mE (755) mqtt_client: Client was not initialized[0m
+[0;32mI (755) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+
+I (785) wifi:wifi driver task: 3ffc0c38, prio:23, stack:6656, core=0
+[0;32mI (785) system_api: Base MAC address is not set[0m
+[0;32mI (785) system_api: read default base MAC address from EFUSE[0m
+I (815) wifi:wifi firmware version: 15fc0ca
+I (815) wifi:wifi certification version: v7.0
+I (815) wifi:config NVS flash: enabled
+I (815) wifi:config nano formating: disabled
+I (825) wifi:Init data frame dynamic rx buffer num: 32
+I (825) wifi:Init management frame dynamic rx buffer num: 32
+I (835) wifi:Init management short buffer num: 32
+I (835) wifi:Init dynamic tx buffer num: 32
+I (845) wifi:Init static rx buffer size: 1600
+I (845) wifi:Init static rx buffer num: 10
+I (845) wifi:Init dynamic rx buffer num: 32
+[0;32mI (855) wifi_init: rx ba win: 6[0m
+[0;32mI (855) wifi_init: tcpip mbox: 32[0m
+[0;32mI (855) wifi_init: udp mbox: 6[0m
+[0;32mI (865) wifi_init: tcp mbox: 6[0m
+[0;32mI (865) wifi_init: tcp tx win: 5744[0m
+[0;32mI (875) wifi_init: tcp rx win: 5744[0m
+[0;32mI (875) wifi_init: tcp mss: 1440[0m
+[0;32mI (875) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (885) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (895) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (995) wifi:mode : sta (e0:e2:e6:ce:04:d4)
+I (995) wifi:enable tsf
+pubic: Alam_seting[0;32mI (995) MQTTS_EXAMPLE: 
+[APP] Free memory: 233540 bytes[0m
+[0;32mI (995) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=7[0m
+E (1005) wifi:[0;32mI (1005) MQTTS_EXAMPLE: 
+Other event id:7[0m
+sta is connecting, return error
+[0;31mE (1015) esp-tls: couldn't get hostname for :test.mosquitto.org: getaddrinfo() returns 202, addrinfo=0x0[0m
+I (1015) wifi:[0;31mE (1025) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (1035) mqtt_client: Error transport connect[0m
+[0;32mI (1035) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=0[0m
+[0;32mI (1045) MQTTS_EXAMPLE: 
+MQTT_EVENT_ERROR[0m
+[0;31mE (1045) MQTTS_EXAMPLE: Last error reported from esp-tls: 0x8001[0m
+new:<4,0>, old:<1,0>, ap:<255,255>, sta:<4,0>, prof:1
+I (1065) wifi:state: init -> auth (b0)
+[0;32mI (1065) MQTTS_EXAMPLE: 
+Last errno string (Success)[0m
+I (1065) wifi:[0;32mI (1075) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=2[0m
+state: auth -> assoc (0)[0;32mI (1075) MQTTS_EXAMPLE: 
+MQTT_EVENT_DISCONNECTED[0m
+
+I (1095) wifi:state: assoc -> run (10)
+I (1195) wifi:connected with Ba Anh Em, aid = 1, channel 4, BW20, bssid = b0:8b:92:30:94:fd
+I (1195) wifi:security: WPA2-PSK, phy: bgn, rssi: -46
+I (1195) wifi:pm start, type: 1
+
+I (1215) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+Line NotUse: ff[0;33mW (1775) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (1775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (2775) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (2775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+I (3675) wifi:<ba-add>idx:0 (ifx:0, b0:8b:92:30:94:fd), tid:0, ssn:0, winSize:64
+Line NotUse: ff[0;33mW (3775) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (3775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+[0;32mI (4705) esp_netif_handlers: sta ip: 192.168.1.3, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4705) WIFI_MANAGER: got ip:192.168.1.3[0m
+[0;32mI (4705) WIFI_MANAGER: got ip:192.168.1.3[0m
+Line NotUse: ff[0;33mW (4775) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (4775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (5775) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (5775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (6775) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (6775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (7775) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (7775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (8775) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (8775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (9775) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (9775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (10775) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (10775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+[0;32mI (11085) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=7[0m
+[0;32mI (11085) MQTTS_EXAMPLE: 
+Other event id:7[0m
+I (11095) wifi:<ba-add>idx:1 (ifx:0, b0:8b:92:30:94:fd), tid:6, ssn:3, winSize:64
+[0;32mI (11665) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=1[0m
+[0;32mI (11665) MQTTS_EXAMPLE: 
+MQTT_EVENT_CONNECTED[0m
+[0;32mI (11665) MQTTS_EXAMPLE: 
+sent subscribe successful, msg_id=20470[0m
+Line NotUse: ff[0;32mI (11775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+[0;32mI (11865) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=3[0m
+[0;32mI (11865) MQTTS_EXAMPLE: 
+MQTT_EVENT_SUBSCRIBED, msg_id=20470[0m
+[0;32mI (11875) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (11885) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (11885) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (11895) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (11895) MQTTS_EXAMPLE: 
+DATA=�
+[0m
+Data Line Not Use: ab
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (12775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (13775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (14775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (15775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (16775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (17775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (18775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (19775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (20775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (21775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (22775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (23775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (24775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+[0;32mI (24895) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (24895) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (24895) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (24895) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (25775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (26775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (27775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+[0;32mI (28555) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (28555) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (28565) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (28565) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (28775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+[0;32mI (29175) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (29175) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (29175) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (29185) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+[0;32mI (29525) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (29525) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (29525) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (29535) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+[0;32mI (29715) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (29715) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (29715) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (29725) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (29775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+[0;32mI (29905) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (29905) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (29905) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (29915) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+[0;32mI (30115) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (30115) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (30125) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (30125) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+[0;32mI (30295) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (30305) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (30305) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (30305) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+[0;32mI (30525) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (30525) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (30535) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (30535) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+[0;32mI (30705) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (30705) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (30715) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (30715) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (30775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+[0;32mI (30915) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (30915) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (30915) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (30925) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+[0;32mI (31105) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (31105) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (31105) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (31115) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+[0;32mI (31225) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (31225) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (31225) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (31225) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+[0;32mI (31355) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (31355) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (31355) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (31355) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+[0;32mI (31475) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (31475) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (31475) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (31485) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+[0;32mI (31675) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (31675) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (31675) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (31685) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (31775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+[0;32mI (31865) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (31865) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (31865) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (31865) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+[0;32mI (32095) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (32095) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (32105) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (32105) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+[0;32mI (32115) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (32125) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (32125) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (32135) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+[0;32mI (32265) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (32265) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (32275) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (32275) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+[0;32mI (32575) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (32575) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (32575) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (32585) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+[0;32mI (32695) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (32695) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (32695) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (32705) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (32775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+[0;32mI (32965) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (32965) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (32965) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (32965) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (33775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (34775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+[0;32mI (34905) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (34905) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (34915) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (34915) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+[0;32mI (35725) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (35725) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (35725) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (35735) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (35775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (36775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+[0;32mI (36975) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (36975) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (36975) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (36985) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (37775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (38775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (39775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (40775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+[0;32mI (40895) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (40895) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (40895) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (40895) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (41775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+[0;32mI (42595) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (42595) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (42595) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (42605) MQTTS_EXAMPLE: 
+DATA=
+[0m
+Data Line Not Use: ab
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (42775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (43775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (44775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (45775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (46775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (47775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (48775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (49775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (50775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (51775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (52775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (53775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (54775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (55775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (56775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (57775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (58775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ԫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (59775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ԫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (60785) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ի
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (61785) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ի
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (62785) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ӫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (63785) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ӫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (64785) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ԫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (65785) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ԫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (66785) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ӫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (67785) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ԫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (68785) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ԫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (69785) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ԫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (70785) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ӫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (71785) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ԫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (72785) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ԫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (73785) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ԫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (74785) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ӫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (75785) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ԫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (76785) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ԫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (77785) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ԫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (78785) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ԫ
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6992
+load:0x40078000,len:15512
+load:0x40080400,len:3864
+entry 0x40080650
+[0;32mI (26) boot: ESP-IDF v5.0.3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time 18:40:57[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v1.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27f28h (163624) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=00037f50 vaddr=3ffb0000 size=03404h ( 13316) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=0003b35c vaddr=40080000 size=04cbch ( 19644) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9bd54h (638292) map[0m
+[0;32mI (403) esp_image: segment 4: paddr=000dbd7c vaddr=40084cbc size=10178h ( 65912) load[0m
+[0;32mI (441) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (441) boot: Disabling RNG early entropy source...[0m
+[0;32mI (452) cpu_start: Multicore app[0m
+[0;32mI (452) cpu_start: Pro cpu up.[0m
+[0;32mI (453) cpu_start: Starting app cpu, entry point is 0x400812bc[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) cpu_start: Application information:[0m
+[0;32mI (475) cpu_start: Project name:     main[0m
+[0;32mI (480) cpu_start: App version:      d2f66b4-dirty[0m
+[0;32mI (486) cpu_start: Compile time:     Nov 20 2023 18:40:35[0m
+[0;32mI (492) cpu_start: ELF file SHA256:  f8d898f6298a04e7...[0m
+[0;32mI (498) cpu_start: ESP-IDF:          v5.0.3-dirty[0m
+[0;32mI (503) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (508) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (513) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (517) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (525) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFB77E8 len 00028818 (162 KiB): DRAM[0m
+[0;32mI (537) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (543) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (550) heap_init: At 40094E34 len 0000B1CC (44 KiB): IRAM[0m
+[0;32mI (557) spi_flash: detected chip: generic[0m
+[0;32mI (560) spi_flash: flash io: dio[0m
+[0;33mW (564) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (579) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+[0;32mI (665) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (665) gpio: GPIO[22]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (675) gpio: GPIO[23]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (675) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (685) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (695) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (705) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (715) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (725) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (735) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (745) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Line NotUse: ff[0;31mE (755) mqtt_client: Client was not initialized[0m
+[0;32mI (755) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+
+I (785) wifi:wifi driver task: 3ffc0c38, prio:23, stack:6656, core=0
+[0;32mI (785) system_api: Base MAC address is not set[0m
+[0;32mI (785) system_api: read default base MAC address from EFUSE[0m
+I (815) wifi:wifi firmware version: 15fc0ca
+I (815) wifi:wifi certification version: v7.0
+I (815) wifi:config NVS flash: enabled
+I (815) wifi:config nano formating: disabled
+I (825) wifi:Init data frame dynamic rx buffer num: 32
+I (825) wifi:Init management frame dynamic rx buffer num: 32
+I (835) wifi:Init management short buffer num: 32
+I (835) wifi:Init dynamic tx buffer num: 32
+I (845) wifi:Init static rx buffer size: 1600
+I (845) wifi:Init static rx buffer num: 10
+I (845) wifi:Init dynamic rx buffer num: 32
+[0;32mI (855) wifi_init: rx ba win: 6[0m
+[0;32mI (855) wifi_init: tcpip mbox: 32[0m
+[0;32mI (855) wifi_init: udp mbox: 6[0m
+[0;32mI (865) wifi_init: tcp mbox: 6[0m
+[0;32mI (865) wifi_init: tcp tx win: 5744[0m
+[0;32mI (875) wifi_init: tcp rx win: 5744[0m
+[0;32mI (875) wifi_init: tcp mss: 1440[0m
+[0;32mI (875) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (885) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (895) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (995) wifi:mode : sta (e0:e2:e6:ce:04:d4)
+I (995) wifi:enable tsf
+pubic: Alam_seting[0;32mI (995) MQTTS_EXAMPLE: 
+[APP] Free memory: 233540 bytes[0m
+[0;32mI (995) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=7[0m
+E (1005) wifi:[0;32mI (1005) MQTTS_EXAMPLE: 
+Other event id:7[0m
+sta is connecting, return error
+[0;31mE (1015) esp-tls: couldn't get hostname for :test.mosquitto.org: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (1025) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (1035) mqtt_client: Error transport connect[0m
+[0;32mI (1035) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=0[0m
+[0;32mI (1045) MQTTS_EXAMPLE: 
+MQTT_EVENT_ERROR[0m
+[0;31mE (1045) MQTTS_EXAMPLE: Last error reported from esp-tls: 0x8001[0m
+[0;32mI (1055) MQTTS_EXAMPLE: 
+Last errno string (Success)[0m
+[0;32mI (1065) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=2[0m
+[0;32mI (1065) MQTTS_EXAMPLE: 
+MQTT_EVENT_DISCONNECTED[0m
+I (1075) wifi:new:<4,0>, old:<1,0>, ap:<255,255>, sta:<4,0>, prof:1
+I (1085) wifi:state: init -> auth (b0)
+I (1095) wifi:state: auth -> assoc (0)
+I (1095) wifi:state: assoc -> run (10)
+I (1195) wifi:connected with Ba Anh Em, aid = 1, channel 4, BW20, bssid = b0:8b:92:30:94:fd
+I (1205) wifi:security: WPA2-PSK, phy: bgn, rssi: -43
+I (1205) wifi:pm start, type: 1
+
+I (1295) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+Line NotUse: ff[0;33mW (1775) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (1775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (2775) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (2775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+I (3265) wifi:<ba-add>idx:0 (ifx:0, b0:8b:92:30:94:fd), tid:0, ssn:0, winSize:64
+Line NotUse: ff[0;33mW (3775) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (3775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+[0;32mI (4215) esp_netif_handlers: sta ip: 192.168.1.3, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4215) WIFI_MANAGER: got ip:192.168.1.3[0m
+[0;32mI (4215) WIFI_MANAGER: got ip:192.168.1.3[0m
+Line NotUse: ff[0;33mW (4775) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (4775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (5775) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (5775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (6785) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (6785) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (7785) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (7785) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (8785) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (8785) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (9785) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (9785) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (10785) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (10785) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+[0;32mI (11085) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=7[0m
+[0;32mI (11085) MQTTS_EXAMPLE: 
+Other event id:7[0m
+I (11095) wifi:<ba-add>idx:1 (ifx:0, b0:8b:92:30:94:fd), tid:6, ssn:3, winSize:64
+Line NotUse: ff[0;32mI (12475) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=1[0m
+[0;32mI (12475) MQTTS_EXAMPLE: 
+MQTT_EVENT_CONNECTED[0m
+[0;32mI (12485) MQTTS_EXAMPLE: 
+sent subscribe successful, msg_id=63749[0m
+[0;32mI (12495) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+[0;32mI (12685) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=3[0m
+[0;32mI (12685) MQTTS_EXAMPLE: 
+MQTT_EVENT_SUBSCRIBED, msg_id=63749[0m
+[0;32mI (12685) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (12695) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (12705) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (12705) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (12715) MQTTS_EXAMPLE: 
+DATA=�
+[0m
+Data Line Not Use: ab
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (13495) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (14495) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (15495) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (16495) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (17495) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (18495) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (19495) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (20495) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (21495) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (22495) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (23495) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (24495) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6992
+load:0x40078000,len:15512
+load:0x40080400,len:3864
+entry 0x40080650
+[0;32mI (26) boot: ESP-IDF v5.0.3-dirty 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time 18:40:57[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v1.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27f28h (163624) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=00037f50 vaddr=3ffb0000 size=03404h ( 13316) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=0003b35c vaddr=40080000 size=04cbch ( 19644) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9bd54h (638292) map[0m
+[0;32mI (403) esp_image: segment 4: paddr=000dbd7c vaddr=40084cbc size=10178h ( 65912) load[0m
+[0;32mI (441) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (441) boot: Disabling RNG early entropy source...[0m
+[0;32mI (452) cpu_start: Multicore app[0m
+[0;32mI (452) cpu_start: Pro cpu up.[0m
+[0;32mI (453) cpu_start: Starting app cpu, entry point is 0x400812bc[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) cpu_start: Application information:[0m
+[0;32mI (475) cpu_start: Project name:     main[0m
+[0;32mI (480) cpu_start: App version:      d2f66b4-dirty[0m
+[0;32mI (486) cpu_start: Compile time:     Nov 20 2023 18:40:35[0m
+[0;32mI (492) cpu_start: ELF file SHA256:  f8d898f6298a04e7...[0m
+[0;32mI (498) cpu_start: ESP-IDF:          v5.0.3-dirty[0m
+[0;32mI (503) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (508) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (513) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (517) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (525) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFB77E8 len 00028818 (162 KiB): DRAM[0m
+[0;32mI (537) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (543) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (550) heap_init: At 40094E34 len 0000B1CC (44 KiB): IRAM[0m
+[0;32mI (557) spi_flash: detected chip: generic[0m
+[0;32mI (560) spi_flash: flash io: dio[0m
+[0;33mW (564) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (579) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+[0;32mI (665) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (665) gpio: GPIO[22]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (675) gpio: GPIO[23]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (675) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (685) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (695) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (705) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (715) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (725) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (735) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (745) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Line NotUse: ff[0;31mE (755) mqtt_client: Client was not initialized[0m
+[0;32mI (755) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+
+I (785) wifi:wifi driver task: 3ffc0c38, prio:23, stack:6656, core=0
+[0;32mI (785) system_api: Base MAC address is not set[0m
+[0;32mI (785) system_api: read default base MAC address from EFUSE[0m
+I (815) wifi:wifi firmware version: 15fc0ca
+I (815) wifi:wifi certification version: v7.0
+I (815) wifi:config NVS flash: enabled
+I (815) wifi:config nano formating: disabled
+I (825) wifi:Init data frame dynamic rx buffer num: 32
+I (825) wifi:Init management frame dynamic rx buffer num: 32
+I (835) wifi:Init management short buffer num: 32
+I (835) wifi:Init dynamic tx buffer num: 32
+I (845) wifi:Init static rx buffer size: 1600
+I (845) wifi:Init static rx buffer num: 10
+I (845) wifi:Init dynamic rx buffer num: 32
+[0;32mI (855) wifi_init: rx ba win: 6[0m
+[0;32mI (855) wifi_init: tcpip mbox: 32[0m
+[0;32mI (855) wifi_init: udp mbox: 6[0m
+[0;32mI (865) wifi_init: tcp mbox: 6[0m
+[0;32mI (865) wifi_init: tcp tx win: 5744[0m
+[0;32mI (875) wifi_init: tcp rx win: 5744[0m
+[0;32mI (875) wifi_init: tcp mss: 1440[0m
+[0;32mI (875) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (885) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (895) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (995) wifi:mode : sta (e0:e2:e6:ce:04:d4)
+I (995) wifi:enable tsf
+pubic: Alam_seting[0;32mI (995) MQTTS_EXAMPLE: 
+[APP] Free memory: 233540 bytes[0m
+[0;32mI (995) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=7[0m
+E (995) wifi:[0;32mI (1005) MQTTS_EXAMPLE: 
+Other event id:7[0m
+sta is connecting, return error
+[0;31mE (1005) esp-tls: couldn't get hostname for :test.mosquitto.org: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (1025) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (1025) mqtt_client: Error transport connect[0m
+[0;32mI (1035) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=0[0m
+[0;32mI (1045) MQTTS_EXAMPLE: 
+MQTT_EVENT_ERROR[0m
+[0;31mE (1045) MQTTS_EXAMPLE: Last error reported from esp-tls: 0x8001[0m
+[0;32mI (1055) MQTTS_EXAMPLE: 
+Last errno string (Success)[0m
+[0;32mI (1055) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=2[0m
+[0;32mI (1065) MQTTS_EXAMPLE: 
+MQTT_EVENT_DISCONNECTED[0m
+I (1075) wifi:new:<4,0>, old:<1,0>, ap:<255,255>, sta:<4,0>, prof:1
+I (1085) wifi:state: init -> auth (b0)
+I (1085) wifi:state: auth -> assoc (0)
+I (1095) wifi:state: assoc -> run (10)
+I (1195) wifi:connected with Ba Anh Em, aid = 1, channel 4, BW20, bssid = b0:8b:92:30:94:fd
+I (1195) wifi:security: WPA2-PSK, phy: bgn, rssi: -46
+I (1205) wifi:pm start, type: 1
+
+I (1225) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+Line NotUse: ff[0;33mW (1775) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (1775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (2775) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (2775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+I (3235) wifi:<ba-add>idx:0 (ifx:0, b0:8b:92:30:94:fd), tid:0, ssn:1, winSize:64
+Line NotUse: ff[0;33mW (3775) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (3775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+[0;32mI (4205) esp_netif_handlers: sta ip: 192.168.1.3, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4205) WIFI_MANAGER: got ip:192.168.1.3[0m
+[0;32mI (4205) WIFI_MANAGER: got ip:192.168.1.3[0m
+Line NotUse: ff[0;33mW (4775) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (4775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (5775) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (5775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (6775) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (6775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (7775) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (7775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (8775) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (8775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (9775) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (9775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (10775) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (10775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+[0;32mI (11075) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=7[0m
+[0;32mI (11075) MQTTS_EXAMPLE: 
+Other event id:7[0m
+I (11085) wifi:<ba-add>idx:1 (ifx:0, b0:8b:92:30:94:fd), tid:6, ssn:3, winSize:64
+[0;32mI (11575) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=1[0m
+[0;32mI (11575) MQTTS_EXAMPLE: 
+MQTT_EVENT_CONNECTED[0m
+[0;32mI (11585) MQTTS_EXAMPLE: 
+sent subscribe successful, msg_id=41429[0m
+Line NotUse: ff[0;32mI (11775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+[0;32mI (11815) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=3[0m
+[0;32mI (11815) MQTTS_EXAMPLE: 
+MQTT_EVENT_SUBSCRIBED, msg_id=41429[0m
+[0;32mI (11815) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+[0;32mI (11825) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (11835) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (11835) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (11845) MQTTS_EXAMPLE: 
+DATA=�
+[0m
+Data Line Not Use: ab
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (12775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ӫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (13775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ӫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (14775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ӫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (15775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (16775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (17775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (18775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ʫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (19775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (20775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ʫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (21775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (22775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (23775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (24775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ƫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (25775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (26775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (27775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (28775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (29775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ӫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (30775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (31775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (32775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (33775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (34775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (35775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (36775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (37775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (38775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (39775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (40775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (41775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (42775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (43775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (44775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (45775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (46775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (47775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (48775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (49775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (50775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (51775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (52775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (53775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (54775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (55775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (56775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (57775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ȫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (58775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (59775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (60775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ɫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (61775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ī
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (62775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (63775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ū
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (64775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (65775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (66775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (67775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (68775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����̫
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (69775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (70775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����˫
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (71775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ī
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (72775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (73775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����̫
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (74775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ɫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (75775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ȫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (76775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+����Կ�
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (77775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+����Կ�
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (78775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ë
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (79775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����«
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (80775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ū
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (81775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (82775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (83775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (84775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (85775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (86775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ë
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (87775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����«
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (88775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ī
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (89775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ī
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (90775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ǫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (91775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����˫
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (92775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ū
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (93775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ë
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (94775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ɫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (95775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����˫
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (96775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����˫
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (97775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����˫
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (98775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (99775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (100775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (101775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ī
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (102775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ū
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (103775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����˫
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (104775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����˫
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (105775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����˫
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (106775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ƫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (107775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ʫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (108775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ɫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (109775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ȫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (110775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ȫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (111775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ʫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (112775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ʫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (113775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����̫
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (114775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����̫
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (115775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����̫
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (116775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ɫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (117775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����̫
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (118775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ȫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (119775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ʫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (120775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ɫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (121775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����˫
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (122775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ɫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (123775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ȫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (124775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ɫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (125775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (126775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (127775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (128775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ƫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (129775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ɫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (130775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ɫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (131775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (132775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (133775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (134775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (135775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (136775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (137775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (138775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (139775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (140775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����̫
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (141775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����̫
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (142775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����˫
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (143775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����˫
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (144775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����̫
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (145775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ʫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (146775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (147775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ǫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (148775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (149775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (150775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (151775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (152775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (153775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (154775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (155775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (156775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ӫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (157775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ӫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (158775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+[0;32mI (158955) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (158965) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (158965) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (158965) MQTTS_EXAMPLE: 
+DATA=�
+[0m
+Data Line Not Use: ab
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (159775) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+[0;32mI (160775) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (160775) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (160775) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (160785) MQTTS_EXAMPLE: 
+DATA=�
+[0m
+Data Line Not Use: ab
+Line NotUse: ab[0;32mI (160795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+[0;32mI (161705) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (161705) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (161705) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (161715) MQTTS_EXAMPLE: 
+DATA=�
+[0m
+Data Line Not Use: ab
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (161795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+[0;32mI (161905) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (161905) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (161905) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (161905) MQTTS_EXAMPLE: 
+DATA=�
+[0m
+Data Line Not Use: ab
+[0;32mI (162085) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (162085) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (162095) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (162095) MQTTS_EXAMPLE: 
+DATA=�
+[0m
+Data Line Not Use: ab
+[0;32mI (162315) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (162315) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (162315) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (162315) MQTTS_EXAMPLE: 
+DATA=�
+[0m
+Data Line Not Use: ab
+[0;32mI (162515) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (162515) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (162515) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (162525) MQTTS_EXAMPLE: 
+DATA=�
+[0m
+Data Line Not Use: ab
+[0;32mI (162725) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (162725) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (162725) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (162725) MQTTS_EXAMPLE: 
+DATA=�
+[0m
+Data Line Not Use: ab
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (162795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+[0;32mI (162925) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (162925) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (162925) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (162935) MQTTS_EXAMPLE: 
+DATA=�
+[0m
+Data Line Not Use: ab
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (163795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (164795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+[0;32mI (165615) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (165615) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (165615) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (165625) MQTTS_EXAMPLE: 
+DATA=�
+[0m
+Data Line Not Use: ab
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (165795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+[0;32mI (166095) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (166095) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (166105) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (166105) MQTTS_EXAMPLE: 
+DATA=�
+[0m
+Data Line Not Use: ab
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (166795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (167795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (168795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (169795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (170795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (171795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (172795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (173795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (174795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (175795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (176795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (177795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (178795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (179795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (180795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (181795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (182795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (183795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ԫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (184795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ӫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (185795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ӫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (186795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (187795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (188795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (189795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ӫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (190795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ӫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (191795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (192795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ӫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (193795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ӫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (194795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (195795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ӫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (196795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (197795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (198795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (199795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (200795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (201795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����׫
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (202795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (203795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (204795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (205795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (206795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (207795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ԫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (208795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (209795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (210795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (211795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (212795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (213795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (214795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (215795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (216795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (217795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (218795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (219795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (220795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (221795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (222795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (223795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (224795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (225795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����̫
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (226795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (227795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (228795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (229795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (230795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ͫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (231795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (232795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (233795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (234795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (235795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ϋ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (236795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (237795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (238795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ҫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (239795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (240795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ϫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (241795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (242795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (243795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (244795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (245795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (246795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ԫ
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (247795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (248795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (249795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (250795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (251795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (252795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (253795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����Ы
+line 1 not use
+line 3 not use
+line 5 not use
+Line NotUse: ab[0;32mI (254795) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ѫ

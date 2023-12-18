@@ -1,0 +1,30 @@
+Removed Pin From Net: NetName=GND Pin=C22-1
+Removed Pin From Net: NetName=3.3V Pin=C22-2
+Change Component Footprint: Designator=C22 Old Footprint=FP-GRM15-MFG New Footprint=tu 0603
+Change Component Footprint: Designator=C23 Old Footprint=FP-GRM188-0_1-e0_2_0_55-IPC_A New Footprint=tu 0603
+Change Component Footprint: Designator=LED1 Old Footprint=LED0603 New Footprint=LED-0805
+Change Component Footprint: Designator=LED2 Old Footprint=LED0603 New Footprint=LED-0805
+Change Component Footprint: Designator=LED3 Old Footprint=LED0603 New Footprint=LED-0805
+Change Component Footprint: Designator=LED4 Old Footprint=LED0603 New Footprint=LED-0805
+Change Component Footprint: Designator=LED5 Old Footprint=LED0603 New Footprint=LED-0805
+Change Component Footprint: Designator=LED6 Old Footprint=LED0603 New Footprint=LED-0805
+Change Component Footprint: Designator=LED7 Old Footprint=LED0603 New Footprint=LED-0805
+Change Component Footprint: Designator=LED8 Old Footprint=LED0603 New Footprint=LED-0805
+Change Managed Component Library Link : Designator=C22 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=388B580D-3E2B-4C40-82C1-AF26D2AEE14B New ItemGUID= Old RevisionGUID=94EC833E-789A-4A38-8035-9CFDBEAC3EC3 New RevisionGUID=
+Change Managed Component Library Link : Designator=C23 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=3F1FDB09-9931-43B7-B80F-88673FF926CD New ItemGUID= Old RevisionGUID=937773BC-2271-489F-837A-E58975DBF117 New RevisionGUID=
+Change component parameters: Designator = "C23" ("C23"); Footprint = "FP-GRM188-0_1-e0_2_0_55-IPC_A"; UniqueID = "\TLSZYBJB" ("\TLSZYBJB")
+Change component parameters (AddParameter): Name = "Chung_Loai"; Value = "Dán"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ma_Hang"; Value = "MH004848"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "So_Chan"; Value = "2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ten_Linh_Kien"; Value = "T? 0603-10uF 20% 16V"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C22" ("C22"); Footprint = "FP-GRM15-MFG"; UniqueID = "\OWRQJAAB" ("\OWRQJAAB")
+Change component parameters (AddParameter): Name = "Chung_Loai"; Value = "Dán"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ma_Hang"; Value = "MH004568"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "So_Chan"; Value = "2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ten_Linh_Kien"; Value = "T? 0603 104-100nF 10% 50V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=3.3V Pin=C22-1
+Added Pin To Net: NetName=GND Pin=C22-2

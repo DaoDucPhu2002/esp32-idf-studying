@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "main",
-    "project_version":    "d74d754-dirty",
+    "project_version":    "d2f66b4-dirty",
     "project_path":       "D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code",
     "idf_path":           "C:/Espressif/frameworks/esp-idf-v5.0.3",
     "build_dir":          "D:/CODE/ESP32-IDF/esp32-idf-studying/FireAlam_Project_Do_An/Fire_Alam_code/build",

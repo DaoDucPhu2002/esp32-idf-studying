@@ -1,0 +1,11 @@
+Added Pin To Net: NetName=NetC14_1 Pin=C24-1
+Added Pin To Net: NetName=NetC14_1 Pin=R56-1
+Added Pin To Net: NetName=NetC14_1 Pin=RL1-5
+Added Pin To Net: NetName=NetC14_1 Pin=RL2-5
+Added Pin To Net: NetName=NetC14_1 Pin=RL3-5
+Added Pin To Net: NetName=NetC14_1 Pin=RL4-5
+Added Pin To Net: NetName=NetC14_1 Pin=U1-7
+Change Net Name : Old Net Name=NetC14_1 New Net Name=12V
+Added Room: Name=16_Line_sensor
+Added Room: Name=Center
+Added Room: Name=Connect_Input_output
