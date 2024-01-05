@@ -1,0 +1,806 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6992
+load:0x40078000,len:15512
+load:0x40080400,len:3864
+entry 0x40080650
+[0;32mI (27) boot: ESP-IDF v5.0.3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time 18:40:57[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v1.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27f30h (163632) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=00037f58 vaddr=3ffb0000 size=03404h ( 13316) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=0003b364 vaddr=40080000 size=04cb4h ( 19636) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9c0bch (639164) map[0m
+[0;32mI (403) esp_image: segment 4: paddr=000dc0e4 vaddr=40084cb4 size=10180h ( 65920) load[0m
+[0;32mI (441) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (441) boot: Disabling RNG early entropy source...[0m
+[0;32mI (453) cpu_start: Multicore app[0m
+[0;32mI (453) cpu_start: Pro cpu up.[0m
+[0;32mI (453) cpu_start: Starting app cpu, entry point is 0x400812bc[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) cpu_start: Application information:[0m
+[0;32mI (476) cpu_start: Project name:     main[0m
+[0;32mI (481) cpu_start: App version:      d684c0b-dirty[0m
+[0;32mI (486) cpu_start: Compile time:     Dec 25 2023 17:18:52[0m
+[0;32mI (492) cpu_start: ELF file SHA256:  eec35350bc6af8ce...[0m
+[0;32mI (498) cpu_start: ESP-IDF:          v5.0.3-dirty[0m
+[0;32mI (504) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (508) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (513) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (518) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (525) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFB77E8 len 00028818 (162 KiB): DRAM[0m
+[0;32mI (537) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (544) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (550) heap_init: At 40094E34 len 0000B1CC (44 KiB): IRAM[0m
+[0;32mI (558) spi_flash: detected chip: generic[0m
+[0;32mI (561) spi_flash: flash io: dio[0m
+[0;33mW (565) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (579) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+[0;32mI (667) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (667) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (677) gpio: GPIO[16]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (687) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (697) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (697) gpio: GPIO[22]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (707) gpio: GPIO[23]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (717) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (727) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (737) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (747) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (757) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (767) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (777) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (787) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Line NotUse: ff[0;32mI (797) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (797) mqtt_client: Client was not initialized[0m
+[0;32mI (807) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=-1[0m
+I (817) wifi:wifi driver task: 3ffc0c38, prio:23, stack:6656, core=0
+[0;32mI (827) system_api: Base MAC address is not set[0m
+[0;32mI (827) system_api: read default base MAC address from EFUSE[0m
+I (857) wifi:wifi firmware version: 15fc0ca
+I (857) wifi:wifi certification version: v7.0
+I (857) wifi:config NVS flash: enabled
+I (857) wifi:config nano formating: disabled
+I (857) wifi:Init data frame dynamic rx buffer num: 32
+I (867) wifi:Init management frame dynamic rx buffer num: 32
+I (867) wifi:Init management short buffer num: 32
+I (877) wifi:Init dynamic tx buffer num: 32
+I (877) wifi:Init static rx buffer size: 1600
+I (887) wifi:Init static rx buffer num: 10
+I (887) wifi:Init dynamic rx buffer num: 32
+
+[0;32mI (897) wifi_init: rx ba win: 6[0m
+[0;32mI (897) wifi_init: tcpip mbox: 32[0m
+[0;32mI (897) wifi_init: udp mbox: 6[0m
+[0;32mI (907) wifi_init: tcp mbox: 6[0m
+[0;32mI (907) wifi_init: tcp tx win: 5744[0m
+[0;32mI (907) wifi_init: tcp rx win: 5744[0m
+[0;32mI (917) wifi_init: tcp mss: 1440[0m
+[0;32mI (917) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (927) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (927) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1027) wifi:mode : sta (e0:e2:e6:ce:04:d4)
+I (1027) wifi:enable tsf
+pubic: Alam_seting[0;32mI (1027) MQTTS_EXAMPLE: 
+[APP] Free memory: 233540 bytes[0m
+[0;32mI (1037) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=7[0m
+E (1037) wifi:[0;32mI (1037) MQTTS_EXAMPLE: 
+Other event id:7[0m
+sta is connecting, return error
+[0;31mE (1057) esp-tls: couldn't get hostname for :test.mosquitto.org: getaddrinfo() returns 202, addrinfo=0x0[0m
+I (1057) wifi:[0;31mE (1057) transport_base: Failed to open a new connection: 32769[0m
+new:<3,0>, old:<1,0>, ap:<255,255>, sta:<3,0>, prof:1
+I (1077) wifi:state: init -> auth (b0)
+[0;31mE (1077) mqtt_client: Error transport connect[0m
+[0;32mI (1077) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=0[0m
+I (1077) wifi:[0;32mI (1087) MQTTS_EXAMPLE: 
+MQTT_EVENT_ERROR[0m
+[0;31mE (1097) MQTTS_EXAMPLE: Last error reported from esp-tls: 0x8001[0m
+state: auth -> assoc (0)
+[0;32mI (1107) MQTTS_EXAMPLE: 
+Last errno string (Success)[0m
+[0;32mI (1107) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=2[0m
+[0;32mI (1117) MQTTS_EXAMPLE: 
+MQTT_EVENT_DISCONNECTED[0m
+I (1117) wifi:state: assoc -> run (10)
+I (1217) wifi:connected with Ba Anh Em, aid = 1, channel 3, BW20, bssid = b0:8b:92:30:94:fd
+I (1217) wifi:security: WPA2-PSK, phy: bgn, rssi: -39
+I (1227) wifi:pm start, type: 1
+
+I (1297) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+Line NotUse: ff[0;33mW (1937) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (1937) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (2937) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (2937) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+I (3357) wifi:<ba-add>idx:0 (ifx:0, b0:8b:92:30:94:fd), tid:0, ssn:0, winSize:64
+Line NotUse: ff[0;33mW (3937) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (3937) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+[0;32mI (4227) esp_netif_handlers: sta ip: 192.168.1.6, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4227) WIFI_MANAGER: got ip:192.168.1.6[0m
+[0;32mI (4227) WIFI_MANAGER: got ip:192.168.1.6[0m
+Line NotUse: ff[0;33mW (4937) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (4937) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (5937) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (5937) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (6937) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (6937) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (7937) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (7937) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (8937) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (8937) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (9937) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (9937) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;33mW (10937) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (10937) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+[0;32mI (11127) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=7[0m
+[0;32mI (11127) MQTTS_EXAMPLE: 
+Other event id:7[0m
+I (11147) wifi:<ba-add>idx:1 (ifx:0, b0:8b:92:30:94:fd), tid:6, ssn:3, winSize:64
+[0;32mI (11657) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=1[0m
+[0;32mI (11657) MQTTS_EXAMPLE: 
+MQTT_EVENT_CONNECTED[0m
+[0;32mI (11657) MQTTS_EXAMPLE: 
+sent subscribe successful, msg_id=36513[0m
+[0;32mI (11857) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=3[0m
+[0;32mI (11857) MQTTS_EXAMPLE: 
+MQTT_EVENT_SUBSCRIBED, msg_id=36513[0m
+[0;32mI (11857) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=36513[0m
+[0;32mI (11877) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (11877) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (11887) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (11887) MQTTS_EXAMPLE: 
+DATA=�
+[0m
+Data Line Not Use: af
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (11937) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����د
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (12937) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ׯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (13937) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ٯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (14937) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����گ
+line 1 not use
+line 3 not use
+OUT ALL
+Line NotUse: af[0;32mI (15937) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ܯ
+line 1 not use
+line 3 not use
+OUT ALL
+Line NotUse: af[0;32mI (16947) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ٯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (17957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����گ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (18957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����گ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (19957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����د
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (20957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ׯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (21957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ׯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (22957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ׯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (23957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����կ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (24957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ԯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (25957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ԯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (26957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����֯
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (27957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����կ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (28957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����կ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (29957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����֯
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (30957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����֯
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (31957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����֯
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (32957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ԯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (33957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����֯
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (34957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����կ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (35957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ԯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (36957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����ӯ
+line 1 not use
+line 3 not use
+Line NotUse: af[0;32mI (37957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�����կ
+[0;32mI (38297) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (38297) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (38297) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (38297) MQTTS_EXAMPLE: 
+DATA=�
+[0m
+Data Line Not Use: af
+[0;32mI (38927) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (38927) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (38937) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (38937) MQTTS_EXAMPLE: 
+DATA=�
+[0m
+Data Line Not Use: ef
+line 3 not use
+Line NotUse: ef[0;32mI (38957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+[0;32mI (39807) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (39807) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (39817) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (39817) MQTTS_EXAMPLE: 
+DATA=�
+[0m
+Data Line Not Use: ef
+line 3 not use
+Line NotUse: ef[0;32mI (39957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+line 3 not use
+Line NotUse: ef[0;32mI (40957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+line 3 not use
+Line NotUse: ef[0;32mI (41957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+line 3 not use
+Line NotUse: ef[0;32mI (42957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+[0;32mI (43397) MQTTS_EXAMPLE: 
+Event dispatched from event loop base=MQTT_EVENTS, event_id=6[0m
+[0;32mI (43397) MQTTS_EXAMPLE: 
+MQTT_EVENT_DATA[0m
+[0;32mI (43397) MQTTS_EXAMPLE: 
+TOPIC=Alam_seting
+[0m
+[0;32mI (43407) MQTTS_EXAMPLE: 
+DATA=�
+[0m
+Data Line Not Use: ff
+OUT ALL
+Line NotUse: ff[0;32mI (43957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+OUT ALL
+Line NotUse: ff[0;32mI (44957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (45957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (46957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (47957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (48957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (49957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (50957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (51957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (52957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (53957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (54957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+OUT ALL
+Line NotUse: ff[0;32mI (55957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+OUT ALL
+Line NotUse: ff[0;32mI (56957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+OUT ALL
+Line NotUse: ff[0;32mI (57957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (58957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (59957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (60957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (61957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (62957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (63957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (64957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (65957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (66957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (67957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (68957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (69957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (70957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (71957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (72957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (73957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (74957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (75957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (76957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (77957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+OUT ALL
+Line NotUse: ff[0;32mI (78957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+OUT ALL
+Line NotUse: ff[0;32mI (79957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+OUT ALL
+Line NotUse: ff[0;32mI (80957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (81957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (82957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (83957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (84957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (85957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (86957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (87957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (88957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (89957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (90957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (91957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (92957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (93957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (94957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (95957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (96957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (97957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (98957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (99957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (100957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (101957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (102957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (103957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (104957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (105957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (106957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (107957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (108957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (109957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (110957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (111957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (112957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (113957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (114957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (115957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (116957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (117957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (118957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (119957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (120957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (121957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (122957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (123957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (124957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (125957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (126957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (127957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (128957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (129957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (130957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (131957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (132957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (133957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (134957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (135957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (136957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (137957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (138957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (139957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (140957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (141957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (142957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (143957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (144957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (145957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (146957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (147957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (148957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (149957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (150957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (151957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (152957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (153957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (154957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (155957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (156957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (157957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (158957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (159957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (160957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (161957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (162957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (163957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (164957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (165957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (166957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (167957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (168957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (169957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (170957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (171957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+Line NotUse: ff[0;32mI (172957) MQTTS_EXAMPLE: 
+sent publish successful, msg_id=0[0m
+�������
+
+Brown 

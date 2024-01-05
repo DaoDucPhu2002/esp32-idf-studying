@@ -1,0 +1,13 @@
+D:\CODE\ESP32-IDF\esp32-idf-studying\FireAlam_Project_Do_An\GUI\MQTT_V2\bin\Debug\MQTT_V2.exe.config
+D:\CODE\ESP32-IDF\esp32-idf-studying\FireAlam_Project_Do_An\GUI\MQTT_V2\bin\Debug\MQTT_V2.exe
+D:\CODE\ESP32-IDF\esp32-idf-studying\FireAlam_Project_Do_An\GUI\MQTT_V2\bin\Debug\MQTT_V2.pdb
+D:\CODE\ESP32-IDF\esp32-idf-studying\FireAlam_Project_Do_An\GUI\MQTT_V2\bin\Debug\M2Mqtt.Net.dll
+D:\CODE\ESP32-IDF\esp32-idf-studying\FireAlam_Project_Do_An\GUI\MQTT_V2\bin\Debug\M2Mqtt.Net.pdb
+D:\CODE\ESP32-IDF\esp32-idf-studying\FireAlam_Project_Do_An\GUI\MQTT_V2\obj\Debug\MQTT_V2.csproj.AssemblyReference.cache
+D:\CODE\ESP32-IDF\esp32-idf-studying\FireAlam_Project_Do_An\GUI\MQTT_V2\obj\Debug\MQTT_V2.Form1.resources
+D:\CODE\ESP32-IDF\esp32-idf-studying\FireAlam_Project_Do_An\GUI\MQTT_V2\obj\Debug\MQTT_V2.Properties.Resources.resources
+D:\CODE\ESP32-IDF\esp32-idf-studying\FireAlam_Project_Do_An\GUI\MQTT_V2\obj\Debug\MQTT_V2.csproj.GenerateResource.cache
+D:\CODE\ESP32-IDF\esp32-idf-studying\FireAlam_Project_Do_An\GUI\MQTT_V2\obj\Debug\MQTT_V2.csproj.CoreCompileInputs.cache
+D:\CODE\ESP32-IDF\esp32-idf-studying\FireAlam_Project_Do_An\GUI\MQTT_V2\obj\Debug\MQTT_V2.csproj.CopyComplete
+D:\CODE\ESP32-IDF\esp32-idf-studying\FireAlam_Project_Do_An\GUI\MQTT_V2\obj\Debug\MQTT_V2.exe
+D:\CODE\ESP32-IDF\esp32-idf-studying\FireAlam_Project_Do_An\GUI\MQTT_V2\obj\Debug\MQTT_V2.pdb

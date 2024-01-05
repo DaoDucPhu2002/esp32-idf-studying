@@ -1,0 +1,5 @@
+Added Component: Designator=MQ2(jp4)
+Added Pin To Net: NetName=5V Pin=MQ2-1
+Added Pin To Net: NetName=GND Pin=MQ2-2
+Added Pin To Net: NetName=DATA_DHT22 Pin=MQ2-4
+Added Member To Class: ClassName=Sheet1 Member=Component MQ2 LCD

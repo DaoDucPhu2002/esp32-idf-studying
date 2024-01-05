@@ -1,0 +1,2 @@
+Removed Pin From Net: NetName=DATA_DHT22 Pin=MQ2-4
+Added Pin To Net: NetName=DATA_MQ2 Pin=MQ2-4

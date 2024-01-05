@@ -43,7 +43,8 @@
     "webserver.h": "c",
     "esp_mac.h": "c",
     "stdlib.h": "c",
-    "task.h": "c"
+    "task.h": "c",
+    "alam_handler.h": "c"
   },
   "C_Cpp.errorSquiggles": "enabled",
   "idf.portWin": "COM3",

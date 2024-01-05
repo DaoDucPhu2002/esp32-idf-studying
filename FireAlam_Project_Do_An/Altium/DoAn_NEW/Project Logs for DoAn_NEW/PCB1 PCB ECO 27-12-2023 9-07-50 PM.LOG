@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=RESET Pin=C10-1
+Removed Pin From Net: NetName=RESET Pin=R4-2
+Removed Pin From Net: NetName=RESET Pin=SW1-2
+Added Pin To Net: NetName=MODE Pin=C10-1
+Added Pin To Net: NetName=MODE Pin=R4-2
+Added Pin To Net: NetName=MODE Pin=SW1-2
